@@ -10,3 +10,38 @@
   background-color: #132f3d;
   color: #fddfbb;
 }
+
+.password .mui-i4bv87-MuiSvgIcon-root {
+  color: #fddfbb;
+}
+.password .bg-default-100 {
+  background-color: #030f15 !important;
+}
+.password .mui-nxo287-MuiInputBase-input-MuiOutlinedInput-input {
+  color: #ececec;
+}
+.password .mui-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  display: none;
+}
+.password .mui-1wr5dqe-MuiFormControl-root {
+  border-radius: 0.25rem;
+}
+.password .text-small {
+  font-size: 16px;
+}
+
+.multiselect .mui-6od3lo-MuiChip-label,
+.multiselect .mui-38raov-MuiButtonBase-root-MuiChip-root .MuiChip-deleteIcon {
+  color: #ececec;
+  transition: 0.3s;
+}
+.multiselect .mui-38raov-MuiButtonBase-root-MuiChip-root .MuiChip-deleteIcon:hover {
+  transition: 0.3s;
+  color: rgba(236, 236, 236, 0.4);
+}
+.multiselect .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.mui-i4bv87-MuiSvgIcon-root {
+  color: #ececec;
+}
+.multiselect .MuiInputBase-input.MuiOutlinedInput-input.MuiInputBase-inputAdornedEnd {
+  color: #ececec !important;
+}

@@ -12,3 +12,53 @@
     color: #fddfbb;
   }
 }
+
+.password {
+  .mui-i4bv87-MuiSvgIcon-root {
+    color: #fddfbb;
+  }
+  .bg-default-100 {
+    background-color: #030f15 !important;
+  }
+  .mui-nxo287-MuiInputBase-input-MuiOutlinedInput-input {
+    color: #ececec;
+  }
+
+  .mui-1d3z3hw-MuiOutlinedInput-notchedOutline {
+    display: none;
+  }
+  .mui-1wr5dqe-MuiFormControl-root {
+    border-radius: 0.25rem;
+  }
+  .text-small {
+    font-size: 16px;
+  }
+}
+
+.multiselect {
+  .mui-6od3lo-MuiChip-label,
+  .mui-38raov-MuiButtonBase-root-MuiChip-root .MuiChip-deleteIcon {
+    color: #ececec;
+    transition: 0.3s;
+  }
+  .mui-38raov-MuiButtonBase-root-MuiChip-root .MuiChip-deleteIcon:hover {
+    transition: 0.3s;
+    color: rgba(236, 236, 236, 0.4);
+  }
+
+  .MuiSvgIcon-root {
+    &.MuiSvgIcon-fontSizeMedium {
+      &.mui-i4bv87-MuiSvgIcon-root {
+        color: #ececec;
+      }
+    }
+  }
+    // MuiAutocomplete-input MuiAutocomplete-inputFocused mui-nxo287-MuiInputBase-input-MuiOutlinedInput-input
+  .MuiInputBase-input {
+    &.MuiOutlinedInput-input {
+      &.MuiInputBase-inputAdornedEnd {
+        color: #ececec !important;
+      }
+    }
+  }
+}

@@ -4,6 +4,7 @@ import "./globals.css";
 import "./dist/app.css";
 import { Providers } from "./providers";
 
+
 export const metadata: Metadata = {
   title: "Lux | Your single Destination",
   description:
