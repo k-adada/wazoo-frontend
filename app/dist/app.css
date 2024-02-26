@@ -1,0 +1,148 @@
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.text-gold {
+  color: #fddfbb;
+}
+
+.text-ice {
+  color: #ececec;
+}
+
+.text-darkblue {
+  color: #132f3d;
+}
+
+.text-grey {
+  color: #a4a4a4;
+}
+
+.text-lightblue {
+  color: #c6deea;
+}
+
+.bg-lightblue {
+  background-color: #e9f8ff;
+}
+
+.bg-blue {
+  background-color: #c6deea;
+}
+
+.bg-darkblue {
+  background-color: #132f3d;
+}
+
+.bg-bluesky {
+  background-color: #0d222d;
+}
+
+.bg-dark-input {
+  background-color: #030f15;
+}
+
+.bg-gold {
+  background-color: #fddfbb;
+}
+
+.bg-gold-gradient {
+  transition: 0.3s ease-in-out;
+  background: linear-gradient(180deg, #fddfbb 0%, #c2986b 100%);
+}
+.bg-gold-gradient:hover {
+  transition: 0.3s ease-in-out;
+  background: linear-gradient(180deg, #c9a279 0%, #c2986b 100%);
+}
+
+.f-48 {
+  font-size: 48px;
+}
+
+.f-24 {
+  font-size: 24px;
+}
+
+.f-18 {
+  font-size: 18px;
+}
+
+.f-16 {
+  font-size: 16px;
+}
+
+.f-14 {
+  font-size: 14px;
+}
+
+.f-12 {
+  font-size: 12px;
+}

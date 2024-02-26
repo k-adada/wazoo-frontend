@@ -1,0 +1,12 @@
+.tab {
+  background-color: transparent;
+  transition: 0.3s ease-in-out;
+  color: #ececec;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.tab.active, .tab:hover {
+  transition: 0.3s ease-in-out;
+  background-color: #132f3d;
+  color: #fddfbb;
+}
