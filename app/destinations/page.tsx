@@ -308,13 +308,13 @@ export default function Destinations() {
           </div>
 
           {/* search */}
-          <div className="">
+          {/* <div className="">
             <input
               className="bg-lightblue text-darkblue p-3 rounded w-full"
               placeholder="Search destinations"
               type="text"
             />
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -324,7 +324,7 @@ export default function Destinations() {
           return (
             <div
               key={index}
-              className="2xl:col-span-2 xl:col-span-3 md:col-span-4 sm:col-span-6 col-span-12 m-auto cursor-pointer relative"
+              className="2xl:col-span-2 xl:col-span-3 md:col-span-4 sm:col-span-6 col-span-12 m-auto cursor-pointer relative transform transition-transform duration-300 ease-in-out hover:scale-105"
               onClick={() => {
                 setSelectedDestinations((prevSelectedDestinations) => {
                   if (
