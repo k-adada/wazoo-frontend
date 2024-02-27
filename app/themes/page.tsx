@@ -202,9 +202,9 @@ export default function Themes() {
   ]);
 
   return (
-    <main className="flex min-h-screen flex-col items-center  p-md-24 p-3 bg-bluesky">
-      <div className="f-48 text-gold">Luxury Travel</div>
-      <div className="f-24 text-ice">Select the travel themes you serve</div>
+    <main className="flex min-h-screen flex-col items-center  p-md-24 p-3 bg-bluesky pb-[100px]">
+      <div className="f-48 text-gold pt-8 pb-3">Luxury Travel</div>
+      <div className="f-24 text-ice pb-5">Select the travel themes you serve</div>
 
       {/* themes bar  */}
       <div className="bg-white py-2 px-4 rounded w-2/3">
@@ -224,7 +224,7 @@ export default function Themes() {
       </div>
 
       {/* themes list */}
-      <div className="grid grid-cols-12 gap-3 w-2/3 mt-4">
+      <div className="grid grid-cols-12 gap-3 w-2/3 mt-6">
         {themes.map((item, index) => {
           return (
             <div
@@ -236,7 +236,7 @@ export default function Themes() {
                 src={item.image}
                 alt="destination"
               />
-              <div className="f-32 text-ice poppins-medium line-clamp-1">{item.name}</div>
+              <div className="f-32 text-ice poppins-medium line-clamp-1 pt-2">{item.name}</div>
               <div className="text-grey line-clamp-2">{item.subtitle}</div>
             </div>
           );
@@ -244,7 +244,7 @@ export default function Themes() {
       </div>
 
       {/* next button */}
-      <div className="w-2/3 bottom-fixed text-center">
+      <div className="w-full bottom-fixed text-center">
         <button className="bg-gold-gradient text-dark-input p-3 w-1/4 rounded">
           Next
         </button>

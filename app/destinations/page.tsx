@@ -6,6 +6,7 @@ import Image from "next/image";
 import destination from "../assets/destination.png";
 import check from "../assets/check.png";
 import CountryMultiSelect from "../components/CountryMultiSelect";
+import ContinentMultiSelect from "../components/ContinentMultiSelect";
 
 interface Destination {
   id: number;
@@ -237,35 +238,48 @@ export default function Destinations() {
     Destination[]
   >([]);
 
-  const [filteredCountries, setFilteredCountries] = React.useState<
+  const [filteredCountries, setFilteredCountries] = useState<
     Destination[]
   >([]);
 
-  const filterCountries = (allDestinations: Destination[]): Destination[] => {
-    let result;
-    if (filteredCountries.length === 0) {
-      result = allDestinations;
-    } else {
-      result = allDestinations.filter((destination) =>
+  const [filteredContinents, setFilteredContinents] = useState<
+    Destination[]
+  >([]);
+
+  const filterDestinations = (
+    allDestinations: Destination[]
+  ): Destination[] => {
+    let result = allDestinations;
+
+    if (filteredCountries.length > 0) {
+      result = result.filter((destination) =>
         filteredCountries.some(
           (filteredCountry) => filteredCountry.country === destination.country
         )
       );
     }
+
+    if (filteredContinents.length > 0) {
+      result = result.filter((destination) =>
+        filteredContinents.some(
+          (filteredContinent) =>
+            filteredContinent.continent === destination.continent
+        )
+      );
+    }
+
     return result;
   };
 
   useEffect(() => {
     console.log("filteredCountries", filteredCountries);
-    setFilteredDestinations(filterCountries(destinations));
-  }, [filteredCountries]);
-
-  useEffect;
+    setFilteredDestinations(filterDestinations(destinations));
+  }, [filteredCountries, filteredContinents]);
 
   return (
-    <main className="flex min-h-screen flex-col items-center  p-md-24 p-3 bg-bluesky">
-      <div className="f-48 text-gold">Luxury Travel</div>
-      <div className="f-24 text-ice">
+    <main className="flex min-h-screen flex-col items-center  p-md-24 p-3 bg-bluesky pb-[100px]">
+      <div className="f-48 text-gold pt-8 pb-3">Luxury Travel</div>
+      <div className="f-24 text-ice pb-5">
         Select the travel Destinations you serve
       </div>
 
@@ -278,15 +292,14 @@ export default function Destinations() {
           </div>
 
           {/* country continent */}
-          <div className="flex">
-            <div className="rounded mx-2 ">
-              <select className="bg-blue rounded p-3" name="" id="">
-                <option value="1">Continent</option>
-                <option value="2">Asia</option>
-                <option value="3">Europe</option>
-              </select>
+          <div className="grid grid-cols-6 w-full">
+            <div className="rounded mx-2 col-span-2 bg-blue">
+              <ContinentMultiSelect
+                options={destinations}
+                setFilteredContinents={setFilteredContinents}
+              />
             </div>
-            <div className="rounded mx-2">
+            <div className="rounded mx-2 col-span-4 bg-blue">
               <CountryMultiSelect
                 options={destinations}
                 setFilteredCountries={setFilteredCountries}
@@ -306,7 +319,7 @@ export default function Destinations() {
       </div>
 
       {/* destinations list */}
-      <div className="grid grid-cols-12 gap-3 w-2/3 mt-4">
+      <div className="grid grid-cols-12 gap-3 w-2/3 mt-6">
         {filteredDestinations.map((item, index) => {
           return (
             <div
@@ -357,7 +370,7 @@ export default function Destinations() {
       </div>
 
       {/* next button */}
-      <div className="w-2/3 bottom-fixed text-center">
+      <div className="w-full bottom-fixed text-center">
         <button className="bg-gold-gradient text-dark-input p-3 w-1/4 rounded">
           Next
         </button>

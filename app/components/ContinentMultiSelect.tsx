@@ -14,8 +14,10 @@ interface Destination {
   country: string;
   image: any;
 }
-export default function CountryMultiSelect(props: any) {
-  const { options, setFilteredCountries } = props;
+export default function ContinentMultiSelect(props: any) {
+  const { options, setFilteredContinents } = props;
+
+
 
   return (
     <>
@@ -25,9 +27,9 @@ export default function CountryMultiSelect(props: any) {
         id="checkboxes-tags-demo"
         options={options}
         disableCloseOnSelect
-        getOptionLabel={(option: Destination) => option.country}
+        getOptionLabel={(option: Destination) => option.continent}
         onChange={(event, selected) => {
-          setFilteredCountries(selected);
+          setFilteredContinents(selected);
         }}
         renderOption={(props, option: Destination, { selected }) => (
           <li {...props}>
@@ -37,11 +39,11 @@ export default function CountryMultiSelect(props: any) {
               style={{ marginRight: 8 }}
               checked={selected}
             />
-            {option.country}
+            {option.continent}
           </li>
         )}
         renderInput={(params) => (
-          <TextField {...params} label="Countries" placeholder="Favorites" />
+          <TextField {...params} label="Continents" placeholder="Favorites" />
         )}
       />
     </>
