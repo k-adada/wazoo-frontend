@@ -98,19 +98,7 @@ export default function Register() {
           <div className="col-span-2">
             <div className="text-ice py-3">Where Are you Based?</div>
             <MultipleSelect options={cities} />
-            {/* <select
-              className="p-4 bg-dark-input text-ice rounded w-full"
-              name=""
-              id=""
-            >
-              {cities.map((city) => {
-                return (
-                  <option key={city.id} value={city.name}>
-                    {city.name}
-                  </option>
-                );
-              })}
-            </select> */}
+       
           </div>
 
           {/* Register button */}
@@ -119,6 +107,7 @@ export default function Register() {
               <button
                 type="submit"
                 className="bg-gold-gradient text-dark-input p-4 w-full rounded"
+                onClick={() => console.log("Register")}
               >
                 Register
               </button>

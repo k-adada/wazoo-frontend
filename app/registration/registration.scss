@@ -14,7 +14,8 @@
 }
 
 .password {
-  .mui-i4bv87-MuiSvgIcon-root {
+  .mui-i4bv87-MuiSvgIcon-root,
+  .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.mui-vubbuv {
     color: #fddfbb;
   }
   .bg-default-100 {
@@ -53,7 +54,7 @@
       }
     }
   }
-    // MuiAutocomplete-input MuiAutocomplete-inputFocused mui-nxo287-MuiInputBase-input-MuiOutlinedInput-input
+  // MuiAutocomplete-input MuiAutocomplete-inputFocused mui-nxo287-MuiInputBase-input-MuiOutlinedInput-input
   .MuiInputBase-input {
     &.MuiOutlinedInput-input {
       &.MuiInputBase-inputAdornedEnd {
