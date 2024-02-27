@@ -41,11 +41,13 @@
 
 .multiselect {
   .mui-6od3lo-MuiChip-label,
-  .mui-38raov-MuiButtonBase-root-MuiChip-root .MuiChip-deleteIcon {
+  .mui-38raov-MuiButtonBase-root-MuiChip-root .MuiChip-deleteIcon,
+  .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiChip-deleteIcon.MuiChip-deleteIconMedium.MuiChip-deleteIconColorDefault.MuiChip-deleteIconFilledColorDefault.mui-vubbuv {
     color: #ececec;
     transition: 0.3s;
   }
-  .mui-38raov-MuiButtonBase-root-MuiChip-root .MuiChip-deleteIcon:hover {
+  .mui-38raov-MuiButtonBase-root-MuiChip-root .MuiChip-deleteIcon:hover,
+  .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiChip-deleteIcon.MuiChip-deleteIconMedium.MuiChip-deleteIconColorDefault.MuiChip-deleteIconFilledColorDefault.mui-vubbuv:hover {
     transition: 0.3s;
     color: rgba(236, 236, 236, 0.4);
   }
