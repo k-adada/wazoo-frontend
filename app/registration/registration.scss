@@ -21,14 +21,17 @@
   .bg-default-100 {
     background-color: #030f15 !important;
   }
-  .mui-nxo287-MuiInputBase-input-MuiOutlinedInput-input {
+  .mui-nxo287-MuiInputBase-input-MuiOutlinedInput-input,
+  .MuiInputBase-input.MuiOutlinedInput-input.MuiInputBase-inputAdornedEnd.mui-1uvydh2 {
     color: #ececec;
   }
 
-  .mui-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  .mui-1d3z3hw-MuiOutlinedInput-notchedOutline,
+  .MuiOutlinedInput-notchedOutline.mui-igs3ac {
     display: none;
   }
-  .mui-1wr5dqe-MuiFormControl-root {
+  .mui-1wr5dqe-MuiFormControl-root,
+  .MuiFormControl-root.bg-dark-input {
     border-radius: 0.25rem;
   }
   .text-small {
@@ -54,7 +57,6 @@
       }
     }
   }
-  // MuiAutocomplete-input MuiAutocomplete-inputFocused mui-nxo287-MuiInputBase-input-MuiOutlinedInput-input
   .MuiInputBase-input {
     &.MuiOutlinedInput-input {
       &.MuiInputBase-inputAdornedEnd {

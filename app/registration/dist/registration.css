@@ -18,13 +18,16 @@
 .password .bg-default-100 {
   background-color: #030f15 !important;
 }
-.password .mui-nxo287-MuiInputBase-input-MuiOutlinedInput-input {
+.password .mui-nxo287-MuiInputBase-input-MuiOutlinedInput-input,
+.password .MuiInputBase-input.MuiOutlinedInput-input.MuiInputBase-inputAdornedEnd.mui-1uvydh2 {
   color: #ececec;
 }
-.password .mui-1d3z3hw-MuiOutlinedInput-notchedOutline {
+.password .mui-1d3z3hw-MuiOutlinedInput-notchedOutline,
+.password .MuiOutlinedInput-notchedOutline.mui-igs3ac {
   display: none;
 }
-.password .mui-1wr5dqe-MuiFormControl-root {
+.password .mui-1wr5dqe-MuiFormControl-root,
+.password .MuiFormControl-root.bg-dark-input {
   border-radius: 0.25rem;
 }
 .password .text-small {
