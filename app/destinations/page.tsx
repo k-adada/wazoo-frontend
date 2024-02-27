@@ -5,6 +5,7 @@ import Image from "next/image";
 
 import destination from "../assets/destination.png";
 import check from "../assets/check.png";
+import CountryMultiSelect from "../components/CountryMultiSelect";
 
 interface Destination {
   id: number;
@@ -232,9 +233,34 @@ export default function Destinations() {
     Destination[]
   >([]);
 
+  const [filteredDestinations, setFilteredDestinations] = useState<
+    Destination[]
+  >([]);
+
+  const [filteredCountries, setFilteredCountries] = React.useState<
+    Destination[]
+  >([]);
+
+  const filterCountries = (allDestinations: Destination[]): Destination[] => {
+    let result;
+    if (filteredCountries.length === 0) {
+      result = allDestinations;
+    } else {
+      result = allDestinations.filter((destination) =>
+        filteredCountries.some(
+          (filteredCountry) => filteredCountry.country === destination.country
+        )
+      );
+    }
+    return result;
+  };
+
   useEffect(() => {
-    console.log(selectedDestinations);
-  }, [selectedDestinations]);
+    console.log("filteredCountries", filteredCountries);
+    setFilteredDestinations(filterCountries(destinations));
+  }, [filteredCountries]);
+
+  useEffect;
 
   return (
     <main className="flex min-h-screen flex-col items-center  p-md-24 p-3 bg-bluesky">
@@ -261,11 +287,10 @@ export default function Destinations() {
               </select>
             </div>
             <div className="rounded mx-2">
-              <select className="bg-blue rounded p-3" name="" id="">
-                <option value="1">Country</option>
-                <option value="2">Lebanon</option>
-                <option value="3">France</option>
-              </select>
+              <CountryMultiSelect
+                options={destinations}
+                setFilteredCountries={setFilteredCountries}
+              />
             </div>
           </div>
 
@@ -282,7 +307,7 @@ export default function Destinations() {
 
       {/* destinations list */}
       <div className="grid grid-cols-12 gap-3 w-2/3 mt-4">
-        {destinations.map((item, index) => {
+        {filteredDestinations.map((item, index) => {
           return (
             <div
               key={index}
@@ -315,7 +340,7 @@ export default function Destinations() {
                 <>
                   <div className="destination-selected-overlay flex items-center justify-center">
                     <div className="text-ice text-center poppins-medium">
-                     <Image src={check} alt="check" />
+                      <Image src={check} alt="check" />
                     </div>
                   </div>
                 </>
