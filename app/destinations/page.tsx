@@ -4,14 +4,14 @@ import "./dist/destinations.css";
 import Image from "next/image";
 
 import destination from "../assets/destination.png";
+import check from "../assets/check.png";
 
-type StaticImageData = string;
 interface Destination {
   id: number;
   name: string;
   continent: string;
   country: string;
-  image: StaticImageData;
+  image: any;
 }
 
 export default function Destinations() {
@@ -315,7 +315,7 @@ export default function Destinations() {
                 <>
                   <div className="destination-selected-overlay flex items-center justify-center">
                     <div className="text-ice text-center poppins-medium">
-                      {"SS"}
+                     <Image src={check} alt="check" />
                     </div>
                   </div>
                 </>
