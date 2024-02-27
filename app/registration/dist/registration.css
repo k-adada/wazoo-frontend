@@ -45,6 +45,10 @@
   transition: 0.3s;
   color: rgba(236, 236, 236, 0.4);
 }
+.multiselect .MuiButtonBase-root.MuiChip-root.MuiChip-filled.MuiChip-sizeMedium.MuiChip-colorDefault.MuiChip-deletable.MuiChip-deletableColorDefault.MuiChip-filledDefault.MuiAutocomplete-tag.MuiAutocomplete-tagSizeMedium.mui-o1spff {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ececec;
+}
 .multiselect .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.mui-i4bv87-MuiSvgIcon-root {
   color: #ececec;
 }
