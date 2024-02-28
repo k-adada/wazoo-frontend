@@ -43,7 +43,7 @@ export default function ContinentMultiSelect(props: any) {
           </li>
         )}
         renderInput={(params) => (
-          <TextField {...params} label="Continents" placeholder="Favorites" />
+          <TextField {...params} label="Continents" placeholder="" />
         )}
       />
     </>

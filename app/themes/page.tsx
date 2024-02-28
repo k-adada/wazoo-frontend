@@ -242,7 +242,7 @@ export default function Themes() {
       </div>
 
       {/* themes list */}
-      <div className="grid grid-cols-12 gap-3 w-2/3 mt-6">
+      <div className="grid grid-cols-12 gap-6 w-2/3 mt-6">
         {themes.map((item, index) => {
           return (
             <div
