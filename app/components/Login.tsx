@@ -12,7 +12,7 @@ export default function Login() {
         <div className="">
           <label className="text-ice self-start pt-3 pb-2">Username</label>
           <input
-            className="bg-dark-input text-ice p-4 rounded w-full"
+            className="bg-dark-input text-ice p-4 rounded-lg w-full"
             placeholder="Enter your Username"
             type="text"
           />
@@ -49,7 +49,7 @@ export default function Login() {
         <div className="pt-2">
           <button
             type="submit"
-            className="bg-gold-gradient text-dark-input p-4 w-full rounded"
+            className="bg-gold-gradient text-dark-input p-4 w-full rounded-lg poppins-medium"
           >
             Login
           </button>

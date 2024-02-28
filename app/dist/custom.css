@@ -1,3 +1,11 @@
 .MuiDrawer-root.MuiDrawer-modal.MuiModal-root.mui-1u2w381-MuiModal-root-MuiDrawer-root .mui-4t3x6l-MuiPaper-root-MuiDrawer-paper {
   background-color: #132f3d;
 }
+
+.MuiSvgIcon-root.MuiSvgIcon-fontSizeSmall.mui-ptiqhd-MuiSvgIcon-root {
+  color: #ececec;
+}
+
+.MuiOutlinedInput-notchedOutline.mui-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  border: none;
+}

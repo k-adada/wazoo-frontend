@@ -25,7 +25,7 @@ export default function Register() {
           <div className="md:col-span-1 col-span-2">
             <div className="text-ice py-3">Email</div>
             <input
-              className="bg-dark-input text-ice p-4 rounded w-full"
+              className="bg-dark-input text-ice p-4 rounded-lg w-full"
               placeholder="Enter your Email"
               type="email"
             />
@@ -46,7 +46,7 @@ export default function Register() {
                 <option value="61">61</option>
               </select>
               <input
-                className="bg-dark-input text-ice p-4 rounded w-full ml-3"
+                className="bg-dark-input text-ice p-4 rounded-lg w-full ml-2"
                 placeholder="Enter your Mobile Number"
                 type="number"
               />
@@ -57,7 +57,7 @@ export default function Register() {
           <div className="md:col-span-1 col-span-2">
             <div className="text-ice py-3">Username</div>
             <input
-              className="bg-dark-input text-ice p-4 rounded w-full"
+              className="bg-dark-input text-ice p-4 rounded-lg w-full"
               placeholder="Enter your Username"
               type="text"
             />
@@ -73,7 +73,7 @@ export default function Register() {
           <div className="md:col-span-1 col-span-2">
             <div className="text-ice py-3">Organization Name</div>
             <input
-              className="bg-dark-input text-ice p-4 rounded w-full"
+              className="bg-dark-input text-ice p-4 rounded-lg w-full"
               placeholder="Enter your Organization Name"
               type="text"
             />
@@ -84,9 +84,10 @@ export default function Register() {
             <div className="text-ice py-3">Select Partnership Type</div>
 
             <select
-              className="p-4 bg-dark-input text-ice rounded w-full"
+              className="p-4 bg-dark-input text-ice rounded-lg w-full"
               name=""
               id=""
+              style={{ height: "56px" }}
             >
               <option value="none">none</option>
               <option value="ta">Travel Agency</option>
@@ -98,7 +99,6 @@ export default function Register() {
           <div className="col-span-2">
             <div className="text-ice py-3">Where Are you Based?</div>
             <MultipleSelect options={cities} />
-       
           </div>
 
           {/* Register button */}
@@ -106,7 +106,7 @@ export default function Register() {
             <div className="pt-4 md:w-1/2 w-full m-auto">
               <button
                 type="submit"
-                className="bg-gold-gradient text-dark-input p-4 w-full rounded"
+                className="bg-gold-gradient text-dark-input p-4 w-full rounded-lg poppins-medium"
                 onClick={() => console.log("Register")}
               >
                 Register

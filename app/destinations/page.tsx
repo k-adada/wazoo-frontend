@@ -284,7 +284,7 @@ export default function Destinations() {
       </div>
 
       {/* destinations bar  */}
-      <div className="bg-white py-2 px-4 rounded w-2/3">
+      <div className="bg-white py-2 px-4 rounded-lg w-2/3">
         <div className="flex justify-between items-center">
           {/* title */}
           <div className="f-24 text-darkblue poppins-semibold">
@@ -293,13 +293,13 @@ export default function Destinations() {
 
           {/* country continent */}
           <div className="grid grid-cols-6 w-full">
-            <div className="rounded mx-2 col-span-2 bg-blue">
+            <div className="rounded-lg mx-2 col-span-2 bg-blue">
               <ContinentMultiSelect
                 options={destinations}
                 setFilteredContinents={setFilteredContinents}
               />
             </div>
-            <div className="rounded mx-2 col-span-4 bg-blue">
+            <div className="rounded-lg mx-2 col-span-4 bg-blue">
               <CountryMultiSelect
                 options={destinations}
                 setFilteredCountries={setFilteredCountries}
@@ -310,7 +310,7 @@ export default function Destinations() {
           {/* search */}
           {/* <div className="">
             <input
-              className="bg-lightblue text-darkblue p-3 rounded w-full"
+              className="bg-lightblue text-darkblue p-3 rounded-lg w-full"
               placeholder="Search destinations"
               type="text"
             />
@@ -319,7 +319,7 @@ export default function Destinations() {
       </div>
 
       {/* destinations list */}
-      <div className="grid grid-cols-12 gap-3 w-2/3 mt-6">
+      <div className="grid grid-cols-12 gap-6 w-2/3 mt-6">
         {filteredDestinations.map((item, index) => {
           return (
             <div

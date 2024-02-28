@@ -4,6 +4,8 @@ import "./dist/themes.css";
 import Image from "next/image";
 
 import destination from "../assets/theme.png";
+import searchIconBlack from "../assets/Icon_Search_Black.png";
+
 interface Theme {
   id: number;
   name: string;
@@ -217,18 +219,24 @@ export default function Themes() {
       </div>
 
       {/* themes bar  */}
-      <div className="bg-white py-2 px-4 rounded w-2/3">
-        <div className="flex justify-between items-center">
+      <div className="bg-white py-2 px-4 rounded-lg w-2/3">
+        <div className="row justify-between items-center">
           {/* title */}
-          <div className="f-24 text-darkblue poppins-semibold">Themes</div>
-
+          <div className="col-auto">
+            <div className="f-24 text-darkblue poppins-semibold">Themes</div>
+          </div>
           {/* search */}
-          <div className="">
-            <input
-              className="bg-lightblue text-darkblue p-3 rounded w-full"
-              placeholder="Search themes"
-              type="text"
-            />
+          <div className="col-5">
+            <div className="relative">
+              <div className="search-icon cursor-pointer">
+                <Image src={searchIconBlack} alt="search" />
+              </div>
+              <input
+                className="bg-lightblue text-darkblue pl-[56px] p-3 rounded-lg w-full"
+                placeholder="Search themes"
+                type="text"
+              />
+            </div>
           </div>
         </div>
       </div>
