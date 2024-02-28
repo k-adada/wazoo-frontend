@@ -1,15 +1,31 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
-import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Drawer from "@mui/material/Drawer";
+import Button from "@mui/material/Button";
+import List from "@mui/material/List";
+import Divider from "@mui/material/Divider";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+
+// collapsables
+import Collapse from "@mui/material/Collapse";
+import ExpandLess from "@mui/icons-material/ExpandLess";
+import ExpandMore from "@mui/icons-material/ExpandMore";
+import StarBorder from "@mui/icons-material/StarBorder";
+
+// icons import
+import dashboardIcon from "../assets/Icon_Home.png";
+import servicesIcon from "../assets/Icon_My_Services.png";
+import communityIcon from "../assets/Icon_Audience.png";
+import requestsIcon from "../assets/Icon_Request.png";
+import tripsIcon from "../assets/Icon_Plane.png";
+import calendarIcon from "../assets/Icon_Calendar.png";
+import financesIcon from "../assets/Icon_Finance.png";
+import accountIcon from "../assets/Icon_My_Account.png";
+
+import Image from "next/image";
 
 export default function LeftDrawerDMC() {
   const [open, setOpen] = React.useState(false);
@@ -18,33 +34,245 @@ export default function LeftDrawerDMC() {
     setOpen(newOpen);
   };
 
+  const [openServices, setOpenServices] = React.useState(false);
+  const [openCommunity, setOpenCommunity] = React.useState(false);
+  const [openFinances, setOpenFinances] = React.useState(false);
+  const [openAccount, setOpenAccount] = React.useState(false);
+
+  const handleCollapse = (collapsable: string) => {
+    switch (collapsable) {
+      case "services":
+        setOpenServices(!openServices);
+        break;
+      case "community":
+        setOpenCommunity(!openCommunity);
+        break;
+      case "finances":
+        setOpenFinances(!openFinances);
+        break;
+      case "account":
+        setOpenAccount(!openAccount);
+        break;
+      default:
+        break;
+    }
+  };
+
   const DrawerList = (
-    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
+    <Box
+      sx={{ width: 280, bgcolor: "#132F3D", color: "#FDDFBB" }}
+      role="presentation"
+      onClick={toggleDrawer(false)}
+    >
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
+        {/* Dashboard  */}
+        <ListItem key={"Dashboard"} disablePadding>
+          <ListItemButton>
+            <ListItemIcon>
+              <Image
+                src={dashboardIcon}
+                alt="Dashboard Icon"
+                width={24}
+                height={24}
+              />
+            </ListItemIcon>
+            <ListItemText primary={"Dashboard"} />
+          </ListItemButton>
+        </ListItem>
+
+        {/* My Services  */}
+        <ListItem key={"My Services"} disablePadding>
+          <ListItemButton
+            onClick={(e) => {
+              e.stopPropagation();
+              handleCollapse("services");
+            }}
+          >
+            <ListItemIcon>
+              <Image
+                src={servicesIcon}
+                alt="My Services Icon"
+                width={24}
+                height={24}
+              />
+            </ListItemIcon>
+            <ListItemText primary="My Services" />
+            {openServices ? <ExpandLess /> : <ExpandMore />}
+          </ListItemButton>
+        </ListItem>
+        <Collapse in={openServices} timeout="auto" unmountOnExit>
+          <List component="div" disablePadding>
+            <ListItemButton sx={{ pl: 4 }}>
+              <ListItemIcon>{/* <StarBorder /> */}</ListItemIcon>
+              <ListItemText primary="&bull;&nbsp; Inside Dashboard 1" />
+              {">"}
             </ListItemButton>
-          </ListItem>
-        ))}
+            <ListItemButton sx={{ pl: 4 }}>
+              <ListItemIcon>
+                <StarBorder />
+              </ListItemIcon>
+              <ListItemText primary="&bull;&nbsp; Inside Dashboard 2" />
+            </ListItemButton>
+          </List>
+        </Collapse>
+
+        {/* Community  */}
+        <ListItem key={"Community"} disablePadding>
+          <ListItemButton
+            onClick={(e) => {
+              e.stopPropagation();
+              handleCollapse("community");
+            }}
+          >
+            <ListItemIcon>
+              <Image
+                src={communityIcon}
+                alt="Community Icon"
+                width={24}
+                height={24}
+              />
+            </ListItemIcon>
+            <ListItemText primary="Community" />
+            {openCommunity ? <ExpandLess /> : <ExpandMore />}
+          </ListItemButton>
+        </ListItem>
+        <Collapse in={openCommunity} timeout="auto" unmountOnExit>
+          <List component="div" disablePadding>
+            <ListItemButton sx={{ pl: 4 }}>
+              <ListItemIcon>
+                <StarBorder />
+              </ListItemIcon>
+              <ListItemText primary="Inside Dashboard 1" />
+            </ListItemButton>
+            <ListItemButton sx={{ pl: 4 }}>
+              <ListItemIcon>
+                <StarBorder />
+              </ListItemIcon>
+              <ListItemText primary="Inside Dashboard 2" />
+            </ListItemButton>
+          </List>
+        </Collapse>
+
+        {/* Requests  */}
+        <ListItem key={"Requests"} disablePadding>
+          <ListItemButton>
+            <ListItemIcon>
+              <Image
+                src={requestsIcon}
+                alt="Requests Icon"
+                width={24}
+                height={24}
+              />
+            </ListItemIcon>
+            <ListItemText primary={"Requests"} />
+          </ListItemButton>
+        </ListItem>
+
+        {/* My Trips  */}
+        <ListItem key={"My Trips"} disablePadding>
+          <ListItemButton>
+            <ListItemIcon>
+              <Image
+                src={tripsIcon}
+                alt="My Trips Icon"
+                width={24}
+                height={24}
+              />
+            </ListItemIcon>
+            <ListItemText primary={"My Trips"} />
+          </ListItemButton>
+        </ListItem>
+
+        {/* My Calendar  */}
+        <ListItem key={"My Calendar"} disablePadding>
+          <ListItemButton>
+            <ListItemIcon>
+              <Image
+                src={calendarIcon}
+                alt="My Calendar Icon"
+                width={24}
+                height={24}
+              />
+            </ListItemIcon>
+            <ListItemText primary={"My Calendar"} />
+          </ListItemButton>
+        </ListItem>
+
+        {/* Finances  */}
+        <ListItem key={"Finances"} disablePadding>
+          <ListItemButton
+            onClick={(e) => {
+              e.stopPropagation();
+              handleCollapse("finances");
+            }}
+          >
+            <ListItemIcon>
+              <Image
+                src={financesIcon}
+                alt="Finances Icon"
+                width={24}
+                height={24}
+              />
+            </ListItemIcon>
+            <ListItemText primary="Finances" />
+            {openFinances ? <ExpandLess /> : <ExpandMore />}
+          </ListItemButton>
+        </ListItem>
+        <Collapse in={openFinances} timeout="auto" unmountOnExit>
+          <List component="div" disablePadding>
+            <ListItemButton sx={{ pl: 4 }}>
+              <ListItemIcon>
+                <StarBorder />
+              </ListItemIcon>
+              <ListItemText primary="Inside Dashboard 1" />
+            </ListItemButton>
+            <ListItemButton sx={{ pl: 4 }}>
+              <ListItemIcon>
+                <StarBorder />
+              </ListItemIcon>
+              <ListItemText primary="Inside Dashboard 2" />
+            </ListItemButton>
+          </List>
+        </Collapse>
+
+        {/* Account  */}
+        <ListItem key={"Account"} disablePadding>
+          <ListItemButton
+            onClick={(e) => {
+              e.stopPropagation();
+              handleCollapse("account");
+            }}
+          >
+            <ListItemIcon>
+              <Image
+                src={accountIcon}
+                alt="Account Icon"
+                width={24}
+                height={24}
+              />
+            </ListItemIcon>
+            <ListItemText primary="Account" />
+            {openAccount ? <ExpandLess /> : <ExpandMore />}
+          </ListItemButton>
+        </ListItem>
+        <Collapse in={openAccount} timeout="auto" unmountOnExit>
+          <List component="div" disablePadding>
+            <ListItemButton sx={{ pl: 4 }}>
+              <ListItemIcon>
+                <StarBorder />
+              </ListItemIcon>
+              <ListItemText primary="Inside Dashboard 1" />
+            </ListItemButton>
+            <ListItemButton sx={{ pl: 4 }}>
+              <ListItemIcon>
+                <StarBorder />
+              </ListItemIcon>
+              <ListItemText primary="Inside Dashboard 2" />
+            </ListItemButton>
+          </List>
+        </Collapse>
       </List>
       <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
     </Box>
   );
 

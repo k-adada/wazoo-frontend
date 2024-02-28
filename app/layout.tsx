@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Head from "next/head";
 import "./globals.css";
 import "./dist/app.css";
+import "./dist/custom.css";
 import "./dist/bootstrap-grid.css";
 import { Providers } from "./providers";
 
