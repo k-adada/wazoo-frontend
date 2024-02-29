@@ -24,6 +24,8 @@ import tripsIcon from "../assets/Icon_Plane.png";
 import calendarIcon from "../assets/Icon_Calendar.png";
 import financesIcon from "../assets/Icon_Finance.png";
 import accountIcon from "../assets/Icon_My_Account.png";
+import navIcon from "../assets/Icon_Nav_Menu.png";
+import closeIcon from "../assets/Icon_Nav_Close.png";
 
 import Image from "next/image";
 
@@ -64,213 +66,243 @@ export default function LeftDrawerDMC() {
       role="presentation"
       onClick={toggleDrawer(false)}
     >
+      <div className="absolute top-3 right-3 cursor-pointer">
+        <Image src={closeIcon} alt="Close Icon" width={15} />
+      </div>
+      <div className="f-32 text-gold py-[50px] text-center">Luxury Travel</div>
       <List>
         {/* Dashboard  */}
-        <ListItem key={"Dashboard"} disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              <Image
-                src={dashboardIcon}
-                alt="Dashboard Icon"
-                width={24}
-                height={24}
-              />
-            </ListItemIcon>
-            <ListItemText primary={"Dashboard"} />
-          </ListItemButton>
-        </ListItem>
+        <div className="py-2">
+          <ListItem key={"Dashboard"} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <Image
+                  src={dashboardIcon}
+                  alt="Dashboard Icon"
+                  width={24}
+                  height={24}
+                />
+              </ListItemIcon>
+              <ListItemText primary={"Dashboard"} />
+            </ListItemButton>
+          </ListItem>
+        </div>
 
         {/* My Services  */}
-        <ListItem key={"My Services"} disablePadding>
-          <ListItemButton
-            onClick={(e) => {
-              e.stopPropagation();
-              handleCollapse("services");
-            }}
-          >
-            <ListItemIcon>
-              <Image
-                src={servicesIcon}
-                alt="My Services Icon"
-                width={24}
-                height={24}
-              />
-            </ListItemIcon>
-            <ListItemText primary="My Services" />
-            {openServices ? <ExpandLess /> : <ExpandMore />}
-          </ListItemButton>
-        </ListItem>
-        <Collapse in={openServices} timeout="auto" unmountOnExit>
-          <List component="div" disablePadding>
-            <ListItemButton sx={{ pl: 4 }}>
-              <ListItemIcon>{/* <StarBorder /> */}</ListItemIcon>
-              <ListItemText primary="&bull;&nbsp; Inside Dashboard 1" />
-              {">"}
-            </ListItemButton>
-            <ListItemButton sx={{ pl: 4 }}>
+        <div className="py-2">
+          <ListItem key={"My Services"} disablePadding>
+            <ListItemButton
+              onClick={(e) => {
+                e.stopPropagation();
+                handleCollapse("services");
+              }}
+            >
               <ListItemIcon>
-                <StarBorder />
+                <Image
+                  src={servicesIcon}
+                  alt="My Services Icon"
+                  width={24}
+                  height={24}
+                />
               </ListItemIcon>
-              <ListItemText primary="&bull;&nbsp; Inside Dashboard 2" />
+              <ListItemText primary="My Services" />
+              {openServices ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
-          </List>
-        </Collapse>
+          </ListItem>
+          <Collapse in={openServices} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItemButton sx={{ pl: 4 }}>
+                <ListItemIcon>{/* <StarBorder /> */}</ListItemIcon>
+                <ListItemText primary="&bull;&nbsp; Services" />
+                {">"}
+              </ListItemButton>
+              <ListItemButton sx={{ pl: 4 }}>
+                <ListItemIcon>{/* <StarBorder /> */}</ListItemIcon>
+                <ListItemText primary="&bull;&nbsp; Itineraries" />
+                {">"}
+              </ListItemButton>
+              <ListItemButton sx={{ pl: 4 }}>
+                <ListItemIcon>{/* <StarBorder /> */}</ListItemIcon>
+                <ListItemText primary="&bull;&nbsp; Catalogues" />
+                {">"}
+              </ListItemButton>
+            </List>
+          </Collapse>
+        </div>
 
         {/* Community  */}
-        <ListItem key={"Community"} disablePadding>
-          <ListItemButton
-            onClick={(e) => {
-              e.stopPropagation();
-              handleCollapse("community");
-            }}
-          >
-            <ListItemIcon>
-              <Image
-                src={communityIcon}
-                alt="Community Icon"
-                width={24}
-                height={24}
-              />
-            </ListItemIcon>
-            <ListItemText primary="Community" />
-            {openCommunity ? <ExpandLess /> : <ExpandMore />}
-          </ListItemButton>
-        </ListItem>
-        <Collapse in={openCommunity} timeout="auto" unmountOnExit>
-          <List component="div" disablePadding>
-            <ListItemButton sx={{ pl: 4 }}>
+        <div className="py-2">
+          <ListItem key={"Community"} disablePadding>
+            <ListItemButton
+              onClick={(e) => {
+                e.stopPropagation();
+                handleCollapse("community");
+              }}
+            >
               <ListItemIcon>
-                <StarBorder />
+                <Image
+                  src={communityIcon}
+                  alt="Community Icon"
+                  width={24}
+                  height={24}
+                />
               </ListItemIcon>
-              <ListItemText primary="Inside Dashboard 1" />
+              <ListItemText primary="Community" />
+              {openCommunity ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
-            <ListItemButton sx={{ pl: 4 }}>
-              <ListItemIcon>
-                <StarBorder />
-              </ListItemIcon>
-              <ListItemText primary="Inside Dashboard 2" />
-            </ListItemButton>
-          </List>
-        </Collapse>
+          </ListItem>
+          <Collapse in={openCommunity} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItemButton sx={{ pl: 4 }}>
+                <ListItemIcon>{/* <StarBorder /> */}</ListItemIcon>
+                <ListItemText primary="&bull;&nbsp; Service Providers" />
+                {">"}
+              </ListItemButton>
+              <ListItemButton sx={{ pl: 4 }}>
+                <ListItemIcon>{/* <StarBorder /> */}</ListItemIcon>
+                <ListItemText primary="&bull;&nbsp; Audiences" />
+                {">"}
+              </ListItemButton>
+              <ListItemButton sx={{ pl: 4 }}>
+                <ListItemIcon>{/* <StarBorder /> */}</ListItemIcon>
+                <ListItemText primary="&bull;&nbsp; My Listings" />
+                {">"}
+              </ListItemButton>
+            </List>
+          </Collapse>
+        </div>
 
         {/* Requests  */}
-        <ListItem key={"Requests"} disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              <Image
-                src={requestsIcon}
-                alt="Requests Icon"
-                width={24}
-                height={24}
-              />
-            </ListItemIcon>
-            <ListItemText primary={"Requests"} />
-          </ListItemButton>
-        </ListItem>
+        <div className="py-2">
+          <ListItem key={"Requests"} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <Image
+                  src={requestsIcon}
+                  alt="Requests Icon"
+                  width={24}
+                  height={24}
+                />
+              </ListItemIcon>
+              <ListItemText primary={"Requests"} />
+            </ListItemButton>
+          </ListItem>
+        </div>
 
         {/* My Trips  */}
-        <ListItem key={"My Trips"} disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              <Image
-                src={tripsIcon}
-                alt="My Trips Icon"
-                width={24}
-                height={24}
-              />
-            </ListItemIcon>
-            <ListItemText primary={"My Trips"} />
-          </ListItemButton>
-        </ListItem>
+        <div className="py-2">
+          <ListItem key={"My Trips"} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <Image
+                  src={tripsIcon}
+                  alt="My Trips Icon"
+                  width={24}
+                  height={24}
+                />
+              </ListItemIcon>
+              <ListItemText primary={"My Trips"} />
+            </ListItemButton>
+          </ListItem>
+        </div>
 
         {/* My Calendar  */}
-        <ListItem key={"My Calendar"} disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              <Image
-                src={calendarIcon}
-                alt="My Calendar Icon"
-                width={24}
-                height={24}
-              />
-            </ListItemIcon>
-            <ListItemText primary={"My Calendar"} />
-          </ListItemButton>
-        </ListItem>
+        <div className="py-2">
+          <ListItem key={"My Calendar"} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <Image
+                  src={calendarIcon}
+                  alt="My Calendar Icon"
+                  width={24}
+                  height={24}
+                />
+              </ListItemIcon>
+              <ListItemText primary={"My Calendar"} />
+            </ListItemButton>
+          </ListItem>
+        </div>
 
         {/* Finances  */}
-        <ListItem key={"Finances"} disablePadding>
-          <ListItemButton
-            onClick={(e) => {
-              e.stopPropagation();
-              handleCollapse("finances");
-            }}
-          >
-            <ListItemIcon>
-              <Image
-                src={financesIcon}
-                alt="Finances Icon"
-                width={24}
-                height={24}
-              />
-            </ListItemIcon>
-            <ListItemText primary="Finances" />
-            {openFinances ? <ExpandLess /> : <ExpandMore />}
-          </ListItemButton>
-        </ListItem>
-        <Collapse in={openFinances} timeout="auto" unmountOnExit>
-          <List component="div" disablePadding>
-            <ListItemButton sx={{ pl: 4 }}>
+        <div className="py-2">
+          <ListItem key={"Finances"} disablePadding>
+            <ListItemButton
+              onClick={(e) => {
+                e.stopPropagation();
+                handleCollapse("finances");
+              }}
+            >
               <ListItemIcon>
-                <StarBorder />
+                <Image
+                  src={financesIcon}
+                  alt="Finances Icon"
+                  width={24}
+                  height={24}
+                />
               </ListItemIcon>
-              <ListItemText primary="Inside Dashboard 1" />
+              <ListItemText primary="Finances" />
+              {openFinances ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
-            <ListItemButton sx={{ pl: 4 }}>
-              <ListItemIcon>
-                <StarBorder />
-              </ListItemIcon>
-              <ListItemText primary="Inside Dashboard 2" />
-            </ListItemButton>
-          </List>
-        </Collapse>
+          </ListItem>
+          <Collapse in={openFinances} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItemButton sx={{ pl: 4 }}>
+                <ListItemIcon>{/* <StarBorder /> */}</ListItemIcon>
+                <ListItemText primary="&bull;&nbsp; Payables" />
+                {">"}
+              </ListItemButton>
+              <ListItemButton sx={{ pl: 4 }}>
+                <ListItemIcon>{/* <StarBorder /> */}</ListItemIcon>
+                <ListItemText primary="&bull;&nbsp; Receivables" />
+                {">"}
+              </ListItemButton>
+              <ListItemButton sx={{ pl: 4 }}>
+                <ListItemIcon>{/* <StarBorder /> */}</ListItemIcon>
+                <ListItemText primary="&bull;&nbsp; Transactions" />
+                {">"}
+              </ListItemButton>
+            </List>
+          </Collapse>
+        </div>
 
         {/* Account  */}
-        <ListItem key={"Account"} disablePadding>
-          <ListItemButton
-            onClick={(e) => {
-              e.stopPropagation();
-              handleCollapse("account");
-            }}
-          >
-            <ListItemIcon>
-              <Image
-                src={accountIcon}
-                alt="Account Icon"
-                width={24}
-                height={24}
-              />
-            </ListItemIcon>
-            <ListItemText primary="Account" />
-            {openAccount ? <ExpandLess /> : <ExpandMore />}
-          </ListItemButton>
-        </ListItem>
-        <Collapse in={openAccount} timeout="auto" unmountOnExit>
-          <List component="div" disablePadding>
-            <ListItemButton sx={{ pl: 4 }}>
+        <div className="py-2">
+          <ListItem key={"Account"} disablePadding>
+            <ListItemButton
+              onClick={(e) => {
+                e.stopPropagation();
+                handleCollapse("account");
+              }}
+            >
               <ListItemIcon>
-                <StarBorder />
+                <Image
+                  src={accountIcon}
+                  alt="Account Icon"
+                  width={24}
+                  height={24}
+                />
               </ListItemIcon>
-              <ListItemText primary="Inside Dashboard 1" />
+              <ListItemText primary="Account" />
+              {openAccount ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
-            <ListItemButton sx={{ pl: 4 }}>
-              <ListItemIcon>
-                <StarBorder />
-              </ListItemIcon>
-              <ListItemText primary="Inside Dashboard 2" />
-            </ListItemButton>
-          </List>
-        </Collapse>
+          </ListItem>
+          <Collapse in={openAccount} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItemButton sx={{ pl: 4 }}>
+                <ListItemIcon>
+                  <StarBorder />
+                </ListItemIcon>
+                <ListItemText primary="Inside Dashboard 1" />
+              </ListItemButton>
+              <ListItemButton sx={{ pl: 4 }}>
+                <ListItemIcon>
+                  <StarBorder />
+                </ListItemIcon>
+                <ListItemText primary="Inside Dashboard 2" />
+              </ListItemButton>
+            </List>
+          </Collapse>
+        </div>
       </List>
       <Divider />
     </Box>
@@ -278,7 +310,9 @@ export default function LeftDrawerDMC() {
 
   return (
     <div>
-      <Button onClick={toggleDrawer(true)}>Open drawer</Button>
+      <Button onClick={toggleDrawer(true)}>
+        <Image src={navIcon} alt="Navbar Icon" />
+      </Button>
       <Drawer open={open} onClose={toggleDrawer(false)}>
         {DrawerList}
       </Drawer>
