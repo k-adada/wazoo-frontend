@@ -8,7 +8,7 @@ import notificationIcon from "../assets/Icon_Notification_Received.png";
 import avatarIcon from "../assets/avatar.png";
 import addIcon from "../assets/Icon_Add.png";
 
-export default function Destinations() {
+export default function DmcDashboard() {
   return (
     <main className="flex min-h-screen flex-col items-center p-md-24 p-3 bg-lightblue pb-[100px]">
       <div className="container-fluid">

@@ -222,6 +222,10 @@ input::placeholder {
   color: #a4a4a4;
 }
 
+.text-orange {
+  color: #ff8961;
+}
+
 .text-lightblue {
   color: #c6deea;
 }
