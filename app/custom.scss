@@ -9,7 +9,7 @@
   &:hover {
     background-color: #0d222d;
     transition: 0.3s;
-    margin-top: -4px;
+    transform: translateY(-4px);
   }
 }
 
@@ -34,10 +34,16 @@
     display: none;
   }
 }
+
+// offline drawer
 .MuiDrawer-root.MuiDrawer-modal.MuiModal-root.mui-1u2w381-MuiModal-root-MuiDrawer-root {
   .mui-4t3x6l-MuiPaper-root-MuiDrawer-paper {
     background-color: #132f3d;
   }
+}
+// online drawer
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation16.MuiDrawer-paper.MuiDrawer-paperAnchorLeft.mui-wf16b5 {
+  background-color: #132f3d;
 }
 
 .MuiSvgIcon-root.MuiSvgIcon-fontSizeSmall.mui-ptiqhd-MuiSvgIcon-root {
