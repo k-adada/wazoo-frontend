@@ -265,7 +265,7 @@ export default function Themes() {
 
       {/* next button */}
       <div className="w-full bottom-fixed text-center">
-        <button className="bg-gold-gradient text-dark-input p-3 w-1/4 rounded">
+        <button className="bg-gold-gradient text-dark-input p-3 w-1/4 rounded poppins-medium">
           Next
         </button>
       </div>
