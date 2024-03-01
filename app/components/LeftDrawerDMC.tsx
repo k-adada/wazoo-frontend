@@ -28,6 +28,7 @@ import navIcon from "../assets/Icon_Nav_Menu.png";
 import closeIcon from "../assets/Icon_Nav_Close.png";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function LeftDrawerDMC() {
   const [open, setOpen] = React.useState(false);
@@ -69,22 +70,28 @@ export default function LeftDrawerDMC() {
       <div className="absolute top-3 right-3 cursor-pointer">
         <Image src={closeIcon} alt="Close Icon" width={15} />
       </div>
-      <div className="f-32 text-gold py-[50px] text-center">Luxury Travel</div>
+      <Link href="/dmc-dashboard">
+        <div className="f-32 text-gold py-[50px] text-center">
+          Luxury Travel
+        </div>
+      </Link>
       <List>
         {/* Dashboard  */}
         <div className="py-2">
           <ListItem key={"Dashboard"} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <Image
-                  src={dashboardIcon}
-                  alt="Dashboard Icon"
-                  width={24}
-                  height={24}
-                />
-              </ListItemIcon>
-              <ListItemText primary={"Dashboard"} />
-            </ListItemButton>
+            <Link href="/dmc-dashboard">
+              <ListItemButton>
+                <ListItemIcon>
+                  <Image
+                    src={dashboardIcon}
+                    alt="Dashboard Icon"
+                    width={24}
+                    height={24}
+                  />
+                </ListItemIcon>
+                <ListItemText primary={"Dashboard"} />
+              </ListItemButton>
+            </Link>
           </ListItem>
         </div>
 
@@ -111,11 +118,13 @@ export default function LeftDrawerDMC() {
           </ListItem>
           <Collapse in={openServices} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon>{/* <StarBorder /> */}</ListItemIcon>
-                <ListItemText primary="&bull;&nbsp; Services" />
-                {">"}
-              </ListItemButton>
+              <Link href="/create-services">
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemIcon>{/* <StarBorder /> */}</ListItemIcon>
+                  <ListItemText primary="&bull;&nbsp; Services" />
+                  {">"}
+                </ListItemButton>
+              </Link>
               <ListItemButton sx={{ pl: 4 }}>
                 <ListItemIcon>{/* <StarBorder /> */}</ListItemIcon>
                 <ListItemText primary="&bull;&nbsp; Itineraries" />

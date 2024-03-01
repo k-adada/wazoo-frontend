@@ -7,6 +7,7 @@ import Image from "next/image";
 import notificationIcon from "../assets/Icon_Notification_Received.png";
 import avatarIcon from "../assets/avatar.png";
 import addIcon from "../assets/Icon_Add.png";
+import Link from "next/link";
 
 export default function DmcDashboard() {
   return (
@@ -45,12 +46,14 @@ export default function DmcDashboard() {
           </div>
 
           <div className="col-auto">
-            <div className="dark-button text-gold poppins-medium cursor-pointer">
-              <div className="flex items-center h-full">
-                <Image src={addIcon} alt="add" />
-                <div className="pl-4">Create Services</div>
+            <Link href="/create-services">
+              <div className="dark-button text-gold poppins-medium cursor-pointer">
+                <div className="flex items-center h-full">
+                  <Image src={addIcon} alt="add" />
+                  <div className="pl-4">Create Services</div>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
           <div className="col-auto">
             <div className="dark-button text-gold poppins-medium cursor-pointer">

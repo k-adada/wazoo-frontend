@@ -5,6 +5,7 @@ import Image from "next/image";
 
 import destination from "../assets/theme.png";
 import searchIconBlack from "../assets/Icon_Search_Black.png";
+import Link from "next/link";
 
 interface Theme {
   id: number;
@@ -265,9 +266,11 @@ export default function Themes() {
 
       {/* next button */}
       <div className="w-full bottom-fixed text-center">
-        <button className="bg-gold-gradient text-dark-input p-3 w-1/4 rounded-lg poppins-medium">
-          Next
-        </button>
+        <Link href="/dmc-dashboard">
+          <button className="bg-gold-gradient text-dark-input p-3 w-1/4 rounded-lg poppins-medium">
+            Next
+          </button>
+        </Link>
       </div>
     </main>
   );

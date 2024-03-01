@@ -7,6 +7,7 @@ import destination from "../assets/destination.png";
 import check from "../assets/check.png";
 import CountryMultiSelect from "../components/CountryMultiSelect";
 import ContinentMultiSelect from "../components/ContinentMultiSelect";
+import Link from "next/link";
 
 interface Destination {
   id: number;
@@ -238,13 +239,11 @@ export default function Destinations() {
     Destination[]
   >([]);
 
-  const [filteredCountries, setFilteredCountries] = useState<
-    Destination[]
-  >([]);
+  const [filteredCountries, setFilteredCountries] = useState<Destination[]>([]);
 
-  const [filteredContinents, setFilteredContinents] = useState<
-    Destination[]
-  >([]);
+  const [filteredContinents, setFilteredContinents] = useState<Destination[]>(
+    []
+  );
 
   const filterDestinations = (
     allDestinations: Destination[]
@@ -371,9 +370,11 @@ export default function Destinations() {
 
       {/* next button */}
       <div className="w-full bottom-fixed text-center">
-        <button className="bg-gold-gradient text-dark-input p-3 w-1/4 rounded-lg poppins-medium">
-          Next
-        </button>
+        <Link href="/themes">
+          <button className="bg-gold-gradient text-dark-input p-3 w-1/4 rounded-lg poppins-medium">
+            Next
+          </button>
+        </Link>
       </div>
     </main>
   );

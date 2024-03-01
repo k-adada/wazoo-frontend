@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import PasswordInput from "./Password";
 import MultipleSelect from "./MultipleSelect";
+import Link from "next/link";
 
 export default function Register() {
   const [cities, setCities] = useState([
@@ -104,13 +105,15 @@ export default function Register() {
           {/* Register button */}
           <div className="col-span-2">
             <div className="pt-4 md:w-1/2 w-full m-auto">
-              <button
-                type="submit"
-                className="bg-gold-gradient text-dark-input p-4 w-full rounded-lg poppins-medium"
-                onClick={() => console.log("Register")}
-              >
-                Register
-              </button>
+              <Link href="/destinations">
+                <button
+                  type="submit"
+                  className="bg-gold-gradient text-dark-input p-4 w-full rounded-lg poppins-medium"
+                  onClick={() => console.log("Register")}
+                >
+                  Register
+                </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,10 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import PasswordInput from "./Password";
-
+import Link from "next/link";
 
 export default function Login() {
-
   return (
     <>
       <div className="">
@@ -21,7 +20,7 @@ export default function Login() {
         {/* password */}
         <div className="password">
           <div className="text-ice self-start pt-3 pb-2">Password</div>
-   
+
           <PasswordInput />
         </div>
 
@@ -47,12 +46,14 @@ export default function Login() {
 
         {/* login button */}
         <div className="pt-2">
-          <button
-            type="submit"
-            className="bg-gold-gradient text-dark-input p-4 w-full rounded-lg poppins-medium"
-          >
-            Login
-          </button>
+          <Link href="/dmc-dashboard">
+            <button
+              type="submit"
+              className="bg-gold-gradient text-dark-input p-4 w-full rounded-lg poppins-medium"
+            >
+              Login
+            </button>
+          </Link>
         </div>
       </div>
     </>
