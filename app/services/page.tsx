@@ -11,8 +11,10 @@ import addIcon from "../assets/Icon_Add.png";
 import backIcon from "../assets/Icon_Back.png";
 import serviceEmptyIcon from "../assets/services_empty.png";
 import Link from "next/link";
+import ServicesTable from "../components/ServicesTable";
 
 export default function CreateServices() {
+  const [services, setServices] = useState([1]);
   return (
     <main className="flex min-h-screen flex-col items-center p-md-24 p-3 bg-lightblue pb-[100px]">
       <div className="container-fluid">
@@ -57,33 +59,44 @@ export default function CreateServices() {
             </div>
           </div>
         </div>
-
-        <div className="row h-full items-center justify-center">
-          <div className="col-12">
-            <div className="text-center">
-              <Image
-                className="m-auto"
-                src={serviceEmptyIcon}
-                alt="serviceEmptyIcon"
-              />
-              <div className="f-48 text-darkblue poppins-medium">
-                Your List is Empty
-              </div>
-              <div className="f-24 text-grey">Start adding your services</div>
+        {services.length > 0 ? (
+          <div className="row">
+            <div className="col-12">
+              <ServicesTable />
             </div>
           </div>
-
-          <div className="col-auto pt-[64px]">
-            <Link href="/create-services">
-              <div className="dark-button text-gold poppins-medium cursor-pointer">
-                <div className="flex items-center h-full">
-                  <Image src={addIcon} alt="add icon" />
-                  <div className="pl-4">Add Service</div>
+        ) : (
+          <>
+            <div className="row items-center justify-center">
+              <div className="col-12">
+                <div className="text-center">
+                  <Image
+                    className="m-auto"
+                    src={serviceEmptyIcon}
+                    alt="serviceEmptyIcon"
+                  />
+                  <div className="f-48 text-darkblue poppins-medium">
+                    Your List is Empty
+                  </div>
+                  <div className="f-24 text-grey">
+                    Start adding your services
+                  </div>
                 </div>
               </div>
-            </Link>
-          </div>
-        </div>
+
+              <div className="col-auto pt-[64px]">
+                <Link href="/create-services">
+                  <div className="dark-button text-gold poppins-medium cursor-pointer">
+                    <div className="flex items-center h-full">
+                      <Image src={addIcon} alt="add icon" />
+                      <div className="pl-4">Add Service</div>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </main>
   );
