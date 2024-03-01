@@ -15,3 +15,31 @@
   height: 44px;
   background-color: #39ae6c;
 }
+
+.day .day-time {
+  height: 56px;
+  transition: 0.3s ease-in-out;
+  opacity: 0.4;
+}
+.day .day-time input {
+  padding: 0 2px;
+  border-radius: 8px;
+}
+.day .day-name {
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.day .day-name:hover {
+  transition: 0.3s ease-in-out;
+  background-color: #c7d4db;
+  border-radius: 20px;
+}
+.day.active .day-time {
+  transition: 0.3s ease-in-out;
+  opacity: 1;
+}
+.day.active .day-name {
+  transition: 0.3s ease-in-out;
+  background-color: #c7d4db;
+  border-radius: 20px;
+}

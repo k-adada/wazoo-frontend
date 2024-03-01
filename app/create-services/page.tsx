@@ -10,10 +10,12 @@ import CircularProgress from "@mui/material/CircularProgress";
 import notificationIcon from "../assets/Icon_Notification_Received.png";
 import avatarIcon from "../assets/avatar.png";
 import addIcon from "../assets/Icon_Add.png";
+import saveIcon from "../assets/Icon_Save.png";
 import backIcon from "../assets/Icon_Back.png";
 import uploadIcon from "../assets/upload_icon.png";
 import themeIcon from "../assets/theme.png";
 import dotsIcon from "../assets/dots_icon.png";
+import AvailabilityTimes from "../components/AvailabilityTimes";
 
 export default function CreateServices() {
   const [progress, setProgress] = React.useState(0);
@@ -80,7 +82,7 @@ export default function CreateServices() {
             <div className="row">
               {/* service name  */}
               <div className="col-6">
-                <div className="text-darkblue">
+                <div className="text-darkblue pb-2">
                   Service Name <span className="text-orange">*</span>
                 </div>
                 <div className="light-input">
@@ -93,7 +95,7 @@ export default function CreateServices() {
               </div>
               {/* location  */}
               <div className="col-6">
-                <div className="text-darkblue">
+                <div className="text-darkblue pb-2">
                   Location <span className="text-orange">*</span>
                 </div>
                 <div className="light-input">
@@ -106,7 +108,7 @@ export default function CreateServices() {
               </div>
               {/* select category  */}
               <div className="col-12">
-                <div className="text-darkblue pt-3">
+                <div className="text-darkblue pb-2 pt-8">
                   Select Category<span className="text-orange">*</span>
                 </div>
                 <div className="remove-mui-label">
@@ -122,7 +124,7 @@ export default function CreateServices() {
               </div>
               {/* type  */}
               <div className="col-6">
-                <div className="text-darkblue pt-3">
+                <div className="text-darkblue pb-2 pt-8">
                   Select Type <span className="text-orange">*</span>
                 </div>
                 <div className="light-input">
@@ -140,7 +142,7 @@ export default function CreateServices() {
               </div>
               {/* subtype  */}
               <div className="col-6">
-                <div className="text-darkblue pt-3">
+                <div className="text-darkblue pb-2 pt-8">
                   Select Subtype <span className="text-orange">*</span>
                 </div>
                 <div className="light-input">
@@ -158,7 +160,7 @@ export default function CreateServices() {
               </div>
               {/* validity dates */}
               <div className="col-6">
-                <div className="text-darkblue pt-3">
+                <div className="text-darkblue pt-8">
                   Validity Dates<span className="text-orange">*</span>
                 </div>
                 <div className="validity-dates">
@@ -167,7 +169,7 @@ export default function CreateServices() {
               </div>
               {/* duration  */}
               <div className="col-6">
-                <div className="text-darkblue">
+                <div className="text-darkblue pb-2 pt-8">
                   Duration <span className="text-orange">*</span>
                 </div>
                 <div className="light-input">
@@ -179,13 +181,14 @@ export default function CreateServices() {
                 </div>
               </div>
 
+              {/* AvailabilityTimes */}
               <div className="col-12">
-               
+                <AvailabilityTimes />
               </div>
 
               {/* select service provider  */}
               <div className="col-6">
-                <div className="text-darkblue pt-3">
+                <div className="text-darkblue pb-2 pt-8">
                   Select Service Provider <span className="text-orange">*</span>
                 </div>
                 <div className="light-input">
@@ -204,7 +207,7 @@ export default function CreateServices() {
 
               {/* service provider phone number  */}
               <div className="col-6">
-                <div className="text-darkblue">
+                <div className="text-darkblue pt-8 pb-2">
                   Service Provider Phone Number
                 </div>
                 <div className="light-input">
@@ -218,7 +221,7 @@ export default function CreateServices() {
 
               {/* service provider Price  */}
               <div className="col-6">
-                <div className="text-darkblue">
+                <div className="text-darkblue pt-8 pb-2">
                   Service Provider Price <span className="text-orange">*</span>
                 </div>
                 <div className="light-input">
@@ -232,7 +235,7 @@ export default function CreateServices() {
 
               {/* My DEfault Selling Price  */}
               <div className="col-6">
-                <div className="text-darkblue">
+                <div className="text-darkblue pt-8 pb-2">
                   My Default Selling Price{" "}
                   <span className="f-14">(indicative)</span>
                   <span className="text-orange">*</span>
@@ -248,7 +251,7 @@ export default function CreateServices() {
 
               {/* Minimum age  */}
               <div className="col-6">
-                <div className="text-darkblue">
+                <div className="text-darkblue pt-8 pb-2">
                   Minimum Age
                   {/* <span className="text-orange">*</span> */}
                 </div>
@@ -263,7 +266,7 @@ export default function CreateServices() {
 
               {/* Requires Voucher  */}
               <div className="col-6">
-                <div className="text-darkblue pt-3">
+                <div className="text-darkblue pb-2 pt-8">
                   Requires Voucher <span className="text-orange">*</span>
                 </div>
                 <div className="light-input">
@@ -278,7 +281,7 @@ export default function CreateServices() {
 
               {/* Description */}
               <div className="col-12">
-                <div className="text-darkblue">
+                <div className="text-darkblue pt-8 pb-2">
                   Description <span className="text-orange">*</span>
                 </div>
                 <div className="light-input">
@@ -373,6 +376,15 @@ export default function CreateServices() {
                   </div>
                   <Image src={dotsIcon} alt="dots" className="cursor-pointer" />
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-auto pt-[64px]">
+            <div className="dark-button text-gold poppins-medium cursor-pointer">
+              <div className="flex items-center h-full">
+                <Image src={saveIcon} alt="saveIcon" />
+                <div className="pl-4">Save Service</div>
               </div>
             </div>
           </div>
