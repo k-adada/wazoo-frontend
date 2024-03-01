@@ -26,9 +26,32 @@
   }
 }
 
+.image-wrapper-83 {
+  position: relative;
+  padding-top: 83%;
+  overflow: hidden;
+  border-radius: 8px;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
 // /////////////////////////////////////////////////////////////////////////////////////////////////
 // ///////////////////////////////////////MUI CUSTOMIZATIONS////////////////////////////////////////
 // /////////////////////////////////////////////////////////////////////////////////////////////////
+
+.col-auto,
+.col-12 {
+  &.px-2 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
 
 .password {
   &.rounded-lg {
