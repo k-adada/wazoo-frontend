@@ -39,3 +39,7 @@
 .MuiOutlinedInput-notchedOutline.mui-igs3ac {
   border: none;
 }
+
+.validity-dates .MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-fullWidth.MuiInputBase-formControl.mui-md26zr-MuiInputBase-root-MuiOutlinedInput-root {
+  background-color: white;
+}
