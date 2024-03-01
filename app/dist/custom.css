@@ -23,6 +23,10 @@
   transform: translateX(-4px);
 }
 
+.password.rounded-lg {
+  border-radius: 8px !important;
+}
+
 .remove-mui-label label {
   display: none;
 }

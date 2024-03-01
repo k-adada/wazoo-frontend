@@ -19,7 +19,7 @@ export default function PasswordInput() {
 
   return (
       <div>
-        <FormControl className='w-full bg-dark-input' sx={{ m: 0 }} >
+        <FormControl className='w-full bg-dark-input rounded-lg password' >
           {/* <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel> */}
           <OutlinedInput
             id="outlined-adornment-password"

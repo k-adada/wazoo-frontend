@@ -36,7 +36,7 @@ export default function Register() {
             <div className="text-ice py-3">Phone Number</div>
             <div className="flex">
               <select
-                className="px-2 bg-dark-input text-ice rounded"
+                className="px-2 bg-dark-input text-ice rounded-lg"
                 name=""
                 id=""
               >
