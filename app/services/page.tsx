@@ -21,6 +21,7 @@ import calendarIcon from "../assets/Icon_Calendar_dark.png";
 import dollarIcon from "../assets/Icon_Dollars.png";
 import userIcon from "../assets/Icon_My_Account_dark.png";
 import phoneIcon from "../assets/phone_icon.png";
+import searchIcon from "../assets/Icon_Search_Black.png";
 
 export default function CreateServices() {
   const [services, setServices] = useState([1]);
@@ -72,13 +73,13 @@ export default function CreateServices() {
         {services.length > 0 ? (
           <div className="row">
             <div className="col-9">
-              <div className="row">
+              <div className="row justify-between">
                 <div className="col-auto">
                   <div className="f-20 py-3 px-3 bg-white rounded-lg">
                     Filters
                   </div>
                 </div>
-                <div className="col-auto">
+                <div className="flex col-auto">
                   <Link href="/create-services">
                     <div className="dark-button text-gold poppins-medium cursor-pointer">
                       <div className="flex items-center h-full">
@@ -87,8 +88,7 @@ export default function CreateServices() {
                       </div>
                     </div>
                   </Link>
-                </div>
-                <div className="col-auto self-end">
+                  <div className="px-3"></div>
                   <Link href="/create-services">
                     <div className="dark-button text-gold poppins-medium cursor-pointer">
                       <div className="flex items-center h-full">
@@ -98,6 +98,38 @@ export default function CreateServices() {
                     </div>
                   </Link>
                 </div>
+              </div>
+              <div className="row justify-between pt-10">
+                <div className="flex col-auto">
+                  <Link href="#">
+                    <div className="dark-button text-gold poppins-medium cursor-pointer">
+                      <div className="flex items-center h-full">
+                        <Image src={itineraryIcon} alt="itineraryIcon icon" />
+                        <div className="pl-4">Create Itinerary</div>
+                      </div>
+                    </div>
+                  </Link>
+                  <div className="px-3"></div>
+                  <Link href="#">
+                    <div className="dark-button text-gold poppins-medium cursor-pointer">
+                      <div className="flex items-center h-full">
+                        <Image src={reportIcon} alt="report icon" />
+                        <div className="pl-4">Generate Reports</div>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+                <div className="col relative">
+                  <input
+                    type="text"
+                    className="bg-white py-3 pl-10 rounded-lg w-full"
+                    placeholder="search"
+                  />
+                  <div className="absolute left-5 top-3">
+                    <Image src={searchIcon} alt="search" />
+                  </div>
+                </div>
+
                 <div className="col-12 pt-7">
                   <ServicesTable />
                 </div>
