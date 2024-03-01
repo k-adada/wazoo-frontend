@@ -118,7 +118,7 @@ export default function LeftDrawerDMC() {
           </ListItem>
           <Collapse in={openServices} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <Link href="/create-services">
+              <Link href="/services">
                 <ListItemButton sx={{ pl: 4 }}>
                   <ListItemIcon>{/* <StarBorder /> */}</ListItemIcon>
                   <ListItemText primary="&bull;&nbsp; Services" />
