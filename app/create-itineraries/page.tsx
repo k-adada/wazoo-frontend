@@ -74,8 +74,16 @@ export default function CreateItineraries() {
         </div>
 
         <div className="row">
-          <div className="col-12">
-            <div className="f-36 poppins-semibold text-darkblue pt-5">
+          <div className="col-auto">
+            <div className="flex">
+              <div className="flex items-center py-5 back-button">
+                <Image src={backIcon} alt="back" />
+                <div className="pl-2 text-darkblue">Back</div>
+              </div>
+            </div>
+          </div>
+          <div className="col-auto self-center">
+            <div className="f-36 poppins-semibold text-darkblue ">
               Itinerary
             </div>
           </div>
@@ -171,18 +179,9 @@ export default function CreateItineraries() {
               </div>
             </div>
           </div>
-
-          <div className="col-12">
-            <div className="flex">
-              <div className="flex items-center py-5 back-button">
-                <Image src={backIcon} alt="back" />
-                <div className="pl-2 text-darkblue">Back</div>
-              </div>
-            </div>
-          </div>
         </div>
 
-        <div className="row">
+        <div className="row pt-4">
           {currentStep === "trip-details" && (
             <>
               <TripDetails
