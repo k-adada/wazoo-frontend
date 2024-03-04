@@ -133,16 +133,20 @@ export default function LeftDrawerDMC() {
                   {">"}
                 </ListItemButton>
               </Link>
-              <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon>{/* <StarBorder /> */}</ListItemIcon>
-                <ListItemText primary="&bull;&nbsp; Itineraries" />
-                {">"}
-              </ListItemButton>
-              <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon>{/* <StarBorder /> */}</ListItemIcon>
-                <ListItemText primary="&bull;&nbsp; Catalogues" />
-                {">"}
-              </ListItemButton>
+              <Link href="/itineraries">
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemIcon>{/* <StarBorder /> */}</ListItemIcon>
+                  <ListItemText primary="&bull;&nbsp; Itineraries" />
+                  {">"}
+                </ListItemButton>
+              </Link>
+              <Link href="/dmc-dashboard">
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemIcon>{/* <StarBorder /> */}</ListItemIcon>
+                  <ListItemText primary="&bull;&nbsp; Catalogues" />
+                  {">"}
+                </ListItemButton>
+              </Link>
             </List>
           </Collapse>
         </div>

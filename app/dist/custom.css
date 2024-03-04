@@ -38,6 +38,32 @@
   object-fit: cover;
 }
 
+.darkblue-ball {
+  background-color: #132f3d;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin: auto;
+}
+
+.grey-ball {
+  background-color: #c7d4db;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin: auto;
+}
+
+.step-direction .step-line {
+  width: 100%;
+  height: 3px;
+  border-radius: 12px;
+  background-color: #c7d4db;
+}
+.step-direction .step-line.active {
+  background-color: #132f3d;
+}
+
 .col-auto.px-2,
 .col-12.px-2 {
   padding-left: 8px;
