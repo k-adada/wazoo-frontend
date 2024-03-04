@@ -21,7 +21,7 @@ import Accommodation from "../components/itineraryComponents/Accommodation";
 
 export default function CreateItineraries() {
   const [progress, setProgress] = React.useState(0);
-  const [currentStep, setCurrentStep] = useState("trip-details");
+  const [currentStep, setCurrentStep] = useState("accommodation");
   const [stepsDone, setStepsDone] = useState(["trip-details"]);
   // const steps = [
   //   "trip-details",
