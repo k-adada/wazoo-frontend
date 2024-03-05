@@ -54,3 +54,17 @@
     background-color: #c6deea;
   }
 }
+
+.service-day-popup {
+  position: absolute;
+  width: 100px;
+  top: -65px;
+  right: 0;
+  .day-row {
+    &:hover {
+      transition: 0.3s ease-in-out;
+      background-color: #a4bfcd;
+      border-radius: 20px;
+    }
+  }
+}

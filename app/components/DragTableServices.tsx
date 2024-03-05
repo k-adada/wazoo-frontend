@@ -24,7 +24,8 @@ function updateRowPosition(
   });
 }
 
-export default function RowOrderingGrid() {
+export default function RowOrderingGrid(props: any) {
+  const { services } = props;
   // Define your own data with id, name, and description columns
   const tempColumns: GridColDef[] = [
     { field: "id", headerName: "ID", width: 30 },
@@ -81,7 +82,7 @@ export default function RowOrderingGrid() {
     // Add more rows as needed
   ];
 
-  const [rows, setRows] = React.useState(tempRows);
+  const [rows, setRows] = React.useState(services);
   const [columns] = React.useState(tempColumns);
 
   const [loading, setLoading] = React.useState(false);
