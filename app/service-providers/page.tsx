@@ -4,15 +4,11 @@ import "./dist/serviceProviders.css";
 import LeftDrawerDMC from "../components/LeftDrawerDMC";
 import Image from "next/image";
 import Link from "next/link";
-import ServicesTable from "../components/ServicesTable";
 
 import notificationIcon from "../assets/Icon_Notification_Received.png";
 import avatarIcon from "../assets/avatar.png";
 import addIcon from "../assets/Icon_Add.png";
 import backIcon from "../assets/Icon_Back.png";
-import itineraryIcon from "../assets/Icon_Build_Package.png";
-import reportIcon from "../assets/Icon_Invoice.png";
-import listIcon from "../assets/Icon_List_View.png";
 
 import searchIcon from "../assets/Icon_Search_Black.png";
 import serviceProviderIcon from "../assets/service_providers_none.png";
@@ -51,18 +47,24 @@ export default function ServiceProviders() {
 
         <div className="row">
           <div className="col-12">
-            <div className="f-36 poppins-semibold text-darkblue pt-5">
-              Services
+            <div className="flex items-center">
+              <div className="flex items-center back-button">
+                <Image src={backIcon} alt="back" />
+                <div className="pl-2 text-darkblue">Back</div>
+              </div>
+              <div className="f-36 poppins-semibold text-darkblue pl-4">
+                Service Providers
+              </div>
             </div>
           </div>
-          <div className="col-12">
+          {/* <div className="col-12">
             <div className="flex">
               <div className="flex items-center py-4 back-button">
                 <Image src={backIcon} alt="back" />
                 <div className="pl-2 text-darkblue">Back</div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {serviceProviders.length > 0 ? (

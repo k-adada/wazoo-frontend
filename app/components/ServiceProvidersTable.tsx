@@ -21,6 +21,10 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import { visuallyHidden } from "@mui/utils";
 
+import deleteRedIcon from "../assets/delete_red.png";
+import editIcon from "../assets/Icon_Edit.png";
+import Image from "next/image";
+
 interface Data {
   id: number;
   serviceProvider: string;
@@ -210,6 +214,12 @@ const headCells: readonly HeadCell[] = [
     disablePadding: false,
     label: "Services",
   },
+  {
+    id: "actions",
+    numeric: false,
+    disablePadding: false,
+    label: "Actions",
+  },
 ];
 
 interface EnhancedTableProps {
@@ -239,7 +249,7 @@ function EnhancedTableHead(props: EnhancedTableProps) {
     };
 
   return (
-    <TableHead>
+    <TableHead className="bg-grey">
       <TableRow>
         <TableCell padding="checkbox">
           <Checkbox
@@ -252,9 +262,10 @@ function EnhancedTableHead(props: EnhancedTableProps) {
             }}
           />
         </TableCell>
-        {headCells.map((headCell) => (
+        {headCells.map((headCell, index) => (
           <TableCell
-            key={headCell.id}
+            className={index === headCells.length - 1 ? "" : "border-right"}
+            key={headCell.id + index}
             align={headCell.numeric ? "right" : "left"}
             padding={headCell.disablePadding ? "none" : "normal"}
             sortDirection={orderBy === headCell.id ? order : false}
@@ -412,7 +423,7 @@ export default function ServiceProvidersTable() {
   return (
     <Box sx={{ width: "100%" }}>
       <Paper sx={{ width: "100%", mb: 2 }}>
-        <EnhancedTableToolbar numSelected={selected.length} />
+        {/* <EnhancedTableToolbar numSelected={selected.length} /> */}
         <TableContainer>
           <Table
             sx={{ minWidth: 750 }}
@@ -464,8 +475,32 @@ export default function ServiceProvidersTable() {
                     <TableCell align="left">{row.description}</TableCell>
                     <TableCell align="left">{row.types}</TableCell>
                     <TableCell align="left">{row.locations}</TableCell>
-                    <TableCell align="left">{row.numberOfLocations}</TableCell>
-                    <TableCell align="left">{row.services}</TableCell>
+                    <TableCell align="center">{row.numberOfLocations}</TableCell>
+                    <TableCell align="left">
+                      <div className="flex justify-end items-center">
+                        <div className="pr-5">{row.services}</div>
+                        <span className="poppins-semibold pr-5">{">"}</span>
+                      </div>
+                    </TableCell>
+                    <TableCell align="left">
+                      <div className="flex">
+                        <Image
+                          src={editIcon}
+                          alt="edit"
+                          onClick={() => {
+                            alert("edit " + row.serviceName);
+                          }}
+                        />
+                        <div className="px-3"></div>
+                        <Image
+                          src={deleteRedIcon}
+                          alt="delete"
+                          onClick={() => {
+                            alert("delete " + row.serviceName);
+                          }}
+                        />
+                      </div>
+                    </TableCell>
                   </TableRow>
                 );
               })}
