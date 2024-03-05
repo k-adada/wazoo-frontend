@@ -81,9 +81,11 @@ export default function TripDetails(props: {
                 <div className="remove-mui-label">
                   <SingleSelect
                     options={[
-                      { label: "theme 1" },
-                      { label: "theme 2" },
-                      { label: "theme 3" },
+                      { label: "Adventure" },
+                      { label: "Family Travel" },
+                      { label: "Honey Moon" },
+                      { label: "Safari" },
+                      { label: "Sports & Outdoors" },
                     ]}
                     label="Select Theme"
                   />
@@ -91,7 +93,7 @@ export default function TripDetails(props: {
               </div>
             </div>
             {/* select season  */}
-            <div className="col-12">
+            <div className="col-6">
               <div className="text-darkblue pb-2 pt-8">
                 Seasonality<span className="text-orange">*</span>
               </div>
@@ -105,25 +107,6 @@ export default function TripDetails(props: {
                   ]}
                   label="Select Season"
                 />
-              </div>
-            </div>
-
-            {/* subtype  */}
-            <div className="col-6">
-              <div className="text-darkblue pb-2 pt-8">
-                Select Subtype <span className="text-orange">*</span>
-              </div>
-              <div className="light-input">
-                <div className="remove-mui-label">
-                  <SingleSelect
-                    options={[
-                      { label: "transfer" },
-                      { label: "Accomodation" },
-                      { label: "Activity" },
-                    ]}
-                    label="Select Category"
-                  />
-                </div>
               </div>
             </div>
 

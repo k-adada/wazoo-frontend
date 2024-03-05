@@ -9,13 +9,13 @@ import CircularProgress from "@mui/material/CircularProgress";
 
 import notificationIcon from "../assets/Icon_Notification_Received.png";
 import avatarIcon from "../assets/avatar.png";
-import addIcon from "../assets/Icon_Add.png";
 import saveIcon from "../assets/Icon_Save.png";
 import backIcon from "../assets/Icon_Back.png";
 import uploadIcon from "../assets/upload_icon.png";
 import themeIcon from "../assets/theme.png";
 import dotsIcon from "../assets/dots_icon.png";
 import AvailabilityTimes from "../components/AvailabilityTimes";
+import Link from "next/link";
 
 export default function CreateServices() {
   const [progress, setProgress] = React.useState(0);
@@ -381,12 +381,14 @@ export default function CreateServices() {
           </div>
 
           <div className="col-auto pt-[64px]">
-            <div className="dark-button text-gold poppins-medium cursor-pointer">
-              <div className="flex items-center h-full">
-                <Image src={saveIcon} alt="saveIcon" />
-                <div className="pl-4">Save Service</div>
+            <Link href="/services">
+              <div className="dark-button text-gold poppins-medium cursor-pointer">
+                <div className="flex items-center h-full">
+                  <Image src={saveIcon} alt="saveIcon" />
+                  <div className="pl-4">Save Service</div>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
