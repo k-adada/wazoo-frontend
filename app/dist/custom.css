@@ -64,6 +64,22 @@
   background-color: #132f3d;
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  color: #c7d4db !important;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 28px !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: #d9d9d9 !important;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #132f3d !important;
+}
+
 .col-auto.px-2,
 .col-12.px-2 {
   padding-left: 8px;

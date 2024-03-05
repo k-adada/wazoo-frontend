@@ -225,6 +225,10 @@ input::placeholder {
   background-color: #e9f8ff;
 }
 
+.bg-grey {
+  background-color: #ECECEC;
+}
+
 .bg-blue {
   background-color: #c6deea;
 }

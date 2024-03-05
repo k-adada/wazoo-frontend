@@ -150,27 +150,27 @@ export default function CreateServices() {
                 <div className="col-auto px-2 py-1">
                   <div className="service-tag flex">
                     <Image src={locationIcon} alt="location" />
-                    <div className="text-darkblue">Paris, France</div>
+                    <div className="text-darkblue pl-2">Paris, France</div>
                   </div>
                 </div>
 
                 <div className="col-auto px-2 py-1">
                   <div className="service-tag flex">
                     <Image src={clockIcon} alt="time" />
-                    <div className="text-darkblue">3h</div>
+                    <div className="text-darkblue pl-2">3h</div>
                   </div>
                 </div>
 
                 <div className="col-auto px-2 py-1">
                   <div className="service-tag flex">
                     <Image src={calendarIcon} alt="calendar" />
-                    <div className="text-darkblue">Oct 11 - Oct 15</div>
+                    <div className="text-darkblue pl-2">Oct 11 - Oct 15</div>
                   </div>
                 </div>
                 <div className="col-auto px-2 py-1">
                   <div className="service-tag flex">
                     <Image src={dollarIcon} alt="dollar sign" />
-                    <div className="text-darkblue">$350</div>
+                    <div className="text-darkblue pl-2">$350</div>
                   </div>
                 </div>
                 <div className="col-auto px-2 py-1">
@@ -183,7 +183,7 @@ export default function CreateServices() {
                     <div className="text-darkblue">Sub-type</div>
                   </div>
                 </div>
-                <div className="col-12 px-2">
+                <div className="col-12 px-2 py-4">
                   <div className="f-20 text-darkblue pt-4">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Veniam voluptates eveniet iste corrupti! Cum, nulla
@@ -192,7 +192,7 @@ export default function CreateServices() {
                   </div>
                 </div>
 
-                <div className="col-12 px-2">
+                <div className="col-12 px-2 pt-5">
                   <div className="f-20 poppins-semibold text-darkblue py-2">
                     Service Provider
                   </div>

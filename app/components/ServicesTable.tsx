@@ -21,6 +21,10 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import { visuallyHidden } from "@mui/utils";
 
+import deleteRedIcon from "../assets/delete_red.png";
+import editIcon from "../assets/Icon_Edit.png";
+import Image from "next/image";
+
 interface Data {
   id: number;
   image: string;
@@ -240,6 +244,12 @@ const headCells: readonly HeadCell[] = [
     disablePadding: false,
     label: "Default Price",
   },
+  {
+    id: "price",
+    numeric: false,
+    disablePadding: false,
+    label: "Actions",
+  },
 ];
 
 interface EnhancedTableProps {
@@ -269,7 +279,7 @@ function EnhancedTableHead(props: EnhancedTableProps) {
     };
 
   return (
-    <TableHead>
+    <TableHead className="bg-grey">
       <TableRow>
         <TableCell padding="checkbox">
           <Checkbox
@@ -282,9 +292,9 @@ function EnhancedTableHead(props: EnhancedTableProps) {
             }}
           />
         </TableCell>
-        {headCells.map((headCell) => (
+        {headCells.map((headCell, index) => (
           <TableCell
-            key={headCell.id}
+            key={headCell.id + index}
             align={headCell.numeric ? "right" : "left"}
             padding={headCell.disablePadding ? "none" : "normal"}
             sortDirection={orderBy === headCell.id ? order : false}
@@ -317,6 +327,7 @@ function EnhancedTableToolbar(props: EnhancedTableToolbarProps) {
 
   return (
     <Toolbar
+      className="bg-grey"
       sx={{
         pl: { sm: 2 },
         pr: { xs: 1, sm: 1 },
@@ -345,7 +356,7 @@ function EnhancedTableToolbar(props: EnhancedTableToolbarProps) {
           id="tableTitle"
           component="div"
         >
-          Your Services
+          {""}
         </Typography>
       )}
       {numSelected > 0 ? (
@@ -442,7 +453,7 @@ export default function ServicesTable() {
   return (
     <Box sx={{ width: "100%" }}>
       <Paper sx={{ width: "100%", mb: 2 }}>
-        <EnhancedTableToolbar numSelected={selected.length} />
+        {/* <EnhancedTableToolbar numSelected={selected.length} /> */}
         <TableContainer>
           <Table
             sx={{ minWidth: 750 }}
@@ -488,12 +499,14 @@ export default function ServicesTable() {
                       scope="row"
                       padding="none"
                     >
-                      <img
-                        src={row.image}
-                        alt={row.serviceName}
-                        style={{ height: "53px", width: "53px" }}
-                        className="rounded-lg"
-                      />
+                      <div className="py-2">
+                        <img
+                          src={row.image}
+                          alt={row.serviceName}
+                          style={{ height: "53px", width: "53px" }}
+                          className="rounded-lg"
+                        />
+                      </div>
                     </TableCell>
                     <TableCell align="left">{row.serviceName}</TableCell>
                     <TableCell align="left">{row.type}</TableCell>
@@ -501,6 +514,25 @@ export default function ServicesTable() {
                     <TableCell align="left">{row.location}</TableCell>
                     <TableCell align="left">{row.validityDate}</TableCell>
                     <TableCell align="left">{row.price}</TableCell>
+                    <TableCell align="left">
+                      <div className="flex">
+                        <Image
+                          src={editIcon}
+                          alt="edit"
+                          onClick={() => {
+                            alert("edit " + row.serviceName);
+                          }}
+                        />
+                        <div className="px-3"></div>
+                        <Image
+                          src={deleteRedIcon}
+                          alt="delete"
+                          onClick={() => {
+                            alert("delete " + row.serviceName);
+                          }}
+                        />
+                      </div>
+                    </TableCell>
                   </TableRow>
                 );
               })}
