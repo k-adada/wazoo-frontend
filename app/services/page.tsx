@@ -192,24 +192,60 @@ export default function CreateServices() {
                   </div>
                 </div>
 
+                <div className="col-12 px-2 pt-4">
+                  <div className="f-20 poppins-semibold text-darkblue py-2">
+                    Availability Times
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <div className="text-darkblue poppins-medium">Monday</div>
+                    <div className="text-darkblue pr-[80px]">11:00am - 10:00pm</div>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <div className="text-darkblue poppins-medium">Tuesday</div>
+                    <div className="text-darkblue pr-[80px]">11:00am - 10:00pm</div>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <div className="text-darkblue poppins-medium">
+                      Wednesday
+                    </div>
+                    <div className="text-darkblue pr-[80px]">11:00am - 10:00pm</div>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <div className="text-darkblue poppins-medium">Thursday</div>
+                    <div className="text-darkblue pr-[80px]">11:00am - 10:00pm</div>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <div className="text-darkblue poppins-medium">Friday</div>
+                    <div className="text-darkblue pr-[80px]">11:00am - 10:00pm</div>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <div className="text-darkblue poppins-medium">Saturday</div>
+                    <div className="text-darkblue pr-[80px]">11:00am - 10:00pm</div>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <div className="text-darkblue poppins-medium">Sunday</div>
+                    <div className="text-darkblue pr-[80px]">11:00am - 10:00pm</div>
+                  </div>
+                </div>
+
                 <div className="col-12 px-2 pt-5">
                   <div className="f-20 poppins-semibold text-darkblue py-2">
                     Service Provider
                   </div>
                   <div className="flex py-1">
-                    <div className="">
+                    <div className="pr-3">
                       <Image src={userIcon} alt="userIcon" />
                     </div>
                     <div className="text-darkblue">Le Touriste</div>
                   </div>
                   <div className="flex py-1">
-                    <div className="">
+                    <div className="pr-3">
                       <Image src={dollarIcon} alt="dollars" />
                     </div>
                     <div className="text-darkblue">$350</div>
                   </div>
                   <div className="flex py-1">
-                    <div className="">
+                    <div className="pr-3">
                       <Image src={phoneIcon} alt="phoneIcon" />
                     </div>
                     <div className="text-darkblue">

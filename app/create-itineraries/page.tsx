@@ -18,10 +18,11 @@ import dotsIcon from "../assets/dots_icon.png";
 import AvailabilityTimes from "../components/AvailabilityTimes";
 import TripDetails from "../components/itineraryComponents/TripDetails";
 import Accommodation from "../components/itineraryComponents/Accommodation";
+import Activities from "../components/itineraryComponents/Activities";
 
 export default function CreateItineraries() {
   const [progress, setProgress] = React.useState(0);
-  const [currentStep, setCurrentStep] = useState("accommodation");
+  const [currentStep, setCurrentStep] = useState("activities");
   const [stepsDone, setStepsDone] = useState(["trip-details"]);
   // const steps = [
   //   "trip-details",
@@ -195,6 +196,16 @@ export default function CreateItineraries() {
           {currentStep === "accommodation" && (
             <>
               <Accommodation
+                setCurrentStep={setCurrentStep}
+                stepsDone={stepsDone}
+                setStepsDone={setStepsDone}
+              />
+            </>
+          )}
+
+          {currentStep === "activities" && (
+            <>
+              <Activities
                 setCurrentStep={setCurrentStep}
                 stepsDone={stepsDone}
                 setStepsDone={setStepsDone}
