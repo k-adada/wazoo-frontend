@@ -23,54 +23,68 @@ export default function Activities(props: {
   const [rooms, setRooms] = useState(["1"]);
   const [activities, setActivities] = useState(["1", "2", "3", "4"]);
   const [selectedActivities, setSelectedActivities] = useState(["1", "2"]);
+  const [days, setDays] = useState(["1", "2"]);
+
+  const [collapsed, setCollapsed] = useState(false);
 
   return (
     <div className="container-fluid activities">
       <div className="row">
         <div className="col-9">
-          <>
-            <div className="row py-4">
-              {/* Day BAR  */}
-              <div className="col-12">
-                <div className="bg-blue rounded-lg px-5 py-2 flex justify-between">
-                  <div className="f-24 text-darkblue poppins-semibold">
-                    Day 1
-                  </div>
-                  <div className="flex items-center">
-                    <Image
-                      src={downArrowIcon}
-                      alt="down arrow"
-                      className="pointer"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              {/* Rich textbox bar  */}
-              <div className="col-12">
-                <div className="px-5 pt-3">
-                  <div className="bg-white rounded-lg py-3 flex justify-between items-center  px-3">
-                    <div className=" text-darkblue poppins-semibold">
-                      Day Notes
+          {days.map((day, index) => {
+            return (
+              <>
+                <div className="row py-4 overflow-hidden" key={index}>
+                  {/* Day BAR  */}
+                  <div className="col-12">
+                    <div className="bg-blue rounded-lg px-5 py-2 flex justify-between">
+                      <div className="f-24 text-darkblue poppins-semibold">
+                        Day {day}
+                      </div>
+                      <div
+                        className="flex items-center"
+                        onClick={() => {
+                          setCollapsed(!collapsed);
+                        }}
+                      >
+                        <Image
+                          src={downArrowIcon}
+                          alt="down arrow"
+                          className="pointer"
+                        />
+                      </div>
                     </div>
-                    <Image
-                      src={downArrowIcon}
-                      alt="down arrow"
-                      className="pointer"
-                    />
                   </div>
 
-                  <RichTextBox initialData="<h1>Hello from CKEditor in Next.js!</h1>" />
-                </div>
-              </div>
+                  {/* Rich textbox and services bar  */}
+                  <div
+                    className={
+                      collapsed ? " slide-up-and-disappear " : "" + " col-12"
+                    }
+                  >
+                    <div className="px-5 pt-3">
+                      <div className="bg-white rounded-lg py-3 flex justify-between items-center  px-3">
+                        <div className=" text-darkblue poppins-semibold">
+                          Day Notes
+                        </div>
+                        <Image
+                          src={downArrowIcon}
+                          alt="down arrow"
+                          className="pointer"
+                        />
+                      </div>
 
-              <div className="col-12">
-                <div className="px-5">
-                  <DragTableServices />
+                      <RichTextBox initialData="<h1>Enter Your Day Notes here!</h1><h1>...</h1>" />
+                    </div>
+
+                    <div className="px-5 pt-5">
+                      <DragTableServices />
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </>
+              </>
+            );
+          })}
         </div>
 
         {/* upload images  */}
@@ -112,46 +126,42 @@ export default function Activities(props: {
             </div>
             {activities.map((activity, index) => {
               return (
-                <>
-                  {/* Hotel service */}
-                  <div className="col-12 py-2">
-                    <div className="flex py-2 px-2 border-dashed rounded-lg items-center justify-between">
-                      <div className="flex">
-                        <Image
-                          src={hotelImage}
-                          alt="hotel image"
-                          className="rounded-lg"
-                          style={{
-                            width: "70px",
-                            height: "70px",
-                            objectFit: "cover",
-                          }}
-                        />
-                        <div className="pl-3">
-                          <div className="f-24 text-darkblue poppins-medium">
-                            Hotel Name
-                          </div>
-                          <div className="f-14 text-darkblue">
-                            Paris, France
-                          </div>
-                        </div>
-                      </div>
-
-                      <div
-                        className="pr-2 pointer"
-                        onClick={() => {
-                          let newSelectedActivities = [
-                            ...selectedActivities,
-                            activity,
-                          ];
-                          setSelectedActivities(newSelectedActivities);
+                //     {/* Hotel service */}
+                <div className="col-12 py-2" key={index}>
+                  <div className="flex py-2 px-2 border-dashed rounded-lg items-center justify-between">
+                    <div className="flex">
+                      <Image
+                        src={hotelImage}
+                        alt="hotel image"
+                        className="rounded-lg"
+                        style={{
+                          width: "70px",
+                          height: "70px",
+                          objectFit: "cover",
                         }}
-                      >
-                        <Image src={addCircleIcon} alt="add" />
+                      />
+                      <div className="pl-3">
+                        <div className="f-24 text-darkblue poppins-medium">
+                          Hotel Name
+                        </div>
+                        <div className="f-14 text-darkblue">Paris, France</div>
                       </div>
                     </div>
+
+                    <div
+                      className="pr-2 pointer"
+                      onClick={() => {
+                        let newSelectedActivities = [
+                          ...selectedActivities,
+                          activity,
+                        ];
+                        setSelectedActivities(newSelectedActivities);
+                      }}
+                    >
+                      <Image src={addCircleIcon} alt="add" />
+                    </div>
                   </div>
-                </>
+                </div>
               );
             })}
           </div>

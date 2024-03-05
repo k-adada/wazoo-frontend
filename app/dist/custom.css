@@ -68,6 +68,10 @@
   border-right: 1px solid #c7d4db;
 }
 
+.slide-up-and-disappear {
+  display: none;
+}
+
 .swiper-button-prev,
 .swiper-button-next {
   color: #c7d4db !important;
@@ -84,11 +88,13 @@
   background-color: #132f3d !important;
 }
 
-.ck-rounded-corners .ck.ck-editor__top .ck-sticky-panel .ck-toolbar, .ck.ck-editor__top .ck-sticky-panel .ck-toolbar.ck-rounded-corners {
+.ck-rounded-corners .ck.ck-editor__top .ck-sticky-panel .ck-toolbar,
+.ck.ck-editor__top .ck-sticky-panel .ck-toolbar.ck-rounded-corners {
   border: 0px;
 }
 
-.ck-rounded-corners .ck.ck-editor__main > .ck-editor__editable, .ck.ck-editor__main > .ck-editor__editable.ck-rounded-corners {
+.ck-rounded-corners .ck.ck-editor__main > .ck-editor__editable,
+.ck.ck-editor__main > .ck-editor__editable.ck-rounded-corners {
   border-bottom-right-radius: 8px !important;
   border-bottom-left-radius: 8px !important;
   border: 1px solid transparent !important;
@@ -127,4 +133,8 @@
 
 .validity-dates .MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-fullWidth.MuiInputBase-formControl.mui-md26zr-MuiInputBase-root-MuiOutlinedInput-root {
   background-color: white;
+}
+
+.MuiDataGrid-columnHeaders.MuiDataGrid-withBorderColor.mui-1iyq7zh-MuiDataGrid-columnHeaders {
+  background-color: #c7d4db;
 }
