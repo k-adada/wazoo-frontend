@@ -85,8 +85,6 @@
 }
 
 .ck-rounded-corners .ck.ck-editor__top .ck-sticky-panel .ck-toolbar, .ck.ck-editor__top .ck-sticky-panel .ck-toolbar.ck-rounded-corners {
-  border-top-right-radius: 8px !important;
-  border-top-left-radius: 8px !important;
   border: 0px;
 }
 

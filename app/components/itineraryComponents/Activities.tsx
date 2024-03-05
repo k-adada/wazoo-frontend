@@ -11,6 +11,7 @@ import addGoldIcon from "../../assets/Icon_Add.png";
 import addCircleIcon from "../../assets/Icon_Add_circle.png";
 import hotelImage from "../../assets/Bellagio-Hotel-Casino-Las-Vegas.webp";
 import RichTextBox from "../RichTextBox";
+import DragTableServices from "../DragTableServices";
 
 export default function Activities(props: {
   setCurrentStep: any;
@@ -29,9 +30,9 @@ export default function Activities(props: {
         <div className="col-9">
           <>
             <div className="row py-4">
-              {/* main hotel bar  */}
+              {/* Day BAR  */}
               <div className="col-12">
-                <div className="bg-lightblue rounded-lg px-5 py-2 flex justify-between">
+                <div className="bg-blue rounded-lg px-5 py-2 flex justify-between">
                   <div className="f-24 text-darkblue poppins-semibold">
                     Day 1
                   </div>
@@ -45,29 +46,27 @@ export default function Activities(props: {
                 </div>
               </div>
 
-              {/* ROOMS  */}
+              {/* Rich textbox bar  */}
+              <div className="col-12">
+                <div className="px-5 pt-3">
+                  <div className="bg-white rounded-lg py-3 flex justify-between items-center  px-3">
+                    <div className=" text-darkblue poppins-semibold">
+                      Day Notes
+                    </div>
+                    <Image
+                      src={downArrowIcon}
+                      alt="down arrow"
+                      className="pointer"
+                    />
+                  </div>
+
+                  <RichTextBox initialData="<h1>Hello from CKEditor in Next.js!</h1>" />
+                </div>
+              </div>
+
               <div className="col-12">
                 <div className="px-5">
-                  <RichTextBox
-                    initialData="<h1>Hello from CKEditor in Next.js!</h1>"
-                  />
-                  {/* <div className="row">
-                    <div className="col-12 self-center">
-                      <div
-                        className=" flex justify-center rounded-lg py-4 border-dashed pointer"
-                        onClick={() => {
-                          setRooms([...rooms, rooms.length + 1 + ""]);
-                        }}
-                      >
-                        <div className="">
-                          <Image src={addIcon} alt="add" />
-                        </div>
-                        <div className="text-darkblue">
-                          <div className="">Add Room</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div> */}
+                  <DragTableServices />
                 </div>
               </div>
             </div>
