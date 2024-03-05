@@ -64,6 +64,10 @@
   background-color: #132f3d;
 }
 
+.border-right {
+  border-right: 1px solid #c7d4db;
+}
+
 .swiper-button-prev,
 .swiper-button-next {
   color: #c7d4db !important;

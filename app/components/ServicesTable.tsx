@@ -294,6 +294,7 @@ function EnhancedTableHead(props: EnhancedTableProps) {
         </TableCell>
         {headCells.map((headCell, index) => (
           <TableCell
+            className={index == headCells.length -1 ? "" : "border-right"}
             key={headCell.id + index}
             align={headCell.numeric ? "right" : "left"}
             padding={headCell.disablePadding ? "none" : "normal"}
@@ -304,7 +305,7 @@ function EnhancedTableHead(props: EnhancedTableProps) {
               direction={orderBy === headCell.id ? order : "asc"}
               onClick={createSortHandler(headCell.id)}
             >
-              {headCell.label}
+              <div className="poppins-medium">{headCell.label}</div>
               {orderBy === headCell.id ? (
                 <Box component="span" sx={visuallyHidden}>
                   {order === "desc" ? "sorted descending" : "sorted ascending"}
