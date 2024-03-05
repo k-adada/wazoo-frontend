@@ -84,6 +84,18 @@
   background-color: #132f3d !important;
 }
 
+.ck-rounded-corners .ck.ck-editor__top .ck-sticky-panel .ck-toolbar, .ck.ck-editor__top .ck-sticky-panel .ck-toolbar.ck-rounded-corners {
+  border-top-right-radius: 8px !important;
+  border-top-left-radius: 8px !important;
+  border: 0px;
+}
+
+.ck-rounded-corners .ck.ck-editor__main > .ck-editor__editable, .ck.ck-editor__main > .ck-editor__editable.ck-rounded-corners {
+  border-bottom-right-radius: 8px !important;
+  border-bottom-left-radius: 8px !important;
+  border: 1px solid transparent !important;
+}
+
 .col-auto.px-2,
 .col-12.px-2 {
   padding-left: 8px;

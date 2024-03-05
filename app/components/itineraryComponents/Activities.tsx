@@ -10,6 +10,7 @@ import addIcon from "../../assets/Icon_Add_Dark.png";
 import addGoldIcon from "../../assets/Icon_Add.png";
 import addCircleIcon from "../../assets/Icon_Add_circle.png";
 import hotelImage from "../../assets/Bellagio-Hotel-Casino-Las-Vegas.webp";
+import RichTextBox from "../RichTextBox";
 
 export default function Activities(props: {
   setCurrentStep: any;
@@ -23,7 +24,7 @@ export default function Activities(props: {
   const [selectedActivities, setSelectedActivities] = useState(["1", "2"]);
 
   return (
-    <div className="container-fluid accommodation">
+    <div className="container-fluid activities">
       <div className="row">
         <div className="col-9">
           <>
@@ -47,109 +48,10 @@ export default function Activities(props: {
               {/* ROOMS  */}
               <div className="col-12">
                 <div className="px-5">
-                  <div className="row pt-5">
-                    <div className="col">
-                      <div className="text-darkblue pb-2">
-                        Room Type <span className="text-orange">*</span>
-                      </div>
-                    </div>
-                    <div className="col">
-                      <div className="text-darkblue pb-2">
-                        Room Configuration{" "}
-                        <span className="text-orange">*</span>
-                      </div>
-                    </div>
-                    <div className="col">
-                      <div className="text-darkblue pb-2">
-                        Extra Bed <span className="text-orange">*</span>
-                      </div>
-                    </div>
-                    <div className="col">
-                      <div className="text-darkblue pb-2">
-                        Nb. of Rooms <span className="text-orange">*</span>
-                      </div>
-                    </div>
-                    <div className="col">
-                      <div className="text-darkblue pb-2">
-                        Default Price ($) <span className="text-orange">*</span>
-                      </div>
-                    </div>
-                    <div className="col-auto">
-                      <div className="opacity-0">
-                        <Image src={deleteRedIcon} alt="delete" />
-                      </div>
-                    </div>
-                  </div>
-                  {rooms.map((room, index) => {
-                    return (
-                      <>
-                        <div className="row py-2">
-                          <div className="col">
-                            <div className="light-input">
-                              <input
-                                className="px-5 py-4 rounded-lg bg-white text-darkblue w-full"
-                                type="text"
-                                placeholder="Room Type"
-                              />
-                            </div>
-                          </div>
-                          <div className="col">
-                            <div className="remove-mui-label">
-                              <SingleSelect
-                                options={[
-                                  { label: "Single" },
-                                  { label: "Double" },
-                                  { label: "Queen" },
-                                ]}
-                                label="Room Configuration"
-                              />
-                            </div>
-                          </div>
-                          <div className="col">
-                            <div className="remove-mui-label">
-                              <SingleSelect
-                                options={[{ label: "Yes" }, { label: "No" }]}
-                                label="extra bed"
-                              />
-                            </div>
-                          </div>
-                          <div className="col">
-                            <div className="light-input">
-                              <input
-                                className="px-5 py-4 rounded-lg bg-white text-darkblue w-full"
-                                type="number"
-                                placeholder="2"
-                              />
-                            </div>
-                          </div>
-                          <div className="col">
-                            <div className="light-input">
-                              <input
-                                className="px-5 py-4 rounded-lg bg-white text-darkblue w-full"
-                                type="number"
-                                placeholder="350"
-                              />
-                            </div>
-                          </div>
-                          <div className="col-auto self-center">
-                            <div
-                              className="pointer"
-                              onClick={() => {
-                                let newRooms = rooms.filter(
-                                  (room, i) => i !== index
-                                );
-                                setRooms(newRooms);
-                              }}
-                            >
-                              <Image src={deleteRedIcon} alt="delete" />
-                            </div>
-                          </div>
-                        </div>
-                      </>
-                    );
-                  })}
-
-                  <div className="row">
+                  <RichTextBox
+                    initialData="<h1>Hello from CKEditor in Next.js!</h1>"
+                  />
+                  {/* <div className="row">
                     <div className="col-12 self-center">
                       <div
                         className=" flex justify-center rounded-lg py-4 border-dashed pointer"
@@ -165,7 +67,7 @@ export default function Activities(props: {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
