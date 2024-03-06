@@ -5,6 +5,7 @@ import "./dist/app.css";
 import "./dist/custom.css";
 import "./dist/bootstrap-grid.css";
 import { Providers } from "./providers";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Lux | Your single Destination",
@@ -28,6 +29,7 @@ export default function RootLayout({
 
       <body className={"poppins-regular"}>
         <Providers>{children}</Providers>
+        <Analytics />
       </body>
     </html>
   );
