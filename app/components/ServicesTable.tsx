@@ -245,7 +245,7 @@ const headCells: readonly HeadCell[] = [
     label: "Default Price",
   },
   {
-    id: "actions",
+    id: "actions" as keyof Data,
     numeric: false,
     disablePadding: false,
     label: "Actions",
