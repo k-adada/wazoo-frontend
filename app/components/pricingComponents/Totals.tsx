@@ -100,7 +100,7 @@ export default function Totals() {
                 </div>
 
                 {totals.map((total, index) => (
-                  <div className="flex items-center py-1">
+                  <div className="flex items-center py-1" key={total.id}>
                     <div className="">
                       <Image
                         className="rounded-lg object-cover"
@@ -139,7 +139,7 @@ export default function Totals() {
                 {totals.map((total, index) => (
                   <>
                     {index < 1 && (
-                      <div className="flex items-center py-1">
+                      <div className="flex items-center py-1" key={total.id}>
                         <div className="">
                           <Image
                             className="rounded-lg object-cover"
@@ -180,7 +180,7 @@ export default function Totals() {
                 {totals.map((total, index) => (
                   <>
                     {index < 2 && (
-                      <div className="flex items-center py-1">
+                      <div className="flex items-center py-1" key={total.id}>
                         <div className="">
                           <Image
                             className="rounded-lg object-cover"
@@ -221,7 +221,7 @@ export default function Totals() {
                 {totals.map((total, index) => (
                   <>
                     {index < 0 && (
-                      <div className="flex items-center py-1">
+                      <div className="flex items-center py-1" key={total.id}>
                         <div className="">
                           <Image
                             className="rounded-lg object-cover"
@@ -262,7 +262,7 @@ export default function Totals() {
                 {totals.map((total, index) => (
                   <>
                     {index < 0 && (
-                      <div className="flex items-center py-1">
+                      <div className="flex items-center py-1" key={total.id}>
                         <div className="">
                           <Image
                             className="rounded-lg object-cover"
