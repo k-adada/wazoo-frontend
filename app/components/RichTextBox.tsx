@@ -25,10 +25,9 @@ const editorConfiguration = {
   ],
 };
 
-function RichTextBox(props) {
+function RichTextBox(props: { initialData: string | null | undefined; }) {
   return (
     <CKEditor
-      className="rounded-lg"
       editor={Editor}
       config={editorConfiguration}
       data={props.initialData}
