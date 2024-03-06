@@ -501,7 +501,7 @@ export default function ServicesTable() {
                       padding="none"
                     >
                       <div className="py-2">
-                        <img
+                        <Image
                           src={row.image}
                           alt={row.serviceName}
                           style={{ height: "53px", width: "53px" }}

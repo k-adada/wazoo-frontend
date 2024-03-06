@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Pagination, Autoplay, Navigation } from "swiper/modules";
+import Image from "next/image";
 
 export default function ServicesSwiper(props: any) {
   const { images } = props;
@@ -29,7 +30,7 @@ export default function ServicesSwiper(props: any) {
       >
         <SwiperSlide>
           <div className="image-wrapper-83">
-            <img
+            <Image
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/TEIDE.JPG/220px-TEIDE.JPG"
               alt=""
             />
@@ -38,7 +39,7 @@ export default function ServicesSwiper(props: any) {
         <SwiperSlide>
           {" "}
           <div className="image-wrapper-83">
-            <img
+            <Image
               src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg"
               alt=""
             />
@@ -47,7 +48,7 @@ export default function ServicesSwiper(props: any) {
         <SwiperSlide>
           {" "}
           <div className="image-wrapper-83">
-            <img
+            <Image
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/TEIDE.JPG/220px-TEIDE.JPG"
               alt=""
             />
@@ -56,7 +57,7 @@ export default function ServicesSwiper(props: any) {
         <SwiperSlide>
           {" "}
           <div className="image-wrapper-83">
-            <img
+            <Image
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/TEIDE.JPG/220px-TEIDE.JPG"
               alt=""
             />
@@ -65,7 +66,7 @@ export default function ServicesSwiper(props: any) {
         <SwiperSlide>
           {" "}
           <div className="image-wrapper-83">
-            <img
+            <Image
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/TEIDE.JPG/220px-TEIDE.JPG"
               alt=""
             />
@@ -74,7 +75,7 @@ export default function ServicesSwiper(props: any) {
         <SwiperSlide>
           {" "}
           <div className="image-wrapper-83">
-            <img
+            <Image
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/TEIDE.JPG/220px-TEIDE.JPG"
               alt=""
             />
@@ -83,7 +84,7 @@ export default function ServicesSwiper(props: any) {
         <SwiperSlide>
           {" "}
           <div className="image-wrapper-83">
-            <img
+            <Image
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/TEIDE.JPG/220px-TEIDE.JPG"
               alt=""
             />
@@ -92,7 +93,7 @@ export default function ServicesSwiper(props: any) {
         <SwiperSlide>
           {" "}
           <div className="image-wrapper-83">
-            <img
+            <Image
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/TEIDE.JPG/220px-TEIDE.JPG"
               alt=""
             />
@@ -101,7 +102,7 @@ export default function ServicesSwiper(props: any) {
         <SwiperSlide>
           {" "}
           <div className="image-wrapper-83">
-            <img
+            <Image
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/TEIDE.JPG/220px-TEIDE.JPG"
               alt=""
             />

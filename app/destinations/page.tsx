@@ -273,7 +273,7 @@ export default function Destinations() {
   useEffect(() => {
     console.log("filteredCountries", filteredCountries);
     setFilteredDestinations(filterDestinations(destinations));
-  }, [filteredCountries, filteredContinents]);
+  }, [filteredCountries, filteredContinents, destinations, filterDestinations]);
 
   return (
     <main className="flex min-h-screen flex-col items-center  p-md-24 p-3 bg-bluesky pb-[100px]">
