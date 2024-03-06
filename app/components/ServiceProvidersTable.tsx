@@ -488,7 +488,7 @@ export default function ServiceProvidersTable() {
                           src={editIcon}
                           alt="edit"
                           onClick={() => {
-                            alert("edit " + row.serviceName);
+                            alert("edit " + row.serviceProvider);
                           }}
                         />
                         <div className="px-3"></div>
@@ -496,7 +496,7 @@ export default function ServiceProvidersTable() {
                           src={deleteRedIcon}
                           alt="delete"
                           onClick={() => {
-                            alert("delete " + row.serviceName);
+                            alert("delete " + row.serviceProvider);
                           }}
                         />
                       </div>
