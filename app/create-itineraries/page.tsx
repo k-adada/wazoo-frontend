@@ -23,7 +23,7 @@ import Transport from "../components/itineraryComponents/Transport";
 
 export default function CreateItineraries() {
   const [progress, setProgress] = React.useState(0);
-  const [currentStep, setCurrentStep] = useState("transport");
+  const [currentStep, setCurrentStep] = useState("trip-details");
   const [stepsDone, setStepsDone] = useState(["trip-details"]);
   // const steps = [
   //   "trip-details",
@@ -181,11 +181,13 @@ export default function CreateItineraries() {
               {/* STEP 5  */}
               <div className="col-auto">
                 <div className="itinerary-step">
-                  <div  className={
+                  <div
+                    className={
                       stepsDone.includes("pricing")
                         ? "darkblue-ball"
                         : "grey-ball"
-                    }></div>
+                    }
+                  ></div>
                   <div className="f-14 text-grey text-center">Step 5</div>
                   <div className="text-darkblue text-center">
                     Pricing & Payment
@@ -258,6 +260,18 @@ export default function CreateItineraries() {
                 stepsDone={stepsDone}
                 setStepsDone={setStepsDone}
               />
+            </>
+          )}
+
+          {currentStep === "pricing" && (
+            <>
+              <div className="col-12">
+                <div className="flex justify-center">
+                  <div className="poppins-semibold text-darkblue f-36">
+                    Pricing & Payment
+                  </div>
+                </div>
+              </div>
             </>
           )}
         </div>

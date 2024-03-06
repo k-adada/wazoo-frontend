@@ -292,8 +292,8 @@ export default function Transport(props: {
           <div
             className="dark-button text-gold poppins-medium cursor-pointer"
             onClick={() => {
-              setCurrentStep("transports");
-              setStepsDone([...stepsDone, "transports"]);
+              setCurrentStep("pricing");
+              setStepsDone([...stepsDone, "pricing"]);
             }}
           >
             <div className="flex items-center h-full">

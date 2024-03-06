@@ -292,8 +292,8 @@ export default function Activities(props: {
           <div
             className="dark-button text-gold poppins-medium cursor-pointer"
             onClick={() => {
-              setCurrentStep("activities");
-              setStepsDone([...stepsDone, "activities"]);
+              setCurrentStep("transport");
+              setStepsDone([...stepsDone, "transport"]);
             }}
           >
             <div className="flex items-center h-full">
