@@ -245,35 +245,30 @@ export default function Destinations() {
     []
   );
 
-  const filterDestinations = (
-    allDestinations: Destination[]
-  ): Destination[] => {
-    let result = allDestinations;
-
-    if (filteredCountries.length > 0) {
-      result = result.filter((destination) =>
-        filteredCountries.some(
-          (filteredCountry) => filteredCountry.country === destination.country
-        )
-      );
-    }
-
-    if (filteredContinents.length > 0) {
-      result = result.filter((destination) =>
-        filteredContinents.some(
-          (filteredContinent) =>
-            filteredContinent.continent === destination.continent
-        )
-      );
-    }
-
-    return result;
-  };
-
   useEffect(() => {
+    const filterDestinations = (destinations: Destination[]) => {
+      let filteredDestinations = destinations;
+      if (filteredCountries.length > 0) {
+        filteredDestinations = filteredDestinations.filter((destination) =>
+          filteredCountries.some(
+            (filteredCountry) => filteredCountry.id === destination.id
+          )
+        );
+      }
+      if (filteredContinents.length > 0) {
+        filteredDestinations = filteredDestinations.filter((destination) =>
+          filteredContinents.some(
+            (filteredContinent) => filteredContinent.id === destination.id
+          )
+        );
+      }
+      return filteredDestinations;
+    };
+
     console.log("filteredCountries", filteredCountries);
+
     setFilteredDestinations(filterDestinations(destinations));
-  }, [filteredCountries, filteredContinents, destinations, filterDestinations]);
+  }, [filteredCountries, filteredContinents, destinations]);
 
   return (
     <main className="flex min-h-screen flex-col items-center  p-md-24 p-3 bg-bluesky pb-[100px]">
