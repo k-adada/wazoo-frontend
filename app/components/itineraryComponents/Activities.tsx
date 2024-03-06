@@ -6,7 +6,6 @@ import SingleSelect from "../SingleSelect";
 import saveIcon from "../../assets/Icon_Save.png";
 import deleteRedIcon from "../../assets/delete_red.png";
 import downArrowIcon from "../../assets/down_arrow_dark.png";
-import addIcon from "../../assets/Icon_Add_Dark.png";
 import addGoldIcon from "../../assets/Icon_Add.png";
 import addCircleIcon from "../../assets/Icon_Add_circle.png";
 import hotelImage from "../../assets/Bellagio-Hotel-Casino-Las-Vegas.webp";
@@ -20,7 +19,6 @@ export default function Activities(props: {
 }) {
   const { setCurrentStep, stepsDone, setStepsDone } = props;
 
-  const [rooms, setRooms] = useState(["1"]);
   const [activities, setActivities] = useState([
     {
       id: "1",
@@ -83,7 +81,6 @@ export default function Activities(props: {
       price: "Price 6",
     },
   ]);
-  const [selectedActivities, setSelectedActivities] = useState(["1", "2"]);
   const [days, setDays] = useState([
     {
       id: 1,
@@ -103,66 +100,68 @@ export default function Activities(props: {
         <div className="col-9">
           {days.map((day, index) => {
             return (
-              <>
-                <div className="row py-4 overflow-hidden" key={index}>
-                  {/* Day BAR  */}
-                  <div className="col-12">
-                    <div className="bg-blue rounded-lg px-5 py-2 flex justify-between">
-                      <div className="f-24 text-darkblue poppins-semibold">
-                        Day {index + 1}
-                      </div>
-                      <div
-                        className="flex items-center"
-                        onClick={() => {
-                          let newDays = [...days];
-                          newDays[index].collapsed = !newDays[index].collapsed;
-                          setDays(newDays);
-                        }}
-                      >
-                        <Image
-                          src={downArrowIcon}
-                          alt="down arrow"
-                          className="pointer"
-                        />
-                      </div>
+              <div
+                className="row py-4 overflow-hidden"
+                key={index + day.id + day.id}
+              >
+                {/* Day BAR  */}
+                <div className="col-12">
+                  <div className="bg-blue rounded-lg px-5 py-2 flex justify-between">
+                    <div className="f-24 text-darkblue poppins-semibold">
+                      Day {index + 1}
                     </div>
-                  </div>
-
-                  {/* Rich textbox and services bar  */}
-                  <div
-                    className={
-                      days[index].collapsed ? "hidden " : "" + " col-12"
-                    }
-                  >
-                    <div className="px-5 pt-3">
-                      <div className="bg-white rounded-lg py-3 flex justify-between items-center  px-3">
-                        <div className=" text-darkblue poppins-semibold">
-                          Day Notes
-                        </div>
-                        <Image
-                          src={downArrowIcon}
-                          alt="down arrow"
-                          className="pointer"
-                          onClick={() => {
-                            let newDays = [...days];
-                            newDays[index].notesCollapsed =
-                              !newDays[index].notesCollapsed;
-                            setDays(newDays);
-                          }}
-                        />
-                      </div>
-                      {/* <div
-                        className={days[index].notesCollapsed ? "hidden" : ""}
-                      >
-                        <RichTextBox initialData="<h1>Enter Your Day Notes here!</h1><h1>...</h1>" />
-                      </div> */}
-                    </div>
-                    <div className="px-5 pt-5">
-                      <DragTableServices services={day.services} />
+                    <div
+                      className="flex items-center"
+                      onClick={() => {
+                        let newDays = [...days];
+                        newDays[index].collapsed = !newDays[index].collapsed;
+                        setDays(newDays);
+                      }}
+                    >
+                      <Image
+                        src={downArrowIcon}
+                        alt="down arrow"
+                        className="pointer"
+                      />
                     </div>
                   </div>
                 </div>
-              </>
+
+                {/* Rich textbox and services bar  */}
+                <div
+                  className={days[index].collapsed ? "hidden " : "" + " col-12"}
+                >
+                  <div className="px-5 pt-3">
+                    {/* RICH TEXTBOX BAR  */}
+                    <div className="bg-white rounded-lg py-3 flex justify-between items-center  px-3">
+                      <div className=" text-darkblue poppins-semibold">
+                        Day Notes
+                      </div>
+                      <Image
+                        src={downArrowIcon}
+                        alt="down arrow"
+                        className="pointer"
+                        onClick={() => {
+                          let newDays = [...days];
+                          newDays[index].notesCollapsed =
+                            !newDays[index].notesCollapsed;
+                          setDays(newDays);
+                        }}
+                      />
+                    </div>
+
+                    {/* RICH TEXTBOX */}
+                    <div className={days[index].notesCollapsed ? "hidden" : ""}>
+                      <RichTextBox initialData="<h1>Enter Your Day Notes here!</h1><h1>...</h1>" />
+                    </div>
+                  </div>
+
+                  {/* DRAG TABLE SERVICES */}
+                  <div className="px-5 pt-5">
+                    <DragTableServices services={day.services} />
+                  </div>
+                </div>
+              </div>
             );
           })}
         </div>
@@ -207,7 +206,7 @@ export default function Activities(props: {
             {activities.map((activity, index) => {
               return (
                 //     {/* Hotel service */}
-                <div className="col-12 py-2" key={index}>
+                <div className="col-12 py-2" key={index + activity.location}>
                   <div className="flex py-2 px-2 border-dashed rounded-lg items-center justify-between">
                     <div className="flex">
                       <Image
@@ -231,7 +230,11 @@ export default function Activities(props: {
                     <div
                       className="pr-2 pointer"
                       onClick={() => {
-                        setOpenServicePopup(index);
+                        if (openServicePopup == index) {
+                          setOpenServicePopup(-1);
+                        } else {
+                          setOpenServicePopup(index);
+                        }
                       }}
                     >
                       <Image src={addCircleIcon} alt="add" />
@@ -246,29 +249,22 @@ export default function Activities(props: {
                   >
                     {days.map((day, index) => {
                       return (
-                        <>
-                          <div
-                            className="text-darkblue text-center day-row"
-                            onClick={() => {
-                              let newDays = [...days];
-                              newDays[index].services = [
-                                activity,
-                                ...newDays[index].services,
-                              ];
+                        <div
+                          key={index + day.id}
+                          className="text-darkblue text-center day-row pointer"
+                          onClick={() => {
+                            let newDays = [...days];
+                            newDays[index].services = [
+                              activity,
+                              ...newDays[index].services,
+                            ];
 
-                              setDays(newDays);
-
-                              console.log(
-                                "day",
-                                activity,
-                                newDays[index].services
-                              );
-                              setOpenServicePopup(-1);
-                            }}
-                          >
-                            Day {index + 1}
-                          </div>
-                        </>
+                            setDays(newDays);
+                            setOpenServicePopup(-1);
+                          }}
+                        >
+                          Day {index + 1}
+                        </div>
                       );
                     })}
                   </div>

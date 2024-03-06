@@ -6,7 +6,7 @@ import {
   GridRowOrderChangeParams,
 } from "@mui/x-data-grid-pro";
 
-import customDragIcon from "../assets/Icon_move.png";
+import deleteRedIcon from "../assets/delete_red.png";
 import Image from "next/image";
 
 function updateRowPosition(
@@ -79,11 +79,14 @@ export default function RowOrderingGrid(props: any) {
       timeslot: "Timeslot 4",
       price: "Price 4",
     },
-    // Add more rows as needed
   ];
 
   const [rows, setRows] = React.useState(services);
   const [columns] = React.useState(tempColumns);
+
+  React.useEffect(() => {
+    setRows(services);
+  }, [services]);
 
   const [loading, setLoading] = React.useState(false);
 
