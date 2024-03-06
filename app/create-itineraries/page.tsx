@@ -20,6 +20,7 @@ import TripDetails from "../components/itineraryComponents/TripDetails";
 import Accommodation from "../components/itineraryComponents/Accommodation";
 import Activities from "../components/itineraryComponents/Activities";
 import Transport from "../components/itineraryComponents/Transport";
+import Pricing from "../components/itineraryComponents/Pricing";
 
 export default function CreateItineraries() {
   const [progress, setProgress] = React.useState(0);
@@ -265,13 +266,11 @@ export default function CreateItineraries() {
 
           {currentStep === "pricing" && (
             <>
-              <div className="col-12">
-                <div className="flex justify-center">
-                  <div className="poppins-semibold text-darkblue f-36">
-                    Pricing & Payment
-                  </div>
-                </div>
-              </div>
+              <Pricing
+                setCurrentStep={setCurrentStep}
+                stepsDone={stepsDone}
+                setStepsDone={setStepsDone}
+              />
             </>
           )}
         </div>
