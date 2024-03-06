@@ -28,8 +28,10 @@ export default function RootLayout({
       </Head>
 
       <body className={"poppins-regular"}>
-        <Providers>{children}</Providers>
-        <Analytics />
+        <Providers>
+          {children}
+          <Analytics />
+        </Providers>
       </body>
     </html>
   );
