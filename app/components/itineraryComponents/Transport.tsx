@@ -1,5 +1,5 @@
 "use client";
-import React, { use, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import SingleSelect from "../SingleSelect";
 
@@ -8,11 +8,11 @@ import deleteRedIcon from "../../assets/delete_red.png";
 import downArrowIcon from "../../assets/down_arrow_dark.png";
 import addGoldIcon from "../../assets/Icon_Add.png";
 import addCircleIcon from "../../assets/Icon_Add_circle.png";
-import tourImage from "../../assets/tour_effel.jpg";
+import carImage from "../../assets/mercedes.webp";
 import RichTextBox from "../RichTextBox";
 import DragTableServices from "../DragTableServices";
 
-export default function Activities(props: {
+export default function Transport(props: {
   setCurrentStep: any;
   stepsDone: any;
   setStepsDone: any;
@@ -20,14 +20,14 @@ export default function Activities(props: {
   const { setCurrentStep, stepsDone, setStepsDone } = props;
 
   useEffect(() => {
-    setStepsDone([...stepsDone, "activities"]);
+    setStepsDone([...stepsDone, "transport"]);
   }, []);
 
-  const [activities, setActivities] = useState([
+  const [transports, setTransports] = useState([
     {
       id: "1",
-      serviceType: "Service 1",
-      description: "Service 1 Description",
+      serviceType: "Transport 1",
+      description: "Transport 1 Description",
       location: "Location 1",
       method: "Method 1",
       duration: "Duration 1",
@@ -36,8 +36,8 @@ export default function Activities(props: {
     },
     {
       id: "2",
-      serviceType: "Service 2",
-      description: "Service 2 Description",
+      serviceType: "Transport 2",
+      description: "Transport 2 Description",
       location: "Location 2",
       method: "Method 2",
       duration: "Duration 2",
@@ -46,8 +46,8 @@ export default function Activities(props: {
     },
     {
       id: "3",
-      serviceType: "Service 3",
-      description: "Service 3 Description",
+      serviceType: "Transport 3",
+      description: "Transport 3 Description",
       location: "Location 3",
       method: "Method 3",
       duration: "Duration 3",
@@ -56,8 +56,8 @@ export default function Activities(props: {
     },
     {
       id: "4",
-      serviceType: "Service 4",
-      description: "Service 4 Description",
+      serviceType: "Transport 4",
+      description: "Transport 4 Description",
       location: "Location 4",
       method: "Method 4",
       duration: "Duration 4",
@@ -66,8 +66,8 @@ export default function Activities(props: {
     },
     {
       id: "5",
-      serviceType: "Service 5",
-      description: "Service 5 Description",
+      serviceType: "Transport 5",
+      description: "Transport 5 Description",
       location: "Location 5",
       method: "Method 5",
       duration: "Duration 5",
@@ -76,8 +76,8 @@ export default function Activities(props: {
     },
     {
       id: "6",
-      serviceType: "Service 6",
-      description: "Service 6 Description",
+      serviceType: "Transport 6",
+      description: "Transport 6 Description",
       location: "Location 6",
       method: "Method 6",
       duration: "Duration 6",
@@ -99,7 +99,7 @@ export default function Activities(props: {
   const [openServicePopup, setOpenServicePopup] = useState(-1);
 
   return (
-    <div className="container-fluid activities">
+    <div className="container-fluid transport">
       <div className="row">
         <div className="col-9">
           {days.map((day, index) => {
@@ -174,13 +174,13 @@ export default function Activities(props: {
         <div className="col-3">
           <div className="row bg-white rounded-lg py-3">
             <div className="col-12">
-              {/* search activities  */}
+              {/* search Transports  */}
               <div className="row">
                 <div className="col">
                   <input
                     type="text"
                     className="rounded-lg bg-lightblue text-darkblue px-5 py-3 w-full"
-                    placeholder="Search Activity"
+                    placeholder="Search Transport"
                   />
                 </div>
                 <div className="col-auto self-center">F</div>
@@ -207,15 +207,15 @@ export default function Activities(props: {
                 </div>
               </div>
             </div>
-            {activities.map((activity, index) => {
+            {transports.map((transport, index) => {
               return (
-                //     {/* activity service */}
-                <div className="col-12 py-2" key={index + activity.location}>
+                //     {/* Transport service */}
+                <div className="col-12 py-2" key={index + transport.location}>
                   <div className="flex py-2 px-2 border-dashed rounded-lg items-center justify-between">
                     <div className="flex">
                       <Image
-                        src={tourImage}
-                        alt="tour image"
+                        src={carImage}
+                        alt="Car image"
                         className="rounded-lg"
                         style={{
                           width: "70px",
@@ -225,7 +225,7 @@ export default function Activities(props: {
                       />
                       <div className="pl-3">
                         <div className="f-24 text-darkblue poppins-medium">
-                          {activity.serviceType}
+                          {transport.serviceType}
                         </div>
                         <div className="f-14 text-darkblue">Paris, France</div>
                       </div>
@@ -259,7 +259,7 @@ export default function Activities(props: {
                           onClick={() => {
                             let newDays = [...days];
                             newDays[index].services = [
-                              activity,
+                              transport,
                               ...newDays[index].services,
                             ];
 
@@ -292,8 +292,8 @@ export default function Activities(props: {
           <div
             className="dark-button text-gold poppins-medium cursor-pointer"
             onClick={() => {
-              setCurrentStep("activities");
-              setStepsDone([...stepsDone, "activities"]);
+              setCurrentStep("transports");
+              setStepsDone([...stepsDone, "transports"]);
             }}
           >
             <div className="flex items-center h-full">

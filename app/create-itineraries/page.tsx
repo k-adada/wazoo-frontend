@@ -19,10 +19,11 @@ import AvailabilityTimes from "../components/AvailabilityTimes";
 import TripDetails from "../components/itineraryComponents/TripDetails";
 import Accommodation from "../components/itineraryComponents/Accommodation";
 import Activities from "../components/itineraryComponents/Activities";
+import Transport from "../components/itineraryComponents/Transport";
 
 export default function CreateItineraries() {
   const [progress, setProgress] = React.useState(0);
-  const [currentStep, setCurrentStep] = useState("activities");
+  const [currentStep, setCurrentStep] = useState("transport");
   const [stepsDone, setStepsDone] = useState(["trip-details"]);
   // const steps = [
   //   "trip-details",
@@ -132,33 +133,59 @@ export default function CreateItineraries() {
               {/* STEP 3  */}
               <div className="col-auto">
                 <div className="itinerary-step">
-                  <div className="grey-ball"></div>
+                  <div
+                    className={
+                      stepsDone.includes("activities")
+                        ? "darkblue-ball"
+                        : "grey-ball"
+                    }
+                  ></div>
                   <div className="f-14 text-grey text-center">Step 3</div>
                   <div className="text-darkblue text-center">Activities</div>
                 </div>
               </div>
               <div className="col">
                 <div className="step-direction pt-3">
-                  <div className="step-line"></div>
+                  <div
+                    className={
+                      (stepsDone.includes("activities") ? "active" : "") +
+                      " step-line"
+                    }
+                  ></div>
                 </div>
               </div>
               {/* STEP 4  */}
               <div className="col-auto">
                 <div className="itinerary-step">
-                  <div className="grey-ball"></div>
+                  <div
+                    className={
+                      stepsDone.includes("transport")
+                        ? "darkblue-ball"
+                        : "grey-ball"
+                    }
+                  ></div>
                   <div className="f-14 text-grey text-center">Step 4</div>
                   <div className="text-darkblue text-center">Transport</div>
                 </div>
               </div>
               <div className="col">
                 <div className="step-direction pt-3">
-                  <div className="step-line"></div>
+                  <div
+                    className={
+                      (stepsDone.includes("transport") ? "active" : "") +
+                      " step-line"
+                    }
+                  ></div>
                 </div>
               </div>
               {/* STEP 5  */}
               <div className="col-auto">
                 <div className="itinerary-step">
-                  <div className="grey-ball"></div>
+                  <div  className={
+                      stepsDone.includes("pricing")
+                        ? "darkblue-ball"
+                        : "grey-ball"
+                    }></div>
                   <div className="f-14 text-grey text-center">Step 5</div>
                   <div className="text-darkblue text-center">
                     Pricing & Payment
@@ -167,13 +194,24 @@ export default function CreateItineraries() {
               </div>
               <div className="col">
                 <div className="step-direction pt-3">
-                  <div className="step-line"></div>
+                  <div
+                    className={
+                      (stepsDone.includes("pricing") ? "active" : "") +
+                      " step-line"
+                    }
+                  ></div>
                 </div>
               </div>
               {/* STEP 6  */}
               <div className="col-auto">
                 <div className="itinerary-step">
-                  <div className="grey-ball"></div>
+                  <div
+                    className={
+                      stepsDone.includes("review")
+                        ? "darkblue-ball"
+                        : "grey-ball"
+                    }
+                  ></div>
                   <div className="f-14 text-grey text-center">Step 6</div>
                   <div className="text-darkblue text-center">Review</div>
                 </div>
@@ -206,6 +244,16 @@ export default function CreateItineraries() {
           {currentStep === "activities" && (
             <>
               <Activities
+                setCurrentStep={setCurrentStep}
+                stepsDone={stepsDone}
+                setStepsDone={setStepsDone}
+              />
+            </>
+          )}
+
+          {currentStep === "transport" && (
+            <>
+              <Transport
                 setCurrentStep={setCurrentStep}
                 stepsDone={stepsDone}
                 setStepsDone={setStepsDone}

@@ -57,20 +57,12 @@ export default function ServiceProviders() {
               </div>
             </div>
           </div>
-          {/* <div className="col-12">
-            <div className="flex">
-              <div className="flex items-center py-4 back-button">
-                <Image src={backIcon} alt="back" />
-                <div className="pl-2 text-darkblue">Back</div>
-              </div>
-            </div>
-          </div> */}
         </div>
 
         {serviceProviders.length > 0 ? (
           <div className="row justify-between pt-10">
             <div className="flex col-auto">
-              <Link href="#">
+              <Link href="/create-service-providers">
                 <div className="dark-button text-gold poppins-medium cursor-pointer">
                   <div className="flex items-center h-full">
                     <Image src={addIcon} alt="add icon" />

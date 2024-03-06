@@ -35,7 +35,7 @@ export default function RowOrderingGrid(props: any) {
     { field: "method", headerName: "Method", width: 130 },
     { field: "duration", headerName: "Duration", width: 100 },
     { field: "timeslot", headerName: "Timeslot", width: 100 },
-    { field: "price", headerName: "Price", width: 100 },
+    { field: "price", headerName: "Price ($)", width: 100 },
   ];
 
   const tempRows: GridRowModel[] = [
