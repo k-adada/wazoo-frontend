@@ -23,7 +23,7 @@ export default function CreateItineraries() {
     router.back();
   };
   const [progress, setProgress] = useState(0);
-  const [currentStep, setCurrentStep] = useState("review");
+  const [currentStep, setCurrentStep] = useState("trip-details");
   const [stepsDone, setStepsDone] = useState(["trip-details"]);
   // const steps = [
   //   "trip-details",
