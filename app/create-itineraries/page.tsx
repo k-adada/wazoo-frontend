@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 import notificationIcon from "../assets/Icon_Notification_Received.png";
 
 import backIcon from "../assets/Icon_Back.png";
+import avatarIcon from "../assets/avatar.png";
 
 import TripDetails from "../components/itineraryComponents/TripDetails";
 import Accommodation from "../components/itineraryComponents/Accommodation";
