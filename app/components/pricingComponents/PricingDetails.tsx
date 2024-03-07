@@ -1,7 +1,14 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
+// Dynamically import the RichTextBox component with SSR disabled
+const DynamicRichTextBox = dynamic(() => import("../RichTextBox"), {
+  ssr: false, // Disable server-side rendering for this component
+});
 
-import RichTextBox from "../RichTextBox";
+type Props = {
+  initialData?: string; // Define any props you want to pass to RichTextBox
+};
 
 export default function PricingDetails() {
   const [serviceProviders, setServiceProviders] = useState([
@@ -72,7 +79,7 @@ export default function PricingDetails() {
         {/* PAYABLES BAR */}
         <div className="col-12">
           <div className="row bg-white rounded-lg py-8">
-            {/* <RichTextBox initialData={"Notes"} /> */}
+            <DynamicRichTextBox initialData={"Notes"} />
           </div>
         </div>
       </div>

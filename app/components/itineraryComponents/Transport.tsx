@@ -9,7 +9,6 @@ import downArrowIcon from "../../assets/down_arrow_dark.png";
 import addGoldIcon from "../../assets/Icon_Add.png";
 import addCircleIcon from "../../assets/Icon_Add_circle.png";
 import carImage from "../../assets/mercedes.webp";
-import RichTextBox from "../RichTextBox";
 import DragTableServices from "../DragTableServices";
 
 import dynamic from "next/dynamic";

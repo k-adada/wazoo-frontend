@@ -9,8 +9,17 @@ import downArrowIcon from "../../assets/down_arrow_dark.png";
 import addGoldIcon from "../../assets/Icon_Add.png";
 import addCircleIcon from "../../assets/Icon_Add_circle.png";
 import tourImage from "../../assets/tour_effel.jpg";
-import RichTextBox from "../RichTextBox";
 import DragTableServices from "../DragTableServices";
+
+import dynamic from "next/dynamic";
+// Dynamically import the RichTextBox component with SSR disabled
+const DynamicRichTextBox = dynamic(() => import("../RichTextBox"), {
+  ssr: false, // Disable server-side rendering for this component
+});
+
+type Props = {
+  initialData?: string; // Define any props you want to pass to RichTextBox
+};
 
 export default function Activities(props: {
   setCurrentStep: any;
@@ -155,9 +164,9 @@ export default function Activities(props: {
                     </div>
 
                     {/* RICH TEXTBOX */}
-                    {/* <div className={days[index].notesCollapsed ? "hidden" : ""}>
-                      <RichTextBox initialData="<h1>Enter Your Day Notes here!</h1><h1>...</h1>" />
-                    </div> */}
+                    <div className={days[index].notesCollapsed ? "hidden" : ""}>
+                      <DynamicRichTextBox initialData="<h1>Enter Your Day Notes here!</h1><h1>...</h1>" />
+                    </div>
                   </div>
 
                   {/* DRAG TABLE SERVICES */}
