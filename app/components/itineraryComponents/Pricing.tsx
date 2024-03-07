@@ -89,8 +89,6 @@ export default function Pricing(props: {
     },
   ]);
 
-  const [openServicePopup, setOpenServicePopup] = useState(-1);
-
   return (
     <div className="container-fluid transport">
       <div className="row">
