@@ -5,6 +5,7 @@ import tagIcon from "../../assets/Icon_Tag.png";
 import invoiceIcon from "../../assets/Icon_Invoice_dark.png";
 import addIcon from "../../assets/Icon_Add_Dark.png";
 import deleteIcon from "../../assets/delete_red.png";
+import cancellationIcon from "../../assets/Icon_Stop.png";
 
 export default function MyPricing() {
   const [paymentTerms, setPaymentTerms] = useState([
@@ -429,7 +430,7 @@ export default function MyPricing() {
               {/* Cancellation Terms */}
               <div className="flex items-center pt-5 pb-3">
                 <div className="pr-3">
-                  <Image width={30} src={invoiceIcon} alt="invoice" />
+                  <Image width={30} src={cancellationIcon} alt="cancellationIcon" />
                 </div>
                 <div className="text-darkblue f-24 poppins-semibold">
                   Cancellation Terms
