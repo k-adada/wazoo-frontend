@@ -1,15 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import SingleSelect from "../SingleSelect";
 
 import saveIcon from "../../assets/Icon_Save.png";
-import deleteRedIcon from "../../assets/delete_red.png";
-import downArrowIcon from "../../assets/down_arrow_dark.png";
-import addGoldIcon from "../../assets/Icon_Add.png";
-import addCircleIcon from "../../assets/Icon_Add_circle.png";
-import carImage from "../../assets/mercedes.webp";
-import RichTextBox from "../RichTextBox";
 import DragTableServices from "../DragTableServices";
 import Totals from "../pricingComponents/Totals";
 import Payables from "../pricingComponents/Payables";
@@ -135,8 +128,8 @@ export default function Pricing(props: {
           <div
             className="dark-button text-gold poppins-medium cursor-pointer"
             onClick={() => {
-              setCurrentStep("pricing");
-              setStepsDone([...stepsDone, "pricing"]);
+              setCurrentStep("review");
+              setStepsDone([...stepsDone, "review"]);
             }}
           >
             <div className="flex items-center h-full">

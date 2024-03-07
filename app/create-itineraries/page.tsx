@@ -21,10 +21,11 @@ import Accommodation from "../components/itineraryComponents/Accommodation";
 import Activities from "../components/itineraryComponents/Activities";
 import Transport from "../components/itineraryComponents/Transport";
 import Pricing from "../components/itineraryComponents/Pricing";
+import Review from "../components/itineraryComponents/Review";
 
 export default function CreateItineraries() {
   const [progress, setProgress] = React.useState(0);
-  const [currentStep, setCurrentStep] = useState("pricing");
+  const [currentStep, setCurrentStep] = useState("trip-details");
   const [stepsDone, setStepsDone] = useState(["trip-details"]);
   // const steps = [
   //   "trip-details",
@@ -267,6 +268,16 @@ export default function CreateItineraries() {
           {currentStep === "pricing" && (
             <>
               <Pricing
+                setCurrentStep={setCurrentStep}
+                stepsDone={stepsDone}
+                setStepsDone={setStepsDone}
+              />
+            </>
+          )}
+
+          {currentStep === "review" && (
+            <>
+              <Review
                 setCurrentStep={setCurrentStep}
                 stepsDone={stepsDone}
                 setStepsDone={setStepsDone}

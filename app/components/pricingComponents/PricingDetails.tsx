@@ -72,7 +72,7 @@ export default function PricingDetails() {
         {/* PAYABLES BAR */}
         <div className="col-12">
           <div className="row bg-white rounded-lg py-8">
-            <RichTextBox initialData={"Notes"} />
+            {/* <RichTextBox initialData={"Notes"} /> */}
           </div>
         </div>
       </div>
