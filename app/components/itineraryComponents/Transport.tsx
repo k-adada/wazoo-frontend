@@ -155,9 +155,9 @@ export default function Transport(props: {
                     </div>
 
                     {/* RICH TEXTBOX */}
-                    {/* <div className={days[index].notesCollapsed ? "hidden" : ""}>
+                    <div className={days[index].notesCollapsed ? "hidden" : ""}>
                       <RichTextBox initialData="<h1>Enter Your Day Notes here!</h1><h1>...</h1>" />
-                    </div> */}
+                    </div>
                   </div>
 
                   {/* DRAG TABLE SERVICES */}
