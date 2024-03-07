@@ -56,12 +56,14 @@ export default function DmcDashboard() {
             </Link>
           </div>
           <div className="col-auto">
-            <div className="dark-button text-gold poppins-medium cursor-pointer">
-              <div className="flex items-center h-full">
-                <Image src={addIcon} alt="add" />
-                <div className="pl-4">Create Sample Itinerary</div>
+            <Link href="/create-itineraries">
+              <div className="dark-button text-gold poppins-medium cursor-pointer">
+                <div className="flex items-center h-full">
+                  <Image src={addIcon} alt="add" />
+                  <div className="pl-4">Create Sample Itinerary</div>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
           <div className="col-auto">
             <div className="dark-button text-gold poppins-medium cursor-pointer">

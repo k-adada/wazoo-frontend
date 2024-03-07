@@ -55,18 +55,16 @@ export default function CreateServices() {
         </div>
 
         <div className="row">
-          <div className="col-12">
-            <div className="f-36 poppins-semibold text-darkblue pt-5">
-              Services
-            </div>
-          </div>
-          <div className="col-12">
+          <div className="col-auto">
             <div className="flex">
-              <div className="flex items-center py-4 back-button">
+              <div className="flex items-center py-5 back-button">
                 <Image src={backIcon} alt="back" />
                 <div className="pl-2 text-darkblue">Back</div>
               </div>
             </div>
+          </div>
+          <div className="col-auto self-center">
+            <div className="f-36 poppins-semibold text-darkblue ">Services</div>
           </div>
         </div>
 
@@ -198,33 +196,47 @@ export default function CreateServices() {
                   </div>
                   <div className="flex justify-between items-center">
                     <div className="text-darkblue poppins-medium">Monday</div>
-                    <div className="text-darkblue pr-[80px]">11:00am - 10:00pm</div>
+                    <div className="text-darkblue pr-[80px]">
+                      11:00am - 10:00pm
+                    </div>
                   </div>
                   <div className="flex justify-between items-center">
                     <div className="text-darkblue poppins-medium">Tuesday</div>
-                    <div className="text-darkblue pr-[80px]">11:00am - 10:00pm</div>
+                    <div className="text-darkblue pr-[80px]">
+                      11:00am - 10:00pm
+                    </div>
                   </div>
                   <div className="flex justify-between items-center">
                     <div className="text-darkblue poppins-medium">
                       Wednesday
                     </div>
-                    <div className="text-darkblue pr-[80px]">11:00am - 10:00pm</div>
+                    <div className="text-darkblue pr-[80px]">
+                      11:00am - 10:00pm
+                    </div>
                   </div>
                   <div className="flex justify-between items-center">
                     <div className="text-darkblue poppins-medium">Thursday</div>
-                    <div className="text-darkblue pr-[80px]">11:00am - 10:00pm</div>
+                    <div className="text-darkblue pr-[80px]">
+                      11:00am - 10:00pm
+                    </div>
                   </div>
                   <div className="flex justify-between items-center">
                     <div className="text-darkblue poppins-medium">Friday</div>
-                    <div className="text-darkblue pr-[80px]">11:00am - 10:00pm</div>
+                    <div className="text-darkblue pr-[80px]">
+                      11:00am - 10:00pm
+                    </div>
                   </div>
                   <div className="flex justify-between items-center">
                     <div className="text-darkblue poppins-medium">Saturday</div>
-                    <div className="text-darkblue pr-[80px]">11:00am - 10:00pm</div>
+                    <div className="text-darkblue pr-[80px]">
+                      11:00am - 10:00pm
+                    </div>
                   </div>
                   <div className="flex justify-between items-center">
                     <div className="text-darkblue poppins-medium">Sunday</div>
-                    <div className="text-darkblue pr-[80px]">11:00am - 10:00pm</div>
+                    <div className="text-darkblue pr-[80px]">
+                      11:00am - 10:00pm
+                    </div>
                   </div>
                 </div>
 

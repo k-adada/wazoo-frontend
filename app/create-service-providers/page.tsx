@@ -40,17 +40,15 @@ export default function CreateServiceProviders() {
         </div>
 
         <div className="row">
-          <div className="col-12">
-            <div className="f-36 poppins-semibold text-darkblue pt-5">
-              Service Providers
+          <div className="col-auto">
+            <div className="flex items-center py-5 back-button">
+              <Image src={backIcon} alt="back" />
+              <div className="pl-2 text-darkblue">Back</div>
             </div>
           </div>
-          <div className="col-12">
-            <div className="flex">
-              <div className="flex items-center py-4 back-button">
-                <Image src={backIcon} alt="back" />
-                <div className="pl-2 text-darkblue">Back</div>
-              </div>
+          <div className="col-auto self-center">
+            <div className="f-36 poppins-semibold text-darkblue ">
+              Service Providers
             </div>
           </div>
         </div>

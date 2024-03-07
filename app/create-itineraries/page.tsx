@@ -79,11 +79,9 @@ export default function CreateItineraries() {
 
         <div className="row">
           <div className="col-auto">
-            <div className="flex">
-              <div className="flex items-center py-5 back-button">
-                <Image src={backIcon} alt="back" />
-                <div className="pl-2 text-darkblue">Back</div>
-              </div>
+            <div className="flex items-center py-5 back-button">
+              <Image src={backIcon} alt="back" />
+              <div className="pl-2 text-darkblue">Back</div>
             </div>
           </div>
           <div className="col-auto self-center">
