@@ -16,11 +16,16 @@ import themeIcon from "../assets/theme.png";
 import dotsIcon from "../assets/dots_icon.png";
 import AvailabilityTimes from "../components/AvailabilityTimes";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function CreateServices() {
-  const [progress, setProgress] = React.useState(0);
+  const router = useRouter();
+  const routerBack = () => {
+    router.back();
+  };
+  const [progress, setProgress] = useState(0);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const timer = setInterval(() => {
       setProgress((prevProgress) =>
         prevProgress >= 100 ? 0 : prevProgress + 10
@@ -63,7 +68,10 @@ export default function CreateServices() {
 
         <div className="row">
           <div className="col-auto">
-            <div className="flex items-center py-5 back-button">
+            <div
+              className="flex items-center py-5 back-button"
+              onClick={routerBack}
+            >
               <Image src={backIcon} alt="back" />
               <div className="pl-2 text-darkblue">Back</div>
             </div>

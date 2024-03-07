@@ -4,6 +4,7 @@ import "./dist/serviceProviders.css";
 import LeftDrawerDMC from "../components/LeftDrawerDMC";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 import notificationIcon from "../assets/Icon_Notification_Received.png";
 import avatarIcon from "../assets/avatar.png";
@@ -15,6 +16,10 @@ import serviceProviderIcon from "../assets/service_providers_none.png";
 import ServiceProvidersTable from "../components/ServiceProvidersTable";
 
 export default function ServiceProviders() {
+  const router = useRouter();
+  const routerBack = () => {
+    router.back();
+  };
   const [serviceProviders, setServiceProviders] = useState([1]);
   return (
     <main className="flex min-h-screen flex-col items-center p-md-24 p-3 bg-lightblue pb-[100px]">
@@ -47,7 +52,10 @@ export default function ServiceProviders() {
 
         <div className="row">
           <div className="col-auto">
-            <div className="flex items-center py-5 back-button">
+            <div
+              className="flex items-center py-5 back-button"
+              onClick={routerBack}
+            >
               <Image src={backIcon} alt="back" />
               <div className="pl-2 text-darkblue">Back</div>
             </div>

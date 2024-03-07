@@ -6,6 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import ServicesTable from "../components/ServicesTable";
 
+import { useRouter } from "next/navigation";
+
 import notificationIcon from "../assets/Icon_Notification_Received.png";
 import avatarIcon from "../assets/avatar.png";
 import addIcon from "../assets/Icon_Add.png";
@@ -24,6 +26,10 @@ import phoneIcon from "../assets/phone_icon.png";
 import searchIcon from "../assets/Icon_Search_Black.png";
 
 export default function CreateServices() {
+  const router = useRouter();
+  const routerBack = () => {
+    router.back();
+  };
   const [services, setServices] = useState([]);
   return (
     <main className="flex min-h-screen flex-col items-center p-md-24 p-3 bg-lightblue pb-[100px]">
@@ -56,7 +62,10 @@ export default function CreateServices() {
 
         <div className="row">
           <div className="col-auto">
-            <div className="flex items-center py-5 back-button">
+            <div
+              className="flex items-center py-5 back-button"
+              onClick={routerBack}
+            >
               <Image src={backIcon} alt="back" />
               <div className="pl-2 text-darkblue">Back</div>
             </div>

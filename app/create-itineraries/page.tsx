@@ -3,19 +3,12 @@ import React, { useEffect, useState } from "react";
 import "./dist/createItineraries.css";
 import LeftDrawerDMC from "../components/LeftDrawerDMC";
 import Image from "next/image";
-import SingleSelect from "../components/SingleSelect";
-import BasicDateRangePicker from "../components/DateRangePicker";
-import CircularProgress from "@mui/material/CircularProgress";
+import { useRouter } from "next/navigation";
 
 import notificationIcon from "../assets/Icon_Notification_Received.png";
-import avatarIcon from "../assets/avatar.png";
-import addIcon from "../assets/Icon_Add.png";
-import saveIcon from "../assets/Icon_Save.png";
+
 import backIcon from "../assets/Icon_Back.png";
-import uploadIcon from "../assets/upload_icon.png";
-import themeIcon from "../assets/theme.png";
-import dotsIcon from "../assets/dots_icon.png";
-import AvailabilityTimes from "../components/AvailabilityTimes";
+
 import TripDetails from "../components/itineraryComponents/TripDetails";
 import Accommodation from "../components/itineraryComponents/Accommodation";
 import Activities from "../components/itineraryComponents/Activities";
@@ -24,7 +17,11 @@ import Pricing from "../components/itineraryComponents/Pricing";
 import Review from "../components/itineraryComponents/Review";
 
 export default function CreateItineraries() {
-  const [progress, setProgress] = React.useState(0);
+  const router = useRouter();
+  const routerBack = () => {
+    router.back();
+  };
+  const [progress, setProgress] = useState(0);
   const [currentStep, setCurrentStep] = useState("review");
   const [stepsDone, setStepsDone] = useState(["trip-details"]);
   // const steps = [
@@ -36,7 +33,7 @@ export default function CreateItineraries() {
   //   "review",
   // ];
 
-  React.useEffect(() => {
+  useEffect(() => {
     const timer = setInterval(() => {
       setProgress((prevProgress) =>
         prevProgress >= 100 ? 0 : prevProgress + 10
@@ -79,7 +76,10 @@ export default function CreateItineraries() {
 
         <div className="row">
           <div className="col-auto">
-            <div className="flex items-center py-5 back-button">
+            <div
+              className="flex items-center py-5 back-button"
+              onClick={routerBack}
+            >
               <Image src={backIcon} alt="back" />
               <div className="pl-2 text-darkblue">Back</div>
             </div>

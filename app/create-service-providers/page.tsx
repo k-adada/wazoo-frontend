@@ -3,6 +3,7 @@ import React from "react";
 import "./dist/createServiceProviders.css";
 import LeftDrawerDMC from "../components/LeftDrawerDMC";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 import notificationIcon from "../assets/Icon_Notification_Received.png";
 import avatarIcon from "../assets/avatar.png";
@@ -10,6 +11,11 @@ import saveIcon from "../assets/Icon_Save.png";
 import backIcon from "../assets/Icon_Back.png";
 
 export default function CreateServiceProviders() {
+  const router = useRouter();
+  const routerBack = () => {
+    router.back();
+  };
+
   return (
     <main className="flex min-h-screen flex-col items-center p-md-24 p-3 bg-lightblue pb-[100px]">
       <div className="container-fluid">
@@ -41,7 +47,10 @@ export default function CreateServiceProviders() {
 
         <div className="row">
           <div className="col-auto">
-            <div className="flex items-center py-5 back-button">
+            <div
+              className="flex items-center py-5 back-button"
+              onClick={routerBack}
+            >
               <Image src={backIcon} alt="back" />
               <div className="pl-2 text-darkblue">Back</div>
             </div>
