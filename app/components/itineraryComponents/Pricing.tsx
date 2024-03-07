@@ -24,7 +24,7 @@ export default function Pricing(props: {
       "transport",
       "pricing",
     ]);
-  }, []);
+  }, [setStepsDone]);
 
   const [pricings, setPricings] = useState([
     {

@@ -30,7 +30,7 @@ export default function Review(props: {
       "pricing",
       "review",
     ]);
-  }, []);
+  }, [setStepsDone]);
 
   const [pricings, setPricings] = useState([
     {

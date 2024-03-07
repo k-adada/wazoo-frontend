@@ -30,7 +30,7 @@ export default function Activities(props: {
 
   useEffect(() => {
     setStepsDone(["tripDetails", "accommodation", "activities"]);
-  }, []);
+  }, [setStepsDone]);
 
   const [activities, setActivities] = useState([
     {

@@ -24,7 +24,7 @@ export default function Accommodation(props: {
 
   useEffect(() => {
     setStepsDone(["tripDetails", "accommodation"]);
-  }, []);
+  }, [setStepsDone]);
 
   return (
     <div className="container-fluid accommodation">

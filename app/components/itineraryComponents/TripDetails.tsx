@@ -32,7 +32,7 @@ export default function TripDetails(props: {
 
   useEffect(() => {
     setStepsDone(["tripDetails"]);
-  }, []);
+  }, [setStepsDone]);
 
   return (
     <div className="container-fluid">

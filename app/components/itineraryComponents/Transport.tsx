@@ -30,7 +30,7 @@ export default function Transport(props: {
 
   useEffect(() => {
     setStepsDone(["tripDetails", "accommodation", "activities", "transport"]);
-  }, []);
+  }, [setStepsDone]);
 
   const [transports, setTransports] = useState([
     {
