@@ -91,6 +91,94 @@ export default function Review(props: {
   const [showItineraryOverview, setShowItineraryOverview] = useState(true);
   const [showDetailedItinerary, setShowDetailedItinerary] = useState(true);
   const [showPricingAndPayment, setShowPricingAndPayment] = useState(true);
+  const [showTotals, setShowTotals] = useState(true);
+  const [showPayables, setShowPayables] = useState(true);
+  const [showMyPricing, setShowMyPricing] = useState(true);
+  const [showPricingDetails, setShowPricingDetails] = useState(true);
+
+  const [days, setDays] = useState([
+    {
+      id: 1,
+      notesCollapsed: false,
+      collapsed: false,
+      services: [
+        {
+          id: "1",
+          serviceType: "Service 1",
+          description: "Service 1 Description",
+          location: "Location 1",
+          method: "Method 1",
+          duration: "Duration 1",
+          timeslot: "Timeslot 1",
+          price: "350",
+        },
+        {
+          id: "2",
+          serviceType: "Service 2",
+          description: "Service 2 Description",
+          location: "Location 2",
+          method: "Method 2",
+          duration: "Duration 2",
+          timeslot: "Timeslot 2",
+          price: "350",
+        },
+      ] as any[],
+    },
+    {
+      id: 2,
+      notesCollapsed: false,
+      collapsed: true,
+      services: [
+        {
+          id: "1",
+          serviceType: "Service 1",
+          description: "Service 1 Description",
+          location: "Location 1",
+          method: "Method 1",
+          duration: "Duration 1",
+          timeslot: "Timeslot 1",
+          price: "350",
+        },
+        {
+          id: "2",
+          serviceType: "Service 2",
+          description: "Service 2 Description",
+          location: "Location 2",
+          method: "Method 2",
+          duration: "Duration 2",
+          timeslot: "Timeslot 2",
+          price: "350",
+        },
+      ] as any[],
+    },
+    {
+      id: 3,
+      notesCollapsed: false,
+      collapsed: false,
+      services: [
+        {
+          id: "1",
+          serviceType: "Service 1",
+          description: "Service 1 Description",
+          location: "Location 1",
+          method: "Method 1",
+          duration: "Duration 1",
+          timeslot: "Timeslot 1",
+          price: "350",
+        },
+        {
+          id: "2",
+          serviceType: "Service 2",
+          description: "Service 2 Description",
+          location: "Location 2",
+          method: "Method 2",
+          duration: "Duration 2",
+          timeslot: "Timeslot 2",
+          price: "350",
+        },
+      ] as any[],
+    },
+  ]);
 
   return (
     <div className="container-fluid transport">
@@ -320,8 +408,77 @@ export default function Review(props: {
           </div>
           {showDetailedItinerary && (
             <>
-              {/* DRAG TABLE SERVICES */}
-              <DragTableServices services={pricings} />
+              <div className="">
+                {days.map((day, index) => {
+                  return (
+                    <div
+                      className="row py-4 overflow-hidden"
+                      key={index + day.id + day.id}
+                    >
+                      {/* Day BAR  */}
+                      <div className="col-12">
+                        <div className="bg-blue rounded-lg px-5 py-2 flex justify-between">
+                          <div className="f-24 text-darkblue poppins-semibold">
+                            May {index + 1}, 2024
+                          </div>
+                          <div
+                            className="flex items-center"
+                            onClick={() => {
+                              let newDays = [...days];
+                              newDays[index].collapsed =
+                                !newDays[index].collapsed;
+                              setDays(newDays);
+                            }}
+                          >
+                            <Image
+                              src={downArrowIcon}
+                              alt="down arrow"
+                              className="pointer"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Rich textbox and services bar  */}
+                      <div
+                        className={
+                          days[index].collapsed ? "hidden " : "" + " col-12"
+                        }
+                      >
+                        <div className="px-5 pt-3">
+                          {/* RICH TEXTBOX BAR  */}
+                          <div className="bg-white rounded-lg py-3 flex justify-between items-center  px-3">
+                            <div className=" text-darkblue poppins-semibold">
+                              Day Notes
+                            </div>
+                            <Image
+                              src={downArrowIcon}
+                              alt="down arrow"
+                              className="pointer"
+                              onClick={() => {
+                                let newDays = [...days];
+                                newDays[index].notesCollapsed =
+                                  !newDays[index].notesCollapsed;
+                                setDays(newDays);
+                              }}
+                            />
+                          </div>
+
+                          {/* RICH TEXTBOX */}
+                          {/* <div className={days[index].notesCollapsed ? "hidden" : ""}>
+                      <RichTextBox initialData="<h1>Enter Your Day Notes here!</h1><h1>...</h1>" />
+                    </div> */}
+                        </div>
+
+                        {/* DRAG TABLE SERVICES */}
+                        <div className="px-5 pt-5">
+                          <DragTableServices services={day.services} />
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </>
           )}
         </div>
@@ -346,19 +503,99 @@ export default function Review(props: {
           <>
             {/* TOTALS */}
             <div className="col-12">
-              <Totals />
+              {/*  BAR  */}
+              <div className="">
+                <div className="bg-blue rounded-lg px-5 py-2 flex justify-between">
+                  <div className="f-24 text-darkblue poppins-semibold">
+                    Totals
+                  </div>
+                  <div
+                    className="flex items-center"
+                    onClick={() => {
+                      setShowTotals(!showTotals);
+                    }}
+                  >
+                    <Image
+                      src={downArrowIcon}
+                      alt="down arrow"
+                      className="pointer"
+                    />
+                  </div>
+                </div>
+              </div>
+              {showTotals && <Totals />}
             </div>
             {/* PAYABLES */}
             <div className="col-12 pt-5">
-              <Payables />
+              {/*  BAR  */}
+              <div className="">
+                <div className="bg-blue rounded-lg px-5 py-2 flex justify-between">
+                  <div className="f-24 text-darkblue poppins-semibold">
+                    Payables
+                  </div>
+                  <div
+                    className="flex items-center"
+                    onClick={() => {
+                      setShowPayables(!showPayables);
+                    }}
+                  >
+                    <Image
+                      src={downArrowIcon}
+                      alt="down arrow"
+                      className="pointer"
+                    />
+                  </div>
+                </div>
+              </div>
+              {showPayables && <Payables />}
             </div>
             {/* MY PRICING */}
             <div className="col-12 pt-5">
-              <MyPricing />
+              {/*  BAR  */}
+              <div className="">
+                <div className="bg-blue rounded-lg px-5 py-2 flex justify-between">
+                  <div className="f-24 text-darkblue poppins-semibold">
+                    My Pricing & Payment Terms
+                  </div>
+                  <div
+                    className="flex items-center"
+                    onClick={() => {
+                      setShowMyPricing(!showMyPricing);
+                    }}
+                  >
+                    <Image
+                      src={downArrowIcon}
+                      alt="down arrow"
+                      className="pointer"
+                    />
+                  </div>
+                </div>
+              </div>
+              {showMyPricing && <MyPricing />}
             </div>
             {/* PRICING DETAILS */}
             <div className="col-12 pt-5">
-              <PricingDetails />
+              {/*  BAR  */}
+              <div className="">
+                <div className="bg-blue rounded-lg px-5 py-2 flex justify-between">
+                  <div className="f-24 text-darkblue poppins-semibold">
+                    Pricing Details
+                  </div>
+                  <div
+                    className="flex items-center"
+                    onClick={() => {
+                      setShowPricingDetails(!showPricingDetails);
+                    }}
+                  >
+                    <Image
+                      src={downArrowIcon}
+                      alt="down arrow"
+                      className="pointer"
+                    />
+                  </div>
+                </div>
+              </div>
+              {showPricingDetails && <PricingDetails />}
             </div>
           </>
         )}
