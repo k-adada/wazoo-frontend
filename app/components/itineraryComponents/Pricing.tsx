@@ -8,6 +8,7 @@ import Totals from "../pricingComponents/Totals";
 import Payables from "../pricingComponents/Payables";
 import MyPricing from "../pricingComponents/MyPricing";
 import PricingDetails from "../pricingComponents/PricingDetails";
+import Link from "next/link";
 
 export default function Pricing(props: {
   setCurrentStep: any;
@@ -120,12 +121,14 @@ export default function Pricing(props: {
 
         {/* save as draft */}
         <div className="col-auto pt-[64px]">
-          <div className="dark-button text-gold poppins-medium cursor-pointer">
-            <div className="flex items-center h-full">
-              <Image src={saveIcon} alt="saveIcon" />
-              <div className="pl-4">Save as Draft</div>
+          <Link href="/itineraries">
+            <div className="dark-button text-gold poppins-medium cursor-pointer">
+              <div className="flex items-center h-full">
+                <Image src={saveIcon} alt="saveIcon" />
+                <div className="pl-4">Save as Draft</div>
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
         {/* NEXT */}
         <div className="col-auto pt-[64px]">

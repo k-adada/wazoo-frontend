@@ -10,6 +10,7 @@ import carImage from "../../assets/mercedes.webp";
 import DragTableServices from "../DragTableServices";
 
 import dynamic from "next/dynamic";
+import Link from "next/link";
 // Dynamically import the RichTextBox component with SSR disabled
 const DynamicRichTextBox = dynamic(() => import("../RichTextBox"), {
   ssr: false, // Disable server-side rendering for this component
@@ -287,12 +288,14 @@ export default function Transport(props: {
 
         {/* save as draft */}
         <div className="col-auto pt-[64px]">
-          <div className="dark-button text-gold poppins-medium cursor-pointer">
-            <div className="flex items-center h-full">
-              <Image src={saveIcon} alt="saveIcon" />
-              <div className="pl-4">Save as Draft</div>
+          <Link href="/itineraries">
+            <div className="dark-button text-gold poppins-medium cursor-pointer">
+              <div className="flex items-center h-full">
+                <Image src={saveIcon} alt="saveIcon" />
+                <div className="pl-4">Save as Draft</div>
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
         {/* NEXT */}
         <div className="col-auto pt-[64px]">

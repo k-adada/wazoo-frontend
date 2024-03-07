@@ -13,6 +13,7 @@ import BasicDateRangePicker from "../DateRangePicker";
 import saveIcon from "../../assets/Icon_Save.png";
 import downArrowIcon from "../../assets/Icon_Arrow_Down_white.png";
 import tourImage from "../../assets/tour_effel.jpg";
+import Link from "next/link";
 
 export default function Review(props: {
   setCurrentStep: any;
@@ -546,12 +547,14 @@ export default function Review(props: {
 
         {/* save as draft */}
         <div className="col-auto pt-[64px]">
-          <div className="dark-button text-gold poppins-medium cursor-pointer">
-            <div className="flex items-center h-full">
-              <Image src={saveIcon} alt="saveIcon" />
-              <div className="pl-4">Save as Draft</div>
+          <Link href="/itineraries">
+            <div className="dark-button text-gold poppins-medium cursor-pointer">
+              <div className="flex items-center h-full">
+                <Image src={saveIcon} alt="saveIcon" />
+                <div className="pl-4">Save as Draft</div>
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
         {/* NEXT */}
         <div className="col-auto pt-[64px]">

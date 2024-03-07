@@ -10,6 +10,7 @@ import addIcon from "../../assets/Icon_Add_Dark.png";
 import addGoldIcon from "../../assets/Icon_Add.png";
 import addCircleIcon from "../../assets/Icon_Add_circle.png";
 import hotelImage from "../../assets/Bellagio-Hotel-Casino-Las-Vegas.webp";
+import Link from "next/link";
 
 export default function Accommodation(props: {
   setCurrentStep: any;
@@ -325,12 +326,14 @@ export default function Accommodation(props: {
 
         {/* save as draft */}
         <div className="col-auto pt-[64px]">
-          <div className="dark-button text-gold poppins-medium cursor-pointer">
-            <div className="flex items-center h-full">
-              <Image src={saveIcon} alt="saveIcon" />
-              <div className="pl-4">Save as Draft</div>
+          <Link href="/itineraries">
+            <div className="dark-button text-gold poppins-medium cursor-pointer">
+              <div className="flex items-center h-full">
+                <Image src={saveIcon} alt="saveIcon" />
+                <div className="pl-4">Save as Draft</div>
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
         {/* NEXT */}
         <div className="col-auto pt-[64px]">

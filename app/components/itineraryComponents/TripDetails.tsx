@@ -9,6 +9,7 @@ import saveIcon from "../../assets/Icon_Save.png";
 import uploadIcon from "../../assets/upload_icon.png";
 import themeIcon from "../../assets/theme.png";
 import dotsIcon from "../../assets/dots_icon.png";
+import Link from "next/link";
 
 export default function TripDetails(props: {
   setCurrentStep: any;
@@ -256,12 +257,14 @@ export default function TripDetails(props: {
         </div>
 
         <div className="col-auto pt-[64px]">
-          <div className="dark-button text-gold poppins-medium cursor-pointer">
-            <div className="flex items-center h-full">
-              <Image src={saveIcon} alt="saveIcon" />
-              <div className="pl-4">Save as Draft</div>
+          <Link href="/itineraries">
+            <div className="dark-button text-gold poppins-medium cursor-pointer">
+              <div className="flex items-center h-full">
+                <Image src={saveIcon} alt="saveIcon" />
+                <div className="pl-4">Save as Draft</div>
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
 
         <div className="col-auto pt-[64px]">
