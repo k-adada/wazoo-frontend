@@ -22,6 +22,10 @@ export default function Accommodation(props: {
   const [hotels, setHotels] = useState(["1", "2", "3", "4"]);
   const [selectedHotels, setSelectedHotels] = useState(["1", "2"]);
 
+  useEffect(() => {
+    setStepsDone(["tripDetails", "accommodation"]);
+  }, []);
+
   return (
     <div className="container-fluid accommodation">
       <div className="row">

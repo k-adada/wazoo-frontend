@@ -96,7 +96,12 @@ export default function CreateItineraries() {
           <div className="col-12">
             <div className="row">
               {/* STEP 1  */}
-              <div className="col-auto">
+              <div
+                className="col-auto pointer"
+                onClick={() => {
+                  setCurrentStep("trip-details");
+                }}
+              >
                 <div className="itinerary-step">
                   <div className="darkblue-ball"></div>
                   <div className="f-14 text-grey text-center">Step 1</div>
@@ -109,7 +114,12 @@ export default function CreateItineraries() {
                 </div>
               </div>
               {/* STEP 2  */}
-              <div className="col-auto">
+              <div
+                className="col-auto pointer"
+                onClick={() => {
+                  setCurrentStep("accommodation");
+                }}
+              >
                 <div className="itinerary-step">
                   <div
                     className={
@@ -133,7 +143,12 @@ export default function CreateItineraries() {
                 </div>
               </div>
               {/* STEP 3  */}
-              <div className="col-auto">
+              <div
+                className="col-auto pointer"
+                onClick={() => {
+                  setCurrentStep("activities");
+                }}
+              >
                 <div className="itinerary-step">
                   <div
                     className={
@@ -157,7 +172,12 @@ export default function CreateItineraries() {
                 </div>
               </div>
               {/* STEP 4  */}
-              <div className="col-auto">
+              <div
+                className="col-auto pointer"
+                onClick={() => {
+                  setCurrentStep("transport");
+                }}
+              >
                 <div className="itinerary-step">
                   <div
                     className={
@@ -181,7 +201,12 @@ export default function CreateItineraries() {
                 </div>
               </div>
               {/* STEP 5  */}
-              <div className="col-auto">
+              <div
+                className="col-auto pointer"
+                onClick={() => {
+                  setCurrentStep("pricing");
+                }}
+              >
                 <div className="itinerary-step">
                   <div
                     className={
@@ -207,7 +232,12 @@ export default function CreateItineraries() {
                 </div>
               </div>
               {/* STEP 6  */}
-              <div className="col-auto">
+              <div
+                className="col-auto pointer"
+                onClick={() => {
+                  setCurrentStep("review");
+                }}
+              >
                 <div className="itinerary-step">
                   <div
                     className={

@@ -16,9 +16,9 @@ export default function TripDetails(props: {
   setStepsDone: any;
 }) {
   const { setCurrentStep, stepsDone, setStepsDone } = props;
-  const [progress, setProgress] = React.useState(0);
+  const [progress, setProgress] = useState(0);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const timer = setInterval(() => {
       setProgress((prevProgress) =>
         prevProgress >= 100 ? 0 : prevProgress + 10
@@ -28,6 +28,10 @@ export default function TripDetails(props: {
     return () => {
       clearInterval(timer);
     };
+  }, []);
+
+  useEffect(() => {
+    setStepsDone(["tripDetails"]);
   }, []);
 
   return (

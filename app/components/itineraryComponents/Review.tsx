@@ -22,7 +22,14 @@ export default function Review(props: {
   const { setCurrentStep, stepsDone, setStepsDone } = props;
 
   useEffect(() => {
-    setStepsDone([...stepsDone, "transport"]);
+    setStepsDone([
+      "tripDetails",
+      "accommodation",
+      "activities",
+      "transport",
+      "pricing",
+      "review",
+    ]);
   }, []);
 
   const [pricings, setPricings] = useState([

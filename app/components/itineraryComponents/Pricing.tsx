@@ -17,7 +17,13 @@ export default function Pricing(props: {
   const { setCurrentStep, stepsDone, setStepsDone } = props;
 
   useEffect(() => {
-    setStepsDone([...stepsDone, "transport"]);
+    setStepsDone([
+      "tripDetails",
+      "accommodation",
+      "activities",
+      "transport",
+      "pricing",
+    ]);
   }, []);
 
   const [pricings, setPricings] = useState([

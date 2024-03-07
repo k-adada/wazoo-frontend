@@ -20,7 +20,7 @@ export default function Activities(props: {
   const { setCurrentStep, stepsDone, setStepsDone } = props;
 
   useEffect(() => {
-    setStepsDone([...stepsDone, "activities"]);
+    setStepsDone(["tripDetails", "accommodation", "activities"]);
   }, []);
 
   const [activities, setActivities] = useState([
