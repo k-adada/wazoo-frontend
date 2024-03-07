@@ -51,7 +51,7 @@ export default function TripDetails(props: {
             {/* reference number  */}
             <div className="col-6">
               <div className="text-darkblue pb-2">
-                Reference Numbver <span className="text-orange">*</span>
+                Reference Number <span className="text-orange">*</span>
               </div>
               <div className="light-input">
                 <input
@@ -120,6 +120,34 @@ export default function TripDetails(props: {
                   className="px-5 py-4 rounded-lg bg-white text-grey w-full"
                   type="number"
                   placeholder="Number of days"
+                />
+              </div>
+            </div>
+
+            {/* Number of Adults  */}
+            <div className="col-6">
+              <div className="text-darkblue pb-2 pt-8">
+                Number of Adults <span className="text-orange">*</span>
+              </div>
+              <div className="light-input">
+                <input
+                  className="px-5 py-4 rounded-lg bg-white text-grey w-full"
+                  type="text"
+                  placeholder="2"
+                />
+              </div>
+            </div>
+
+            {/* Number of Children  */}
+            <div className="col-6">
+              <div className="text-darkblue pb-2 pt-8">
+                Number of Children <span className="text-orange">*</span>
+              </div>
+              <div className="light-input">
+                <input
+                  className="px-5 py-4 rounded-lg bg-white text-grey w-full"
+                  type="text"
+                  placeholder="1"
                 />
               </div>
             </div>

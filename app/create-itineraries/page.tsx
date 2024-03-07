@@ -25,7 +25,7 @@ import Review from "../components/itineraryComponents/Review";
 
 export default function CreateItineraries() {
   const [progress, setProgress] = React.useState(0);
-  const [currentStep, setCurrentStep] = useState("trip-details");
+  const [currentStep, setCurrentStep] = useState("review");
   const [stepsDone, setStepsDone] = useState(["trip-details"]);
   // const steps = [
   //   "trip-details",

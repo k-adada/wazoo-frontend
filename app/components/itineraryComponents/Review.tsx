@@ -7,11 +7,12 @@ import Totals from "../pricingComponents/Totals";
 import Payables from "../pricingComponents/Payables";
 import MyPricing from "../pricingComponents/MyPricing";
 import PricingDetails from "../pricingComponents/PricingDetails";
+import SingleSelect from "../SingleSelect";
+import BasicDateRangePicker from "../DateRangePicker";
 
 import saveIcon from "../../assets/Icon_Save.png";
 import downArrowIcon from "../../assets/Icon_Arrow_Down_white.png";
-import SingleSelect from "../SingleSelect";
-import BasicDateRangePicker from "../DateRangePicker";
+import tourImage from "../../assets/tour_effel.jpg";
 
 export default function Review(props: {
   setCurrentStep: any;
@@ -87,6 +88,10 @@ export default function Review(props: {
     },
   ]);
 
+  const [showItineraryOverview, setShowItineraryOverview] = useState(true);
+  const [showDetailedItinerary, setShowDetailedItinerary] = useState(true);
+  const [showPricingAndPayment, setShowPricingAndPayment] = useState(true);
+
   return (
     <div className="container-fluid transport">
       <div className="row">
@@ -98,118 +103,204 @@ export default function Review(props: {
             </div>
             <div
               className="flex items-center"
-              // onClick={() => {
-              //   let newDays = [...days];
-              //   newDays[index].collapsed = !newDays[index].collapsed;
-              //   setDays(newDays);
-              // }}
+              onClick={() => {
+                setShowItineraryOverview(!showItineraryOverview);
+              }}
             >
               <Image src={downArrowIcon} alt="down arrow" className="pointer" />
             </div>
           </div>
 
-          <div className="row">
-            {/* Itinerary name  */}
-            <div className="col-4">
-              <div className="text-darkblue pb-2">
-                Itinerary Name <span className="text-orange">*</span>
-              </div>
-              <div className="light-input">
-                <input
-                  className="px-5 py-4 rounded-lg bg-white text-grey w-full"
-                  type="text"
-                  placeholder="Itinerary Name"
-                />
-              </div>
-            </div>
-            {/* reference number  */}
-            <div className="col-4">
-              <div className="text-darkblue pb-2">
-                Reference Numbver <span className="text-orange">*</span>
-              </div>
-              <div className="light-input">
-                <input
-                  className="px-5 py-4 rounded-lg bg-white text-grey w-full"
-                  type="text"
-                  placeholder="422"
-                  value={422}
-                  disabled
-                />
-              </div>
-            </div>
-            {/* validity dates */}
-            <div className="col-4">
-              <div className="text-darkblue">
-                Validity Dates<span className="text-orange">*</span>
-              </div>
-              <div className="validity-dates">
-                <BasicDateRangePicker />
-              </div>
-            </div>
-            {/* theme  */}
-            <div className="col-4">
-              <div className="text-darkblue pb-2 pt-8">
-                Theme <span className="text-orange">*</span>
-              </div>
-              <div className="light-input">
-                <div className="remove-mui-label">
-                  <SingleSelect
-                    options={[
-                      { label: "Adventure" },
-                      { label: "Family Travel" },
-                      { label: "Honey Moon" },
-                      { label: "Safari" },
-                      { label: "Sports & Outdoors" },
-                    ]}
-                    label="Select Theme"
-                  />
+          {showItineraryOverview && (
+            <>
+              {/* details  */}
+              <div className="row">
+                {/* Itinerary name  */}
+                <div className="col-4">
+                  <div className="text-darkblue pb-2">
+                    Itinerary Name <span className="text-orange">*</span>
+                  </div>
+                  <div className="light-input">
+                    <input
+                      className="px-5 py-4 rounded-lg bg-white text-grey w-full"
+                      type="text"
+                      placeholder="Itinerary Name"
+                    />
+                  </div>
+                </div>
+                {/* reference number  */}
+                <div className="col-4">
+                  <div className="text-darkblue pb-2">
+                    Reference Numbver <span className="text-orange">*</span>
+                  </div>
+                  <div className="light-input">
+                    <input
+                      className="px-5 py-4 rounded-lg bg-white text-grey w-full"
+                      type="text"
+                      placeholder="422"
+                      value={422}
+                      disabled
+                    />
+                  </div>
+                </div>
+                {/* validity dates */}
+                <div className="col-4">
+                  <div className="text-darkblue">
+                    Validity Dates<span className="text-orange">*</span>
+                  </div>
+                  <div className="validity-dates">
+                    <BasicDateRangePicker />
+                  </div>
+                </div>
+                {/* theme  */}
+                <div className="col-4">
+                  <div className="text-darkblue pb-2 pt-8">
+                    Theme <span className="text-orange">*</span>
+                  </div>
+                  <div className="light-input">
+                    <div className="remove-mui-label">
+                      <SingleSelect
+                        options={[
+                          { label: "Adventure" },
+                          { label: "Family Travel" },
+                          { label: "Honey Moon" },
+                          { label: "Safari" },
+                          { label: "Sports & Outdoors" },
+                        ]}
+                        label="Select Theme"
+                      />
+                    </div>
+                  </div>
+                </div>
+                {/* select season  */}
+                <div className="col-4">
+                  <div className="text-darkblue pb-2 pt-8">
+                    Seasonality<span className="text-orange">*</span>
+                  </div>
+                  <div className="remove-mui-label">
+                    <SingleSelect
+                      options={[
+                        { label: "Winter" },
+                        { label: "Summer" },
+                        { label: "Spring" },
+                        { label: "Autumn" },
+                      ]}
+                      label="Select Season"
+                    />
+                  </div>
+                </div>
+                {/* Trip Length  */}
+                <div className="col-4">
+                  <div className="text-darkblue pb-2 pt-8">
+                    Trip Lenth <span className="text-orange">*</span>
+                  </div>
+                  <div className="light-input">
+                    <input
+                      className="px-5 py-4 rounded-lg bg-white text-grey w-full"
+                      type="number"
+                      placeholder="Number of days"
+                    />
+                  </div>
+                </div>
+
+                {/* Number of Adults  */}
+                <div className="col-3">
+                  <div className="text-darkblue pb-2 pt-8">
+                    Number of Adults <span className="text-orange">*</span>
+                  </div>
+                  <div className="light-input">
+                    <input
+                      className="px-5 py-4 rounded-lg bg-white text-grey w-full"
+                      type="text"
+                      placeholder="2"
+                    />
+                  </div>
+                </div>
+
+                {/* Number of Children  */}
+                <div className="col-3">
+                  <div className="text-darkblue pb-2 pt-8">
+                    Number of Children <span className="text-orange">*</span>
+                  </div>
+                  <div className="light-input">
+                    <input
+                      className="px-5 py-4 rounded-lg bg-white text-grey w-full"
+                      type="text"
+                      placeholder="1"
+                    />
+                  </div>
+                </div>
+
+                {/* Images  */}
+                <div className="col-6">
+                  <div className="text-darkblue pb-2 pt-8">Images</div>
+                  <div className="flex">
+                    <div className="pr-1">
+                      <Image
+                        className="rounded-lg"
+                        style={{
+                          height: "56px",
+                          width: "56px",
+                          objectFit: "cover",
+                        }}
+                        src={tourImage}
+                        alt="tourImage"
+                      />
+                    </div>
+                    <div className="px-1">
+                      <Image
+                        className="rounded-lg"
+                        style={{
+                          height: "56px",
+                          width: "56px",
+                          objectFit: "cover",
+                        }}
+                        src={tourImage}
+                        alt="tourImage"
+                      />
+                    </div>
+                    <div className="px-1">
+                      <Image
+                        className="rounded-lg"
+                        style={{
+                          height: "56px",
+                          width: "56px",
+                          objectFit: "cover",
+                        }}
+                        src={tourImage}
+                        alt="tourImage"
+                      />
+                    </div>
+                    <div className="px-1">
+                      <Image
+                        className="rounded-lg"
+                        style={{
+                          height: "56px",
+                          width: "56px",
+                          objectFit: "cover",
+                        }}
+                        src={tourImage}
+                        alt="tourImage"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Description */}
+                <div className="col-12">
+                  <div className="text-darkblue pt-8 pb-2">
+                    Description <span className="text-orange">*</span>
+                  </div>
+                  <div className="light-input">
+                    <textarea
+                      className="px-5 py-4 rounded-lg bg-white text-grey w-full"
+                      placeholder="Service Name"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-            {/* select season  */}
-            <div className="col-4">
-              <div className="text-darkblue pb-2 pt-8">
-                Seasonality<span className="text-orange">*</span>
-              </div>
-              <div className="remove-mui-label">
-                <SingleSelect
-                  options={[
-                    { label: "Winter" },
-                    { label: "Summer" },
-                    { label: "Spring" },
-                    { label: "Autumn" },
-                  ]}
-                  label="Select Season"
-                />
-              </div>
-            </div>
-            {/* Trip Length  */}
-            <div className="col-4">
-              <div className="text-darkblue pb-2 pt-8">
-                Trip Lenth <span className="text-orange">*</span>
-              </div>
-              <div className="light-input">
-                <input
-                  className="px-5 py-4 rounded-lg bg-white text-grey w-full"
-                  type="number"
-                  placeholder="Number of days"
-                />
-              </div>
-            </div>
-
-            {/* Description */}
-            <div className="col-12">
-              <div className="text-darkblue pt-8 pb-2">
-                Description <span className="text-orange">*</span>
-              </div>
-              <div className="light-input">
-                <textarea
-                  className="px-5 py-4 rounded-lg bg-white text-grey w-full"
-                  placeholder="Service Name"
-                />
-              </div>
-            </div>
-          </div>
+            </>
+          )}
         </div>
 
         {/* DETAILED ITINERARY */}
@@ -220,21 +311,19 @@ export default function Review(props: {
             </div>
             <div
               className="flex items-center"
-              // onClick={() => {
-              //   let newDays = [...days];
-              //   newDays[index].collapsed = !newDays[index].collapsed;
-              //   setDays(newDays);
-              // }}
+              onClick={() => {
+                setShowDetailedItinerary(!showDetailedItinerary);
+              }}
             >
               <Image src={downArrowIcon} alt="down arrow" className="pointer" />
             </div>
           </div>
-
-          {/* DRAG TABLE SERVICES */}
-          <div className="f-32 text-darkblue poppins-semibold pb-4">
-            Services
-          </div>
-          <DragTableServices services={pricings} />
+          {showDetailedItinerary && (
+            <>
+              {/* DRAG TABLE SERVICES */}
+              <DragTableServices services={pricings} />
+            </>
+          )}
         </div>
 
         {/* PRICING AND PAYMENT */}
@@ -245,17 +334,15 @@ export default function Review(props: {
             </div>
             <div
               className="flex items-center"
-              // onClick={() => {
-              //   let newDays = [...days];
-              //   newDays[index].collapsed = !newDays[index].collapsed;
-              //   setDays(newDays);
-              // }}
+              onClick={() => {
+                setShowPricingAndPayment(!showPricingAndPayment);
+              }}
             >
               <Image src={downArrowIcon} alt="down arrow" className="pointer" />
             </div>
           </div>
         </div>
-        {true ? (
+        {showPricingAndPayment && (
           <>
             {/* TOTALS */}
             <div className="col-12">
@@ -274,8 +361,6 @@ export default function Review(props: {
               <PricingDetails />
             </div>
           </>
-        ) : (
-          <></>
         )}
 
         {/* save as draft */}
