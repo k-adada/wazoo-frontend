@@ -122,8 +122,8 @@ export default function Payables() {
   return (
     <div className="container-fluid payables">
       <div className="row">
-        <div className="col-12 pt-5">
-          <div className="f-28 text-darkblue poppins-semibold">Payables</div>
+        <div className="col-12 pt-5 pb-4">
+          <div className="f-32 text-darkblue poppins-semibold">Payables</div>
         </div>
 
         {/* SERVICE PROVIDERS BAR */}

@@ -74,8 +74,8 @@ export default function Totals() {
   return (
     <div className="container-fluid totals">
       <div className="row">
-        <div className="col-12 pt-5">
-          <div className="f-28 text-darkblue poppins-semibold">Totals</div>
+        <div className="col-12 pt-5 pb-4">
+          <div className="f-32 text-darkblue poppins-semibold">Totals</div>
         </div>
         <div className="col-12">
           <div className="bg-white row rounded-lg py-8">

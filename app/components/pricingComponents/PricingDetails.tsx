@@ -1,75 +1,80 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
+
+import RichTextBox from "../RichTextBox";
 
 export default function PricingDetails() {
-  const [pricingDetails, setPricingDetailss] = useState([
+  const [serviceProviders, setServiceProviders] = useState([
     {
-      id: "1",
-      serviceType: "Pricing 1",
-      description: "Pricing 1 Description",
-      location: "Location 1",
-      method: "Method 1",
-      duration: "Duration 1",
-      timeslot: "Timeslot 1",
-      price: "350",
+      name: "Price Includes",
+      location: "Paris, France",
+      phone: "+1234567890",
+      total: "$12,000.00",
     },
     {
-      id: "2",
-      serviceType: "Pricing 2",
-      description: "Pricing 2 Description",
-      location: "Location 2",
-      method: "Method 2",
-      duration: "Duration 2",
-      timeslot: "Timeslot 2",
-      price: "350",
+      name: "Price Excludes",
+      location: "Paris, France",
+      phone: "+1234567890",
+      total: "$12,000.00",
     },
     {
-      id: "3",
-      serviceType: "Pricing 3",
-      description: "Pricing 3 Description",
-      location: "Location 3",
-      method: "Method 3",
-      duration: "Duration 3",
-      timeslot: "Timeslot 3",
-      price: "350",
+      name: "T’s & C’s",
+      location: "Paris, France",
+      phone: "+1234567890",
+      total: "$12,000.00",
     },
     {
-      id: "4",
-      serviceType: "Pricing 4",
-      description: "Pricing 4 Description",
-      location: "Location 4",
-      method: "Method 4",
-      duration: "Duration 4",
-      timeslot: "Timeslot 4",
-      price: "350",
-    },
-    {
-      id: "5",
-      serviceType: "Pricing 5",
-      description: "Pricing 5 Description",
-      location: "Location 5",
-      method: "Method 5",
-      duration: "Duration 5",
-      timeslot: "Timeslot 5",
-      price: "350",
-    },
-    {
-      id: "6",
-      serviceType: "Pricing 6",
-      description: "Pricing 6 Description",
-      location: "Location 6",
-      method: "Method 6",
-      duration: "Duration 6",
-      timeslot: "Timeslot 6",
-      price: "350",
+      name: "Additional Notes",
+      location: "Paris, France",
+      phone: "+1234567890",
+      total: "$12,000.00",
     },
   ]);
 
+  const [selectedProvider, setSelectedProvider] = useState(0);
+
   return (
-    <div className="container-fluid pricingDetails">
+    <div className="container-fluid pricing-details">
       <div className="row">
-        <div className="col-12 pt-5">pricingDetails here</div>
+        {/* Pricing Details */}
+
+        <div className="col-12 pt-5 pb-4">
+          <div className="f-32 text-darkblue poppins-semibold">
+            Pricing Details
+          </div>
+        </div>
+        {/* SERVICE PROVIDERS BAR */}
+        <div className="col-12">
+          <div className="row rounded-lg">
+            {/* service provider  */}
+            {serviceProviders.map((serviceProvider, index) => (
+              <div
+                className={
+                  (selectedProvider === index
+                    ? ""
+                    : "  opacity-25 border-right") +
+                  (index != serviceProviders.length - 1 && "") +
+                  " col-auto py-4 bg-white pointer rounded-lg"
+                }
+                onClick={() => setSelectedProvider(index)}
+                key={serviceProvider.name}
+              >
+                <div className="px-5">
+                  <div className="f-20 text-darkblue text-center poppins-semibold">
+                    {serviceProvider.name}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* PAYABLES BAR */}
+        <div className="col-12">
+          <div className="row bg-white rounded-lg py-8">
+            <RichTextBox initialData={"Notes"} />
+          </div>
+        </div>
       </div>
     </div>
   );

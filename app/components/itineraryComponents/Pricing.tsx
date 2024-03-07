@@ -97,6 +97,11 @@ export default function Pricing(props: {
       <div className="row">
         <div className="col-12 pt-5">
           {/* DRAG TABLE SERVICES */}
+
+          <div className="f-32 text-darkblue poppins-semibold pb-4">
+            Services
+          </div>
+
           <DragTableServices services={pricings} />
         </div>
 
