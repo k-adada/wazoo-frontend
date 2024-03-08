@@ -9,6 +9,7 @@ import notificationIcon from "../assets/Icon_Notification_Received.png";
 
 import backIcon from "../assets/Icon_Back.png";
 import avatarIcon from "../assets/avatar.png";
+import bgImage from "../assets/background_image_tour.png";
 
 import TripDetails from "../components/itineraryComponents/TripDetails";
 import Accommodation from "../components/itineraryComponents/Accommodation";
@@ -49,8 +50,16 @@ export default function CreateItineraries() {
   }, []);
 
   return (
-    <main className="flex min-h-screen flex-col items-center p-md-24 p-3 bg-lightblue">
-      <div className="container-fluid">
+    <main
+      className="flex min-h-screen flex-col items-center p-md-24 p-3 bg-lightblue"
+      style={{
+        backgroundImage: `url(${bgImage.src})`,
+        backgroundSize: "",
+        backgroundRepeat: "repeat-y",
+        backgroundPosition: "right",
+      }}
+    >
+      <div className="container-fluid" style={{ width: "80%" }}>
         {/* navbar  */}
         <div className="row items-center">
           <div className="col-auto">

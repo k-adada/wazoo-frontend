@@ -8,6 +8,7 @@ import middleEastLogo from "../../assets/middle_east_yours.png";
 import calendarIcon from "../../assets/Icon_Calendar.png";
 import mercedesImage from "../../assets/mercedes.webp";
 import locationIcon from "../../assets/Icon_Location.png";
+import bgImage from "../../assets/Itinerary_background_image.jpg";
 
 import Totals from "../pricingComponents/Totals";
 import MyPricing from "../pricingComponents/MyPricing";
@@ -31,9 +32,11 @@ export default function Preview(props: {
       "pricing",
     ]);
   }, [setStepsDone]);
-
   return (
-    <div className="container-fluid transport">
+    <div
+      className="container-fluid transport"
+    
+    >
       <div className="row">
         {/* TITLE AND LOGO HERE */}
         <div className="col-12 pt-5">
@@ -67,7 +70,7 @@ export default function Preview(props: {
               <div className="col-5">
                 <div className="flex justify-between pt-4">
                   <div className="f-28 text-darkblue poppins-semibold">
-                    Jon's Trip to France
+                    Jon&apos;s Trip to France
                   </div>
                   <div className="flex">
                     <div className="">
