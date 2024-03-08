@@ -17,6 +17,7 @@ import Transport from "../components/itineraryComponents/Transport";
 import Pricing from "../components/itineraryComponents/Pricing";
 import Review from "../components/itineraryComponents/Review";
 import Preview from "../components/itineraryComponents/Preview";
+import MapView from "../components/itineraryComponents/MapView";
 
 export default function CreateItineraries() {
   const router = useRouter();
@@ -318,6 +319,16 @@ export default function CreateItineraries() {
           {currentStep === "preview" && (
             <>
               <Preview
+                setCurrentStep={setCurrentStep}
+                stepsDone={stepsDone}
+                setStepsDone={setStepsDone}
+              />
+            </>
+          )}
+
+          {currentStep === "map-view" && (
+            <>
+              <MapView
                 setCurrentStep={setCurrentStep}
                 stepsDone={stepsDone}
                 setStepsDone={setStepsDone}

@@ -7,6 +7,7 @@ import downArrowIcon from "../../assets/down_arrow_dark.png";
 import addGoldIcon from "../../assets/Icon_Add.png";
 import addCircleIcon from "../../assets/Icon_Add_circle.png";
 import tourImage from "../../assets/tour_effel.jpg";
+import locationIcon from "../../assets/Icon_Location_gold.png";
 import DragTableServices from "../DragTableServices";
 
 import dynamic from "next/dynamic";
@@ -110,6 +111,18 @@ export default function Activities(props: {
     <div className="container-fluid activities">
       <div className="row">
         <div className="col-9">
+          {/* map view */}
+          <div className="flex justify-end">
+            <div className="dark-button text-gold poppins-medium cursor-pointer" onClick={()=>{
+              setCurrentStep("map-view");
+            }}>
+              <div className="flex items-center h-full">
+                <Image src={locationIcon} alt="location" />
+                <div className="pl-4">Map View</div>
+              </div>
+            </div>
+          </div>
+
           {days.map((day, index) => {
             return (
               <div

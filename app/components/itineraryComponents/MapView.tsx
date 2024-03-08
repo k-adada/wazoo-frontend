@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import locationIcon from "../../assets/Icon_Location.png";
 import mercedesImage from "../../assets/mercedes.webp";
-import addGoldIcon from "../../assets/Icon_Add.png";
+import listViewIcon from "../../assets/Icon_List_View.png";
 import addCircleIcon from "../../assets/Icon_Add_circle.png";
 import tourImage from "../../assets/tour_effel.jpg";
 import DragTableServices from "../DragTableServices";
@@ -104,10 +104,22 @@ export default function MapView(props: {
     { id: 3, notesCollapsed: false, collapsed: false, services: [] as any[] },
   ]);
 
-  const [openServicePopup, setOpenServicePopup] = useState(-1);
-
   return (
     <div className="container-fluid map-view">
+      {/* map view */}
+      <div className="flex justify-end">
+        <div
+          className="dark-button text-gold poppins-medium cursor-pointer"
+          onClick={() => {
+            setCurrentStep("activities");
+          }}
+        >
+          <div className="flex items-center h-full">
+            <Image src={listViewIcon} alt="list view" />
+            <div className="pl-4">Table View</div>
+          </div>
+        </div>
+      </div>
       <div className="bg-white rounded-lg py-4 px-3">
         <div className="row">
           <div className="col-7">
