@@ -20,8 +20,6 @@ export default function ThumbsSwiper() {
       <div className="pb-4">
         <Swiper
           style={{
-            "--swiper-navigation-color": "#fff",
-            "--swiper-pagination-color": "#fff",
             height: "370px",
           }}
           spaceBetween={10}
