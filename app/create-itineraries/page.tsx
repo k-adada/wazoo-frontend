@@ -16,6 +16,7 @@ import Activities from "../components/itineraryComponents/Activities";
 import Transport from "../components/itineraryComponents/Transport";
 import Pricing from "../components/itineraryComponents/Pricing";
 import Review from "../components/itineraryComponents/Review";
+import Preview from "../components/itineraryComponents/Preview";
 
 export default function CreateItineraries() {
   const router = useRouter();
@@ -23,7 +24,7 @@ export default function CreateItineraries() {
     router.back();
   };
   const [progress, setProgress] = useState(0);
-  const [currentStep, setCurrentStep] = useState("trip-details");
+  const [currentStep, setCurrentStep] = useState("preview");
   const [stepsDone, setStepsDone] = useState(["trip-details"]);
   // const steps = [
   //   "trip-details",
@@ -307,6 +308,16 @@ export default function CreateItineraries() {
           {currentStep === "review" && (
             <>
               <Review
+                setCurrentStep={setCurrentStep}
+                stepsDone={stepsDone}
+                setStepsDone={setStepsDone}
+              />
+            </>
+          )}
+
+          {currentStep === "preview" && (
+            <>
+              <Preview
                 setCurrentStep={setCurrentStep}
                 stepsDone={stepsDone}
                 setStepsDone={setStepsDone}

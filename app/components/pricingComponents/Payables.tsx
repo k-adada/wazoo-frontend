@@ -548,14 +548,6 @@ export default function Payables() {
             </div>
           </div>
         </div>
-
-        {/* total  */}
-        <div className="col-12 bg-white rounded-lg py-4 mt-2">
-          <div className="f-24 text-darkblue poppins-semibold text-center pb-2">
-            Total
-          </div>
-          <div className="f-20 poppins-bold f-20 text-center">$18,300.00</div>
-        </div>
       </div>
     </div>
   );

@@ -163,21 +163,6 @@ export default function MyPricing() {
 
                 {/* ########################################################################################################## */}
 
-                {/* net total  */}
-                <div className="bg-white rounded-lg py-2 px-4 mt-4">
-                  <div className="f-20 text-darkblue poppins-semibold">
-                    Net Total
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="text-darkblue">
-                      Sixteen Thousand dollars
-                    </div>
-                    <div className="text-darkblue f-20 poppins-bold">
-                      $16,000.00
-                    </div>
-                  </div>
-                </div>
-
                 <div className="f-14 poppins-semibold text-darkblue pt-4 pb-2">
                   Taxes & Fees
                 </div>
@@ -281,15 +266,42 @@ export default function MyPricing() {
 
                 {/* gross total  */}
                 <div className="bg-white rounded-lg py-2 px-4 mt-4">
+                  {/* GROSS TOTAL  */}
                   <div className="f-20 text-darkblue poppins-semibold">
                     Gross Total
+                  </div>
+                  <div className="flex items-center justify-between pb-2">
+                    <div className="text-darkblue">
+                      Sixteen Thousand dollars
+                    </div>
+                    <div className="text-darkblue f-20 poppins-bold">
+                      $16,000.00
+                    </div>
+                  </div>
+
+                  {/* TOTAL COST  */}
+                  <div className="f-20 text-darkblue poppins-semibold">
+                    Total Cost
+                  </div>
+                  <div className="flex items-center justify-between pb-2 border-b">
+                    <div className="text-darkblue">
+                      Sixteen Thousand dollars
+                    </div>
+                    <div className="text-darkblue f-20 poppins-bold">
+                      - $13,000.00
+                    </div>
+                  </div>
+
+                  {/* NET PROFIT  */}
+                  <div className="f-20 text-darkblue poppins-semibold pt-2">
+                    Net Profit
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="text-darkblue">
                       Sixteen Thousand dollars
                     </div>
                     <div className="text-darkblue f-20 poppins-bold">
-                      $16,000.00
+                      $3,000.00
                     </div>
                   </div>
                 </div>
@@ -430,7 +442,11 @@ export default function MyPricing() {
               {/* Cancellation Terms */}
               <div className="flex items-center pt-5 pb-3">
                 <div className="pr-3">
-                  <Image width={30} src={cancellationIcon} alt="cancellationIcon" />
+                  <Image
+                    width={30}
+                    src={cancellationIcon}
+                    alt="cancellationIcon"
+                  />
                 </div>
                 <div className="text-darkblue f-24 poppins-semibold">
                   Cancellation Terms

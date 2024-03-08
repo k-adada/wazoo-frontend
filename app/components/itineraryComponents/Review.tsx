@@ -556,17 +556,17 @@ export default function Review(props: {
             </div>
           </Link>
         </div>
-        {/* NEXT */}
+        {/* Preview */}
         <div className="col-auto pt-[64px]">
           <div
             className="dark-button text-gold poppins-medium cursor-pointer"
             onClick={() => {
-              setCurrentStep("review");
-              setStepsDone([...stepsDone, "review"]);
+              setCurrentStep("preview");
+              setStepsDone([...stepsDone, "preview"]);
             }}
           >
             <div className="flex items-center h-full">
-              <div className="">Next</div>
+              <div className="">Preview</div>
             </div>
           </div>
         </div>
