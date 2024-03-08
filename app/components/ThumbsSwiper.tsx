@@ -111,7 +111,7 @@ export default function ThumbsSwiper() {
         </Swiper>
       </div>
       <Swiper
-        onSwiper={setThumbsSwiper}
+        onSwiper={() => setThumbsSwiper}
         spaceBetween={10}
         slidesPerView={4}
         freeMode={true}
