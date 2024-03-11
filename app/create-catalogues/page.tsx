@@ -11,15 +11,13 @@ import backIcon from "../assets/Icon_Back.png";
 import avatarIcon from "../assets/avatar.png";
 import bgImage from "../assets/background_image_tour.png";
 
-import TripDetails from "../components/itineraryComponents/TripDetails";
-import Accommodation from "../components/itineraryComponents/Accommodation";
-import Activities from "../components/itineraryComponents/Activities";
 import Transport from "../components/itineraryComponents/Transport";
 import Pricing from "../components/itineraryComponents/Pricing";
 import Review from "../components/itineraryComponents/Review";
 import Preview from "../components/itineraryComponents/Preview";
 import MapView from "../components/itineraryComponents/MapView";
 import CatalogueDetails from "../components/catalogueComponents/CatalogueDetails";
+import CatalogueBuilder from "../components/catalogueComponents/CatalogueBuilder";
 
 export default function CreateCatalogues() {
   const router = useRouter();
@@ -27,8 +25,8 @@ export default function CreateCatalogues() {
     router.back();
   };
   const [progress, setProgress] = useState(0);
-  const [currentStep, setCurrentStep] = useState("trip-details");
-  const [stepsDone, setStepsDone] = useState(["trip-details"]);
+  const [currentStep, setCurrentStep] = useState("catalogue-details");
+  const [stepsDone, setStepsDone] = useState(["catalogue-details"]);
   // const steps = [
   //   "trip-details",
   //   "accommodation",
@@ -108,13 +106,15 @@ export default function CreateCatalogues() {
               <div
                 className="col-auto pointer"
                 onClick={() => {
-                  setCurrentStep("trip-details");
+                  setCurrentStep("catalogue-details");
                 }}
               >
                 <div className="itinerary-step">
                   <div className="darkblue-ball"></div>
                   <div className="f-14 text-grey text-center">Step 1</div>
-                  <div className="text-darkblue text-center">Trip Details</div>
+                  <div className="text-darkblue text-center">
+                    Catalogue Details
+                  </div>
                 </div>
               </div>
               <div className="col">
@@ -126,107 +126,20 @@ export default function CreateCatalogues() {
               <div
                 className="col-auto pointer"
                 onClick={() => {
-                  setCurrentStep("accommodation");
+                  setCurrentStep("catalogue-builder");
                 }}
               >
                 <div className="itinerary-step">
                   <div
                     className={
-                      stepsDone.includes("accommodation")
+                      stepsDone.includes("catalogue-builder")
                         ? "darkblue-ball"
                         : "grey-ball"
                     }
                   ></div>
                   <div className="f-14 text-grey text-center">Step 2</div>
-                  <div className="text-darkblue text-center">Accommodation</div>
-                </div>
-              </div>
-              <div className="col">
-                <div className="step-direction pt-3">
-                  <div
-                    className={
-                      (stepsDone.includes("accommodation") ? "active" : "") +
-                      " step-line"
-                    }
-                  ></div>
-                </div>
-              </div>
-              {/* STEP 3  */}
-              <div
-                className="col-auto pointer"
-                onClick={() => {
-                  setCurrentStep("activities");
-                }}
-              >
-                <div className="itinerary-step">
-                  <div
-                    className={
-                      stepsDone.includes("activities")
-                        ? "darkblue-ball"
-                        : "grey-ball"
-                    }
-                  ></div>
-                  <div className="f-14 text-grey text-center">Step 3</div>
-                  <div className="text-darkblue text-center">Activities</div>
-                </div>
-              </div>
-              <div className="col">
-                <div className="step-direction pt-3">
-                  <div
-                    className={
-                      (stepsDone.includes("activities") ? "active" : "") +
-                      " step-line"
-                    }
-                  ></div>
-                </div>
-              </div>
-              {/* STEP 4  */}
-              <div
-                className="col-auto pointer"
-                onClick={() => {
-                  setCurrentStep("transport");
-                }}
-              >
-                <div className="itinerary-step">
-                  <div
-                    className={
-                      stepsDone.includes("transport")
-                        ? "darkblue-ball"
-                        : "grey-ball"
-                    }
-                  ></div>
-                  <div className="f-14 text-grey text-center">Step 4</div>
-                  <div className="text-darkblue text-center">Transport</div>
-                </div>
-              </div>
-              <div className="col">
-                <div className="step-direction pt-3">
-                  <div
-                    className={
-                      (stepsDone.includes("transport") ? "active" : "") +
-                      " step-line"
-                    }
-                  ></div>
-                </div>
-              </div>
-              {/* STEP 5  */}
-              <div
-                className="col-auto pointer"
-                onClick={() => {
-                  setCurrentStep("pricing");
-                }}
-              >
-                <div className="itinerary-step">
-                  <div
-                    className={
-                      stepsDone.includes("pricing")
-                        ? "darkblue-ball"
-                        : "grey-ball"
-                    }
-                  ></div>
-                  <div className="f-14 text-grey text-center">Step 5</div>
                   <div className="text-darkblue text-center">
-                    Pricing & Payment
+                    Catalogue Builder
                   </div>
                 </div>
               </div>
@@ -234,13 +147,14 @@ export default function CreateCatalogues() {
                 <div className="step-direction pt-3">
                   <div
                     className={
-                      (stepsDone.includes("pricing") ? "active" : "") +
-                      " step-line"
+                      (stepsDone.includes("catalogue-builder")
+                        ? "active"
+                        : "") + " step-line"
                     }
                   ></div>
                 </div>
               </div>
-              {/* STEP 6  */}
+              {/* STEP 3  */}
               <div
                 className="col-auto pointer"
                 onClick={() => {
@@ -264,7 +178,8 @@ export default function CreateCatalogues() {
         </div>
 
         <div className="row pt-10">
-          {currentStep === "trip-details" && (
+          {/* catalogue details  */}
+          {currentStep === "catalogue-details" && (
             <>
               <CatalogueDetails
                 setCurrentStep={setCurrentStep}
@@ -274,9 +189,10 @@ export default function CreateCatalogues() {
             </>
           )}
 
-          {currentStep === "accommodation" && (
+          {/* catalogue builder  */}
+          {currentStep === "catalogue-builder" && (
             <>
-              <Accommodation
+              <CatalogueBuilder
                 setCurrentStep={setCurrentStep}
                 stepsDone={stepsDone}
                 setStepsDone={setStepsDone}
@@ -284,59 +200,10 @@ export default function CreateCatalogues() {
             </>
           )}
 
-          {currentStep === "activities" && (
-            <>
-              <Activities
-                setCurrentStep={setCurrentStep}
-                stepsDone={stepsDone}
-                setStepsDone={setStepsDone}
-              />
-            </>
-          )}
-
-          {currentStep === "transport" && (
-            <>
-              <Transport
-                setCurrentStep={setCurrentStep}
-                stepsDone={stepsDone}
-                setStepsDone={setStepsDone}
-              />
-            </>
-          )}
-
-          {currentStep === "pricing" && (
-            <>
-              <Pricing
-                setCurrentStep={setCurrentStep}
-                stepsDone={stepsDone}
-                setStepsDone={setStepsDone}
-              />
-            </>
-          )}
-
+          {/* catalogue builder  */}
           {currentStep === "review" && (
             <>
-              <Review
-                setCurrentStep={setCurrentStep}
-                stepsDone={stepsDone}
-                setStepsDone={setStepsDone}
-              />
-            </>
-          )}
-
-          {currentStep === "preview" && (
-            <>
-              <Preview
-                setCurrentStep={setCurrentStep}
-                stepsDone={stepsDone}
-                setStepsDone={setStepsDone}
-              />
-            </>
-          )}
-
-          {currentStep === "map-view" && (
-            <>
-              <MapView
+              <CatalogueBuilder
                 setCurrentStep={setCurrentStep}
                 stepsDone={stepsDone}
                 setStepsDone={setStepsDone}

@@ -6,10 +6,8 @@ import saveIcon from "../../assets/Icon_Save.png";
 import searchIcon from "../../assets/Icon_Search_Black.png";
 import filterIcon from "../../assets/Icon_Itinerary.png";
 import downArrowIcon from "../../assets/down_arrow_dark.png";
-import addGoldIcon from "../../assets/Icon_Add.png";
 import addCircleIcon from "../../assets/Icon_Add_circle.png";
 import tourImage from "../../assets/tour_effel.jpg";
-import locationIcon from "../../assets/Icon_Location_gold.png";
 import DragTableServices from "../DragTableServices";
 
 import dynamic from "next/dynamic";
@@ -33,7 +31,7 @@ export default function CatalogueBuilder(props: {
   const { setCurrentStep, stepsDone, setStepsDone } = props;
 
   useEffect(() => {
-    setStepsDone(["tripDetails", "accommodation", "activities"]);
+    setStepsDone(["catalogue-details", "catalogue-builder"]);
   }, [setStepsDone]);
 
   const [activities, setActivities] = useState([
@@ -105,8 +103,7 @@ export default function CatalogueBuilder(props: {
       collapsed: false,
       services: [] as any[],
     },
-    { id: 2, notesCollapsed: false, collapsed: true, services: [] as any[] },
-    { id: 3, notesCollapsed: false, collapsed: false, services: [] as any[] },
+    { id: 2, notesCollapsed: false, collapsed: false, services: [] as any[] },
   ]);
 
   const [openServicePopup, setOpenServicePopup] = useState(-1);
@@ -115,21 +112,6 @@ export default function CatalogueBuilder(props: {
     <div className="container-fluid activities">
       <div className="row">
         <div className="col-9">
-          {/* map view */}
-          <div className="flex justify-end">
-            <div
-              className="dark-button text-gold poppins-medium cursor-pointer"
-              onClick={() => {
-                setCurrentStep("map-view");
-              }}
-            >
-              <div className="flex items-center h-full">
-                <Image src={locationIcon} alt="location" />
-                <div className="pl-4">Map View</div>
-              </div>
-            </div>
-          </div>
-
           {days.map((day, index) => {
             return (
               <div
@@ -140,7 +122,7 @@ export default function CatalogueBuilder(props: {
                 <div className="col-12">
                   <div className="bg-blue rounded-lg px-5 py-2 flex justify-between">
                     <div className="f-24 text-darkblue poppins-semibold">
-                      Day {index + 1}
+                      {index == 0 ? "Itineraries" : "Services"}
                     </div>
                     <div
                       className="flex items-center"
@@ -163,31 +145,6 @@ export default function CatalogueBuilder(props: {
                 <div
                   className={days[index].collapsed ? "hidden " : "" + " col-12"}
                 >
-                  <div className="px-5 pt-3">
-                    {/* RICH TEXTBOX BAR  */}
-                    <div className="bg-white rounded-lg py-3 flex justify-between items-center  px-3">
-                      <div className=" text-darkblue poppins-semibold">
-                        Day Notes
-                      </div>
-                      <Image
-                        src={downArrowIcon}
-                        alt="down arrow"
-                        className="pointer"
-                        onClick={() => {
-                          let newDays = [...days];
-                          newDays[index].notesCollapsed =
-                            !newDays[index].notesCollapsed;
-                          setDays(newDays);
-                        }}
-                      />
-                    </div>
-
-                    {/* RICH TEXTBOX */}
-                    <div className={days[index].notesCollapsed ? "hidden" : ""}>
-                      <DynamicRichTextBox initialData="<h1>Enter Your Day Notes here!</h1><h1>...</h1>" />
-                    </div>
-                  </div>
-
                   {/* DRAG TABLE SERVICES */}
                   <div className="px-5 pt-5">
                     <DragTableServices
@@ -236,12 +193,15 @@ export default function CatalogueBuilder(props: {
                     </div>
                   </div>
                 </div>
-                <div className="col-auto">
-                  <div className="dark-button text-gold poppins-medium cursor-pointer">
-                    <div className="flex items-center h-full">
-                      <Image src={addGoldIcon} alt="Add Icon" />
-                    </div>
-                  </div>
+                <div className="col-auto self-center">
+                  <select
+                    name=""
+                    id=""
+                    className="text-darkblue poppins-medium"
+                  >
+                    <option value="1">Itineraries</option>
+                    <option value="2">Services</option>
+                  </select>
                 </div>
               </div>
             </div>
@@ -310,7 +270,7 @@ export default function CatalogueBuilder(props: {
                             setOpenServicePopup(-1);
                           }}
                         >
-                          Day {index + 1}
+                          {index == 0 ? "Itineraries" : "Services"}
                         </div>
                       );
                     })}

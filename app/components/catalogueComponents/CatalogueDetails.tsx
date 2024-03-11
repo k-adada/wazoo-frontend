@@ -32,7 +32,7 @@ export default function CatalogueDetails(props: {
   }, []);
 
   useEffect(() => {
-    setStepsDone(["tripDetails"]);
+    setStepsDone(["catalogue-details"]);
   }, [setStepsDone]);
 
   return (
@@ -169,8 +169,8 @@ export default function CatalogueDetails(props: {
           <div
             className="dark-button text-gold poppins-medium cursor-pointer"
             onClick={() => {
-              setCurrentStep("accommodation");
-              setStepsDone([...stepsDone, "accommodation"]);
+              setCurrentStep("catalogue-builder");
+              setStepsDone([...stepsDone, "catalogue-builder"]);
             }}
           >
             <div className="flex items-center h-full">
