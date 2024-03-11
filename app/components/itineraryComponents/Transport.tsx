@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
+import searchIcon from "../../assets/Icon_Search_Black.png";
 import saveIcon from "../../assets/Icon_Save.png";
 import downArrowIcon from "../../assets/down_arrow_dark.png";
 import addGoldIcon from "../../assets/Icon_Add.png";
@@ -185,9 +186,12 @@ export default function Transport(props: {
               {/* search Transports  */}
               <div className="row">
                 <div className="col">
+                  <div className="absolute left-6 top-3 pointer">
+                    <Image src={searchIcon} alt="search icon" />
+                  </div>
                   <input
                     type="text"
-                    className="rounded-lg bg-lightblue text-darkblue px-5 py-3 w-full"
+                    className="rounded-lg bg-blue text-darkblue pl-10 pr-5 py-3 w-full"
                     placeholder="Search Transport"
                   />
                 </div>
