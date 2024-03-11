@@ -23,6 +23,7 @@ import { visuallyHidden } from "@mui/utils";
 
 import deleteRedIcon from "../assets/delete_red.png";
 import editIcon from "../assets/Icon_Edit.png";
+import tourEffelImage from "../assets/tour_effel.jpg";
 import Image from "next/image";
 
 interface Data {
@@ -61,7 +62,7 @@ function createData(
 const rows = [
   createData(
     1,
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/TEIDE.JPG/220px-TEIDE.JPG",
+    tourEffelImage.src,
     "Service 1",
     "transport",
     "transfer",
@@ -71,7 +72,7 @@ const rows = [
   ),
   createData(
     2,
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/TEIDE.JPG/220px-TEIDE.JPG",
+    tourEffelImage.src,
     "Service 2",
     "transport",
     "transfer",
@@ -81,7 +82,7 @@ const rows = [
   ),
   createData(
     3,
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/TEIDE.JPG/220px-TEIDE.JPG",
+    tourEffelImage.src,
     "Service 3",
     "transport",
     "transfer",
@@ -91,7 +92,7 @@ const rows = [
   ),
   createData(
     4,
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/TEIDE.JPG/220px-TEIDE.JPG",
+    tourEffelImage.src,
     "Service 4",
     "transport",
     "transfer",
@@ -101,7 +102,7 @@ const rows = [
   ),
   createData(
     5,
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/TEIDE.JPG/220px-TEIDE.JPG",
+    tourEffelImage.src,
     "Service 5",
     "transport",
     "transfer",
@@ -111,7 +112,7 @@ const rows = [
   ),
   createData(
     6,
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/TEIDE.JPG/220px-TEIDE.JPG",
+    tourEffelImage.src,
     "Service 6",
     "transport",
     "transfer",
@@ -121,7 +122,7 @@ const rows = [
   ),
   createData(
     7,
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/TEIDE.JPG/220px-TEIDE.JPG",
+    tourEffelImage.src,
     "Service 7",
     "transport",
     "transfer",
@@ -131,7 +132,7 @@ const rows = [
   ),
   createData(
     8,
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/TEIDE.JPG/220px-TEIDE.JPG",
+    tourEffelImage.src,
     "Service 8",
     "transport",
     "transfer",
@@ -141,7 +142,7 @@ const rows = [
   ),
   createData(
     9,
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/TEIDE.JPG/220px-TEIDE.JPG",
+    tourEffelImage.src,
     "Service 9",
     "transport",
     "transfer",
@@ -294,7 +295,7 @@ function EnhancedTableHead(props: EnhancedTableProps) {
         </TableCell>
         {headCells.map((headCell, index) => (
           <TableCell
-            className={index == headCells.length -1 ? "" : "border-right"}
+            className={index == headCells.length - 1 ? "" : "border-right"}
             key={headCell.id + index}
             align={headCell.numeric ? "right" : "left"}
             padding={headCell.disablePadding ? "none" : "normal"}
@@ -505,6 +506,8 @@ export default function ServicesTable() {
                           src={row.image}
                           alt={row.serviceName}
                           style={{ height: "53px", width: "53px" }}
+                          width={53}
+                          height={53}
                           className="rounded-lg"
                         />
                       </div>
