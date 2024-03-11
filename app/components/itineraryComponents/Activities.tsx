@@ -265,7 +265,12 @@ export default function Activities(props: {
                         <div className="f-24 text-darkblue poppins-medium">
                           {activity.serviceType}
                         </div>
-                        <div className="f-14 text-darkblue">Paris, France</div>
+                        <div className="flex items-center">
+                          <div className="f-24 poppins-semibold text-darkblue">
+                            $ {activity.price}
+                          </div>
+                          <div className="f-14 text-darkblue"> / Default</div>
+                        </div>
                       </div>
                     </div>
 
