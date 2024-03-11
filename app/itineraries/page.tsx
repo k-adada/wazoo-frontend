@@ -25,12 +25,12 @@ import userIcon from "../assets/Icon_My_Account_dark.png";
 import phoneIcon from "../assets/phone_icon.png";
 import searchIcon from "../assets/Icon_Search_Black.png";
 
-export default function CreateServices() {
+export default function CreateItineraries() {
   const router = useRouter();
   const routerBack = () => {
     router.back();
   };
-  const [services, setServices] = useState([]);
+  const [itineraries, setItineraries] = useState([1]);
   return (
     <main className="flex min-h-screen flex-col items-center p-md-24 p-3 bg-lightblue pb-[100px]">
       <div className="container-fluid">
@@ -77,7 +77,7 @@ export default function CreateServices() {
           </div>
         </div>
 
-        {services.length > 0 ? (
+        {itineraries.length > 0 ? (
           <div className="row">
             <div className="col-9">
               <div className="row justify-between">
@@ -87,16 +87,16 @@ export default function CreateServices() {
                   </div>
                 </div>
                 <div className="flex col-auto">
-                  <Link href="/create-services">
+                  <Link href="/create-itineraries">
                     <div className="dark-button text-gold poppins-medium cursor-pointer">
                       <div className="flex items-center h-full">
                         <Image src={addIcon} alt="add icon" />
-                        <div className="pl-4">Add Service</div>
+                        <div className="pl-4">Add Itinerary</div>
                       </div>
                     </div>
                   </Link>
                   <div className="px-3"></div>
-                  <Link href="/create-services">
+                  <Link href="#">
                     <div className="dark-button text-gold poppins-medium cursor-pointer">
                       <div className="flex items-center h-full">
                         <Image src={listIcon} alt="list icon" />
@@ -106,47 +106,81 @@ export default function CreateServices() {
                   </Link>
                 </div>
               </div>
-              <div className="row justify-between pt-10">
-                <div className="flex col-auto">
-                  <Link href="#">
-                    <div className="dark-button text-gold poppins-medium cursor-pointer">
-                      <div className="flex items-center h-full">
-                        <Image src={itineraryIcon} alt="itineraryIcon icon" />
-                        <div className="pl-4">Create Itinerary</div>
-                      </div>
-                    </div>
-                  </Link>
-                  <div className="px-3"></div>
-                  <Link href="#">
-                    <div className="dark-button text-gold poppins-medium cursor-pointer">
-                      <div className="flex items-center h-full">
-                        <Image src={reportIcon} alt="report icon" />
-                        <div className="pl-4">Generate Reports</div>
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-                <div className="col relative">
-                  <input
-                    type="text"
-                    className="bg-white py-3 pl-10 rounded-lg w-full"
-                    placeholder="search"
-                  />
-                  <div className="absolute left-5 top-3">
-                    <Image src={searchIcon} alt="search" />
-                  </div>
-                </div>
-
-                <div className="col-12 pt-7">
+              <div className="row justify-between">
+             
+                <div className="col-12 py-3"></div>
+                {/* <div className="col-12 pt-7">
                   <ServicesTable />
-                </div>
+                </div> */}
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, index) => {
+                  return (
+                    <div className="col-4">
+                      <div className="row rounded-lg py-2">
+                        <div className="col-12 pb-4 px-2">
+                          <ServicesSwiper images={[]} />
+                        </div>
+                        <div className="col-12 px-2">
+                          <div className="f-28 text-darkblue poppins-medium">
+                            Itinerary Name {index + 1}
+                          </div>
+                        </div>
+
+                        <div className="col-12 px-2">
+                          <div className="f-20 text-grey pt-4">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Veniam voluptates eveniet iste corrupti! Cum,
+                          </div>
+                        </div>
+
+                        <div className="col-auto px-2 py-1">
+                          <div className="service-tag flex">
+                            <Image src={locationIcon} alt="location" />
+                            <div className="text-darkblue">Paris, France</div>
+                          </div>
+                        </div>
+
+                        <div className="col-auto px-2 py-1">
+                          <div className="service-tag flex">
+                            <Image src={clockIcon} alt="time" />
+                            <div className="text-darkblue">3h</div>
+                          </div>
+                        </div>
+
+                        <div className="col-auto px-2 py-1">
+                          <div className="service-tag flex">
+                            <Image src={calendarIcon} alt="calendar" />
+                            <div className="text-darkblue">Oct 11 - Oct 15</div>
+                          </div>
+                        </div>
+                        <div className="col-auto px-2 py-1">
+                          <div className="service-tag flex">
+                            <Image src={dollarIcon} alt="dollar sign" />
+                            <div className="text-darkblue">$350</div>
+                          </div>
+                        </div>
+                        <div className="col-auto px-2 py-1">
+                          <div className="service-tag flex">
+                            <div className="text-darkblue">
+                              Outdoor Activity
+                            </div>
+                          </div>
+                        </div>
+                        <div className="col-auto px-2 py-1">
+                          <div className="service-tag flex">
+                            <div className="text-darkblue">Sub-type</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
             <div className="col-3">
               <div className="row bg-white rounded-lg py-2">
                 <div className="col-12 px-2">
                   <div className="f-28 text-darkblue poppins-medium">
-                    Service Name
+                    Itinerary Name
                   </div>
                 </div>
 
