@@ -78,7 +78,10 @@ export default function PricingDetails() {
 
         {/* PAYABLES BAR */}
         <div className="col-12">
-          <div className="row bg-white rounded-lg py-8">
+          <div
+            className="row bg-white rounded-lg py-8"
+            style={{ minHeight: "290px" }}
+          >
             <DynamicRichTextBox initialData={"Notes"} />
           </div>
         </div>

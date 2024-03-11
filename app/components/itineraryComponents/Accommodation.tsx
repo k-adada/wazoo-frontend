@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import SingleSelect from "../SingleSelect";
 
+import locationIcon from "../../assets/Icon_Location_gold.png";
 import searchIcon from "../../assets/Icon_Search_Black.png";
 import filterIcon from "../../assets/Icon_Itinerary.png";
 import saveIcon from "../../assets/Icon_Save.png";
@@ -33,6 +34,20 @@ export default function Accommodation(props: {
     <div className="container-fluid accommodation">
       <div className="row">
         <div className="col-9">
+          {/* map view */}
+          <div className="flex justify-end">
+            <div
+              className="dark-button text-gold poppins-medium cursor-pointer"
+              onClick={() => {
+                setCurrentStep("map-view");
+              }}
+            >
+              <div className="flex items-center h-full">
+                <Image src={locationIcon} alt="location" />
+                <div className="pl-4">Map View</div>
+              </div>
+            </div>
+          </div>
           {selectedHotels.map((hotel, index) => {
             return (
               <>

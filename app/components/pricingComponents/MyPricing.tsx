@@ -35,7 +35,7 @@ export default function MyPricing() {
 
         {/* PRICING AND PAYMENT TERMS */}
         <div className="col-12 pt-1">
-          <div className="row bg-white py-5 px-4">
+          <div className="row bg-white py-5 px-4 rounded-lg">
             <div className="col-5">
               <div className="flex items-center pb-3">
                 <div className="pr-3">

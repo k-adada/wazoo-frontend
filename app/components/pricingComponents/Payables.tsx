@@ -134,8 +134,8 @@ export default function Payables() {
               <div
                 className={
                   (selectedProvider === index ? "" : "  opacity-25 ") +
-                  (index != serviceProviders.length - 1 && "border-right") +
-                  " col py-8 bg-white pointer"
+                  
+                  " col py-8 bg-white pointer rounded-lg"
                 }
                 onClick={() => setSelectedProvider(index)}
                 key={serviceProvider.name}
@@ -304,47 +304,6 @@ export default function Payables() {
               </div>
             </div>
 
-            {/* logistics */}
-            <div className="col border-right">
-              <div className="px-5">
-                <div className="f-24 text-darkblue text-center poppins-bold">
-                  0
-                </div>
-                <div className="payable-icon pt-2">
-                  <Image className="m-auto" src={carIcon} alt="carIcon" />
-                </div>
-                <div className="text-center text-darkblue poppins-medium py-2">
-                  Logistics
-                </div>
-                <div className="f-20 poppins-semibold text-darkblue text-center pb-8">
-                  $0.00
-                </div>
-
-                {payables.map((payable, index) => (
-                  <>
-                    {index < 0 && (
-                      <div className="flex items-center py-1" key={payable.id}>
-                        <div className="">
-                          <Image
-                            className="rounded-lg object-cover"
-                            style={{ width: "40px", height: "40px" }}
-                            src={parisImage}
-                            alt="paris"
-                          />
-                        </div>
-                        <div
-                          key={payable.id}
-                          className="poppins-medium text-darkblue pl-2"
-                        >
-                          {payable.serviceType}
-                        </div>
-                      </div>
-                    )}
-                  </>
-                ))}
-              </div>
-            </div>
-
             {/* other */}
             <div className="col">
               <div className="px-5">
@@ -391,7 +350,7 @@ export default function Payables() {
         {/* PRICING AND PAYMENT TERMS */}
         <div className="col-12 pt-1">
           <div className="row bg-white py-5 px-4 rounded-lg">
-            <div className="col-4">
+            <div className="col-5">
               <div className="flex items-center pb-3">
                 <div className="pr-3">
                   <Image width={30} src={tagIcon} alt="tag icon" />
@@ -416,7 +375,7 @@ export default function Payables() {
               </div>
             </div>
 
-            <div className="col-8">
+            <div className="col-7">
               <div className="flex items-center pb-3">
                 <div className="pr-3">
                   <Image width={30} src={invoiceIcon} alt="invoice" />
