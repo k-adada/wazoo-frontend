@@ -150,14 +150,15 @@ export default function RowOrderingGrid(props: any) {
   };
 
   return (
-    <div style={{ height: 400, width: "100%" }} className="bg-white">
-      <DataGridPro
-        rows={rows}
-        columns={columns}
-        loading={loading}
-        rowReordering
-        onRowOrderChange={handleRowOrderChange}
-      />
-    </div>
+    <div style={{  width: "100%" }} className="bg-white">
+    <DataGridPro
+      rows={rows}
+      columns={columns}
+      loading={loading}
+      rowReordering
+      onRowOrderChange={handleRowOrderChange}
+      autoHeight
+    />
+  </div>
   );
 }
