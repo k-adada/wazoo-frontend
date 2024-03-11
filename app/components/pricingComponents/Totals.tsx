@@ -8,7 +8,8 @@ import activityIcon from "../../assets/Icon_Activity.png";
 import carIcon from "../../assets/Icon_car.png";
 import homeIcon from "../../assets/Icon_Home_dark.png";
 
-export default function Totals() {
+export default function Totals(props: any) {
+  const { title = true } = props;
   const [totals, setTotals] = useState([
     {
       id: "1",
@@ -76,8 +77,11 @@ export default function Totals() {
     <div className="container-fluid totals">
       <div className="row">
         <div className="col-12 pt-5 pb-4">
-          <div className="f-32 text-darkblue poppins-semibold">Totals</div>
+          {title && (
+            <div className="f-32 text-darkblue poppins-semibold">Totals</div>
+          )}
         </div>
+
         <div className="col-12">
           <div className="bg-white row rounded-lg py-8">
             {/* activities  */}

@@ -10,7 +10,8 @@ type Props = {
   initialData?: string; // Define any props you want to pass to RichTextBox
 };
 
-export default function PricingDetails() {
+export default function PricingDetails(props: any) {
+  const { title = true } = props;
   const [serviceProviders, setServiceProviders] = useState([
     {
       name: "Price Includes",
@@ -46,9 +47,11 @@ export default function PricingDetails() {
         {/* Pricing Details */}
 
         <div className="col-12 pt-5 pb-4">
-          <div className="f-32 text-darkblue poppins-semibold">
-            Pricing Details
-          </div>
+          {title && (
+            <div className="f-32 text-darkblue poppins-semibold">
+              Pricing Details
+            </div>
+          )}
         </div>
         {/* SERVICE PROVIDERS BAR */}
         <div className="col-12">

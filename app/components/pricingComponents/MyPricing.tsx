@@ -7,7 +7,8 @@ import addIcon from "../../assets/Icon_Add_Dark.png";
 import deleteIcon from "../../assets/delete_red.png";
 import cancellationIcon from "../../assets/Icon_Stop.png";
 
-export default function MyPricing() {
+export default function MyPricing(props: any) {
+  const { title = true } = props;
   const [paymentTerms, setPaymentTerms] = useState([
     {
       id: 1,
@@ -28,9 +29,11 @@ export default function MyPricing() {
     <div className="container-fluid myPricings">
       <div className="row">
         <div className="col-12 pt-8 pb-4">
-          <div className="f-32 text-darkblue poppins-semibold">
-            My Pricing & Payment Terms
-          </div>
+          {title && (
+            <div className="f-32 text-darkblue poppins-semibold">
+              My Pricing & Payment Terms
+            </div>
+          )}
         </div>
 
         {/* PRICING AND PAYMENT TERMS */}

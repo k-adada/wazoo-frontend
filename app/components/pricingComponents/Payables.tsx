@@ -15,7 +15,8 @@ import invoiceIcon from "../../assets/Icon_Invoice_dark.png";
 import addIcon from "../../assets/Icon_Add_Dark.png";
 import deleteIcon from "../../assets/delete_red.png";
 
-export default function Payables() {
+export default function Payables(props: any) {
+  const { title = true } = props;
   const [payables, setPayables] = useState([
     {
       id: "1",
@@ -123,7 +124,9 @@ export default function Payables() {
     <div className="container-fluid payables">
       <div className="row">
         <div className="col-12 pt-5 pb-4">
-          <div className="f-32 text-darkblue poppins-semibold">Payables</div>
+          {title && (
+            <div className="f-32 text-darkblue poppins-semibold">Payables</div>
+          )}
         </div>
 
         {/* SERVICE PROVIDERS BAR */}
@@ -134,7 +137,6 @@ export default function Payables() {
               <div
                 className={
                   (selectedProvider === index ? "" : "  opacity-25 ") +
-                  
                   " col py-8 bg-white pointer rounded-lg"
                 }
                 onClick={() => setSelectedProvider(index)}

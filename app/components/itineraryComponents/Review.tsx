@@ -468,7 +468,7 @@ export default function Review(props: {
                   </div>
                 </div>
               </div>
-              {showTotals && <Totals />}
+              {showTotals && <Totals title={false} />}
             </div>
             {/* PAYABLES */}
             <div className="col-12 pt-5">
@@ -492,7 +492,7 @@ export default function Review(props: {
                   </div>
                 </div>
               </div>
-              {showPayables && <Payables />}
+              {showPayables && <Payables title={false} />}
             </div>
             {/* MY PRICING */}
             <div className="col-12 pt-5">
@@ -516,7 +516,7 @@ export default function Review(props: {
                   </div>
                 </div>
               </div>
-              {showMyPricing && <MyPricing />}
+              {showMyPricing && <MyPricing title={false} />}
             </div>
             {/* PRICING DETAILS */}
             <div className="col-12 pt-5">
@@ -540,7 +540,7 @@ export default function Review(props: {
                   </div>
                 </div>
               </div>
-              {showPricingDetails && <PricingDetails />}
+              {showPricingDetails && <PricingDetails title={false} />}
             </div>
           </>
         )}
