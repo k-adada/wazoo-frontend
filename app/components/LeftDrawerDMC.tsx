@@ -140,7 +140,7 @@ export default function LeftDrawerDMC() {
                   {">"}
                 </ListItemButton>
               </Link>
-              <Link href="/dmc-dashboard">
+              <Link href="/catalogues">
                 <ListItemButton sx={{ pl: 4 }}>
                   <ListItemIcon>{/* <StarBorder /> */}</ListItemIcon>
                   <ListItemText primary="&bull;&nbsp; Catalogues" />
