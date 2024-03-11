@@ -110,7 +110,7 @@ export default function Catalogues() {
                 </div> */}
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, index) => {
                   return (
-                    <div className="col-4">
+                    <div className="col-4" key={index}>
                       <div className="row rounded-lg py-2">
                         <div className="col-12 pb-4 px-2">
                           <ServicesSwiper images={[]} />
