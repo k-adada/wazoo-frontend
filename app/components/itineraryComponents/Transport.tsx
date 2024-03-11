@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
+import filterIcon from "../../assets/Icon_Itinerary.png";
 import searchIcon from "../../assets/Icon_Search_Black.png";
 import saveIcon from "../../assets/Icon_Save.png";
 import downArrowIcon from "../../assets/down_arrow_dark.png";
@@ -195,7 +196,9 @@ export default function Transport(props: {
                     placeholder="Search Transport"
                   />
                 </div>
-                <div className="col-auto self-center">F</div>
+                <div className="col-auto self-center">
+                  <Image src={filterIcon} alt="filter" />
+                </div>
               </div>
             </div>
             <div className="col-12 py-3">

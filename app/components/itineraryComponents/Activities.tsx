@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import saveIcon from "../../assets/Icon_Save.png";
 import searchIcon from "../../assets/Icon_Search_Black.png";
-import deleteRedIcon from "../../assets/delete_red.png";
+import filterIcon from "../../assets/Icon_Itinerary.png";
 import downArrowIcon from "../../assets/down_arrow_dark.png";
 import addGoldIcon from "../../assets/Icon_Add.png";
 import addCircleIcon from "../../assets/Icon_Add_circle.png";
@@ -14,6 +14,8 @@ import DragTableServices from "../DragTableServices";
 
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import { filterColumns } from "@mui/x-data-grid-pro/components/DataGridProVirtualScroller";
+import { GridFilterAltIcon } from "@mui/x-data-grid-pro";
 // Dynamically import the RichTextBox component with SSR disabled
 const DynamicRichTextBox = dynamic(() => import("../RichTextBox"), {
   ssr: false, // Disable server-side rendering for this component
@@ -217,7 +219,9 @@ export default function Activities(props: {
                     placeholder="Search Activity"
                   />
                 </div>
-                <div className="col-auto self-center">F</div>
+                <div className="col-auto self-center">
+                  <Image src={filterIcon} alt="filter" />
+                </div>
               </div>
             </div>
             <div className="col-12 py-3">
