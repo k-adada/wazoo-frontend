@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 import saveIcon from "../../assets/Icon_Save.png";
+import deleteRedIcon from "../../assets/delete_red.png";
 import downArrowIcon from "../../assets/down_arrow_dark.png";
 import addGoldIcon from "../../assets/Icon_Add.png";
 import addCircleIcon from "../../assets/Icon_Add_circle.png";
@@ -113,9 +114,12 @@ export default function Activities(props: {
         <div className="col-9">
           {/* map view */}
           <div className="flex justify-end">
-            <div className="dark-button text-gold poppins-medium cursor-pointer" onClick={()=>{
-              setCurrentStep("map-view");
-            }}>
+            <div
+              className="dark-button text-gold poppins-medium cursor-pointer"
+              onClick={() => {
+                setCurrentStep("map-view");
+              }}
+            >
               <div className="flex items-center h-full">
                 <Image src={locationIcon} alt="location" />
                 <div className="pl-4">Map View</div>
@@ -183,7 +187,12 @@ export default function Activities(props: {
 
                   {/* DRAG TABLE SERVICES */}
                   <div className="px-5 pt-5">
-                    <DragTableServices services={day.services} />
+                    <DragTableServices
+                      services={day.services}
+                      days={days}
+                      setDays={setDays}
+                      dayIndex={index}
+                    />
                   </div>
                 </div>
               </div>

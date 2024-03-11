@@ -2,11 +2,13 @@ import * as React from "react";
 import {
   DataGridPro,
   GridColDef,
+  GridRowId,
   GridRowModel,
   GridRowOrderChangeParams,
 } from "@mui/x-data-grid-pro";
 
 import deleteRedIcon from "../assets/delete_red.png";
+import editIcon from "../assets/Icon_Edit.png";
 import Image from "next/image";
 
 function updateRowPosition(
@@ -25,7 +27,7 @@ function updateRowPosition(
 }
 
 export default function RowOrderingGrid(props: any) {
-  const { services } = props;
+  const { services, days, setDays, dayIndex } = props;
   // Define your own data with id, name, and description columns
   const tempColumns: GridColDef[] = [
     { field: "id", headerName: "ID", width: 30 },
@@ -36,6 +38,52 @@ export default function RowOrderingGrid(props: any) {
     { field: "duration", headerName: "Duration", width: 100 },
     { field: "timeslot", headerName: "Timeslot", width: 100 },
     { field: "price", headerName: "Price ($)", width: 100 },
+    {
+      field: "actions",
+      headerName: "Actions",
+      width: 100,
+      sortable: false,
+      filterable: false,
+      renderCell: (params) => {
+        // Example dynamic image selection (adjust according to your needs)
+
+        const handleDeleteService = (
+          event: React.MouseEvent<HTMLDivElement, MouseEvent>,
+          serviceId: GridRowId
+        ) => {
+          event.stopPropagation(); // Prevent triggering row selection or other grid actions
+
+          // Update the services for the targeted day directly within the days state
+          let updatedDays = [...days];
+          updatedDays[dayIndex].services = updatedDays[
+            dayIndex
+          ].services.filter((service: { id: any }) => service.id !== serviceId);
+
+          // Update the days state
+          setDays(updatedDays);
+
+          //ensure the rows for the DataGridPro are updated to reflect this change
+          setRows(updatedDays[dayIndex].services); // This assumes your component re-receives the updated services as props
+        };
+
+        return (
+          <div className="flex items-center justify-center">
+            <div
+              className="pointer pr-3"
+              onClick={(e) => console.log("EDIT : ", params.id)}
+            >
+              <Image src={editIcon} alt="action" width={20} height={20} />
+            </div>
+            <div
+              className="pointer"
+              onClick={(e) => handleDeleteService(e, params.id)}
+            >
+              <Image src={deleteRedIcon} alt="action" width={20} height={20} />
+            </div>
+          </div>
+        );
+      },
+    },
   ];
 
   const tempRows: GridRowModel[] = [
