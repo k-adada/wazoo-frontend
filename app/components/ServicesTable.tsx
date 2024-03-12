@@ -24,6 +24,14 @@ import { visuallyHidden } from "@mui/utils";
 import deleteRedIcon from "../assets/delete_red.png";
 import editIcon from "../assets/Icon_Edit.png";
 import tourEffelImage from "../assets/tour_effel.jpg";
+
+import alpsImage from "../assets/images/services/alps.webp";
+import bernImage from "../assets/images/services/bern.jpg";
+import eifelImage from "../assets/images/services/EiffelTower.jpg";
+import brandenImage from "../assets/images/services/BrandenbergGate.webp";
+import garnierImage from "../assets/images/services/Garnier.webp";
+import genevaImage from "../assets/images/services/Geneva.webp";
+
 import Image from "next/image";
 
 interface Data {
@@ -62,7 +70,7 @@ function createData(
 const rows = [
   createData(
     1,
-    tourEffelImage.src,
+    alpsImage.src,
     "Service 1",
     "transport",
     "transfer",
@@ -72,7 +80,7 @@ const rows = [
   ),
   createData(
     2,
-    tourEffelImage.src,
+    bernImage.src,
     "Service 2",
     "transport",
     "transfer",
@@ -82,7 +90,7 @@ const rows = [
   ),
   createData(
     3,
-    tourEffelImage.src,
+    eifelImage.src,
     "Service 3",
     "transport",
     "transfer",
@@ -92,7 +100,7 @@ const rows = [
   ),
   createData(
     4,
-    tourEffelImage.src,
+    brandenImage.src,
     "Service 4",
     "transport",
     "transfer",
@@ -102,7 +110,7 @@ const rows = [
   ),
   createData(
     5,
-    tourEffelImage.src,
+    garnierImage.src,
     "Service 5",
     "transport",
     "transfer",
@@ -112,7 +120,7 @@ const rows = [
   ),
   createData(
     6,
-    tourEffelImage.src,
+    genevaImage.src,
     "Service 6",
     "transport",
     "transfer",
@@ -122,7 +130,7 @@ const rows = [
   ),
   createData(
     7,
-    tourEffelImage.src,
+    alpsImage.src,
     "Service 7",
     "transport",
     "transfer",
@@ -132,7 +140,7 @@ const rows = [
   ),
   createData(
     8,
-    tourEffelImage.src,
+    bernImage.src,
     "Service 8",
     "transport",
     "transfer",
@@ -142,7 +150,7 @@ const rows = [
   ),
   createData(
     9,
-    tourEffelImage.src,
+    eifelImage.src,
     "Service 9",
     "transport",
     "transfer",
@@ -506,9 +514,9 @@ export default function ServicesTable() {
                           src={row.image}
                           alt={row.serviceName}
                           style={{ height: "53px", width: "53px" }}
-                          width={53}
-                          height={53}
-                          className="rounded-lg"
+                          width={500}
+                          height={500}
+                          className="rounded-lg object-cover"
                         />
                       </div>
                     </TableCell>
