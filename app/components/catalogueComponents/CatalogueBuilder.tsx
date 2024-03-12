@@ -3,10 +3,12 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 import saveIcon from "../../assets/Icon_Save.png";
+import addIcon from "../../assets/Icon_Add.png";
 import searchIcon from "../../assets/Icon_Search_Black.png";
 import filterIcon from "../../assets/Icon_Itinerary.png";
 import downArrowIcon from "../../assets/down_arrow_dark.png";
 import addCircleIcon from "../../assets/Icon_Add_circle.png";
+import eyeIcon from "../../assets/Icon_Preview_gold.png";
 import tourImage from "../../assets/tour_effel.jpg";
 import DragTableServices from "../DragTableServices";
 
@@ -29,10 +31,6 @@ export default function CatalogueBuilder(props: {
   setStepsDone: any;
 }) {
   const { setCurrentStep, stepsDone, setStepsDone } = props;
-
-  useEffect(() => {
-    setStepsDone(["catalogue-details", "catalogue-builder"]);
-  }, [setStepsDone]);
 
   const [activities, setActivities] = useState([
     {
@@ -173,7 +171,7 @@ export default function CatalogueBuilder(props: {
                   <input
                     type="text"
                     className="rounded-lg bg-blue text-darkblue pl-10 pr-5 py-3 w-full"
-                    placeholder="Search Activity"
+                    placeholder="Search Itineraries / Services"
                   />
                 </div>
                 <div className="col-auto self-center">
@@ -281,28 +279,30 @@ export default function CatalogueBuilder(props: {
           </div>
         </div>
 
-        {/* save as draft */}
+        {/* NEXT */}
         <div className="col-auto pt-[64px]">
           <Link href="/itineraries">
             <div className="dark-button text-gold poppins-medium cursor-pointer">
               <div className="flex items-center h-full">
-                <Image src={saveIcon} alt="saveIcon" />
-                <div className="pl-4">Save as Draft</div>
+                <Image src={addIcon} alt="eyeIcon" />
+                <div className="pl-4">Create Catalogue</div>
               </div>
             </div>
           </Link>
         </div>
-        {/* NEXT */}
+
+        {/* save as draft */}
         <div className="col-auto pt-[64px]">
           <div
             className="dark-button text-gold poppins-medium cursor-pointer"
             onClick={() => {
-              setCurrentStep("transport");
-              setStepsDone([...stepsDone, "transport"]);
+              setCurrentStep("preview");
+              setStepsDone([...stepsDone, "preview"]);
             }}
           >
             <div className="flex items-center h-full">
-              <div className="">Next</div>
+              <Image src={eyeIcon} alt="eyeIcon" />
+              <div className="pl-4">Preview Catalogue</div>
             </div>
           </div>
         </div>

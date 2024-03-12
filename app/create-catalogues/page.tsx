@@ -18,6 +18,7 @@ import Preview from "../components/itineraryComponents/Preview";
 import MapView from "../components/itineraryComponents/MapView";
 import CatalogueDetails from "../components/catalogueComponents/CatalogueDetails";
 import CatalogueBuilder from "../components/catalogueComponents/CatalogueBuilder";
+import CataloguePreview from "../components/catalogueComponents/CataloguePreview";
 
 export default function CreateCatalogues() {
   const router = useRouter();
@@ -100,7 +101,7 @@ export default function CreateCatalogues() {
           </div>
 
           {/*  STEPS BAR */}
-          <div className="col-12">
+          <div className="col-12 pt-6">
             <div className="row">
               {/* STEP 1  */}
               <div
@@ -127,6 +128,7 @@ export default function CreateCatalogues() {
                 className="col-auto pointer"
                 onClick={() => {
                   setCurrentStep("catalogue-builder");
+                  setStepsDone(["catalogue-details", "catalogue-builder"]);
                 }}
               >
                 <div className="itinerary-step">
@@ -159,6 +161,11 @@ export default function CreateCatalogues() {
                 className="col-auto pointer"
                 onClick={() => {
                   setCurrentStep("review");
+                  setStepsDone([
+                    "catalogue-details",
+                    "catalogue-builder",
+                    "review",
+                  ]);
                 }}
               >
                 <div className="itinerary-step">
@@ -204,6 +211,17 @@ export default function CreateCatalogues() {
           {currentStep === "review" && (
             <>
               <CatalogueBuilder
+                setCurrentStep={setCurrentStep}
+                stepsDone={stepsDone}
+                setStepsDone={setStepsDone}
+              />
+            </>
+          )}
+
+          {/* Preview Catalogue  */}
+          {currentStep === "preview" && (
+            <>
+              <CataloguePreview
                 setCurrentStep={setCurrentStep}
                 stepsDone={stepsDone}
                 setStepsDone={setStepsDone}
