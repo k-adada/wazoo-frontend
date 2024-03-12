@@ -54,3 +54,12 @@
   padding: 8px 6px;
   border-radius: 8px;
 }
+
+.catalogue-card {
+  border: 2px solid transparent;
+  transition: 0.3s ease-in-out;
+  &.active {
+    border: 2px solid #c7d4db;
+    transform: scale(1.05);
+  }
+}

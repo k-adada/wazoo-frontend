@@ -13,11 +13,12 @@ import addIcon from "../assets/Icon_Add.png";
 import backIcon from "../assets/Icon_Back.png";
 import serviceEmptyIcon from "../assets/services_empty.png";
 import listIcon from "../assets/Icon_List_View.png";
-import ServicesSwiper from "../components/servicesSwiper";
 import locationIcon from "../assets/Icon_Location.png";
+import threeDotsIcon from "../assets/three_dots_white.png";
 import clockIcon from "../assets/Icon_Time.png";
 import calendarIcon from "../assets/Icon_Calendar_dark.png";
 import dollarIcon from "../assets/Icon_Dollars.png";
+import casinoImage from "../assets/Bellagio-Hotel-Casino-Las-Vegas.webp";
 import userIcon from "../assets/Icon_My_Account_dark.png";
 import phoneIcon from "../assets/phone_icon.png";
 import searchIcon from "../assets/Icon_Search_Black.png";
@@ -27,7 +28,10 @@ export default function Catalogues() {
   const routerBack = () => {
     router.back();
   };
-  const [itineraries, setItineraries] = useState([]);
+  const [itineraries, setItineraries] = useState([1]);
+
+  const [activeCatalogue, setActiveCatalogue] = useState(-1);
+
   return (
     <main className="flex min-h-screen flex-col items-center p-md-24 p-3 bg-lightblue pb-[100px]">
       <div className="container-fluid">
@@ -76,7 +80,7 @@ export default function Catalogues() {
 
         {itineraries.length > 0 ? (
           <div className="row">
-            <div className="col-9">
+            <div className="col-12">
               <div className="row justify-between">
                 <div className="col-auto">
                   <div className="f-20 py-3 px-3 bg-white rounded-lg">
@@ -88,7 +92,7 @@ export default function Catalogues() {
                     <div className="dark-button text-gold poppins-medium cursor-pointer">
                       <div className="flex items-center h-full">
                         <Image src={addIcon} alt="add icon" />
-                        <div className="pl-4">Add Catalogue</div>
+                        <div className="pl-4">Create Catalogue</div>
                       </div>
                     </div>
                   </Link>
@@ -108,62 +112,167 @@ export default function Catalogues() {
                 {/* <div className="col-12 pt-7">
                   <ServicesTable />
                 </div> */}
-                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, index) => {
+                {[1, 2, 3, 4, 5, 6].map((item, index) => {
                   return (
-                    <div className="col-4" key={index}>
-                      <div className="row rounded-lg py-2">
-                        <div className="col-12 pb-4 px-2">
-                          <ServicesSwiper images={[]} />
-                        </div>
-                        <div className="col-12 px-2">
-                          <div className="f-28 text-darkblue poppins-medium">
-                            Itinerary Name {index + 1}
-                          </div>
-                        </div>
-
-                        <div className="col-12 px-2">
-                          <div className="f-20 text-grey pt-4">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit. Veniam voluptates eveniet iste corrupti! Cum,
-                          </div>
-                        </div>
-
-                        <div className="col-auto px-2 py-1">
-                          <div className="service-tag flex">
-                            <Image src={locationIcon} alt="location" />
-                            <div className="text-darkblue">Paris, France</div>
-                          </div>
-                        </div>
-
-                        <div className="col-auto px-2 py-1">
-                          <div className="service-tag flex">
-                            <Image src={clockIcon} alt="time" />
-                            <div className="text-darkblue">3h</div>
-                          </div>
-                        </div>
-
-                        <div className="col-auto px-2 py-1">
-                          <div className="service-tag flex">
-                            <Image src={calendarIcon} alt="calendar" />
-                            <div className="text-darkblue">Oct 11 - Oct 15</div>
-                          </div>
-                        </div>
-                        <div className="col-auto px-2 py-1">
-                          <div className="service-tag flex">
-                            <Image src={dollarIcon} alt="dollar sign" />
-                            <div className="text-darkblue">$350</div>
-                          </div>
-                        </div>
-                        <div className="col-auto px-2 py-1">
-                          <div className="service-tag flex">
-                            <div className="text-darkblue">
-                              Outdoor Activity
+                    <div className="col-4 py-3" key={index}>
+                      <div
+                        className={
+                          (activeCatalogue === index
+                            ? "active text-white"
+                            : "") + " bg-white px-4 rounded-lg catalogue-card"
+                        }
+                      >
+                        <div className="row py-2">
+                          <div className="col-12 pb-4 px-2">
+                            <div className="image-wrapper-83">
+                              <Image src={casinoImage} alt="casinoImage" />
+                            </div>
+                            <div className="absolute top-2 right-8 pointer">
+                              <Image
+                                src={threeDotsIcon}
+                                alt="three dots"
+                                className="three-dots"
+                              />
                             </div>
                           </div>
-                        </div>
-                        <div className="col-auto px-2 py-1">
-                          <div className="service-tag flex">
-                            <div className="text-darkblue">Sub-type</div>
+                          <div className="col-12 px-2">
+                            <div className="f-20 text-darkblue poppins-medium">
+                              Itinerary Name {index + 1}
+                            </div>
+                          </div>
+
+                          <div className="col-12 px-2">
+                            <div className="text-grey pt-4">
+                              Lorem ipsum dolor sit amet consectetur,
+                              adipisicing elit. Veniam voluptates eveniet iste
+                              corrupti! Cum,
+                            </div>
+                          </div>
+
+                          <div className="col-auto px-2 py-1">
+                            <div className="bg-grey text-grey rounded-xl px-2">
+                              #Outdoor activity
+                            </div>
+                          </div>
+                          <div className="col-auto px-2 py-1">
+                            <div className="bg-grey text-grey rounded-xl px-2">
+                              #Beach&Sun
+                            </div>
+                          </div>
+
+                          <div className="col-auto px-2 py-1">
+                            <div className="bg-grey text-grey rounded-xl px-2">
+                              #Snow&Skii
+                            </div>
+                          </div>
+
+                          <div className="col-12 flex items-center justify-between pt-4">
+                            <div className="text-darkblue f-14 poppins-medium">
+                              Packages
+                              <div className="flex">
+                                <Image
+                                  className="rounded-full"
+                                  style={{
+                                    width: "36px",
+                                    height: "36px",
+                                  }}
+                                  src={casinoImage}
+                                  alt="casino"
+                                />
+                                <Image
+                                  className="rounded-full"
+                                  style={{
+                                    width: "36px",
+                                    height: "36px",
+                                    transform: "translateX(-50%)",
+                                  }}
+                                  src={casinoImage}
+                                  alt="casino"
+                                />
+                                <Image
+                                  className="rounded-full"
+                                  style={{
+                                    width: "36px",
+                                    height: "36px",
+                                    transform: "translateX(-100%)",
+                                  }}
+                                  src={casinoImage}
+                                  alt="casino"
+                                />
+                                <Image
+                                  className="rounded-full"
+                                  style={{
+                                    width: "36px",
+                                    height: "36px",
+                                    transform: "translateX(-150%)",
+                                  }}
+                                  src={casinoImage}
+                                  alt="casino"
+                                />
+                              </div>
+                            </div>
+                            <div className="text-darkblue f-14 poppins-medium pr-20">
+                              Services
+                              <div className="flex">
+                                <Image
+                                  className="rounded-full"
+                                  style={{
+                                    width: "36px",
+                                    height: "36px",
+                                  }}
+                                  src={casinoImage}
+                                  alt="casino"
+                                />
+                                <Image
+                                  className="rounded-full"
+                                  style={{
+                                    width: "36px",
+                                    height: "36px",
+                                    transform: "translateX(-50%)",
+                                  }}
+                                  src={casinoImage}
+                                  alt="casino"
+                                />
+                                <Image
+                                  className="rounded-full"
+                                  style={{
+                                    width: "36px",
+                                    height: "36px",
+                                    transform: "translateX(-100%)",
+                                  }}
+                                  src={casinoImage}
+                                  alt="casino"
+                                />
+                                <Image
+                                  className="rounded-full"
+                                  style={{
+                                    width: "36px",
+                                    height: "36px",
+                                    transform: "translateX(-150%)",
+                                  }}
+                                  src={casinoImage}
+                                  alt="casino"
+                                />
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="col-12 pt-4">
+                            <div
+                              className="rounded-lg bg-lineslight poppins-medium py-3 text-darkblue flex items-center justify-center pointer hover"
+                              onClick={() => {
+                                if (activeCatalogue === index) {
+                                  setActiveCatalogue(-1);
+                                } else {
+                                  setActiveCatalogue(index);
+                                }
+                              }}
+                            >
+                              <div className="">
+                                <Image src={locationIcon} alt="speaker" />
+                              </div>
+                              <div className="pl-2"> Create Listing</div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -172,7 +281,7 @@ export default function Catalogues() {
                 })}
               </div>
             </div>
-            <div className="col-3">
+            {/* <div className="col-3">
               <div className="row bg-white rounded-lg py-2">
                 <div className="col-12 px-2">
                   <div className="f-28 text-darkblue poppins-medium">
@@ -255,7 +364,7 @@ export default function Catalogues() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         ) : (
           <>

@@ -229,6 +229,16 @@ input::placeholder {
   background-color: #ececec;
 }
 
+.bg-lineslight {
+  background-color: #c7d4db;
+}
+.bg-lineslight.hover {
+  transition: 0.3s ease-in-out;
+}
+.bg-lineslight.hover:hover {
+  background-color: #9fbbcb;
+}
+
 .bg-darkgrey {
   background-color: #a4a4a466;
 }

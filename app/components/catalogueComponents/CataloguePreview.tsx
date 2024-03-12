@@ -246,28 +246,14 @@ export default function CataloguePreview(props: {
         )}
         {/* save as draft */}
         <div className="col-auto pt-[64px]">
-          <Link href="/itineraries">
+          <Link href="/catalogues">
             <div className="dark-button text-gold poppins-medium cursor-pointer">
               <div className="flex items-center h-full">
                 <Image src={saveIcon} alt="saveIcon" />
-                <div className="pl-4">Save as Draft</div>
+                <div className="pl-4">Submit</div>
               </div>
             </div>
           </Link>
-        </div>
-        {/* NEXT */}
-        <div className="col-auto pt-[64px]">
-          <div
-            className="dark-button text-gold poppins-medium cursor-pointer"
-            onClick={() => {
-              setCurrentStep("review");
-              setStepsDone([...stepsDone, "review"]);
-            }}
-          >
-            <div className="flex items-center h-full">
-              <div className="">Next</div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
