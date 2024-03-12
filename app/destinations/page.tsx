@@ -9,6 +9,20 @@ import CountryMultiSelect from "../components/CountryMultiSelect";
 import ContinentMultiSelect from "../components/ContinentMultiSelect";
 import Link from "next/link";
 
+import australiaImage from "../assets/images/destinations/Australia.webp";
+import brazilImage from "../assets/images/destinations/Brazil.webp";
+import egyptImage from "../assets/images/destinations/egypt.jpg";
+import franceImage from "../assets/images/destinations/France.png";
+import lebanonImage from "../assets/images/destinations/Baalbek.webp";
+import japanImage from "../assets/images/destinations/Japan.webp";
+import italyImage from "../assets/images/destinations/Italy.png";
+import newzealandImage from "../assets/images/destinations/NewZeland.png";
+import spainImage from "../assets/images/destinations/spain.webp";
+import thailandImage from "../assets/images/destinations/Thailand.webp";
+import uaeImage from "../assets/images/destinations/UAE.png";
+import turkeyImage from "../assets/images/destinations/Turkey.png";
+import switzerlandImage from "../assets/images/destinations/Switzerland.webp";
+
 interface Destination {
   id: number;
   name: string;
@@ -24,210 +38,92 @@ export default function Destinations() {
       name: "Lebanon",
       continent: "Asia",
       country: "Lebanon",
-      image: destination,
+      image: lebanonImage,
     },
     {
       id: 2,
       name: "France",
       continent: "Europe",
       country: "France",
-      image: destination,
+      image: franceImage,
     },
     {
       id: 3,
       name: "Australia",
       continent: "Oceania",
       country: "Australia",
-      image: destination,
+      image: australiaImage,
     },
     {
       id: 4,
       name: "Brazil",
       continent: "South America",
       country: "Brazil",
-      image: destination,
+      image: brazilImage,
     },
     {
       id: 5,
       name: "Egypt",
       continent: "Africa",
       country: "Egypt",
-      image: destination,
+      image: egyptImage,
     },
     {
       id: 6,
       name: "Japan",
       continent: "Asia",
       country: "Japan",
-      image: destination,
+      image: japanImage,
     },
     {
       id: 7,
       name: "Italy",
       continent: "Europe",
       country: "Italy",
-      image: destination,
+      image: italyImage,
     },
     {
       id: 8,
       name: "New Zealand",
       continent: "Oceania",
       country: "New Zealand",
-      image: destination,
+      image: newzealandImage,
     },
-    {
-      id: 9,
-      name: "Argentina",
-      continent: "South America",
-      country: "Argentina",
-      image: destination,
-    },
-    {
-      id: 10,
-      name: "South Africa",
-      continent: "Africa",
-      country: "South Africa",
-      image: destination,
-    },
+
     {
       id: 11,
       name: "Thailand",
       continent: "Asia",
       country: "Thailand",
-      image: destination,
+      image: thailandImage,
     },
     {
       id: 12,
       name: "Spain",
       continent: "Europe",
       country: "Spain",
-      image: destination,
+      image: spainImage,
     },
     {
       id: 13,
-      name: "Fiji",
-      continent: "Oceania",
-      country: "Fiji",
-      image: destination,
+      name: "UAE",
+      continent: "Asia",
+      country: "UAE",
+      image: uaeImage,
     },
     {
       id: 14,
-      name: "Chile",
-      continent: "South America",
-      country: "Chile",
-      image: destination,
+      name: "Turkey",
+      continent: "Asia",
+      country: "Turkey",
+      image: turkeyImage,
     },
     {
       id: 15,
-      name: "Morocco",
-      continent: "Africa",
-      country: "Morocco",
-      image: destination,
-    },
-    {
-      id: 16,
-      name: "India",
-      continent: "Asia",
-      country: "India",
-      image: destination,
-    },
-    {
-      id: 17,
-      name: "Germany",
+      name: "Switzerland",
       continent: "Europe",
-      country: "Germany",
-      image: destination,
-    },
-    {
-      id: 18,
-      name: "Samoa",
-      continent: "Oceania",
-      country: "Samoa",
-      image: destination,
-    },
-    {
-      id: 19,
-      name: "Peru",
-      continent: "South America",
-      country: "Peru",
-      image: destination,
-    },
-    {
-      id: 20,
-      name: "Kenya",
-      continent: "Africa",
-      country: "Kenya",
-      image: destination,
-    },
-    {
-      id: 21,
-      name: "Maldives",
-      continent: "Asia",
-      country: "Maldives",
-      image: destination,
-    },
-    {
-      id: 22,
-      name: "Greece",
-      continent: "Europe",
-      country: "Greece",
-      image: destination,
-    },
-    {
-      id: 23,
-      name: "Vanuatu",
-      continent: "Oceania",
-      country: "Vanuatu",
-      image: destination,
-    },
-    {
-      id: 24,
-      name: "Colombia",
-      continent: "South America",
-      country: "Colombia",
-      image: destination,
-    },
-    {
-      id: 25,
-      name: "Tanzania",
-      continent: "Africa",
-      country: "Tanzania",
-      image: destination,
-    },
-    {
-      id: 26,
-      name: "Vietnam",
-      continent: "Asia",
-      country: "Vietnam",
-      image: destination,
-    },
-    {
-      id: 27,
-      name: "Netherlands",
-      continent: "Europe",
-      country: "Netherlands",
-      image: destination,
-    },
-    {
-      id: 28,
-      name: "Tonga",
-      continent: "Oceania",
-      country: "Tonga",
-      image: destination,
-    },
-    {
-      id: 29,
-      name: "Ecuador",
-      continent: "South America",
-      country: "Ecuador",
-      image: destination,
-    },
-    {
-      id: 30,
-      name: "Botswana",
-      continent: "Africa",
-      country: "Botswana",
-      image: destination,
+      country: "Switzerland",
+      image: switzerlandImage,
     },
   ]);
 
@@ -354,9 +250,10 @@ export default function Destinations() {
               )}
 
               <Image
-                className="rounded-[15px]"
+                className="rounded-[15px] object-cover"
                 src={item.image}
                 alt="destination"
+                style={{ width: "200px", height: "240px" }}
               />
             </div>
           );
