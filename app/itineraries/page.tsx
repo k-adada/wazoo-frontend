@@ -223,13 +223,13 @@ export default function CreateItineraries() {
                           </div>
                         </div>
                         <div className="col-12 px-2">
-                          <div className="f-16 text-darkblue poppins-medium">
+                          <div className="f-20 text-darkblue poppins-medium">
                             Itinerary Name {index + 1}
                           </div>
                         </div>
 
                         <div className="col-12 px-2">
-                          <div className="f-16 text-grey pt-4 line-clamp-3">
+                          <div className="f-16 text-grey pt-1 line-clamp-3">
                             Lorem ipsum dolor sit amet consectetur, adipisicing
                             elit. Veniam voluptates eveniet iste corrupti! Cum,
                           </div>
@@ -296,7 +296,7 @@ export default function CreateItineraries() {
             <div className="col-3">
               <div className="row bg-white rounded-lg py-2">
                 <div className="col-12 px-2">
-                  <div className="f-16 text-darkblue poppins-medium">
+                  <div className="f-20 text-darkblue poppins-medium">
                     Itinerary Name
                   </div>
                 </div>
@@ -353,14 +353,12 @@ export default function CreateItineraries() {
                           </div>
                         </div>
                         <div
-                          className={`${
-                            day.collapsed ? "hidden" : ""
-                          } col-12 py-2`}
+                          className={`${day.collapsed ? "hidden" : ""} py-2`}
                         >
                           {day.services.map((service, index) => {
                             return (
                               <div
-                                className="col-12 py-2"
+                                className="py-2"
                                 key={index + service.location}
                               >
                                 <div className="flex py-2 px-2 bg-grey rounded-lg items-center justify-between">

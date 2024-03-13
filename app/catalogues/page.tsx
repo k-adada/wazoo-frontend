@@ -219,7 +219,7 @@ export default function Catalogues() {
                             </div>
                           </div>
                           <div className="col-12 px-2 flex justify-between">
-                            <div className="f-16 text-darkblue poppins-medium">
+                            <div className="f-20 text-darkblue poppins-medium">
                               Itinerary Name {index + 1}
                             </div>
                             <Link href="/catalogue">

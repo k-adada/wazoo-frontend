@@ -98,7 +98,7 @@ export default function CataloguePreview() {
                       <ServicesSwiper images={[]} />
                     </div>
                     <div className="col-12">
-                      <div className="f-16 text-darkblue poppins-medium">
+                      <div className="f-20 text-darkblue poppins-medium">
                         Itinerary Name {index + 1}
                       </div>
                     </div>
@@ -179,11 +179,11 @@ export default function CataloguePreview() {
                     </div>
                     <div className="col-12">
                       <div className="flex justify-between items-center">
-                        <div className="f-16 text-darkblue poppins-medium">
+                        <div className="f-20 text-darkblue poppins-medium">
                           Itinerary Name {index + 1}
                         </div>
                         <div className="flex items-center">
-                          <div className="f-30 poppins-semibold text-darkblue">
+                          <div className="f-24 poppins-semibold text-darkblue">
                             $ 350
                           </div>
                           <div className="f-16 text-darkblue pl-2">

@@ -59,7 +59,7 @@ export default function CreateCatalogues() {
         backgroundPosition: "right",
       }}
     >
-      <div className="container-fluid" style={{ width: "80%" }}>
+      <div className="container-fluid" style={{ width: "95%" }}>
         {/* navbar  */}
         <div className="row items-center">
           <div className="col-auto">
