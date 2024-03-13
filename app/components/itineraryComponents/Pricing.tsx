@@ -93,7 +93,7 @@ export default function Pricing(props: {
   return (
     <div className="container-fluid transport">
       <div className="row">
-        <div className="col-12 pt-5">
+        <div className="col-12">
           {/* DRAG TABLE SERVICES */}
 
           <div className="f-32 text-darkblue poppins-semibold pb-4">

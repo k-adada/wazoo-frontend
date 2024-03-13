@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
-import eyeIcon from "../../assets/Icon_Preview_gold.png";
+import eyeIcon from "../../assets/Icon_Preview.svg";
 import parisImage from "../../assets/tour_effel.jpg";
 import activityIcon from "../../assets/Icon_Activity.png";
 import carIcon from "../../assets/Icon_car.png";
@@ -253,10 +253,14 @@ export default function Totals(props: any) {
           <div className="f-24 text-darkblue poppins-semibold text-center pb-2">
             Total
           </div>
-          <div className="f-16 poppins-bold f-16 text-center">$18,300.00</div>
+          <div className="poppins-bold f-20 text-center">$18,300.00</div>
 
           <div className="absolute right-8 top-10">
-            <Image src={eyeIcon} alt="eye" />
+            <Image
+              src={eyeIcon}
+              alt="eye"
+              style={{ width: "32px", height: "32px" }}
+            />
           </div>
         </div>
       </div>

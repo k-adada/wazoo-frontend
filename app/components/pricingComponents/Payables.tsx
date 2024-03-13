@@ -137,7 +137,7 @@ export default function Payables(props: any) {
               <div
                 className={
                   (selectedProvider === index ? "" : "  opacity-25 ") +
-                  " col py-8 bg-white pointer rounded-lg"
+                  " col py-5 bg-white pointer rounded-lg"
                 }
                 onClick={() => setSelectedProvider(index)}
                 key={serviceProvider.name}
@@ -147,32 +147,46 @@ export default function Payables(props: any) {
                     <div className="pr-3">
                       <Image width={30} src={userIcon} alt="location" />
                     </div>
-                    <div className="f-16 text-darkblue text-center poppins-semibold">
+                    <div className="f-20 text-darkblue text-center poppins-semibold">
                       {serviceProvider.name}
                     </div>
                   </div>
 
                   <div className="flex py-1 justify-center">
                     <div className="pr-3">
-                      <Image src={locationIcon} alt="location" />
+                      <Image
+                        src={locationIcon}
+                        alt="location"
+                        style={{ width: "20px", height: "20px" }}
+                      />
                     </div>
-                    <div className="text-darkblue">
+                    <div className="text-darkblue f-14">
                       {serviceProvider.location}
                     </div>
                   </div>
                   <div className="flex py-1 justify-center">
                     <div className="pr-3">
-                      <Image src={phoneIcon} alt="phoneIcon" />
+                      <Image
+                        src={phoneIcon}
+                        alt="phoneIcon"
+                        style={{ width: "20px", height: "20px" }}
+                      />
                     </div>
-                    <div className="text-darkblue">
+                    <div className="text-darkblue f-14">
                       <a href="tel:+9613123456">{serviceProvider.phone}</a>
                     </div>
                   </div>
                   <div className="flex py-1 justify-center">
                     <div className="pr-3">
-                      <Image src={dollarIcon} alt="dollars" />
+                      <Image
+                        src={dollarIcon}
+                        alt="dollars"
+                        style={{ width: "20px", height: "20px" }}
+                      />
                     </div>
-                    <div className="text-darkblue">{serviceProvider.total}</div>
+                    <div className="text-darkblue f-14">
+                      {serviceProvider.total}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -389,28 +403,28 @@ export default function Payables(props: any) {
               <div className="rounded-lg bg-grey px-4 py-4">
                 {/* terms titles  */}
                 <div className="row">
-                  <div className="col-1">
+                  <div className="col-1 px-2">
                     <div className="f-12 text-darkblue">Nb.</div>
                   </div>
-                  <div className="col-4">
+                  <div className="col-4 px-2">
                     <div className="f-12 text-darkblue">Description</div>
                   </div>
-                  <div className="col">
+                  <div className="col px-2">
                     <div className="f-12 text-darkblue">
                       Percentage <span className="text-orange">*</span>
                     </div>
                   </div>
-                  <div className="col">
+                  <div className="col px-2">
                     <div className="f-12 text-darkblue">
                       Amount ($)<span className="text-orange">*</span>
                     </div>
                   </div>
-                  <div className="col">
+                  <div className="col px-2">
                     <div className="f-12 text-darkblue">
                       Due Date<span className="text-orange">*</span>
                     </div>
                   </div>
-                  <div className="col-auto" style={{ paddingLeft: "0px" }}>
+                  <div className="col-auto px-2" style={{ paddingLeft: "0px" }}>
                     <div className="opacity-0">
                       <Image src={deleteIcon} alt="delete" />
                     </div>
@@ -420,14 +434,14 @@ export default function Payables(props: any) {
                 {/* terms  */}
                 {paymentTerms.map((paymentTerm, index) => (
                   <div className="row py-1 items-center" key={paymentTerm.id}>
-                    <div className="col-1">
+                    <div className="col-1 px-2">
                       <div className="bg-white rounded-lg py-2 px-2">
                         <div className="f-12 text-darkblue text-center">
                           {paymentTerm.id}
                         </div>
                       </div>
                     </div>
-                    <div className="col-4">
+                    <div className="col-4 px-2">
                       <div className="light-input">
                         <input
                           className="px-2 py-2 f-12 rounded-lg bg-white text-darkblue w-full"
@@ -436,7 +450,7 @@ export default function Payables(props: any) {
                         />
                       </div>
                     </div>
-                    <div className="col">
+                    <div className="col px-2">
                       <div className="light-input">
                         <input
                           className="px-2 py-2 f-12 rounded-lg bg-white text-darkblue w-full"
@@ -445,7 +459,7 @@ export default function Payables(props: any) {
                         />
                       </div>
                     </div>
-                    <div className="col">
+                    <div className="col px-2">
                       <div className="light-input">
                         <input
                           className="px-2 py-2 f-12 rounded-lg bg-white text-darkblue w-full"
@@ -454,7 +468,7 @@ export default function Payables(props: any) {
                         />
                       </div>
                     </div>
-                    <div className="col">
+                    <div className="col px-2">
                       <div className="light-input">
                         <input
                           className="px-2 py-2 f-12 rounded-lg bg-white text-darkblue w-full"
@@ -462,7 +476,7 @@ export default function Payables(props: any) {
                         />
                       </div>
                     </div>
-                    <div className="col-auto" style={{ paddingLeft: "0px" }}>
+                    <div className="col-auto px-2" style={{ paddingLeft: "0px" }}>
                       <div
                         className=" pointer"
                         onClick={() => {
