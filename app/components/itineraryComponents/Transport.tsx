@@ -160,7 +160,7 @@ export default function Transport(props: {
                 <div
                   className={days[index].collapsed ? "hidden " : "" + " col-12"}
                 >
-                  <div className="px-5 pt-3">
+                  <div className="px-5 py-3">
                     {/* RICH TEXTBOX BAR  */}
                     <div className="bg-white rounded-lg py-3 flex justify-between items-center  px-3">
                       <div className=" text-darkblue poppins-semibold">
@@ -186,7 +186,7 @@ export default function Transport(props: {
                   </div>
 
                   {/* DRAG TABLE SERVICES */}
-                  <div className="px-5 pt-5">
+                  <div className="px-5">
                     <DragTableServices services={day.services} />
                   </div>
                 </div>
@@ -217,22 +217,19 @@ export default function Transport(props: {
               </div>
             </div>
             <div className="col-12 py-3">
-              <div className="row pt-4 justify-between">
-                <div className="col-auto">
-                  <div className="flex">
-                    <div className="rounded-lg bg-lightblue py-3 px-4 text-darkblue poppins-medium pointer">
-                      All
-                    </div>
-                    <div className="rounded-lg py-3 px-4 text-grey poppins-medium pointer">
-                      Recommended
-                    </div>
+              <div className="flex pt-4 justify-between">
+                <div className="flex items-center">
+                  <div className="rounded-lg bg-blue py-2 px-3 text-darkblue poppins-medium pointer">
+                    All
+                  </div>
+                  <div className="rounded-lg py-2 px-3 text-grey poppins-medium pointer">
+                    Recommended
                   </div>
                 </div>
-                <div className="col-auto">
-                  <div className="dark-button text-gold poppins-medium cursor-pointer">
-                    <div className="flex items-center h-full">
-                      <Image src={addGoldIcon} alt="Add Icon" />
-                    </div>
+
+                <div className="bg-darkblue py-2 px-3 rounded-lg text-gold poppins-medium cursor-pointer">
+                  <div className="flex items-center h-full">
+                    <Image src={addGoldIcon} alt="Add Icon" />
                   </div>
                 </div>
               </div>
@@ -248,13 +245,13 @@ export default function Transport(props: {
                         alt="Car image"
                         className="rounded-lg"
                         style={{
-                          width: "70px",
-                          height: "70px",
+                          width: "60px",
+                          height: "60px",
                           objectFit: "cover",
                         }}
                       />
                       <div className="pl-3">
-                        <div className="f-24 text-darkblue poppins-medium">
+                        <div className="f-20 text-darkblue poppins-medium">
                           {transport.serviceType}
                         </div>
                         <div className="f-14 text-darkblue">Paris, France</div>
@@ -271,7 +268,11 @@ export default function Transport(props: {
                         }
                       }}
                     >
-                      <Image src={addCircleIcon} alt="add" />
+                      <Image
+                        src={addCircleIcon}
+                        alt="add"
+                        style={{ width: "24px" }}
+                      />
                     </div>
                   </div>
 
