@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 import saveIcon from "../../assets/Icon_Save.png";
+import treeIcon from "../../assets/goldTree.svg";
+import sunIcon from "../../assets/Sun.svg";
 import tourEffelImage from "../../assets/tour_effel.jpg";
 import calendarIcon from "../../assets/Icon_Calendar.png";
 import arrowDownIcon from "../../assets/down_arrow_dark.png";
@@ -51,8 +53,8 @@ export default function CataloguePreview() {
                 <div className="pr-2">
                   <Image
                     style={{ width: "18px", height: "18px" }}
-                    src={calendarIcon}
-                    alt="calendar gold"
+                    src={treeIcon}
+                    alt="tree gold"
                   />
                 </div>
                 <div className="">Oct 11 - Oct 15</div>
@@ -61,8 +63,8 @@ export default function CataloguePreview() {
                 <div className="pr-2">
                   <Image
                     style={{ width: "18px", height: "18px" }}
-                    src={calendarIcon}
-                    alt="calendar gold"
+                    src={sunIcon}
+                    alt="sunIcon"
                   />
                 </div>
                 <div className="">Seasonality</div>
