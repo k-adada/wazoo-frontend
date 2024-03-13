@@ -132,7 +132,10 @@ export default function Themes() {
       </div>
 
       {/* themes bar  */}
-      <div className="bg-white py-2 px-4 rounded-lg w-2/3">
+      <div
+        className="bg-white py-2 px-4 rounded-lg w-full"
+        style={{ maxWidth: "80%" }}
+      >
         <div className="row justify-between items-center">
           {/* title */}
           <div className="col-auto">
@@ -155,7 +158,10 @@ export default function Themes() {
       </div>
 
       {/* themes list */}
-      <div className="grid grid-cols-12 gap-6 w-2/3 mt-6">
+      <div
+        className="grid grid-cols-12 gap-6 w-full mt-6"
+        style={{ maxWidth: "80%" }}
+      >
         {themes.map((item, index) => {
           return (
             <div
@@ -172,10 +178,10 @@ export default function Themes() {
                   filter: "brightness(0.8)",
                 }}
               />
-              <div className="f-24 text-ice poppins-medium line-clamp-1 pt-2">
+              <div className="f-22 text-ice poppins-medium line-clamp-1 pt-2">
                 {item.name}
               </div>
-              <div className="text-grey line-clamp-2">{item.subtitle}</div>
+              <div className="text-grey f-16 line-clamp-2">{item.subtitle}</div>
             </div>
           );
         })}
