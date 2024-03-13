@@ -45,10 +45,13 @@
 }
 
 .service-tag {
-  padding: 8px 6px;
+  padding: 6px 6px;
   border-radius: 8px;
   background-color: #ececec;
+  font-size: 12px;
 }
 .service-tag img {
+  width: 16px;
+  height: 16px;
   opacity: 0.3;
 }

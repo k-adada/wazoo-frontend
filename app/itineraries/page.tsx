@@ -229,7 +229,7 @@ export default function CreateItineraries() {
                         </div>
 
                         <div className="col-12 px-2">
-                          <div className="f-16 text-grey pt-4">
+                          <div className="f-16 text-grey pt-4 line-clamp-3">
                             Lorem ipsum dolor sit amet consectetur, adipisicing
                             elit. Veniam voluptates eveniet iste corrupti! Cum,
                           </div>
@@ -237,27 +237,43 @@ export default function CreateItineraries() {
 
                         <div className="col-auto px-2 py-1">
                           <div className="service-tag flex">
-                            <Image src={locationIcon} alt="location" />
+                            <Image
+                              className="mr-2"
+                              src={locationIcon}
+                              alt="location"
+                            />
                             <div className="text-grey">Paris, France</div>
                           </div>
                         </div>
 
                         <div className="col-auto px-2 py-1">
                           <div className="service-tag flex">
-                            <Image src={clockIcon} alt="time" />
+                            <Image
+                              className="mr-2"
+                              src={clockIcon}
+                              alt="time"
+                            />
                             <div className="text-grey">3h</div>
                           </div>
                         </div>
 
                         <div className="col-auto px-2 py-1">
                           <div className="service-tag flex">
-                            <Image src={calendarIcon} alt="calendar" />
+                            <Image
+                              className="mr-2"
+                              src={calendarIcon}
+                              alt="calendar"
+                            />
                             <div className="text-grey">Oct 11 - Oct 15</div>
                           </div>
                         </div>
                         <div className="col-auto px-2 py-1">
                           <div className="service-tag flex">
-                            <Image src={dollarIcon} alt="dollar sign" />
+                            <Image
+                              className="mr-2"
+                              src={dollarIcon}
+                              alt="dollar sign"
+                            />
                             <div className="text-grey">$350</div>
                           </div>
                         </div>

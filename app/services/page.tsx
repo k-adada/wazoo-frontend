@@ -144,7 +144,7 @@ export default function CreateServices() {
             <div className="col-3">
               <div className="row bg-white rounded-lg py-2">
                 <div className="col-12 px-2">
-                  <div className="f-16 text-darkblue poppins-medium">
+                  <div className="f-20 text-darkblue poppins-medium">
                     Service Name
                   </div>
                 </div>
