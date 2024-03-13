@@ -35,19 +35,7 @@ export default function Accommodation(props: {
       <div className="row">
         <div className="col-9">
           {/* map view */}
-          <div className="flex justify-end">
-            <div
-              className="dark-button text-gold poppins-medium cursor-pointer"
-              onClick={() => {
-                setCurrentStep("map-view");
-              }}
-            >
-              <div className="flex items-center h-full">
-                <Image src={locationIcon} alt="location" />
-                <div className="pl-4">Map View</div>
-              </div>
-            </div>
-          </div>
+
           {selectedHotels.map((hotel, index) => {
             return (
               <>
@@ -92,9 +80,9 @@ export default function Accommodation(props: {
                     </div>
                   </div>
                   {/* Meal basis  */}
-                  <div className="col-6">
+                  <div className="col-6 px-2">
                     <div className="pl-5">
-                      <div className="text-darkblue pb-2 pt-8">
+                      <div className="text-darkblue pb-2 pt-4 f-20">
                         Basis <span className="text-orange">*</span>
                       </div>
                       <div className="light-input">
@@ -112,9 +100,9 @@ export default function Accommodation(props: {
                     </div>
                   </div>
                   {/* nights  */}
-                  <div className="col-6">
+                  <div className="col-6 px-2">
                     <div className="pr-5">
-                      <div className="text-darkblue pb-2 pt-8">
+                      <div className="text-darkblue pb-2 pt-4 f-20">
                         Nights <span className="text-orange">*</span>
                       </div>
                       <div className="light-input">
@@ -130,34 +118,34 @@ export default function Accommodation(props: {
                   <div className="col-12">
                     <div className="px-5">
                       <div className="row pt-5">
-                        <div className="col">
-                          <div className="text-darkblue pb-2">
+                        <div className="col px-2">
+                          <div className="text-darkblue">
                             Room Type <span className="text-orange">*</span>
                           </div>
                         </div>
-                        <div className="col">
-                          <div className="text-darkblue pb-2">
-                            Room Configuration{" "}
+                        <div className="col px-2">
+                          <div className="text-darkblue">
+                            Room Config.
                             <span className="text-orange">*</span>
                           </div>
                         </div>
-                        <div className="col">
-                          <div className="text-darkblue pb-2">
+                        <div className="col px-2">
+                          <div className="text-darkblue">
                             Extra Bed <span className="text-orange">*</span>
                           </div>
                         </div>
-                        <div className="col">
-                          <div className="text-darkblue pb-2">
+                        <div className="col px-2">
+                          <div className="text-darkblue">
                             Nb. of Rooms <span className="text-orange">*</span>
                           </div>
                         </div>
-                        <div className="col">
-                          <div className="text-darkblue pb-2">
+                        <div className="col px-2">
+                          <div className="text-darkblue">
                             Default Price ($){" "}
                             <span className="text-orange">*</span>
                           </div>
                         </div>
-                        <div className="col-auto">
+                        <div className="col-auto px-2">
                           <div className="opacity-0">
                             <Image src={deleteRedIcon} alt="delete" />
                           </div>
@@ -166,8 +154,8 @@ export default function Accommodation(props: {
                       {rooms.map((room, index) => {
                         return (
                           <>
-                            <div className="row py-2">
-                              <div className="col">
+                            <div className="row py-1">
+                              <div className="col px-2">
                                 <div className="light-input">
                                   <input
                                     className="px-5 py-4 rounded-lg bg-white text-darkblue w-full"
@@ -176,7 +164,7 @@ export default function Accommodation(props: {
                                   />
                                 </div>
                               </div>
-                              <div className="col">
+                              <div className="col px-2">
                                 <div className="remove-mui-label">
                                   <SingleSelect
                                     options={[
@@ -188,7 +176,7 @@ export default function Accommodation(props: {
                                   />
                                 </div>
                               </div>
-                              <div className="col">
+                              <div className="col px-2">
                                 <div className="remove-mui-label">
                                   <SingleSelect
                                     options={[
@@ -199,7 +187,7 @@ export default function Accommodation(props: {
                                   />
                                 </div>
                               </div>
-                              <div className="col">
+                              <div className="col px-2">
                                 <div className="light-input">
                                   <input
                                     className="px-5 py-4 rounded-lg bg-white text-darkblue w-full"
@@ -208,7 +196,7 @@ export default function Accommodation(props: {
                                   />
                                 </div>
                               </div>
-                              <div className="col">
+                              <div className="col px-2">
                                 <div className="light-input">
                                   <input
                                     className="px-5 py-4 rounded-lg bg-white text-darkblue w-full"
@@ -217,7 +205,7 @@ export default function Accommodation(props: {
                                   />
                                 </div>
                               </div>
-                              <div className="col-auto self-center">
+                              <div className="col-auto px-2 self-center">
                                 <div
                                   className="pointer"
                                   onClick={() => {
@@ -235,8 +223,8 @@ export default function Accommodation(props: {
                         );
                       })}
 
-                      <div className="row">
-                        <div className="col-12 self-center">
+                      <div className="row pt-3">
+                        <div className="col-12 self-center px-2">
                           <div
                             className=" flex justify-center rounded-lg py-4 border-dashed pointer"
                             onClick={() => {
