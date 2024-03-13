@@ -86,7 +86,7 @@ export default function CreateServices() {
             <div className="row">
               {/* service name  */}
               <div className="col-6">
-                <div className="text-darkblue pb-2">
+                <div className="text-darkblue pb-2 f-20">
                   Service Name <span className="text-orange">*</span>
                 </div>
                 <div className="light-input">
@@ -99,7 +99,7 @@ export default function CreateServices() {
               </div>
               {/* location  */}
               <div className="col-6">
-                <div className="text-darkblue pb-2">
+                <div className="text-darkblue pb-2 f-20">
                   Location <span className="text-orange">*</span>
                 </div>
                 <div className="light-input">
@@ -112,7 +112,7 @@ export default function CreateServices() {
               </div>
               {/* select category  */}
               <div className="col-12">
-                <div className="text-darkblue pb-2 pt-8">
+                <div className="text-darkblue pb-2 pt-8 f-20">
                   Select Category<span className="text-orange">*</span>
                 </div>
                 <div className="remove-mui-label">
@@ -128,7 +128,7 @@ export default function CreateServices() {
               </div>
               {/* type  */}
               <div className="col-6">
-                <div className="text-darkblue pb-2 pt-8">
+                <div className="text-darkblue pb-2 pt-8 f-20">
                   Select Type <span className="text-orange">*</span>
                 </div>
                 <div className="light-input">
@@ -146,7 +146,7 @@ export default function CreateServices() {
               </div>
               {/* subtype  */}
               <div className="col-6">
-                <div className="text-darkblue pb-2 pt-8">
+                <div className="text-darkblue pb-2 pt-8 f-20">
                   Select Subtype <span className="text-orange">*</span>
                 </div>
                 <div className="light-input">
@@ -164,7 +164,7 @@ export default function CreateServices() {
               </div>
               {/* validity dates */}
               <div className="col-6">
-                <div className="text-darkblue pt-8">
+                <div className="text-darkblue pt-8 f-20">
                   Validity Dates<span className="text-orange">*</span>
                 </div>
                 <div className="validity-dates">
@@ -173,7 +173,7 @@ export default function CreateServices() {
               </div>
               {/* duration  */}
               <div className="col-6">
-                <div className="text-darkblue pb-2 pt-8">
+                <div className="text-darkblue pb-2 pt-8 f-20">
                   Duration <span className="text-orange">*</span>
                 </div>
                 <div className="light-input">
@@ -192,7 +192,7 @@ export default function CreateServices() {
 
               {/* select service provider  */}
               <div className="col-6">
-                <div className="text-darkblue pb-2 pt-8">
+                <div className="text-darkblue pb-2 pt-8 f-20">
                   Select Service Provider <span className="text-orange">*</span>
                 </div>
                 <div className="light-input">
@@ -211,7 +211,7 @@ export default function CreateServices() {
 
               {/* service provider phone number  */}
               <div className="col-6">
-                <div className="text-darkblue pt-8 pb-2">
+                <div className="text-darkblue pt-8 pb-2 f-20">
                   Service Provider Phone Number
                 </div>
                 <div className="light-input">
@@ -225,7 +225,7 @@ export default function CreateServices() {
 
               {/* service provider Price  */}
               <div className="col-6">
-                <div className="text-darkblue pt-8 pb-2">
+                <div className="text-darkblue pt-8 pb-2 f-20">
                   Service Provider Price <span className="text-orange">*</span>
                 </div>
                 <div className="light-input">
@@ -239,7 +239,7 @@ export default function CreateServices() {
 
               {/* My DEfault Selling Price  */}
               <div className="col-6">
-                <div className="text-darkblue pt-8 pb-2">
+                <div className="text-darkblue pt-8 pb-2 f-20">
                   My Default Selling Price{" "}
                   <span className="f-14">(indicative)</span>
                   <span className="text-orange">*</span>
@@ -255,7 +255,7 @@ export default function CreateServices() {
 
               {/* Minimum age  */}
               <div className="col-6">
-                <div className="text-darkblue pt-8 pb-2">
+                <div className="text-darkblue pt-8 pb-2 f-20">
                   Minimum Age
                   {/* <span className="text-orange">*</span> */}
                 </div>
@@ -270,7 +270,7 @@ export default function CreateServices() {
 
               {/* Requires Voucher  */}
               <div className="col-6">
-                <div className="text-darkblue pb-2 pt-8">
+                <div className="text-darkblue pb-2 pt-8 f-20">
                   Requires Voucher <span className="text-orange">*</span>
                 </div>
                 <div className="light-input">
@@ -285,13 +285,14 @@ export default function CreateServices() {
 
               {/* Description */}
               <div className="col-12">
-                <div className="text-darkblue pt-8 pb-2">
+                <div className="text-darkblue pt-8 pb-2 f-20">
                   Description <span className="text-orange">*</span>
                 </div>
                 <div className="light-input">
                   <textarea
                     className="px-5 py-4 rounded-lg bg-white text-grey w-full"
-                    placeholder="Service Name"
+                    placeholder="Description"
+                    style={{ height: "200px" }}
                   />
                 </div>
               </div>
@@ -308,14 +309,14 @@ export default function CreateServices() {
                     <div className="flex justify-center">
                       <Image src={uploadIcon} alt="upload" />
                     </div>
-                    <div className="f-16 text-darkblue pt-3">
+                    <div className="f-20 text-darkblue pt-3">
                       Drag & drop files here
                     </div>
                     <div className="text-darkblue">or upload from desktop</div>
                   </div>
                 </div>
               </div>
-              <div className="col-12 pt-6">
+              <div className="col-12 pt-6 pb-1">
                 <div className="flex justify-between items-center">
                   <Image
                     src={themeIcon}
@@ -324,7 +325,7 @@ export default function CreateServices() {
                     height={80}
                     className="rounded-lg"
                   />
-                  <div className="f-16 text-darkblue">File name.png</div>
+                  <div className="f-20 text-darkblue line-clamp-1">File name.png</div>
                   <div className="uploaded-tag flex justify-between items-center px-3 pr-6">
                     <CircularProgress
                       variant="determinate"
@@ -333,13 +334,13 @@ export default function CreateServices() {
                     />
 
                     <div className="text-white poppins-medium pl-2">
-                      Uploaded
+                      100%
                     </div>
                   </div>
                   <Image src={dotsIcon} alt="dots" className="cursor-pointer" />
                 </div>
               </div>
-              <div className="col-12 pt-6">
+              <div className="col-12 py-1">
                 <div className="flex justify-between items-center">
                   <Image
                     src={themeIcon}
@@ -348,7 +349,7 @@ export default function CreateServices() {
                     height={80}
                     className="rounded-lg"
                   />
-                  <div className="f-16 text-darkblue">File name.png</div>
+                  <div className="f-20 text-darkblue line-clamp-1">File name.png</div>
                   <div className="progress-tag flex justify-between items-center px-3">
                     <CircularProgress
                       variant="determinate"
@@ -360,7 +361,7 @@ export default function CreateServices() {
                   <Image src={dotsIcon} alt="dots" className="cursor-pointer" />
                 </div>
               </div>
-              <div className="col-12 pt-6">
+              <div className="col-12 py-1">
                 <div className="flex justify-between items-center">
                   <Image
                     src={themeIcon}
@@ -369,7 +370,7 @@ export default function CreateServices() {
                     height={80}
                     className="rounded-lg"
                   />
-                  <div className="f-16 text-darkblue">File name.png</div>
+                  <div className="f-20 text-darkblue line-clamp-1">File name.png</div>
                   <div className="progress-tag flex justify-between items-center px-3">
                     <CircularProgress
                       variant="determinate"

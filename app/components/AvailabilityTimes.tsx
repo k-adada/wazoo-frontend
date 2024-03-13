@@ -43,7 +43,7 @@ export default function AvailabilityTimes() {
     <>
       <div className="row">
         <div className="col-12">
-          <div className="text-darkblue pt-8 pb-3">Availability</div>
+          <div className="text-darkblue pt-8 pb-3 f-20">Availability Times</div>
         </div>
 
         {/* Monday  */}
@@ -121,7 +121,7 @@ export default function AvailabilityTimes() {
                 }));
               }}
             >
-              tuesday
+              Tuesday
             </span>
             <div className="day-time flex mt-2">
               <input
@@ -176,7 +176,7 @@ export default function AvailabilityTimes() {
                 }));
               }}
             >
-              wednesday
+              Wednesday
             </span>
             <div className="day-time flex mt-2">
               <input
@@ -231,7 +231,7 @@ export default function AvailabilityTimes() {
                 }));
               }}
             >
-              thursday
+              Thursday
             </span>
             <div className="day-time flex mt-2">
               <input
@@ -286,7 +286,7 @@ export default function AvailabilityTimes() {
                 }));
               }}
             >
-              friday
+              Friday
             </span>
             <div className="day-time flex mt-2">
               <input
@@ -341,7 +341,7 @@ export default function AvailabilityTimes() {
                 }));
               }}
             >
-              saturday
+              Saturday
             </span>
             <div className="day-time flex mt-2">
               <input
@@ -396,7 +396,7 @@ export default function AvailabilityTimes() {
                 }));
               }}
             >
-              sunday
+              Sunday
             </span>
             <div className="day-time flex mt-2">
               <input
