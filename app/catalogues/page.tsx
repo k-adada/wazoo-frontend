@@ -15,13 +15,9 @@ import serviceEmptyIcon from "../assets/services_empty.png";
 import listIcon from "../assets/Icon_List_View.png";
 import locationIcon from "../assets/Icon_Location.png";
 import threeDotsIcon from "../assets/three_dots_white.png";
-import clockIcon from "../assets/Icon_Time.png";
-import calendarIcon from "../assets/Icon_Calendar_dark.png";
-import dollarIcon from "../assets/Icon_Dollars.png";
 import casinoImage from "../assets/Bellagio-Hotel-Casino-Las-Vegas.webp";
-import userIcon from "../assets/Icon_My_Account_dark.png";
-import phoneIcon from "../assets/phone_icon.png";
-import searchIcon from "../assets/Icon_Search_Black.png";
+
+import AudienceDrawer from "../components/catalogueComponents/AudienceDrawer";
 
 export default function Catalogues() {
   const router = useRouter();
@@ -31,6 +27,81 @@ export default function Catalogues() {
   const [itineraries, setItineraries] = useState([1]);
 
   const [activeCatalogue, setActiveCatalogue] = useState(-1);
+
+  const [openAudiences, setOpenAudiences] = useState(false);
+
+  const [audienceData, setAudienceData] = useState([
+    {
+      id: 1,
+      name: "Families",
+      selected: true,
+      image: casinoImage,
+      agencies: [1, 2, 3, 4, 5, 6, , 7, 8, 9],
+    },
+    {
+      id: 2,
+      name: "Couples",
+      selected: false,
+      image: casinoImage,
+      agencies: [1, 2, 3, 4],
+    },
+    {
+      id: 3,
+      name: "Friends",
+      selected: false,
+      image: casinoImage,
+      agencies: [1, 2, 3, 4, 5, 6],
+    },
+    {
+      id: 4,
+      name: "Solo",
+      selected: false,
+      image: casinoImage,
+      agencies: [1, 2, 3, 4, 5, 6, 7, 8],
+    },
+    {
+      id: 5,
+      name: "Business",
+      selected: false,
+      image: casinoImage,
+      agencies: [1, 2, 3],
+    },
+    {
+      id: 6,
+      name: "Adventure",
+      selected: false,
+      image: casinoImage,
+      agencies: [1, 2, 3, 4, 5, 6, 7, 8],
+    },
+    {
+      id: 7,
+      name: "Relaxation",
+      selected: false,
+      image: casinoImage,
+      agencies: [1, 2, 3, 4, 5, 6, 7, 8],
+    },
+    {
+      id: 8,
+      name: "Culture",
+      selected: false,
+      image: casinoImage,
+      agencies: [1, 2, 3, 4, 5, 6, 7, 8],
+    },
+
+    {
+      id: 9,
+      name: "Nature",
+      selected: false,
+      image: casinoImage,
+      agencies: [1, 2, 3, 4, 5, 6, 7, 8],
+    },
+  ]);
+
+  useEffect(() => {
+    if (!openAudiences) {
+      setActiveCatalogue(-1);
+    }
+  }, [openAudiences]);
 
   return (
     <main className="flex min-h-screen flex-col items-center p-md-24 p-3 bg-lightblue pb-[100px]">
@@ -81,6 +152,14 @@ export default function Catalogues() {
         {itineraries.length > 0 ? (
           <div className="row">
             <div className="col-12">
+              <AudienceDrawer
+                openAudiences={openAudiences}
+                setOpenAudiences={setOpenAudiences}
+                audienceData={audienceData}
+                setAudienceData={setAudienceData}
+              />
+            </div>
+            <div className="col-12">
               <div className="row justify-between">
                 <div className="col-auto">
                   <div className="f-20 py-3 px-3 bg-white rounded-lg">
@@ -114,7 +193,7 @@ export default function Catalogues() {
                 </div> */}
                 {[1, 2, 3, 4, 5, 6].map((item, index) => {
                   return (
-                    <div className="col-3 py-3" key={index}>
+                    <div className="col-2xl-3 col-lg-4 col-md-6 py-3 px-2" key={index}>
                       <div
                         className={
                           (activeCatalogue === index
@@ -265,6 +344,7 @@ export default function Catalogues() {
                                   setActiveCatalogue(-1);
                                 } else {
                                   setActiveCatalogue(index);
+                                  setOpenAudiences(true);
                                 }
                               }}
                             >
