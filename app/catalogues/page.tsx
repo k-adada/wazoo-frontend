@@ -13,9 +13,10 @@ import addIcon from "../assets/Icon_Add.png";
 import backIcon from "../assets/Icon_Back.png";
 import serviceEmptyIcon from "../assets/services_empty.png";
 import listIcon from "../assets/Icon_List_View.png";
-import locationIcon from "../assets/Icon_Location.png";
 import threeDotsIcon from "../assets/three_dots_white.png";
 import casinoImage from "../assets/Bellagio-Hotel-Casino-Las-Vegas.webp";
+import speakerIcon from "../assets/Icon_Campaigns.svg";
+import eyeIcon from "../assets/Icon_Preview.svg";
 
 import AudienceDrawer from "../components/catalogueComponents/AudienceDrawer";
 
@@ -193,7 +194,10 @@ export default function Catalogues() {
                 </div> */}
                 {[1, 2, 3, 4, 5, 6].map((item, index) => {
                   return (
-                    <div className="col-2xl-3 col-lg-4 col-md-6 py-3 px-2" key={index}>
+                    <div
+                      className="col-2xl-3 col-lg-4 col-md-6 py-3 px-2"
+                      key={index}
+                    >
                       <div
                         className={
                           (activeCatalogue === index
@@ -214,10 +218,18 @@ export default function Catalogues() {
                               />
                             </div>
                           </div>
-                          <div className="col-12 px-2">
+                          <div className="col-12 px-2 flex justify-between">
                             <div className="f-20 text-darkblue poppins-medium">
                               Itinerary Name {index + 1}
                             </div>
+                            <Link href="/catalogue">
+                              <div className="rounded-lg bg-lineslight poppins-medium py-1 text-darkblue flex items-center justify-center hover pointer px-4">
+                                <div className="">
+                                  <Image src={eyeIcon} alt="eyeIcon" />
+                                </div>
+                                <div className="pl-2">View</div>
+                              </div>
+                            </Link>
                           </div>
 
                           <div className="col-12 px-2">
@@ -338,7 +350,7 @@ export default function Catalogues() {
 
                           <div className="col-12 pt-4">
                             <div
-                              className="rounded-lg bg-lineslight poppins-medium py-3 text-darkblue flex items-center justify-center pointer hover"
+                              className="rounded-lg bg-lineslight poppins-medium py-3 text-darkblue flex items-center justify-center pointer hover px-4"
                               onClick={() => {
                                 if (activeCatalogue === index) {
                                   setActiveCatalogue(-1);
@@ -349,7 +361,7 @@ export default function Catalogues() {
                               }}
                             >
                               <div className="">
-                                <Image src={locationIcon} alt="speaker" />
+                                <Image src={speakerIcon} alt="speaker" />
                               </div>
                               <div className="pl-2"> Create Listing</div>
                             </div>

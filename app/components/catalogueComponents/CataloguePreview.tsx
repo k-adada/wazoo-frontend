@@ -13,13 +13,7 @@ import dollarIcon from "../../assets/Icon_Dollars.png";
 import Link from "next/link";
 import ServicesSwiper from "../servicesSwiper";
 
-export default function CataloguePreview(props: {
-  setCurrentStep: any;
-  stepsDone: any;
-  setStepsDone: any;
-}) {
-  const { setCurrentStep, stepsDone, setStepsDone } = props;
-
+export default function CataloguePreview() {
   const [itinerariesCollapsed, setItinerariesCollapsed] = useState(false);
   const [servicesCollapsed, setServicesCollapsed] = useState(false);
 

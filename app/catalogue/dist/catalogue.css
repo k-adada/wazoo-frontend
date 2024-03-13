@@ -1,0 +1,60 @@
+.upload-container {
+  border-radius: 16px;
+  height: 220px;
+  border: 2px dashed #c7d4db;
+}
+
+.progress-tag {
+  border-radius: 24px;
+  height: 44px;
+  background-color: #c6deea;
+}
+
+.uploaded-tag {
+  border-radius: 24px;
+  height: 44px;
+  background-color: #39ae6c;
+}
+
+.day .day-time {
+  height: 56px;
+  transition: 0.3s ease-in-out;
+  opacity: 0.4;
+}
+.day .day-time input {
+  padding: 0 2px;
+  border-radius: 8px;
+}
+.day .day-name {
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.day .day-name:hover {
+  transition: 0.3s ease-in-out;
+  background-color: #c7d4db;
+  border-radius: 20px;
+}
+.day.active .day-time {
+  transition: 0.3s ease-in-out;
+  opacity: 1;
+}
+.day.active .day-name {
+  transition: 0.3s ease-in-out;
+  background-color: #c7d4db;
+  border-radius: 20px;
+}
+
+.service-tag {
+  border: 1px solid #132f3d;
+  padding: 8px 6px;
+  border-radius: 8px;
+}
+
+.catalogue-card {
+  border: 2px solid transparent;
+  transition: 0.3s ease-in-out;
+}
+.catalogue-card.active {
+  border: 2px solid #c7d4db;
+  transform: scale(1.05);
+}
