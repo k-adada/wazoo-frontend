@@ -64,10 +64,6 @@ export default function AudienceDrawer(props: {
     event.stopPropagation(); // Prevent the click from propagating to the Box
   };
 
-  React.useEffect(() => {
-    console.log("audienceData", audienceData);
-  }, [audienceData]);
-
   const list = (anchor: Anchor) => (
     <Box
       role="presentation"
@@ -131,7 +127,6 @@ export default function AudienceDrawer(props: {
                         let newAudienceData = [...audienceData];
                         newAudienceData[index].selected = !audience.selected;
                         setAudienceData(newAudienceData);
-                        console.log(newAudienceData);
                       }}
                     >
                       <div className="col-12 px-2">
@@ -168,6 +163,12 @@ export default function AudienceDrawer(props: {
                               style={{ width: "16px", height: "16px" }}
                               // value={audience.selected}
                               checked={audience.selected}
+                              onChange={() => {
+                                let newAudienceData = [...audienceData];
+                                newAudienceData[index].selected =
+                                  !audience.selected;
+                                setAudienceData(newAudienceData);
+                              }}
                             />
                           </div>
                         </div>
