@@ -8,7 +8,7 @@ export default function Registration() {
   const [activeTab, setActiveTab] = useState("login");
 
   return (
-    <main className="flex min-h-screen flex-col items-center md:p-24 pt-10 p-3 bg-bluesky">
+    <main className="flex min-h-screen flex-col items-center pt-10 p-3 bg-bluesky">
       <div className="f-48 text-gold text-center">Luxury Travel</div>
 
       <div className="w-full" style={{ maxWidth: "330px" }}>

@@ -174,7 +174,10 @@ export default function Destinations() {
       </div>
 
       {/* destinations bar  */}
-      <div className="bg-white py-2 px-4 rounded-lg w-2/3">
+      <div
+        className="bg-white py-2 px-4 rounded-lg w-full"
+        style={{ maxWidth: "80%" }}
+      >
         <div className="flex justify-between items-center">
           {/* title */}
           <div className="f-24 text-darkblue poppins-semibold">
@@ -209,7 +212,10 @@ export default function Destinations() {
       </div>
 
       {/* destinations list */}
-      <div className="grid grid-cols-12 gap-6 w-2/3 mt-6">
+      <div
+        className="grid grid-cols-12 gap-6 w-full mt-6"
+        style={{ maxWidth: "80%" }}
+      >
         {filteredDestinations.map((item, index) => {
           return (
             <div
