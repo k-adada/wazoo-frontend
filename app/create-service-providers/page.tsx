@@ -9,6 +9,7 @@ import notificationIcon from "../assets/Icon_Notification_Received.png";
 import avatarIcon from "../assets/avatar.png";
 import saveIcon from "../assets/Icon_Save.png";
 import backIcon from "../assets/Icon_Back.png";
+import Link from "next/link";
 
 export default function CreateServiceProviders() {
   const router = useRouter();
@@ -64,10 +65,10 @@ export default function CreateServiceProviders() {
 
         <div className="row">
           <div className="col-12">
-            <div className="row">
+            <div className="row pt-8">
               {/* service name  */}
               <div className="col-6">
-                <div className="text-darkblue pb-2">
+                <div className="text-darkblue pb-2 f-20">
                   Service Provider Name <span className="text-orange">*</span>
                 </div>
                 <div className="light-input">
@@ -81,7 +82,7 @@ export default function CreateServiceProviders() {
 
               {/* service provider phone number  */}
               <div className="col-6">
-                <div className="text-darkblue pb-2">Phone Number</div>
+                <div className="text-darkblue pb-2 f-20">Phone Number</div>
                 <div className="light-input">
                   <input
                     className="px-5 py-4 rounded-lg bg-white text-grey w-full"
@@ -93,13 +94,14 @@ export default function CreateServiceProviders() {
 
               {/* Description */}
               <div className="col-12">
-                <div className="text-darkblue pt-8 pb-2">
+                <div className="text-darkblue pt-4 pb-2 f-20">
                   Description <span className="text-orange">*</span>
                 </div>
                 <div className="light-input">
                   <textarea
                     className="px-5 py-4 rounded-lg bg-white text-grey w-full"
                     placeholder="Write Description Here..."
+                    style={{ height: "200px" }}
                   />
                 </div>
               </div>
@@ -107,12 +109,14 @@ export default function CreateServiceProviders() {
           </div>
 
           <div className="col-auto pt-[64px]">
-            <div className="dark-button text-gold poppins-medium cursor-pointer">
-              <div className="flex items-center h-full">
-                <Image src={saveIcon} alt="saveIcon" />
-                <div className="pl-4">Create Service Provider</div>
+            <Link href="/service-providers">
+              <div className="dark-button text-gold poppins-medium cursor-pointer">
+                <div className="flex items-center h-full">
+                  <Image src={saveIcon} alt="saveIcon" />
+                  <div className="pl-4">Create Service Provider</div>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
