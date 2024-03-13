@@ -104,7 +104,7 @@ export default function CreateItineraries() {
           {currentStep != "preview" && (
             <>
               {/*  STEPS BAR */}
-              <div className="col-12">
+              <div className="col-12 pb-10 pt-4">
                 <div className="row">
                   {/* STEP 1  */}
                   <div
@@ -274,7 +274,7 @@ export default function CreateItineraries() {
           )}
         </div>
 
-        <div className="row pt-4">
+        <div className="row ">
           {currentStep === "trip-details" && (
             <>
               <TripDetails

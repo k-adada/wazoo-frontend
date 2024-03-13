@@ -42,7 +42,7 @@ export default function TripDetails(props: {
           <div className="row">
             {/* Itinerary name  */}
             <div className="col-6">
-              <div className="text-darkblue pb-2">
+              <div className="text-darkblue pb-2 f-20">
                 Itinerary Name <span className="text-orange">*</span>
               </div>
               <div className="light-input">
@@ -55,7 +55,7 @@ export default function TripDetails(props: {
             </div>
             {/* reference number  */}
             <div className="col-6">
-              <div className="text-darkblue pb-2">
+              <div className="text-darkblue pb-2 f-20">
                 Reference Number <span className="text-orange">*</span>
               </div>
               <div className="light-input">
@@ -70,7 +70,7 @@ export default function TripDetails(props: {
             </div>
             {/* validity dates */}
             <div className="col-6">
-              <div className="text-darkblue pt-8">
+              <div className="text-darkblue pt-8 f-20">
                 Validity Dates<span className="text-orange">*</span>
               </div>
               <div className="validity-dates">
@@ -79,7 +79,7 @@ export default function TripDetails(props: {
             </div>
             {/* theme  */}
             <div className="col-6">
-              <div className="text-darkblue pb-2 pt-8">
+              <div className="text-darkblue pb-2 f-20 pt-8">
                 Theme <span className="text-orange">*</span>
               </div>
               <div className="light-input">
@@ -99,7 +99,7 @@ export default function TripDetails(props: {
             </div>
             {/* select season  */}
             <div className="col-6">
-              <div className="text-darkblue pb-2 pt-8">
+              <div className="text-darkblue pb-2 f-20 pt-8">
                 Seasonality<span className="text-orange">*</span>
               </div>
               <div className="remove-mui-label">
@@ -117,7 +117,7 @@ export default function TripDetails(props: {
 
             {/* Trip Length  */}
             <div className="col-6">
-              <div className="text-darkblue pb-2 pt-8">
+              <div className="text-darkblue pb-2 f-20 pt-8">
                 Trip Lenth <span className="text-orange">*</span>
               </div>
               <div className="light-input">
@@ -131,7 +131,7 @@ export default function TripDetails(props: {
 
             {/* Number of Adults  */}
             <div className="col-6">
-              <div className="text-darkblue pb-2 pt-8">
+              <div className="text-darkblue pb-2 f-20 pt-8">
                 Number of Adults <span className="text-orange">*</span>
               </div>
               <div className="light-input">
@@ -145,7 +145,7 @@ export default function TripDetails(props: {
 
             {/* Number of Children  */}
             <div className="col-6">
-              <div className="text-darkblue pb-2 pt-8">
+              <div className="text-darkblue pb-2 f-20 pt-8">
                 Number of Children <span className="text-orange">*</span>
               </div>
               <div className="light-input">
@@ -159,13 +159,14 @@ export default function TripDetails(props: {
 
             {/* Description */}
             <div className="col-12">
-              <div className="text-darkblue pt-8 pb-2">
+              <div className="text-darkblue pt-8 f-20 pb-2">
                 Description <span className="text-orange">*</span>
               </div>
               <div className="light-input">
                 <textarea
                   className="px-5 py-4 rounded-lg bg-white text-grey w-full"
                   placeholder="Service Name"
+                  style={{ height: "200px" }}
                 />
               </div>
             </div>
@@ -182,14 +183,14 @@ export default function TripDetails(props: {
                   <div className="flex justify-center">
                     <Image src={uploadIcon} alt="upload" />
                   </div>
-                  <div className="f-16 text-darkblue pt-3">
+                  <div className="f-20 text-darkblue pt-3">
                     Drag & drop files here
                   </div>
                   <div className="text-darkblue">or upload from desktop</div>
                 </div>
               </div>
             </div>
-            <div className="col-12 pt-6">
+            <div className="col-12 pt-6 pb-1">
               <div className="flex justify-between items-center">
                 <Image
                   src={themeIcon}
@@ -198,7 +199,9 @@ export default function TripDetails(props: {
                   height={80}
                   className="rounded-lg"
                 />
-                <div className="f-16 text-darkblue">File name.png</div>
+                <div className="f-20 text-darkblue line-clamp-1">
+                  File name.png
+                </div>
                 <div className="uploaded-tag flex justify-between items-center px-3 pr-6">
                   <CircularProgress
                     variant="determinate"
@@ -206,12 +209,12 @@ export default function TripDetails(props: {
                     style={{ height: "24px", width: "24px" }}
                   />
 
-                  <div className="text-white poppins-medium pl-2">Uploaded</div>
+                  <div className="text-white poppins-medium pl-2">100%</div>
                 </div>
                 <Image src={dotsIcon} alt="dots" className="cursor-pointer" />
               </div>
             </div>
-            <div className="col-12 pt-6">
+            <div className="col-12 py-1">
               <div className="flex justify-between items-center">
                 <Image
                   src={themeIcon}
@@ -220,7 +223,9 @@ export default function TripDetails(props: {
                   height={80}
                   className="rounded-lg"
                 />
-                <div className="f-16 text-darkblue">File name.png</div>
+                <div className="f-20 text-darkblue line-clamp-1">
+                  File name.png
+                </div>
                 <div className="progress-tag flex justify-between items-center px-3">
                   <CircularProgress
                     variant="determinate"
@@ -232,7 +237,7 @@ export default function TripDetails(props: {
                 <Image src={dotsIcon} alt="dots" className="cursor-pointer" />
               </div>
             </div>
-            <div className="col-12 pt-6">
+            <div className="col-12 py-1">
               <div className="flex justify-between items-center">
                 <Image
                   src={themeIcon}
@@ -241,7 +246,9 @@ export default function TripDetails(props: {
                   height={80}
                   className="rounded-lg"
                 />
-                <div className="f-16 text-darkblue">File name.png</div>
+                <div className="f-20 text-darkblue line-clamp-1">
+                  File name.png
+                </div>
                 <div className="progress-tag flex justify-between items-center px-3">
                   <CircularProgress
                     variant="determinate"
