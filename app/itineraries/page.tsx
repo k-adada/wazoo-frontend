@@ -34,6 +34,15 @@ export default function CreateItineraries() {
   };
   const [itineraries, setItineraries] = useState([1]);
 
+  const images = [
+    louvreImage,
+    lucerneImage,
+    montsaintImage,
+    triomphImage,
+    notreImage,
+    quartierImage,
+  ];
+
   const [days, setDays] = useState([
     {
       id: 1,
@@ -175,7 +184,7 @@ export default function CreateItineraries() {
             <div className="col-9">
               <div className="row justify-between">
                 <div className="col-auto">
-                  <div className="f-20 py-3 px-3 bg-white rounded-lg">
+                  <div className="f-16 py-3 px-3 bg-white rounded-lg">
                     Filters
                   </div>
                 </div>
@@ -204,21 +213,23 @@ export default function CreateItineraries() {
                 {/* <div className="col-12 pt-7">
                   <ServicesTable />
                 </div> */}
-                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, index) => {
+                {[1, 2, 3, 4, 5, 6].map((item, index) => {
                   return (
                     <div className="col-4" key={index}>
                       <div className="row rounded-lg py-2">
                         <div className="col-12 pb-4 px-2">
-                          <ServicesSwiper images={[]} />
+                          <div className="image-wrapper-83">
+                            <Image src={images[index]} alt="casinoImage" />
+                          </div>
                         </div>
                         <div className="col-12 px-2">
-                          <div className="f-28 text-darkblue poppins-medium">
+                          <div className="f-16 text-darkblue poppins-medium">
                             Itinerary Name {index + 1}
                           </div>
                         </div>
 
                         <div className="col-12 px-2">
-                          <div className="f-20 text-grey pt-4">
+                          <div className="f-16 text-grey pt-4">
                             Lorem ipsum dolor sit amet consectetur, adipisicing
                             elit. Veniam voluptates eveniet iste corrupti! Cum,
                           </div>
@@ -269,7 +280,7 @@ export default function CreateItineraries() {
             <div className="col-3">
               <div className="row bg-white rounded-lg py-2">
                 <div className="col-12 px-2">
-                  <div className="f-28 text-darkblue poppins-medium">
+                  <div className="f-16 text-darkblue poppins-medium">
                     Itinerary Name
                   </div>
                 </div>
@@ -279,7 +290,7 @@ export default function CreateItineraries() {
                 </div>
 
                 <div className="col-12 px-2">
-                  <div className="f-20 text-grey py-4">
+                  <div className="f-16 text-grey py-4">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Veniam
                   </div>
@@ -349,7 +360,7 @@ export default function CreateItineraries() {
                                       }}
                                     />
                                     <div className="pl-3">
-                                      <div className="f-20 text-darkblue poppins-medium">
+                                      <div className="f-16 text-darkblue poppins-medium">
                                         {service.serviceType}
                                       </div>
                                       <div className="items-center">

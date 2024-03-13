@@ -17,13 +17,13 @@ export default function Registration() {
             onClick={() => setActiveTab("login")}
             className={(activeTab == "login" && "active") + " tab"}
           >
-            <div className={" f-20 text-center p-2"}>Login</div>
+            <div className={" f-16 text-center p-2"}>Login</div>
           </div>
           <div
             onClick={() => setActiveTab("register")}
             className={(activeTab == "register" && "active") + " tab"}
           >
-            <div className={" f-20 text-center p-2"}>Register</div>
+            <div className={" f-16 text-center p-2"}>Register</div>
           </div>
         </div>
       </div>

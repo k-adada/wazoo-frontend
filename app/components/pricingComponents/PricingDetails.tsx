@@ -70,7 +70,7 @@ export default function PricingDetails(props: any) {
                 key={serviceProvider.name}
               >
                 <div className="px-5">
-                  <div className="f-20 text-darkblue text-center poppins-semibold">
+                  <div className="f-16 text-darkblue text-center poppins-semibold">
                     {serviceProvider.name}
                   </div>
                 </div>

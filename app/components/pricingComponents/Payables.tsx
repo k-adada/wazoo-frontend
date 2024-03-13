@@ -147,7 +147,7 @@ export default function Payables(props: any) {
                     <div className="pr-3">
                       <Image width={30} src={userIcon} alt="location" />
                     </div>
-                    <div className="f-20 text-darkblue text-center poppins-semibold">
+                    <div className="f-16 text-darkblue text-center poppins-semibold">
                       {serviceProvider.name}
                     </div>
                   </div>
@@ -199,7 +199,7 @@ export default function Payables(props: any) {
                 <div className="text-center text-darkblue poppins-medium py-2">
                   Activities
                 </div>
-                <div className="f-20 poppins-semibold text-darkblue text-center pb-8">
+                <div className="f-16 poppins-semibold text-darkblue text-center pb-8">
                   $12,000.00
                 </div>
 
@@ -236,7 +236,7 @@ export default function Payables(props: any) {
                 <div className="text-center text-darkblue poppins-medium py-2">
                   Accommodations
                 </div>
-                <div className="f-20 poppins-semibold text-darkblue text-center pb-8">
+                <div className="f-16 poppins-semibold text-darkblue text-center pb-8">
                   $4,000.00
                 </div>
 
@@ -277,7 +277,7 @@ export default function Payables(props: any) {
                 <div className="text-center text-darkblue poppins-medium py-2">
                   Transport
                 </div>
-                <div className="f-20 poppins-semibold text-darkblue text-center pb-8">
+                <div className="f-16 poppins-semibold text-darkblue text-center pb-8">
                   $3,300.00
                 </div>
 
@@ -318,7 +318,7 @@ export default function Payables(props: any) {
                 <div className="text-center text-darkblue poppins-medium py-2">
                   Other
                 </div>
-                <div className="f-20 poppins-semibold text-darkblue text-center pb-8">
+                <div className="f-16 poppins-semibold text-darkblue text-center pb-8">
                   $0.00
                 </div>
 
@@ -364,12 +364,12 @@ export default function Payables(props: any) {
 
               <div className="rounded-lg bg-grey px-4 py-4">
                 <div className="bg-white rounded-lg py-2 px-4">
-                  <div className="f-20 text-darkblue poppins-semibold">
+                  <div className="f-16 text-darkblue poppins-semibold">
                     Total
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="text-darkblue">Three thousand dollars</div>
-                    <div className="text-darkblue f-20 poppins-bold">
+                    <div className="text-darkblue f-16 poppins-bold">
                       $3,000.00
                     </div>
                   </div>

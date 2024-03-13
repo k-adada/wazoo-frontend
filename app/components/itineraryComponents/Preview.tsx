@@ -69,12 +69,12 @@ export default function Preview(props: {
               </div>
               <div className="col-5">
                 <div className="flex justify-between pt-4">
-                  <div className="f-28 text-darkblue poppins-semibold">
+                  <div className="f-16 text-darkblue poppins-semibold">
                     Jon&apos;s Trip to France
                   </div>
                   <div className="flex">
                     <div className="">
-                      <div className="f-28 text-darkblue poppins-semibold">
+                      <div className="f-16 text-darkblue poppins-semibold">
                         France
                       </div>
                       <div className="text-darkblue text-right">5 Days</div>
@@ -138,7 +138,7 @@ export default function Preview(props: {
                 <div className="row">
                   <div className="col-4 border-right">
                     <div className="">
-                      <div className="f-20 text-darkblue poppins-bold pb-3">
+                      <div className="f-16 text-darkblue poppins-bold pb-3">
                         Day 1
                       </div>
                       <div className="f-12 text-darkblue poppins-medium">
@@ -148,10 +148,10 @@ export default function Preview(props: {
                     </div>
                   </div>
                   <div className="col-8">
-                    <div className="f-28 poppins-bold text-darkblue">
+                    <div className="f-16 poppins-bold text-darkblue">
                       May 1, 2024
                     </div>
-                    <div className="poppins-semibold text-darkblue f-20">
+                    <div className="poppins-semibold text-darkblue f-16">
                       Arrive in Paris, France
                     </div>
 
@@ -166,7 +166,7 @@ export default function Preview(props: {
                         />
                       </div>
                       <div className="pl-4">
-                        <div className="f-20 text-darkblue poppins-semibold">
+                        <div className="f-16 text-darkblue poppins-semibold">
                           Transfer from CDG to Hilton
                         </div>
                         <div className="f-12 text-grey">
@@ -205,7 +205,7 @@ export default function Preview(props: {
                         />
                       </div>
                       <div className="pl-4">
-                        <div className="f-20 text-darkblue poppins-semibold">
+                        <div className="f-16 text-darkblue poppins-semibold">
                           Transfer from CDG to Hilton
                         </div>
                         <div className="f-12 text-grey">
@@ -238,7 +238,7 @@ export default function Preview(props: {
                 <div className="row pt-6">
                   <div className="col-4 border-right">
                     <div className="">
-                      <div className="f-20 text-darkblue poppins-bold pb-3">
+                      <div className="f-16 text-darkblue poppins-bold pb-3">
                         Day 2
                       </div>
                       <div className="f-12 text-darkblue poppins-medium">
@@ -248,10 +248,10 @@ export default function Preview(props: {
                     </div>
                   </div>
                   <div className="col-8">
-                    <div className="f-28 poppins-bold text-darkblue">
+                    <div className="f-16 poppins-bold text-darkblue">
                       May 2, 2024
                     </div>
-                    <div className="poppins-semibold text-darkblue f-20">
+                    <div className="poppins-semibold text-darkblue f-16">
                       Arrive in Lyon, France
                     </div>
 
@@ -266,7 +266,7 @@ export default function Preview(props: {
                         />
                       </div>
                       <div className="pl-4">
-                        <div className="f-20 text-darkblue poppins-semibold">
+                        <div className="f-16 text-darkblue poppins-semibold">
                           Transfer from CDG to Hilton
                         </div>
                         <div className="f-12 text-grey">
@@ -305,7 +305,7 @@ export default function Preview(props: {
                         />
                       </div>
                       <div className="pl-4">
-                        <div className="f-20 text-darkblue poppins-semibold">
+                        <div className="f-16 text-darkblue poppins-semibold">
                           Transfer from CDG to Hilton
                         </div>
                         <div className="f-12 text-grey">

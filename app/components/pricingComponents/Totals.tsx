@@ -100,7 +100,7 @@ export default function Totals(props: any) {
                 <div className="text-center text-darkblue poppins-medium py-2">
                   Activities
                 </div>
-                <div className="f-20 poppins-semibold text-darkblue text-center pb-8">
+                <div className="f-16 poppins-semibold text-darkblue text-center pb-8">
                   $12,000.00
                 </div>
 
@@ -137,7 +137,7 @@ export default function Totals(props: any) {
                 <div className="text-center text-darkblue poppins-medium py-2">
                   Accommodations
                 </div>
-                <div className="f-20 poppins-semibold text-darkblue text-center pb-8">
+                <div className="f-16 poppins-semibold text-darkblue text-center pb-8">
                   $4,000.00
                 </div>
 
@@ -178,7 +178,7 @@ export default function Totals(props: any) {
                 <div className="text-center text-darkblue poppins-medium py-2">
                   Transport
                 </div>
-                <div className="f-20 poppins-semibold text-darkblue text-center pb-8">
+                <div className="f-16 poppins-semibold text-darkblue text-center pb-8">
                   $3,300.00
                 </div>
 
@@ -219,7 +219,7 @@ export default function Totals(props: any) {
                 <div className="text-center text-darkblue poppins-medium py-2">
                   Other
                 </div>
-                <div className="f-20 poppins-semibold text-darkblue text-center pb-8">
+                <div className="f-16 poppins-semibold text-darkblue text-center pb-8">
                   $0.00
                 </div>
 
@@ -253,7 +253,7 @@ export default function Totals(props: any) {
           <div className="f-24 text-darkblue poppins-semibold text-center pb-2">
             Total
           </div>
-          <div className="f-20 poppins-bold f-20 text-center">$18,300.00</div>
+          <div className="f-16 poppins-bold f-16 text-center">$18,300.00</div>
 
           <div className="absolute right-8 top-10">
             <Image src={eyeIcon} alt="eye" />

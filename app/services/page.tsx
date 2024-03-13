@@ -81,7 +81,7 @@ export default function CreateServices() {
             <div className="col-9">
               <div className="row justify-between">
                 <div className="col-auto">
-                  <div className="f-20 py-3 px-3 bg-white rounded-lg">
+                  <div className="f-16 py-3 px-3 bg-white rounded-lg">
                     Filters
                   </div>
                 </div>
@@ -144,7 +144,7 @@ export default function CreateServices() {
             <div className="col-3">
               <div className="row bg-white rounded-lg py-2">
                 <div className="col-12 px-2">
-                  <div className="f-28 text-darkblue poppins-medium">
+                  <div className="f-16 text-darkblue poppins-medium">
                     Service Name
                   </div>
                 </div>
@@ -190,7 +190,7 @@ export default function CreateServices() {
                   </div>
                 </div>
                 <div className="col-12 px-2 py-4">
-                  <div className="f-20 text-darkblue pt-4">
+                  <div className="f-16 text-darkblue pt-4">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Veniam voluptates eveniet iste corrupti! Cum, nulla
                     exercitationem beatae tempora veritatis ex voluptates labore
@@ -199,7 +199,7 @@ export default function CreateServices() {
                 </div>
 
                 <div className="col-12 px-2 pt-4">
-                  <div className="f-20 poppins-semibold text-darkblue py-2">
+                  <div className="f-16 poppins-semibold text-darkblue py-2">
                     Availability Times
                   </div>
                   <div className="flex justify-between items-center">
@@ -249,7 +249,7 @@ export default function CreateServices() {
                 </div>
 
                 <div className="col-12 px-2 pt-5">
-                  <div className="f-20 poppins-semibold text-darkblue py-2">
+                  <div className="f-16 poppins-semibold text-darkblue py-2">
                     Service Provider
                   </div>
                   <div className="flex py-1">

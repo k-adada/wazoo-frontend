@@ -52,12 +52,12 @@ export default function MyPricing(props: any) {
               <div className="rounded-lg bg-grey px-4 py-4">
                 {/* total  */}
                 <div className="bg-white rounded-lg py-2 px-4">
-                  <div className="f-20 text-darkblue poppins-semibold">
+                  <div className="f-16 text-darkblue poppins-semibold">
                     Total
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="text-darkblue">Three thousand dollars</div>
-                    <div className="text-darkblue f-20 poppins-bold">
+                    <div className="text-darkblue f-16 poppins-bold">
                       $3,000.00
                     </div>
                   </div>
@@ -270,40 +270,40 @@ export default function MyPricing(props: any) {
                 {/* gross total  */}
                 <div className="bg-white rounded-lg py-2 px-4 mt-4">
                   {/* GROSS TOTAL  */}
-                  <div className="f-20 text-darkblue poppins-semibold">
+                  <div className="f-16 text-darkblue poppins-semibold">
                     Gross Total
                   </div>
                   <div className="flex items-center justify-between pb-2">
                     <div className="text-darkblue">
                       Sixteen Thousand dollars
                     </div>
-                    <div className="text-darkblue f-20 poppins-bold">
+                    <div className="text-darkblue f-16 poppins-bold">
                       $16,000.00
                     </div>
                   </div>
 
                   {/* TOTAL COST  */}
-                  <div className="f-20 text-darkblue poppins-semibold">
+                  <div className="f-16 text-darkblue poppins-semibold">
                     Total Cost
                   </div>
                   <div className="flex items-center justify-between pb-2 border-b">
                     <div className="text-darkblue">
                       Sixteen Thousand dollars
                     </div>
-                    <div className="text-darkblue f-20 poppins-bold">
+                    <div className="text-darkblue f-16 poppins-bold">
                       - $13,000.00
                     </div>
                   </div>
 
                   {/* NET PROFIT  */}
-                  <div className="f-20 text-darkblue poppins-semibold pt-2">
+                  <div className="f-16 text-darkblue poppins-semibold pt-2">
                     Net Profit
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="text-darkblue">
                       Sixteen Thousand dollars
                     </div>
-                    <div className="text-darkblue f-20 poppins-bold">
+                    <div className="text-darkblue f-16 poppins-bold">
                       $3,000.00
                     </div>
                   </div>

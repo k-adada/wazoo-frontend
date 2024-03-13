@@ -308,7 +308,7 @@ export default function CreateServices() {
                     <div className="flex justify-center">
                       <Image src={uploadIcon} alt="upload" />
                     </div>
-                    <div className="f-20 text-darkblue pt-3">
+                    <div className="f-16 text-darkblue pt-3">
                       Drag & drop files here
                     </div>
                     <div className="text-darkblue">or upload from desktop</div>
@@ -324,7 +324,7 @@ export default function CreateServices() {
                     height={80}
                     className="rounded-lg"
                   />
-                  <div className="f-20 text-darkblue">File name.png</div>
+                  <div className="f-16 text-darkblue">File name.png</div>
                   <div className="uploaded-tag flex justify-between items-center px-3 pr-6">
                     <CircularProgress
                       variant="determinate"
@@ -348,7 +348,7 @@ export default function CreateServices() {
                     height={80}
                     className="rounded-lg"
                   />
-                  <div className="f-20 text-darkblue">File name.png</div>
+                  <div className="f-16 text-darkblue">File name.png</div>
                   <div className="progress-tag flex justify-between items-center px-3">
                     <CircularProgress
                       variant="determinate"
@@ -369,7 +369,7 @@ export default function CreateServices() {
                     height={80}
                     className="rounded-lg"
                   />
-                  <div className="f-20 text-darkblue">File name.png</div>
+                  <div className="f-16 text-darkblue">File name.png</div>
                   <div className="progress-tag flex justify-between items-center px-3">
                     <CircularProgress
                       variant="determinate"
