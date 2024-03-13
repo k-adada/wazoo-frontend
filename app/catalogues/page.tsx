@@ -302,7 +302,7 @@ export default function Catalogues() {
                                 />
                               </div>
                             </div>
-                            <div className="text-darkblue f-14 poppins-medium pr-20">
+                            <div className="text-darkblue f-14 poppins-medium pr-10">
                               Services
                               <div className="flex">
                                 <Image

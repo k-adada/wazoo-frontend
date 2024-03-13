@@ -107,7 +107,7 @@ export default function AudienceDrawer(props: {
                   </div>
                 </div>
 
-                <div className="rounded-lg py-3 px-8 text-grey poppins-medium pointer">
+                <div className="rounded-lg py-3 px-8">
                   <input
                     type="checkbox"
                     style={{ width: "16px", height: "16px" }}
