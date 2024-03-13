@@ -46,7 +46,7 @@ export default function AudienceDrawer(props: {
 
   React.useEffect(() => {
     setState({ ...state, right: openAudiences });
-  }, [openAudiences]);
+  }, [openAudiences, state]);
 
   const handleClick = (event: React.MouseEvent) => {
     // Check if the click was inside a ListItem component
