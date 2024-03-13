@@ -11,6 +11,7 @@ import "swiper/css/thumbs";
 
 // import required modules
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import Image from "next/image";
 
 export default function ThumbsSwiper() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -30,81 +31,91 @@ export default function ThumbsSwiper() {
         >
           <SwiperSlide>
             <div className="w-full h-full">
-              <img
+              <Image
                 className="object-cover w-full h-full"
                 src="https://swiperjs.com/demos/images/nature-1.jpg"
+                alt={"nature-1"}
               />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="w-full h-full">
-              <img
+              <Image
                 className="object-cover w-full h-full"
                 src="https://swiperjs.com/demos/images/nature-2.jpg"
+                alt="nature-2"
               />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="w-full h-full">
-              <img
+              <Image
                 className="object-cover w-full h-full"
                 src="https://swiperjs.com/demos/images/nature-3.jpg"
+                alt="nature-2"
               />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="w-full h-full">
-              <img
+              <Image
                 className="object-cover w-full h-full"
                 src="https://swiperjs.com/demos/images/nature-4.jpg"
+                alt="nature-2"
               />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="w-full h-full">
-              <img
+              <Image
                 className="object-cover w-full h-full"
                 src="https://swiperjs.com/demos/images/nature-5.jpg"
+                alt="nature-2"
               />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="w-full h-full">
-              <img
+              <Image
                 className="object-cover w-full h-full"
                 src="https://swiperjs.com/demos/images/nature-6.jpg"
+                alt="nature-2"
               />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="w-full h-full">
-              <img
+              <Image
                 className="object-cover w-full h-full"
                 src="https://swiperjs.com/demos/images/nature-7.jpg"
+                alt="nature-2"
               />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="w-full h-full">
-              <img
+              <Image
                 className="object-cover w-full h-full"
                 src="https://swiperjs.com/demos/images/nature-8.jpg"
+                alt="nature-2"
               />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="w-full h-full">
-              <img
+              <Image
                 className="object-cover w-full h-full"
                 src="https://swiperjs.com/demos/images/nature-9.jpg"
+                alt="nature-2"
               />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="w-full h-full">
-              <img
+              <Image
                 className="object-cover w-full h-full"
                 src="https://swiperjs.com/demos/images/nature-10.jpg"
+                alt="nature-2"
               />
             </div>
           </SwiperSlide>
@@ -122,81 +133,91 @@ export default function ThumbsSwiper() {
       >
         <SwiperSlide>
           <div className="rounded-lg h-full">
-            <img
+            <Image
               className="object-cover w-full h-full rounded-lg"
               src="https://swiperjs.com/demos/images/nature-1.jpg"
+              alt="nature-2"
             />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="rounded-lg h-full">
-            <img
+            <Image
               className="object-cover w-full h-full rounded-lg"
               src="https://swiperjs.com/demos/images/nature-2.jpg"
+              alt="nature-2"
             />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="rounded-lg h-full">
-            <img
+            <Image
               className="object-cover w-full h-full rounded-lg"
               src="https://swiperjs.com/demos/images/nature-3.jpg"
+              alt="nature-2"
             />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="rounded-lg h-full">
-            <img
+            <Image
               className="object-cover w-full h-full rounded-lg"
               src="https://swiperjs.com/demos/images/nature-4.jpg"
+              alt="nature-2"
             />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="rounded-lg h-full">
-            <img
+            <Image
               className="object-cover w-full h-full rounded-lg"
               src="https://swiperjs.com/demos/images/nature-5.jpg"
+              alt="nature-2"
             />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="rounded-lg h-full">
-            <img
+            <Image
               className="object-cover w-full h-full rounded-lg"
               src="https://swiperjs.com/demos/images/nature-6.jpg"
+              alt="nature-2"
             />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="rounded-lg h-full">
-            <img
+            <Image
               className="object-cover w-full h-full rounded-lg"
               src="https://swiperjs.com/demos/images/nature-7.jpg"
+              alt="nature-2"
             />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="rounded-lg h-full">
-            <img
+            <Image
               className="object-cover w-full h-full rounded-lg"
               src="https://swiperjs.com/demos/images/nature-8.jpg"
+              alt="nature-2"
             />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="rounded-lg h-full">
-            <img
+            <Image
               className="object-cover w-full h-full rounded-lg"
               src="https://swiperjs.com/demos/images/nature-9.jpg"
+              alt="nature-2"
             />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="rounded-lg h-full">
-            <img
+            <Image
               className="object-cover w-full h-full rounded-lg"
               src="https://swiperjs.com/demos/images/nature-10.jpg"
+              alt="nature-2"
             />
           </div>
         </SwiperSlide>

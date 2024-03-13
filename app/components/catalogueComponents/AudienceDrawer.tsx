@@ -60,6 +60,10 @@ export default function AudienceDrawer(props: {
     }
   };
 
+  const handleListClick = (event: React.MouseEvent) => {
+    event.stopPropagation(); // Prevent the click from propagating to the Box
+  };
+
   React.useEffect(() => {
     console.log("audienceData", audienceData);
   }, [audienceData]);
@@ -72,10 +76,14 @@ export default function AudienceDrawer(props: {
     >
       <List>
         <>
-          <div className="px-4" style={{ maxWidth: "470px" }}>
+          <div
+            className="px-4"
+            style={{ maxWidth: "470px" }}
+            onClick={(e) => handleListClick(e)}
+          >
             <div className="row rounded-lg pt-3 pb-[90px]">
               <div className="col-12">
-                {/* search activities  */}
+                {/* search Audiences  */}
                 <div className="row px-2">
                   <div className="col">
                     <div className="absolute left-6 top-3 pointer">
@@ -84,7 +92,7 @@ export default function AudienceDrawer(props: {
                     <input
                       type="text"
                       className="rounded-lg bg-blue text-darkblue pl-10 pr-5 py-3 w-full"
-                      placeholder="Search Activity"
+                      placeholder="Search Audiences"
                     />
                   </div>
                   <div className="col-auto self-center">
@@ -103,6 +111,14 @@ export default function AudienceDrawer(props: {
                   <input
                     type="checkbox"
                     style={{ width: "16px", height: "16px" }}
+                    onChange={(e) => {
+                      //if this is checked, check all the audiences
+                      let newAudienceData = [...audienceData];
+                      newAudienceData.map((audience) => {
+                        audience.selected = e.target.checked;
+                      });
+                      setAudienceData(newAudienceData);
+                    }}
                   />
                 </div>
               </div>
@@ -162,7 +178,10 @@ export default function AudienceDrawer(props: {
               })}
 
               <div className="fixed w-[440px] right-[24px] bottom-10">
-                <div className="dark-button text-gold poppins-medium cursor-pointer">
+                <div
+                  className="dark-button text-gold poppins-medium pointer"
+                  onClick={() => setOpenAudiences(false)}
+                >
                   <div className="flex items-center justify-center h-full">
                     <Image src={audienceIcon} alt="audienceIcon" />
                     <div className="pl-4">Link Audience(s)</div>
