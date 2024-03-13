@@ -181,7 +181,7 @@ export default function CreateItineraries() {
 
         {itineraries.length > 0 ? (
           <div className="row">
-            <div className="col-9">
+            <div className="col-9 pr-5">
               <div className="row justify-between">
                 <div className="col-auto">
                   <div className="f-16 py-3 px-3 bg-white rounded-lg">
@@ -215,8 +215,8 @@ export default function CreateItineraries() {
                 </div> */}
                 {[1, 2, 3, 4, 5, 6].map((item, index) => {
                   return (
-                    <div className="col-4" key={index}>
-                      <div className="row rounded-lg py-2">
+                    <div className="col-4 px-5 py-2" key={index}>
+                      <div className="row bg-white rounded-lg py-2">
                         <div className="col-12 pb-4 px-2">
                           <div className="image-wrapper-83">
                             <Image src={images[index]} alt="casinoImage" />
@@ -227,14 +227,12 @@ export default function CreateItineraries() {
                             Itinerary Name {index + 1}
                           </div>
                         </div>
-
                         <div className="col-12 px-2">
                           <div className="f-16 text-grey pt-1 line-clamp-3">
                             Lorem ipsum dolor sit amet consectetur, adipisicing
                             elit. Veniam voluptates eveniet iste corrupti! Cum,
                           </div>
                         </div>
-
                         <div className="col-auto px-2 py-1">
                           <div className="service-tag flex">
                             <Image
@@ -245,7 +243,6 @@ export default function CreateItineraries() {
                             <div className="text-grey">Paris, France</div>
                           </div>
                         </div>
-
                         <div className="col-auto px-2 py-1">
                           <div className="service-tag flex">
                             <Image
@@ -256,7 +253,6 @@ export default function CreateItineraries() {
                             <div className="text-grey">3h</div>
                           </div>
                         </div>
-
                         <div className="col-auto px-2 py-1">
                           <div className="service-tag flex">
                             <Image
@@ -296,7 +292,7 @@ export default function CreateItineraries() {
             <div className="col-3">
               <div className="row bg-white rounded-lg py-2">
                 <div className="col-12 px-2">
-                  <div className="f-20 text-darkblue poppins-medium">
+                  <div className="f-24 text-darkblue poppins-medium py-2">
                     Itinerary Name
                   </div>
                 </div>
@@ -306,7 +302,7 @@ export default function CreateItineraries() {
                 </div>
 
                 <div className="col-12 px-2">
-                  <div className="f-16 text-grey py-4">
+                  <div className="f-16 text-grey pt-1 pb-4">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Veniam
                   </div>
@@ -353,12 +349,12 @@ export default function CreateItineraries() {
                           </div>
                         </div>
                         <div
-                          className={`${day.collapsed ? "hidden" : ""} py-2`}
+                          className={`${day.collapsed ? "hidden" : ""} py-1`}
                         >
                           {day.services.map((service, index) => {
                             return (
                               <div
-                                className="py-2"
+                                className="py-1"
                                 key={index + service.location}
                               >
                                 <div className="flex py-2 px-2 bg-grey rounded-lg items-center justify-between">
