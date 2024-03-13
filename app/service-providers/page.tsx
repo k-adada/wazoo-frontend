@@ -82,11 +82,11 @@ export default function ServiceProviders() {
             <div className="col-5 relative">
               <input
                 type="text"
-                className="bg-white py-3 pl-10 rounded-lg w-full"
-                placeholder="search"
+                className="bg-white py-2 pl-10 rounded-lg w-full"
+                placeholder="Search"
               />
-              <div className="absolute left-5 top-3">
-                <Image src={searchIcon} alt="search" />
+              <div className="absolute left-5 top-2">
+                <Image src={searchIcon} alt="Search" />
               </div>
             </div>
 

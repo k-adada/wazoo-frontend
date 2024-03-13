@@ -182,7 +182,7 @@ const headCells: readonly HeadCell[] = [
     id: "phone",
     numeric: false,
     disablePadding: false,
-    label: "Phone Number",
+    label: "Phone",
   },
   {
     id: "description",
@@ -206,7 +206,7 @@ const headCells: readonly HeadCell[] = [
     id: "numberOfLocations",
     numeric: false,
     disablePadding: false,
-    label: "Number of Locations",
+    label: "Nb. of Locations",
   },
   {
     id: "services",
