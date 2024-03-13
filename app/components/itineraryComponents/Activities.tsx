@@ -12,6 +12,13 @@ import tourImage from "../../assets/tour_effel.jpg";
 import locationIcon from "../../assets/Icon_Location_gold.png";
 import DragTableServices from "../DragTableServices";
 
+import louvreImage from "../../assets/images/services/Louvre.jpg";
+import lucerneImage from "../../assets/images/services/lucerne.jpg";
+import montsaintImage from "../../assets/images/services/montsaintmich.jpg";
+import triomphImage from "../../assets/images/services/Triomphe.jpg";
+import notreImage from "../../assets/images/services/NotreDameCathedral.jpg";
+import quartierImage from "../../assets/images/services/Quartier_Latin.jpg";
+
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { filterColumns } from "@mui/x-data-grid-pro/components/DataGridProVirtualScroller";
@@ -39,63 +46,69 @@ export default function Activities(props: {
   const [activities, setActivities] = useState([
     {
       id: "1",
-      serviceType: "Service 1",
+      serviceType: "Louvre",
       description: "Service 1 Description",
       location: "Location 1",
       method: "Method 1",
       duration: "Duration 1",
       timeslot: "Timeslot 1",
       price: "350",
+      image: louvreImage,
     },
     {
       id: "2",
-      serviceType: "Service 2",
+      serviceType: "Lucerne",
       description: "Service 2 Description",
       location: "Location 2",
       method: "Method 2",
       duration: "Duration 2",
       timeslot: "Timeslot 2",
       price: "350",
+      image: lucerneImage,
     },
     {
       id: "3",
-      serviceType: "Service 3",
+      serviceType: "Mont Saint",
       description: "Service 3 Description",
       location: "Location 3",
       method: "Method 3",
       duration: "Duration 3",
       timeslot: "Timeslot 3",
       price: "350",
+      image: montsaintImage,
     },
     {
       id: "4",
-      serviceType: "Service 4",
+      serviceType: "Triomphe",
       description: "Service 4 Description",
       location: "Location 4",
       method: "Method 4",
       duration: "Duration 4",
       timeslot: "Timeslot 4",
       price: "350",
+      image: triomphImage,
     },
     {
       id: "5",
-      serviceType: "Service 5",
+      serviceType: "Notre Dame",
       description: "Service 5 Description",
       location: "Location 5",
       method: "Method 5",
       duration: "Duration 5",
       timeslot: "Timeslot 5",
       price: "350",
+      image: notreImage,
     },
     {
       id: "6",
-      serviceType: "Service 6",
+      serviceType: "Quartier",
       description: "Service 6 Description",
       location: "Location 6",
       method: "Method 6",
       duration: "Duration 6",
       timeslot: "Timeslot 6",
       price: "350",
+      image: quartierImage,
     },
   ]);
   const [days, setDays] = useState([
@@ -252,7 +265,7 @@ export default function Activities(props: {
                   <div className="flex py-2 px-2 border-dashed rounded-lg items-center justify-between">
                     <div className="flex">
                       <Image
-                        src={tourImage}
+                        src={activity.image}
                         alt="tour image"
                         className="rounded-lg"
                         style={{
@@ -267,9 +280,11 @@ export default function Activities(props: {
                         </div>
                         <div className="flex items-center">
                           <div className="f-24 poppins-semibold text-darkblue">
-                            $ {activity.price}
+                            ${activity.price}
                           </div>
-                          <div className="f-14 text-darkblue"> / Default</div>
+                          <div className="f-14 text-darkblue">
+                            &nbsp; Default
+                          </div>
                         </div>
                       </div>
                     </div>

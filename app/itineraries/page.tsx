@@ -187,10 +187,17 @@ export default function CreateItineraries() {
                   <ServicesSwiper images={[]} />
                 </div>
 
+                <div className="col-12 px-2">
+                  <div className="f-20 text-grey py-4">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Veniam 
+                  </div>
+                </div>
+
                 <div className="col-auto px-2 py-1">
                   <div className="service-tag flex">
                     <Image src={locationIcon} alt="location" />
-                    <div className="text-darkblue">Paris, France</div>
+                    <div className="text-darkblue pl-2">Paris, France</div>
                   </div>
                 </div>
 
@@ -207,30 +214,7 @@ export default function CreateItineraries() {
                     <div className="text-darkblue">Oct 11 - Oct 15</div>
                   </div>
                 </div>
-                <div className="col-auto px-2 py-1">
-                  <div className="service-tag flex">
-                    <Image src={dollarIcon} alt="dollar sign" />
-                    <div className="text-darkblue">$350</div>
-                  </div>
-                </div>
-                <div className="col-auto px-2 py-1">
-                  <div className="service-tag flex">
-                    <div className="text-darkblue">Outdoor Activity</div>
-                  </div>
-                </div>
-                <div className="col-auto px-2 py-1">
-                  <div className="service-tag flex">
-                    <div className="text-darkblue">Sub-type</div>
-                  </div>
-                </div>
-                <div className="col-12 px-2">
-                  <div className="f-20 text-darkblue pt-4">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Veniam voluptates eveniet iste corrupti! Cum, nulla
-                    exercitationem beatae tempora veritatis ex voluptates labore
-                    a quae, reiciendis soluta? Error repellat commodi similique.
-                  </div>
-                </div>
+      
 
                 <div className="col-12 px-2">
                   <div className="f-20 poppins-semibold text-darkblue py-2">

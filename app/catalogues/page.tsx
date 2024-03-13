@@ -107,14 +107,14 @@ export default function Catalogues() {
                   </Link>
                 </div>
               </div>
-              <div className="row justify-between">
+              <div className="row">
                 <div className="col-12 py-3"></div>
                 {/* <div className="col-12 pt-7">
                   <ServicesTable />
                 </div> */}
                 {[1, 2, 3, 4, 5, 6].map((item, index) => {
                   return (
-                    <div className="col-4 py-3" key={index}>
+                    <div className="col-3 py-3" key={index}>
                       <div
                         className={
                           (activeCatalogue === index

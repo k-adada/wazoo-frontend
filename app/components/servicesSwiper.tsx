@@ -12,6 +12,16 @@ import { Pagination, Autoplay, Navigation } from "swiper/modules";
 import Image from "next/image";
 import casinoImage from "../assets/Bellagio-Hotel-Casino-Las-Vegas.webp";
 
+import alpsImage from "../assets/images/services/alps.webp";
+import bernImage from "../assets/images/services/bern.jpg";
+import eifelImage from "../assets/images/services/EiffelTower.jpg";
+import brandenImage from "../assets/images/services/BrandenbergGate.webp";
+import garnierImage from "../assets/images/services/Garnier.webp";
+import genevaImage from "../assets/images/services/Geneva.webp";
+import quartierImage from "../assets/images/services/Quartier_Latin.jpg";
+import jungerfrauImage from "../assets/images/services/jungfraujoch.jpg";
+import interlakenImage from "../assets/images/services/interlaken.jpg";
+
 export default function ServicesSwiper(props: any) {
   const { images } = props;
   return (
@@ -31,55 +41,55 @@ export default function ServicesSwiper(props: any) {
       >
         <SwiperSlide>
           <div className="image-wrapper-83">
-            <Image src={casinoImage} alt="casinoImage" />
+            <Image src={alpsImage} alt="casinoImage" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           {" "}
           <div className="image-wrapper-83">
-            <Image src={casinoImage} alt="casinoImage" />
+            <Image src={bernImage} alt="casinoImage" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           {" "}
           <div className="image-wrapper-83">
-            <Image src={casinoImage} alt="casinoImage" />
+            <Image src={eifelImage} alt="casinoImage" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           {" "}
           <div className="image-wrapper-83">
-            <Image src={casinoImage} alt="casinoImage" />
+            <Image src={brandenImage} alt="casinoImage" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           {" "}
           <div className="image-wrapper-83">
-            <Image src={casinoImage} alt="casinoImage" />
+            <Image src={garnierImage} alt="casinoImage" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           {" "}
           <div className="image-wrapper-83">
-            <Image src={casinoImage} alt="casinoImage" />
+            <Image src={genevaImage} alt="casinoImage" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           {" "}
           <div className="image-wrapper-83">
-            <Image src={casinoImage} alt="casinoImage" />
+            <Image src={quartierImage} alt="casinoImage" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           {" "}
           <div className="image-wrapper-83">
-            <Image src={casinoImage} alt="casinoImage" />
+            <Image src={jungerfrauImage} alt="casinoImage" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           {" "}
           <div className="image-wrapper-83">
-            <Image src={casinoImage} alt="casinoImage" />
+            <Image src={interlakenImage} alt="casinoImage" />
           </div>
         </SwiperSlide>
       </Swiper>

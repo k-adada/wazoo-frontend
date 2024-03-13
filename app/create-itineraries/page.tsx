@@ -101,167 +101,177 @@ export default function CreateItineraries() {
               Itinerary
             </div>
           </div>
-
-          {/*  STEPS BAR */}
-          <div className="col-12">
-            <div className="row">
-              {/* STEP 1  */}
-              <div
-                className="col-auto pointer"
-                onClick={() => {
-                  setCurrentStep("trip-details");
-                }}
-              >
-                <div className="itinerary-step">
-                  <div className="darkblue-ball"></div>
-                  <div className="f-14 text-grey text-center">Step 1</div>
-                  <div className="text-darkblue text-center">Trip Details</div>
-                </div>
-              </div>
-              <div className="col">
-                <div className="step-direction pt-3">
-                  <div className="step-line active"></div>
-                </div>
-              </div>
-              {/* STEP 2  */}
-              <div
-                className="col-auto pointer"
-                onClick={() => {
-                  setCurrentStep("accommodation");
-                }}
-              >
-                <div className="itinerary-step">
+          {currentStep != "preview" && (
+            <>
+              {/*  STEPS BAR */}
+              <div className="col-12">
+                <div className="row">
+                  {/* STEP 1  */}
                   <div
-                    className={
-                      stepsDone.includes("accommodation")
-                        ? "darkblue-ball"
-                        : "grey-ball"
-                    }
-                  ></div>
-                  <div className="f-14 text-grey text-center">Step 2</div>
-                  <div className="text-darkblue text-center">Accommodation</div>
-                </div>
-              </div>
-              <div className="col">
-                <div className="step-direction pt-3">
+                    className="col-auto pointer"
+                    onClick={() => {
+                      setCurrentStep("trip-details");
+                    }}
+                  >
+                    <div className="itinerary-step">
+                      <div className="darkblue-ball"></div>
+                      <div className="f-14 text-grey text-center">Step 1</div>
+                      <div className="text-darkblue text-center">
+                        Trip Details
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col">
+                    <div className="step-direction pt-3">
+                      <div className="step-line active"></div>
+                    </div>
+                  </div>
+                  {/* STEP 2  */}
                   <div
-                    className={
-                      (stepsDone.includes("accommodation") ? "active" : "") +
-                      " step-line"
-                    }
-                  ></div>
-                </div>
-              </div>
-              {/* STEP 3  */}
-              <div
-                className="col-auto pointer"
-                onClick={() => {
-                  setCurrentStep("activities");
-                }}
-              >
-                <div className="itinerary-step">
+                    className="col-auto pointer"
+                    onClick={() => {
+                      setCurrentStep("accommodation");
+                    }}
+                  >
+                    <div className="itinerary-step">
+                      <div
+                        className={
+                          stepsDone.includes("accommodation")
+                            ? "darkblue-ball"
+                            : "grey-ball"
+                        }
+                      ></div>
+                      <div className="f-14 text-grey text-center">Step 2</div>
+                      <div className="text-darkblue text-center">
+                        Accommodation
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col">
+                    <div className="step-direction pt-3">
+                      <div
+                        className={
+                          (stepsDone.includes("accommodation")
+                            ? "active"
+                            : "") + " step-line"
+                        }
+                      ></div>
+                    </div>
+                  </div>
+                  {/* STEP 3  */}
                   <div
-                    className={
-                      stepsDone.includes("activities")
-                        ? "darkblue-ball"
-                        : "grey-ball"
-                    }
-                  ></div>
-                  <div className="f-14 text-grey text-center">Step 3</div>
-                  <div className="text-darkblue text-center">Activities</div>
-                </div>
-              </div>
-              <div className="col">
-                <div className="step-direction pt-3">
+                    className="col-auto pointer"
+                    onClick={() => {
+                      setCurrentStep("activities");
+                    }}
+                  >
+                    <div className="itinerary-step">
+                      <div
+                        className={
+                          stepsDone.includes("activities")
+                            ? "darkblue-ball"
+                            : "grey-ball"
+                        }
+                      ></div>
+                      <div className="f-14 text-grey text-center">Step 3</div>
+                      <div className="text-darkblue text-center">
+                        Activities
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col">
+                    <div className="step-direction pt-3">
+                      <div
+                        className={
+                          (stepsDone.includes("activities") ? "active" : "") +
+                          " step-line"
+                        }
+                      ></div>
+                    </div>
+                  </div>
+                  {/* STEP 4  */}
                   <div
-                    className={
-                      (stepsDone.includes("activities") ? "active" : "") +
-                      " step-line"
-                    }
-                  ></div>
-                </div>
-              </div>
-              {/* STEP 4  */}
-              <div
-                className="col-auto pointer"
-                onClick={() => {
-                  setCurrentStep("transport");
-                }}
-              >
-                <div className="itinerary-step">
+                    className="col-auto pointer"
+                    onClick={() => {
+                      setCurrentStep("transport");
+                    }}
+                  >
+                    <div className="itinerary-step">
+                      <div
+                        className={
+                          stepsDone.includes("transport")
+                            ? "darkblue-ball"
+                            : "grey-ball"
+                        }
+                      ></div>
+                      <div className="f-14 text-grey text-center">Step 4</div>
+                      <div className="text-darkblue text-center">Transport</div>
+                    </div>
+                  </div>
+                  <div className="col">
+                    <div className="step-direction pt-3">
+                      <div
+                        className={
+                          (stepsDone.includes("transport") ? "active" : "") +
+                          " step-line"
+                        }
+                      ></div>
+                    </div>
+                  </div>
+                  {/* STEP 5  */}
                   <div
-                    className={
-                      stepsDone.includes("transport")
-                        ? "darkblue-ball"
-                        : "grey-ball"
-                    }
-                  ></div>
-                  <div className="f-14 text-grey text-center">Step 4</div>
-                  <div className="text-darkblue text-center">Transport</div>
-                </div>
-              </div>
-              <div className="col">
-                <div className="step-direction pt-3">
+                    className="col-auto pointer"
+                    onClick={() => {
+                      setCurrentStep("pricing");
+                    }}
+                  >
+                    <div className="itinerary-step">
+                      <div
+                        className={
+                          stepsDone.includes("pricing")
+                            ? "darkblue-ball"
+                            : "grey-ball"
+                        }
+                      ></div>
+                      <div className="f-14 text-grey text-center">Step 5</div>
+                      <div className="text-darkblue text-center">
+                        Pricing & Payment
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col">
+                    <div className="step-direction pt-3">
+                      <div
+                        className={
+                          (stepsDone.includes("pricing") ? "active" : "") +
+                          " step-line"
+                        }
+                      ></div>
+                    </div>
+                  </div>
+                  {/* STEP 6  */}
                   <div
-                    className={
-                      (stepsDone.includes("transport") ? "active" : "") +
-                      " step-line"
-                    }
-                  ></div>
-                </div>
-              </div>
-              {/* STEP 5  */}
-              <div
-                className="col-auto pointer"
-                onClick={() => {
-                  setCurrentStep("pricing");
-                }}
-              >
-                <div className="itinerary-step">
-                  <div
-                    className={
-                      stepsDone.includes("pricing")
-                        ? "darkblue-ball"
-                        : "grey-ball"
-                    }
-                  ></div>
-                  <div className="f-14 text-grey text-center">Step 5</div>
-                  <div className="text-darkblue text-center">
-                    Pricing & Payment
+                    className="col-auto pointer"
+                    onClick={() => {
+                      setCurrentStep("review");
+                    }}
+                  >
+                    <div className="itinerary-step">
+                      <div
+                        className={
+                          stepsDone.includes("review")
+                            ? "darkblue-ball"
+                            : "grey-ball"
+                        }
+                      ></div>
+                      <div className="f-14 text-grey text-center">Step 6</div>
+                      <div className="text-darkblue text-center">Review</div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div className="col">
-                <div className="step-direction pt-3">
-                  <div
-                    className={
-                      (stepsDone.includes("pricing") ? "active" : "") +
-                      " step-line"
-                    }
-                  ></div>
-                </div>
-              </div>
-              {/* STEP 6  */}
-              <div
-                className="col-auto pointer"
-                onClick={() => {
-                  setCurrentStep("review");
-                }}
-              >
-                <div className="itinerary-step">
-                  <div
-                    className={
-                      stepsDone.includes("review")
-                        ? "darkblue-ball"
-                        : "grey-ball"
-                    }
-                  ></div>
-                  <div className="f-14 text-grey text-center">Step 6</div>
-                  <div className="text-darkblue text-center">Review</div>
-                </div>
-              </div>
-            </div>
-          </div>
+            </>
+          )}
         </div>
 
         <div className="row pt-4">
