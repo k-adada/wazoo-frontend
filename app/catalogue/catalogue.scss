@@ -50,9 +50,12 @@
 }
 
 .service-tag {
-  border: 1px solid #132f3d;
   padding: 8px 6px;
   border-radius: 8px;
+  background-color: #ececec;
+  img {
+    opacity: 0.3;
+  }
 }
 
 .catalogue-card {

@@ -134,39 +134,39 @@ export default function CreateItineraries() {
                         <div className="col-auto px-2 py-1">
                           <div className="service-tag flex">
                             <Image src={locationIcon} alt="location" />
-                            <div className="text-darkblue">Paris, France</div>
+                            <div className="text-grey">Paris, France</div>
                           </div>
                         </div>
 
                         <div className="col-auto px-2 py-1">
                           <div className="service-tag flex">
                             <Image src={clockIcon} alt="time" />
-                            <div className="text-darkblue">3h</div>
+                            <div className="text-grey">3h</div>
                           </div>
                         </div>
 
                         <div className="col-auto px-2 py-1">
                           <div className="service-tag flex">
                             <Image src={calendarIcon} alt="calendar" />
-                            <div className="text-darkblue">Oct 11 - Oct 15</div>
+                            <div className="text-grey">Oct 11 - Oct 15</div>
                           </div>
                         </div>
                         <div className="col-auto px-2 py-1">
                           <div className="service-tag flex">
                             <Image src={dollarIcon} alt="dollar sign" />
-                            <div className="text-darkblue">$350</div>
+                            <div className="text-grey">$350</div>
                           </div>
                         </div>
                         <div className="col-auto px-2 py-1">
                           <div className="service-tag flex">
-                            <div className="text-darkblue">
+                            <div className="text-grey">
                               Outdoor Activity
                             </div>
                           </div>
                         </div>
                         <div className="col-auto px-2 py-1">
                           <div className="service-tag flex">
-                            <div className="text-darkblue">Sub-type</div>
+                            <div className="text-grey">Sub-type</div>
                           </div>
                         </div>
                       </div>
@@ -197,21 +197,21 @@ export default function CreateItineraries() {
                 <div className="col-auto px-2 py-1">
                   <div className="service-tag flex">
                     <Image src={locationIcon} alt="location" />
-                    <div className="text-darkblue pl-2">Paris, France</div>
+                    <div className="text-grey pl-2">Paris, France</div>
                   </div>
                 </div>
 
                 <div className="col-auto px-2 py-1">
                   <div className="service-tag flex">
                     <Image src={clockIcon} alt="time" />
-                    <div className="text-darkblue">3h</div>
+                    <div className="text-grey">3h</div>
                   </div>
                 </div>
 
                 <div className="col-auto px-2 py-1">
                   <div className="service-tag flex">
                     <Image src={calendarIcon} alt="calendar" />
-                    <div className="text-darkblue">Oct 11 - Oct 15</div>
+                    <div className="text-grey">Oct 11 - Oct 15</div>
                   </div>
                 </div>
       
