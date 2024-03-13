@@ -221,11 +221,7 @@ export default function CreateCatalogues() {
           {/* Preview Catalogue  */}
           {currentStep === "preview" && (
             <>
-              <CataloguePreview
-                setCurrentStep={setCurrentStep}
-                stepsDone={stepsDone}
-                setStepsDone={setStepsDone}
-              />
+              <CataloguePreview />
             </>
           )}
         </div>
