@@ -1,8 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import SingleSelect from "../SingleSelect";
-import BasicDateRangePicker from "../DateRangePicker";
 import CircularProgress from "@mui/material/CircularProgress";
 
 import saveIcon from "../../assets/Icon_Save.png";
@@ -42,7 +40,7 @@ export default function CatalogueDetails(props: {
           <div className="row">
             {/* Catalogue name  */}
             <div className="col-6">
-              <div className="text-darkblue pb-2">
+              <div className="text-darkblue pb-2 f-20">
                 Catalogue Name <span className="text-orange">*</span>
               </div>
               <div className="light-input">
@@ -56,7 +54,7 @@ export default function CatalogueDetails(props: {
 
             {/* Description */}
             <div className="col-12">
-              <div className="text-darkblue pt-8 pb-2">
+              <div className="text-darkblue pt-8 pb-2 f-20">
                 Description <span className="text-orange">*</span>
               </div>
               <div className="light-input">
@@ -80,14 +78,14 @@ export default function CatalogueDetails(props: {
                   <div className="flex justify-center">
                     <Image src={uploadIcon} alt="upload" />
                   </div>
-                  <div className="f-16 text-darkblue pt-3">
+                  <div className="f-20 text-darkblue pt-3">
                     Drag & drop files here
                   </div>
                   <div className="text-darkblue">or upload from desktop</div>
                 </div>
               </div>
             </div>
-            <div className="col-12 pt-6">
+            <div className="col-12 pt-6 pb-1">
               <div className="flex justify-between items-center">
                 <Image
                   src={themeIcon}
@@ -96,7 +94,9 @@ export default function CatalogueDetails(props: {
                   height={80}
                   className="rounded-lg"
                 />
-                <div className="f-16 text-darkblue">File name.png</div>
+                <div className="f-20 text-darkblue line-clamp-1">
+                  File name.png
+                </div>
                 <div className="uploaded-tag flex justify-between items-center px-3 pr-6">
                   <CircularProgress
                     variant="determinate"
@@ -104,12 +104,12 @@ export default function CatalogueDetails(props: {
                     style={{ height: "24px", width: "24px" }}
                   />
 
-                  <div className="text-white poppins-medium pl-2">Uploaded</div>
+                  <div className="text-white poppins-medium pl-2">100%</div>
                 </div>
                 <Image src={dotsIcon} alt="dots" className="cursor-pointer" />
               </div>
             </div>
-            <div className="col-12 pt-6">
+            <div className="col-12 py-1">
               <div className="flex justify-between items-center">
                 <Image
                   src={themeIcon}
@@ -118,7 +118,9 @@ export default function CatalogueDetails(props: {
                   height={80}
                   className="rounded-lg"
                 />
-                <div className="f-16 text-darkblue">File name.png</div>
+                <div className="f-20 text-darkblue line-clamp-1">
+                  File name.png
+                </div>
                 <div className="progress-tag flex justify-between items-center px-3">
                   <CircularProgress
                     variant="determinate"
@@ -130,7 +132,7 @@ export default function CatalogueDetails(props: {
                 <Image src={dotsIcon} alt="dots" className="cursor-pointer" />
               </div>
             </div>
-            <div className="col-12 pt-6">
+            <div className="col-12 py-1">
               <div className="flex justify-between items-center">
                 <Image
                   src={themeIcon}
@@ -139,7 +141,9 @@ export default function CatalogueDetails(props: {
                   height={80}
                   className="rounded-lg"
                 />
-                <div className="f-16 text-darkblue">File name.png</div>
+                <div className="f-20 text-darkblue line-clamp-1">
+                  File name.png
+                </div>
                 <div className="progress-tag flex justify-between items-center px-3">
                   <CircularProgress
                     variant="determinate"
@@ -153,7 +157,6 @@ export default function CatalogueDetails(props: {
             </div>
           </div>
         </div>
-
         <div className="col-auto pt-[64px]">
           <Link href="/catalogues">
             <div className="dark-button text-gold poppins-medium cursor-pointer">

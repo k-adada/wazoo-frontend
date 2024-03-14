@@ -281,7 +281,7 @@ export default function CatalogueBuilder(props: {
 
         {/* NEXT */}
         <div className="col-auto pt-[64px]">
-          <Link href="/itineraries">
+          <Link href="/catalogues">
             <div className="dark-button text-gold poppins-medium cursor-pointer">
               <div className="flex items-center h-full">
                 <Image src={addIcon} alt="eyeIcon" />

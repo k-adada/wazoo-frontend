@@ -168,7 +168,7 @@ export default function Catalogues() {
                   </div>
                 </div>
                 <div className="flex col-auto">
-                  <Link href="/create-itineraries">
+                  <Link href="/create-catalogues">
                     <div className="dark-button text-gold poppins-medium cursor-pointer">
                       <div className="flex items-center h-full">
                         <Image src={addIcon} alt="add icon" />

@@ -102,7 +102,7 @@ export default function CreateCatalogues() {
 
           {/*  STEPS BAR */}
           <div className="col-12 pt-6">
-            <div className="row">
+            <div className="row" style={{ maxWidth: "600px", margin: "auto" }}>
               {/* STEP 1  */}
               <div
                 className="col-auto pointer"
@@ -145,7 +145,7 @@ export default function CreateCatalogues() {
                   </div>
                 </div>
               </div>
-              <div className="col">
+              {/* <div className="col">
                 <div className="step-direction pt-3">
                   <div
                     className={
@@ -155,31 +155,7 @@ export default function CreateCatalogues() {
                     }
                   ></div>
                 </div>
-              </div>
-              {/* STEP 3  */}
-              <div
-                className="col-auto pointer"
-                onClick={() => {
-                  setCurrentStep("review");
-                  setStepsDone([
-                    "catalogue-details",
-                    "catalogue-builder",
-                    "review",
-                  ]);
-                }}
-              >
-                <div className="itinerary-step">
-                  <div
-                    className={
-                      stepsDone.includes("review")
-                        ? "darkblue-ball"
-                        : "grey-ball"
-                    }
-                  ></div>
-                  <div className="f-14 text-grey text-center">Step 6</div>
-                  <div className="text-darkblue text-center">Review</div>
-                </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
