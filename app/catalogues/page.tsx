@@ -363,7 +363,7 @@ export default function Catalogues() {
                               <div className="">
                                 <Image src={speakerIcon} alt="speaker" />
                               </div>
-                              <div className="pl-2"> Create Listing</div>
+                              <div className="pl-2"> Publish Catalogue</div>
                             </div>
                           </div>
                         </div>

@@ -8,11 +8,10 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 
 import searchIcon from "../../assets/Icon_Search_Black.png";
 import audienceIcon from "../../assets/audience.svg";
+import speakerGoldIcon from "../../assets/speaker_gold.svg";
 import audienceGreyIcon from "../../assets/audience_grey.svg";
 import filterIcon from "../../assets/Icon_Itinerary.png";
 import Image from "next/image";
@@ -196,8 +195,8 @@ export default function AudienceDrawer(props: {
                   onClick={() => setOpenAudiences(false)}
                 >
                   <div className="flex items-center justify-center h-full">
-                    <Image src={audienceIcon} alt="audienceIcon" />
-                    <div className="pl-4">Link Audience(s)</div>
+                    <Image src={speakerGoldIcon} alt="speakerGoldIcon" />
+                    <div className="pl-4">Publish Catalogue</div>
                   </div>
                 </div>
               </div>
