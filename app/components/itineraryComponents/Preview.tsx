@@ -67,6 +67,10 @@ export default function Preview(props: {
     ]);
   }, [setStepsDone]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="container-fluid transport">
       <div className="row">

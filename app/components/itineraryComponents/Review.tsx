@@ -11,6 +11,7 @@ import SingleSelect from "../SingleSelect";
 import BasicDateRangePicker from "../DateRangePicker";
 
 import saveIcon from "../../assets/Icon_Save.png";
+import eyeIcon from "../../assets/Icon_Preview_gold.png";
 import downArrowIcon from "../../assets/Icon_Arrow_Down_white.png";
 import tourImage from "../../assets/tour_effel.jpg";
 import Link from "next/link";
@@ -561,7 +562,8 @@ export default function Review(props: {
             }}
           >
             <div className="flex items-center h-full">
-              <div className="">Preview</div>
+              <Image src={eyeIcon} alt="preview gold" />
+              <div className="pl-4">Preview</div>
             </div>
           </div>
         </div>
