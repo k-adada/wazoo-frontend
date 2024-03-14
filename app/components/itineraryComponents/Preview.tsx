@@ -16,12 +16,45 @@ import PricingDetails from "../pricingComponents/PricingDetails";
 import Link from "next/link";
 import ThumbsSwiper from "../ThumbsSwiper";
 
+// importing images
+
+import louvreImage from "../../assets/images/services/Louvre.jpg";
+import lucerneImage from "../../assets/images/services/lucerne.jpg";
+import montsaintImage from "../../assets/images/services/montsaintmich.jpg";
+import triomphImage from "../../assets/images/services/Triomphe.jpg";
+import notreImage from "../../assets/images/services/NotreDameCathedral.jpg";
+import quartierImage from "../../assets/images/services/Quartier_Latin.jpg";
+import alpsImage from "../../assets/images/services/alps.webp";
+import bernImage from "../../assets/images/services/bern.jpg";
+import eifelImage from "../../assets/images/services/EiffelTower.jpg";
+import brandenImage from "../../assets/images/services/BrandenbergGate.webp";
+import garnierImage from "../../assets/images/services/Garnier.webp";
+import genevaImage from "../../assets/images/services/Geneva.webp";
+import jungerfrauImage from "../../assets/images/services/jungfraujoch.jpg";
+import interlakenImage from "../../assets/images/services/interlaken.jpg";
+
 export default function Preview(props: {
   setCurrentStep: any;
   stepsDone: any;
   setStepsDone: any;
 }) {
   const { setCurrentStep, stepsDone, setStepsDone } = props;
+  const [tempImages, setTempImages] = useState([
+    louvreImage,
+    lucerneImage,
+    montsaintImage,
+    triomphImage,
+    notreImage,
+    quartierImage,
+    alpsImage,
+    bernImage,
+    eifelImage,
+    brandenImage,
+    garnierImage,
+    genevaImage,
+    jungerfrauImage,
+    interlakenImage,
+  ]);
 
   useEffect(() => {
     setStepsDone([
@@ -32,11 +65,9 @@ export default function Preview(props: {
       "pricing",
     ]);
   }, [setStepsDone]);
+
   return (
-    <div
-      className="container-fluid transport"
-    
-    >
+    <div className="container-fluid transport">
       <div className="row">
         {/* TITLE AND LOGO HERE */}
         <div className="col-12 pt-5">
@@ -65,7 +96,7 @@ export default function Preview(props: {
           <div className="bg-white rounded-lg py-4 px-3">
             <div className="row ">
               <div className="col-7">
-                <ThumbsSwiper />
+                <ThumbsSwiper tempImages={tempImages} />
               </div>
               <div className="col-5">
                 <div className="flex justify-between pt-4">

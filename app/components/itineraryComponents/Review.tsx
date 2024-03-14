@@ -150,7 +150,7 @@ export default function Review(props: {
               <div className="row">
                 {/* Itinerary name  */}
                 <div className="col-4">
-                  <div className="text-darkblue pb-2">
+                  <div className="text-darkblue pb-2 f-20">
                     Itinerary Name <span className="text-orange">*</span>
                   </div>
                   <div className="light-input">
@@ -163,7 +163,7 @@ export default function Review(props: {
                 </div>
                 {/* reference number  */}
                 <div className="col-4">
-                  <div className="text-darkblue pb-2">
+                  <div className="text-darkblue pb-2 f-20">
                     Reference Numbver <span className="text-orange">*</span>
                   </div>
                   <div className="light-input">
@@ -178,7 +178,7 @@ export default function Review(props: {
                 </div>
                 {/* validity dates */}
                 <div className="col-4">
-                  <div className="text-darkblue">
+                  <div className="text-darkblue f-20">
                     Validity Dates<span className="text-orange">*</span>
                   </div>
                   <div className="validity-dates">
@@ -187,7 +187,7 @@ export default function Review(props: {
                 </div>
                 {/* theme  */}
                 <div className="col-4">
-                  <div className="text-darkblue pb-2 pt-8">
+                  <div className="text-darkblue pb-2 pt-8 f-20">
                     Theme <span className="text-orange">*</span>
                   </div>
                   <div className="light-input">
@@ -207,7 +207,7 @@ export default function Review(props: {
                 </div>
                 {/* select season  */}
                 <div className="col-4">
-                  <div className="text-darkblue pb-2 pt-8">
+                  <div className="text-darkblue pb-2 pt-8 f-20">
                     Seasonality<span className="text-orange">*</span>
                   </div>
                   <div className="remove-mui-label">
@@ -224,7 +224,7 @@ export default function Review(props: {
                 </div>
                 {/* Trip Length  */}
                 <div className="col-4">
-                  <div className="text-darkblue pb-2 pt-8">
+                  <div className="text-darkblue pb-2 pt-8 f-20">
                     Trip Lenth <span className="text-orange">*</span>
                   </div>
                   <div className="light-input">
@@ -238,7 +238,7 @@ export default function Review(props: {
 
                 {/* Number of Adults  */}
                 <div className="col-3">
-                  <div className="text-darkblue pb-2 pt-8">
+                  <div className="text-darkblue pb-2 pt-8 f-20">
                     Number of Adults <span className="text-orange">*</span>
                   </div>
                   <div className="light-input">
@@ -252,7 +252,7 @@ export default function Review(props: {
 
                 {/* Number of Children  */}
                 <div className="col-3">
-                  <div className="text-darkblue pb-2 pt-8">
+                  <div className="text-darkblue pb-2 pt-8 f-20">
                     Number of Children <span className="text-orange">*</span>
                   </div>
                   <div className="light-input">
@@ -266,7 +266,7 @@ export default function Review(props: {
 
                 {/* Images  */}
                 <div className="col-6">
-                  <div className="text-darkblue pb-2 pt-8">Images</div>
+                  <div className="text-darkblue pb-2 pt-8 f-20">Images</div>
                   <div className="flex">
                     <div className="pr-1">
                       <Image
@@ -321,7 +321,7 @@ export default function Review(props: {
 
                 {/* Description */}
                 <div className="col-12">
-                  <div className="text-darkblue pt-8 pb-2">
+                  <div className="text-darkblue pt-8 pb-2 f-20">
                     Description <span className="text-orange">*</span>
                   </div>
                   <div className="light-input">
