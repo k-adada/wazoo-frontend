@@ -107,7 +107,7 @@ export default function CreateServices() {
               </div>
               <div className="row justify-between pt-10">
                 <div className="flex col-auto">
-                  <Link href="#">
+                  <Link href="/create-itineraries">
                     <div className="dark-button text-gold poppins-medium cursor-pointer">
                       <div className="flex items-center h-full">
                         <Image src={itineraryIcon} alt="itineraryIcon icon" />
