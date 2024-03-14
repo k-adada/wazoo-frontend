@@ -288,7 +288,7 @@ export default function MyPricing(props: any) {
                   </div>
                   <div className="flex items-center justify-between pb-2 border-b">
                     <div className="text-darkblue">
-                      Sixteen Thousand dollars
+                      Thirteen Thousand dollars
                     </div>
                     <div className="text-darkblue f-16 poppins-bold">
                       - $13,000.00
@@ -301,7 +301,7 @@ export default function MyPricing(props: any) {
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="text-darkblue">
-                      Sixteen Thousand dollars
+                      Three Thousand dollars
                     </div>
                     <div className="text-darkblue f-16 poppins-bold">
                       $3,000.00
