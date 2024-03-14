@@ -8,70 +8,91 @@ import activityIcon from "../../assets/Icon_Activity.png";
 import carIcon from "../../assets/Icon_car.png";
 import homeIcon from "../../assets/Icon_Home_dark.png";
 
+import casinoImage from "../../assets/Bellagio-Hotel-Casino-Las-Vegas.webp";
+import louvreImage from "../../assets/images/services/Louvre.jpg";
+import triomphImage from "../../assets/images/services/Triomphe.jpg";
+import mercedesImage from "../../assets/mercedes.webp";
+import genevaImage from "../../assets/images/services/Geneva.webp";
+import jungerfrauImage from "../../assets/images/services/jungfraujoch.jpg";
+import interlakenImage from "../../assets/images/services/interlaken.jpg";
+
 export default function Totals(props: any) {
   const { title = true } = props;
-  const [totals, setTotals] = useState([
-    {
-      id: "1",
-      serviceType: "Pricing 1",
-      description: "Pricing 1 Description",
-      location: "Location 1",
-      method: "Method 1",
-      duration: "Duration 1",
-      timeslot: "Timeslot 1",
-      price: "350",
-    },
-    {
-      id: "2",
-      serviceType: "Pricing 2",
-      description: "Pricing 2 Description",
-      location: "Location 2",
-      method: "Method 2",
-      duration: "Duration 2",
-      timeslot: "Timeslot 2",
-      price: "350",
-    },
-    {
-      id: "3",
-      serviceType: "Pricing 3",
-      description: "Pricing 3 Description",
-      location: "Location 3",
-      method: "Method 3",
-      duration: "Duration 3",
-      timeslot: "Timeslot 3",
-      price: "350",
-    },
-    {
-      id: "4",
-      serviceType: "Pricing 4",
-      description: "Pricing 4 Description",
-      location: "Location 4",
-      method: "Method 4",
-      duration: "Duration 4",
-      timeslot: "Timeslot 4",
-      price: "350",
-    },
-    {
-      id: "5",
-      serviceType: "Pricing 5",
-      description: "Pricing 5 Description",
-      location: "Location 5",
-      method: "Method 5",
-      duration: "Duration 5",
-      timeslot: "Timeslot 5",
-      price: "350",
-    },
-    {
-      id: "6",
-      serviceType: "Pricing 6",
-      description: "Pricing 6 Description",
-      location: "Location 6",
-      method: "Method 6",
-      duration: "Duration 6",
-      timeslot: "Timeslot 6",
-      price: "350",
-    },
-  ]);
+  const [totals, setTotals] = useState({
+    activities: [
+      {
+        id: "2",
+        serviceType: "Musee du Louvre",
+        description: "Pricing 2 Description",
+        location: "Location 2",
+        method: "Method 2",
+        duration: "Duration 2",
+        timeslot: "Timeslot 2",
+        price: "350",
+        image: louvreImage,
+      },
+      {
+        id: "3",
+        serviceType: "Arc de Triomphe",
+        description: "Pricing 3 Description",
+        location: "Location 3",
+        method: "Method 3",
+        duration: "Duration 3",
+        timeslot: "Timeslot 3",
+        price: "350",
+        image: triomphImage,
+      },
+      {
+        id: "5",
+        serviceType: "Geneve",
+        description: "Pricing 5 Description",
+        location: "Location 5",
+        method: "Method 5",
+        duration: "Duration 5",
+        timeslot: "Timeslot 5",
+        price: "350",
+        image: genevaImage,
+      },
+      {
+        id: "6",
+        serviceType: "JungerFrau",
+        description: "Pricing 6 Description",
+        location: "Location 6",
+        method: "Method 6",
+        duration: "Duration 6",
+        timeslot: "Timeslot 6",
+        price: "350",
+        image: jungerfrauImage,
+      },
+    ],
+    accommodations: [
+      {
+        id: "1",
+        serviceType: "The Ritz Hotel",
+        description: "Pricing 1 Description",
+        location: "Location 1",
+        method: "Method 1",
+        duration: "Duration 1",
+        timeslot: "Timeslot 1",
+        price: "350",
+        image: casinoImage,
+      },
+    ],
+    trasnport: [
+      {
+        id: "4",
+        serviceType: "CDG to The Ritz",
+        description: "Pricing 4 Description",
+        location: "Location 4",
+        method: "Method 4",
+        duration: "Duration 4",
+        timeslot: "Timeslot 4",
+        price: "350",
+        image: mercedesImage,
+      },
+    ],
+    other: [],
+  });
 
   return (
     <div className="container-fluid totals">
@@ -104,14 +125,14 @@ export default function Totals(props: any) {
                   $12,000.00
                 </div>
 
-                {totals.map((total, index) => (
+                {totals.activities.map((total, index) => (
                   <div className="flex items-center py-1" key={total.id}>
                     <div className="">
                       <Image
                         className="rounded-lg object-cover"
                         style={{ width: "40px", height: "40px" }}
-                        src={parisImage}
-                        alt="paris"
+                        src={total.image}
+                        alt={total.description}
                       />
                     </div>
                     <div
@@ -141,26 +162,24 @@ export default function Totals(props: any) {
                   $4,000.00
                 </div>
 
-                {totals.map((total, index) => (
+                {totals.accommodations.map((total, index) => (
                   <>
-                    {index < 1 && (
-                      <div className="flex items-center py-1" key={total.id}>
-                        <div className="">
-                          <Image
-                            className="rounded-lg object-cover"
-                            style={{ width: "40px", height: "40px" }}
-                            src={parisImage}
-                            alt="paris"
-                          />
-                        </div>
-                        <div
-                          key={total.id}
-                          className="poppins-medium text-darkblue pl-2"
-                        >
-                          {total.serviceType}
-                        </div>
+                    <div className="flex items-center py-1" key={total.id}>
+                      <div className="">
+                        <Image
+                          className="rounded-lg object-cover"
+                          style={{ width: "40px", height: "40px" }}
+                          src={total.image}
+                          alt={total.description}
+                        />
                       </div>
-                    )}
+                      <div
+                        key={total.id}
+                        className="poppins-medium text-darkblue pl-2"
+                      >
+                        {total.serviceType}
+                      </div>
+                    </div>
                   </>
                 ))}
               </div>
@@ -182,26 +201,24 @@ export default function Totals(props: any) {
                   $3,300.00
                 </div>
 
-                {totals.map((total, index) => (
+                {totals.trasnport.map((total, index) => (
                   <>
-                    {index < 2 && (
-                      <div className="flex items-center py-1" key={total.id}>
-                        <div className="">
-                          <Image
-                            className="rounded-lg object-cover"
-                            style={{ width: "40px", height: "40px" }}
-                            src={parisImage}
-                            alt="paris"
-                          />
-                        </div>
-                        <div
-                          key={total.id}
-                          className="poppins-medium text-darkblue pl-2"
-                        >
-                          {total.serviceType}
-                        </div>
+                    <div className="flex items-center py-1" key={total.id}>
+                      <div className="">
+                        <Image
+                          className="rounded-lg object-cover"
+                          style={{ width: "40px", height: "40px" }}
+                          src={total.image}
+                          alt={total.description}
+                        />
                       </div>
-                    )}
+                      <div
+                        key={total.id}
+                        className="poppins-medium text-darkblue pl-2"
+                      >
+                        {total.serviceType}
+                      </div>
+                    </div>
                   </>
                 ))}
               </div>
@@ -223,26 +240,24 @@ export default function Totals(props: any) {
                   $0.00
                 </div>
 
-                {totals.map((total, index) => (
+                {totals.other.map((total, index) => (
                   <>
-                    {index < 0 && (
-                      <div className="flex items-center py-1" key={total.id}>
-                        <div className="">
-                          <Image
-                            className="rounded-lg object-cover"
-                            style={{ width: "40px", height: "40px" }}
-                            src={parisImage}
-                            alt="paris"
-                          />
-                        </div>
-                        <div
-                          key={total.id}
-                          className="poppins-medium text-darkblue pl-2"
-                        >
-                          {total.serviceType}
-                        </div>
+                    <div className="flex items-center py-1" key={total.id}>
+                      <div className="">
+                        <Image
+                          className="rounded-lg object-cover"
+                          style={{ width: "40px", height: "40px" }}
+                          src={parisImage}
+                          alt="paris"
+                        />
                       </div>
-                    )}
+                      <div
+                        key={total.id}
+                        className="poppins-medium text-darkblue pl-2"
+                      >
+                        {total.serviceType}
+                      </div>
+                    </div>
                   </>
                 ))}
               </div>
