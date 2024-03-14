@@ -13,6 +13,7 @@ import MailIcon from "@mui/icons-material/Mail";
 
 import searchIcon from "../../assets/Icon_Search_Black.png";
 import audienceIcon from "../../assets/audience.svg";
+import audienceGreyIcon from "../../assets/audience_grey.svg";
 import filterIcon from "../../assets/Icon_Itinerary.png";
 import Image from "next/image";
 
@@ -132,16 +133,26 @@ export default function AudienceDrawer(props: {
                       <div className="col-12 px-2">
                         <div className="flex py-2 px-2 border-dashed rounded-lg items-center justify-between">
                           <div className="flex">
-                            <Image
-                              src={audience.image}
-                              alt="tour image"
-                              className="rounded-lg"
+                            <div
+                              className="rounded-lg bg-grey flex items-center justify-center"
                               style={{
                                 width: "70px",
                                 height: "70px",
-                                objectFit: "cover",
+                                objectFit: "contain",
                               }}
-                            />
+                            >
+                              <Image
+                                src={audienceGreyIcon}
+                                alt="tour image"
+                                className="rounded-lg"
+                                style={{
+                                  width: "40px",
+                                  height: "40px",
+                                  objectFit: "contain",
+                                }}
+                              />
+                            </div>
+
                             <div className="pl-3">
                               <div className="f-24 text-darkblue poppins-medium">
                                 {audience.name}
@@ -181,6 +192,7 @@ export default function AudienceDrawer(props: {
               <div className="fixed w-[440px] right-[24px] bottom-10">
                 <div
                   className="dark-button text-gold poppins-medium pointer"
+                  style={{ height: "55px" }}
                   onClick={() => setOpenAudiences(false)}
                 >
                   <div className="flex items-center justify-center h-full">
