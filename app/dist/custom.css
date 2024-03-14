@@ -117,6 +117,22 @@
   padding-left: 8px;
   padding-right: 8px;
 }
+.col.pr-2,
+.col-auto.pr-2,
+.col-1.pr-2,
+.col-2.pr-2,
+.col-3.pr-2,
+.col-4.pr-2,
+.col-5.pr-2,
+.col-6.pr-2,
+.col-7.pr-2,
+.col-8.pr-2,
+.col-9.pr-2,
+.col-10.pr-2,
+.col-11.pr-2,
+.col-12.pr-2 {
+  padding-right: 8px;
+}
 .col.px-1,
 .col-auto.px-1,
 .col-1.px-1,
