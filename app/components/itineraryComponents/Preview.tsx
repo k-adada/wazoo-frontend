@@ -8,7 +8,8 @@ import middleEastLogo from "../../assets/middle_east_yours.png";
 import calendarIcon from "../../assets/Icon_Calendar.png";
 import mercedesImage from "../../assets/mercedes.webp";
 import locationIcon from "../../assets/Icon_Location.png";
-import bgImage from "../../assets/Itinerary_background_image.jpg";
+import treeIcon from "../../assets/goldTree.svg";
+import casinoImage from "../../assets/Bellagio-Hotel-Casino-Las-Vegas.webp";
 
 import Totals from "../pricingComponents/Totals";
 import MyPricing from "../pricingComponents/MyPricing";
@@ -100,12 +101,19 @@ export default function Preview(props: {
               </div>
               <div className="col-5">
                 <div className="flex justify-between pt-4">
-                  <div className="f-16 text-darkblue poppins-semibold">
+                  <div className="f-28 text-darkblue poppins-semibold">
                     Jon&apos;s Trip to France
                   </div>
                   <div className="flex">
+                    <div className="pr-1">
+                      <Image
+                        src={locationIcon}
+                        alt="location"
+                        style={{ width: "35px", height: "35px" }}
+                      />
+                    </div>
                     <div className="">
-                      <div className="f-16 text-darkblue poppins-semibold">
+                      <div className="f-28 text-darkblue poppins-semibold">
                         France
                       </div>
                       <div className="text-darkblue text-right">5 Days</div>
@@ -113,9 +121,13 @@ export default function Preview(props: {
                   </div>
                 </div>
 
-                <div className="flex items-center cursor-pointer pt-4">
+                <div className="flex items-center pt-1">
                   <div className="user-icon">
-                    <Image src={avatarIcon} alt="avatar" />
+                    <Image
+                      src={avatarIcon}
+                      alt="avatar"
+                      style={{ width: "50px", height: "50px" }}
+                    />
                   </div>
                   <div className="text-grey pl-4">Brit Ferguson</div>
                 </div>
@@ -129,22 +141,20 @@ export default function Preview(props: {
                 </div>
 
                 <div className="flex">
-                  <div className="bg-darkblue text-gold f-12 mr-1 px-2 py-2 rounded-lg">
-                    Medium
-                  </div>
-                  <div className="bg-darkblue text-gold f-12 mx-1 px-2 py-2 rounded-lg">
-                    5 days
-                  </div>
-                  <div className="bg-darkblue text-gold f-12 mx-1 px-2 py-2 rounded-lg">
-                    Theme
-                  </div>
-                  <div className="bg-darkblue text-gold f-12 mx-1 px-2 py-2 rounded-lg">
-                    Seasonality
+                  <div className="bg-darkblue text-gold f-12 mx-1 px-2 py-2 rounded-lg flex items-center">
+                    <div className="pr-2">
+                      <Image
+                        style={{ width: "20px", height: "20px" }}
+                        src={treeIcon}
+                        alt="calendar gold"
+                      />
+                    </div>
+                    <div className="">Theme</div>
                   </div>
                   <div className="bg-darkblue text-gold f-12 mx-1 px-2 py-2 rounded-lg flex items-center">
                     <div className="pr-2">
                       <Image
-                        style={{ width: "18px", height: "18px" }}
+                        style={{ width: "20px", height: "20px" }}
                         src={calendarIcon}
                         alt="calendar gold"
                       />
@@ -169,7 +179,7 @@ export default function Preview(props: {
                 <div className="row">
                   <div className="col-4 border-right">
                     <div className="">
-                      <div className="f-16 text-darkblue poppins-bold pb-3">
+                      <div className="f-20 text-darkblue poppins-bold pb-3">
                         Day 1
                       </div>
                       <div className="f-12 text-darkblue poppins-medium">
@@ -179,26 +189,32 @@ export default function Preview(props: {
                     </div>
                   </div>
                   <div className="col-8">
-                    <div className="f-16 poppins-bold text-darkblue">
+                    <div className="f-28 poppins-bold text-darkblue">
                       May 1, 2024
                     </div>
-                    <div className="poppins-semibold text-darkblue f-16">
-                      Arrive in Paris, France
+                    <div className="flex pb-4">
+                      <div className="">
+                        <Image src={locationIcon} alt="location icon" />
+                      </div>
+                      <div className="poppins-semibold text-darkblue f-20 pl-1">
+                        Arrive in Paris, France
+                      </div>
                     </div>
 
                     {/* SERVICE CARD  */}
-                    <div className="bg-grey flex rounded-lg px-4 py-4">
-                      <div className="">
-                        <Image
-                          src={mercedesImage}
-                          alt="car"
-                          style={{ height: "110px" }}
-                          className="rounded-lg object-cover w-full"
-                        />
+                    <div className="bg-grey flex rounded-lg px-3 py-3">
+                      <div className="" style={{ minWidth: "145px" }}>
+                        <div className="image-wrapper-72">
+                          <Image
+                            src={mercedesImage}
+                            alt="car"
+                            className="rounded-lg"
+                          />
+                        </div>
                       </div>
                       <div className="pl-4">
                         <div className="f-16 text-darkblue poppins-semibold">
-                          Transfer from CDG to Hilton
+                          Transfer from CDG to The Ritz
                         </div>
                         <div className="f-12 text-grey">
                           Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -226,18 +242,19 @@ export default function Preview(props: {
                     </div>
 
                     {/* SERVICE CARD  */}
-                    <div className="bg-grey flex rounded-lg px-4 py-4 mt-3">
-                      <div className="">
-                        <Image
-                          src={mercedesImage}
-                          alt="car"
-                          style={{ height: "110px" }}
-                          className="rounded-lg object-cover w-full"
-                        />
+                    <div className="bg-grey flex rounded-lg px-3 py-3 mt-3">
+                      <div className="" style={{ minWidth: "145px" }}>
+                        <div className="image-wrapper-72">
+                          <Image
+                            src={casinoImage}
+                            alt="casino"
+                            className="rounded-lg"
+                          />
+                        </div>
                       </div>
                       <div className="pl-4">
                         <div className="f-16 text-darkblue poppins-semibold">
-                          Transfer from CDG to Hilton
+                          Check-in at The Ritz
                         </div>
                         <div className="f-12 text-grey">
                           Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -269,7 +286,7 @@ export default function Preview(props: {
                 <div className="row pt-6">
                   <div className="col-4 border-right">
                     <div className="">
-                      <div className="f-16 text-darkblue poppins-bold pb-3">
+                      <div className="f-20 text-darkblue poppins-bold pb-3">
                         Day 2
                       </div>
                       <div className="f-12 text-darkblue poppins-medium">
@@ -279,26 +296,32 @@ export default function Preview(props: {
                     </div>
                   </div>
                   <div className="col-8">
-                    <div className="f-16 poppins-bold text-darkblue">
+                    <div className="f-28 poppins-bold text-darkblue">
                       May 2, 2024
                     </div>
-                    <div className="poppins-semibold text-darkblue f-16">
-                      Arrive in Lyon, France
+                    <div className="flex pb-4">
+                      <div className="">
+                        <Image src={locationIcon} alt="location icon" />
+                      </div>
+                      <div className="poppins-semibold text-darkblue f-20 pl-1">
+                        Paris, France
+                      </div>
                     </div>
 
                     {/* SERVICE CARD  */}
-                    <div className="bg-grey flex rounded-lg px-4 py-4">
-                      <div className="">
-                        <Image
-                          src={mercedesImage}
-                          alt="car"
-                          style={{ height: "110px" }}
-                          className="rounded-lg object-cover w-full"
-                        />
+                    <div className="bg-grey flex rounded-lg px-3 py-3">
+                      <div className="" style={{ minWidth: "145px" }}>
+                        <div className="image-wrapper-72">
+                          <Image
+                            src={louvreImage}
+                            alt="louvre"
+                            className="rounded-lg"
+                          />
+                        </div>
                       </div>
                       <div className="pl-4">
                         <div className="f-16 text-darkblue poppins-semibold">
-                          Transfer from CDG to Hilton
+                          Louvre Museum
                         </div>
                         <div className="f-12 text-grey">
                           Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -307,7 +330,10 @@ export default function Preview(props: {
 
                         <div className="flex">
                           <div className="f-10 bg-darkgrey rounded-full py-1 px-2">
-                            #Outdoor Activity
+                            #Culture
+                          </div>
+                          <div className="f-10 bg-darkgrey rounded-full py-1 px-2 ml-1">
+                            #History
                           </div>
                         </div>
                         <div className="flex items-center pt-1">
@@ -326,18 +352,19 @@ export default function Preview(props: {
                     </div>
 
                     {/* SERVICE CARD  */}
-                    <div className="bg-grey flex rounded-lg px-4 py-4 mt-3">
-                      <div className="">
-                        <Image
-                          src={mercedesImage}
-                          alt="car"
-                          style={{ height: "110px" }}
-                          className="rounded-lg object-cover w-full"
-                        />
+                    <div className="bg-grey flex rounded-lg px-3 py-3 mt-3">
+                      <div className="" style={{ minWidth: "145px" }}>
+                        <div className="image-wrapper-72">
+                          <Image
+                            src={triomphImage}
+                            alt="car"
+                            className="rounded-lg"
+                          />
+                        </div>
                       </div>
                       <div className="pl-4">
                         <div className="f-16 text-darkblue poppins-semibold">
-                          Transfer from CDG to Hilton
+                          Arc De Triomphe
                         </div>
                         <div className="f-12 text-grey">
                           Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -345,8 +372,11 @@ export default function Preview(props: {
                         </div>
 
                         <div className="flex">
-                          <div className="f-10 bg-darkgrey rounded-full py-1 px-2">
-                            #Outdoor Activity
+                          <div className="f-10 bg-darkgrey rounded-full py-1 px-2 ">
+                            #History
+                          </div>
+                          <div className="f-10 bg-darkgrey rounded-full py-1 px-2 ml-1">
+                            #Landmark
                           </div>
                         </div>
                         <div className="flex items-center pt-1">
@@ -370,7 +400,7 @@ export default function Preview(props: {
               <div className="col-5">
                 <iframe
                   className="w-full rounded-lg"
-                  height="550"
+                  height="744"
                   style={{ border: "0" }}
                   loading="lazy"
                   allowFullScreen
