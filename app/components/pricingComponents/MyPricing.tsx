@@ -28,16 +28,16 @@ export default function MyPricing(props: any) {
   return (
     <div className="container-fluid myPricings">
       <div className="row">
-        <div className="col-12 pt-8 pb-4">
-          {title && (
+        {title && (
+          <div className="col-12 pt-8 pb-4">
             <div className="f-32 text-darkblue poppins-semibold">
               My Pricing & Payment Terms
             </div>
-          )}
-        </div>
+          </div>
+        )}
 
         {/* PRICING AND PAYMENT TERMS */}
-        <div className="col-12 pt-1">
+        <div className="col-12 pt-2">
           <div className="row bg-white py-5 px-4 rounded-lg">
             <div className="col-5">
               <div className="flex items-center pb-3">
@@ -300,9 +300,7 @@ export default function MyPricing(props: any) {
                     Net Profit
                   </div>
                   <div className="flex items-center justify-between">
-                    <div className="text-darkblue">
-                      Three Thousand dollars
-                    </div>
+                    <div className="text-darkblue">Three Thousand dollars</div>
                     <div className="text-darkblue f-16 poppins-bold">
                       $3,000.00
                     </div>

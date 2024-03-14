@@ -45,16 +45,16 @@ export default function PricingDetails(props: any) {
     <div className="container-fluid pricing-details">
       <div className="row">
         {/* Pricing Details */}
-
-        <div className="col-12 pt-5 pb-4">
-          {title && (
+        {title && (
+          <div className="col-12 pt-5 pb-4">
             <div className="f-32 text-darkblue poppins-semibold">
               Pricing Details
             </div>
-          )}
-        </div>
+          </div>
+        )}
+
         {/* SERVICE PROVIDERS BAR */}
-        <div className="col-12">
+        <div className="col-12 pt-2">
           <div className="row rounded-lg">
             {/* service provider  */}
             {serviceProviders.map((serviceProvider, index) => (

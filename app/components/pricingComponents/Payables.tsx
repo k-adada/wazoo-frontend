@@ -123,14 +123,14 @@ export default function Payables(props: any) {
   return (
     <div className="container-fluid payables">
       <div className="row">
-        <div className="col-12 pt-5 pb-4">
-          {title && (
+        {title && (
+          <div className="col-12 pt-5 pb-4">
             <div className="f-32 text-darkblue poppins-semibold">Payables</div>
-          )}
-        </div>
+          </div>
+        )}
 
         {/* SERVICE PROVIDERS BAR */}
-        <div className="col-12">
+        <div className="col-12 pt-2">
           <div className="row rounded-lg">
             {/* service provider  */}
             {serviceProviders.map((serviceProvider, index) => (
@@ -476,7 +476,10 @@ export default function Payables(props: any) {
                         />
                       </div>
                     </div>
-                    <div className="col-auto px-2" style={{ paddingLeft: "0px" }}>
+                    <div
+                      className="col-auto px-2"
+                      style={{ paddingLeft: "0px" }}
+                    >
                       <div
                         className=" pointer"
                         onClick={() => {

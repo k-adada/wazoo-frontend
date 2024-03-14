@@ -120,13 +120,13 @@ export default function Totals(props: any) {
   return (
     <div className="container-fluid totals">
       <div className="row">
-        <div className="col-12 pt-5 pb-4">
-          {title && (
+        {title && (
+          <div className="col-12 pt-5 pb-4">
             <div className="f-32 text-darkblue poppins-semibold">Totals</div>
-          )}
-        </div>
+          </div>
+        )}
 
-        <div className="col-12">
+        <div className="col-12 pt-2">
           <div className="bg-white row rounded-lg py-8">
             {/* activities  */}
             <div className="col border-right">
