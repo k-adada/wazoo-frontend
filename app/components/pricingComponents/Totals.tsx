@@ -90,8 +90,31 @@ export default function Totals(props: any) {
         price: "350",
         image: mercedesImage,
       },
+      {
+        id: "7",
+        serviceType: "The Ritz to CDG",
+        description: "Pricing 4 Description",
+        location: "Location 4",
+        method: "Method 4",
+        duration: "Duration 4",
+        timeslot: "Timeslot 4",
+        price: "350",
+        image: mercedesImage,
+      },
     ],
-    other: [],
+    other: [
+      {
+        id: "8",
+        serviceType: "InterLaken Tour",
+        description: "Pricing 4 Description",
+        location: "Location 4",
+        method: "Method 4",
+        duration: "Duration 4",
+        timeslot: "Timeslot 4",
+        price: "350",
+        image: interlakenImage,
+      },
+    ],
   });
 
   return (
@@ -228,7 +251,7 @@ export default function Totals(props: any) {
             <div className="col">
               <div className="px-5">
                 <div className="f-24 text-darkblue text-center poppins-bold">
-                  0
+                  1
                 </div>
                 <div className="total-icon pt-2">
                   <Image className="m-auto" src={carIcon} alt="carIcon" />
@@ -237,7 +260,7 @@ export default function Totals(props: any) {
                   Other
                 </div>
                 <div className="f-16 poppins-semibold text-darkblue text-center pb-8">
-                  $0.00
+                  $1,700.00
                 </div>
 
                 {totals.other.map((total, index) => (
@@ -247,7 +270,7 @@ export default function Totals(props: any) {
                         <Image
                           className="rounded-lg object-cover"
                           style={{ width: "40px", height: "40px" }}
-                          src={parisImage}
+                          src={total.image}
                           alt="paris"
                         />
                       </div>
@@ -268,7 +291,7 @@ export default function Totals(props: any) {
           <div className="f-24 text-darkblue poppins-semibold text-center pb-2">
             Total
           </div>
-          <div className="poppins-bold f-20 text-center">$18,300.00</div>
+          <div className="poppins-bold f-20 text-center">$21,000.00</div>
 
           <div className="absolute right-8 top-10">
             <Image
