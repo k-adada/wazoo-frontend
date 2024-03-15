@@ -12,6 +12,19 @@
   transform: translateY(-4px);
 }
 
+.light-button {
+  background-color: white;
+  height: 40px;
+  padding: 0 15px;
+  border-radius: 8px;
+  box-shadow: 0px 10px 25px -10px #0d2632;
+  transition: 0.3s;
+}
+.light-button:hover {
+  transition: 0.3s;
+  transform: translateY(-4px);
+}
+
 .back-button {
   cursor: pointer;
 }

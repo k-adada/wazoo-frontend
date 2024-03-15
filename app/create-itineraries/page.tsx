@@ -285,35 +285,40 @@ export default function CreateItineraries() {
             </>
           )}
 
-          {currentStep === "accommodation" && (
-            <>
-              <Accommodation
-                setCurrentStep={setCurrentStep}
-                stepsDone={stepsDone}
-                setStepsDone={setStepsDone}
-              />
-            </>
-          )}
-
-          {currentStep === "activities" && (
+          {(currentStep === "accommodation" ||
+            currentStep === "activities" ||
+            currentStep === "transport") && (
             <>
               <Activities
                 setCurrentStep={setCurrentStep}
                 stepsDone={stepsDone}
                 setStepsDone={setStepsDone}
+                currentStep={currentStep}
+              />
+            </>
+          )}
+
+          {/* {currentStep === "activities" && (
+            <>
+              <Activities
+                setCurrentStep={setCurrentStep}
+                stepsDone={stepsDone}
+                setStepsDone={setStepsDone}
+                currentStep={currentStep}
               />
             </>
           )}
 
           {currentStep === "transport" && (
             <>
-              <Transport
+              <Activities
                 setCurrentStep={setCurrentStep}
                 stepsDone={stepsDone}
                 setStepsDone={setStepsDone}
+                currentStep={currentStep}
               />
             </>
-          )}
+          )} */}
 
           {currentStep === "pricing" && (
             <>
