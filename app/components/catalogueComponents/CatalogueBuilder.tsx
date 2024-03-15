@@ -94,15 +94,87 @@ export default function CatalogueBuilder(props: {
       price: "350",
     },
   ]);
-  const [days, setDays] = useState([
+  const [itineraries, setItineraries] = useState([
+    {
+      id: "1",
+      serviceType: "Itinerary 1",
+      description: "Itinerary 1 Description",
+      location: "Location 1",
+      method: "Method 1",
+      duration: "Duration 1",
+      timeslot: "Timeslot 1",
+      price: "350",
+    },
+    {
+      id: "2",
+      serviceType: "Itinerary 2",
+      description: "Itinerary 2 Description",
+      location: "Location 2",
+      method: "Method 2",
+      duration: "Duration 2",
+      timeslot: "Timeslot 2",
+      price: "350",
+    },
+    {
+      id: "3",
+      serviceType: "Itinerary 3",
+      description: "Itinerary 3 Description",
+      location: "Location 3",
+      method: "Method 3",
+      duration: "Duration 3",
+      timeslot: "Timeslot 3",
+      price: "350",
+    },
+    {
+      id: "4",
+      serviceType: "Itinerary 4",
+      description: "Itinerary 4 Description",
+      location: "Location 4",
+      method: "Method 4",
+      duration: "Duration 4",
+      timeslot: "Timeslot 4",
+      price: "350",
+    },
+    {
+      id: "5",
+      serviceType: "Itinerary 5",
+      description: "Itinerary 5 Description",
+      location: "Location 5",
+      method: "Method 5",
+      duration: "Duration 5",
+      timeslot: "Timeslot 5",
+      price: "350",
+    },
+    {
+      id: "6",
+      serviceType: "Itinerary 6",
+      description: "Itinerary 6 Description",
+      location: "Location 6",
+      method: "Method 6",
+      duration: "Duration 6",
+      timeslot: "Timeslot 6",
+      price: "350",
+    },
+  ]);
+
+  const [catalogue, setCatalogue] = useState([
     {
       id: 1,
+      slug: "itinerary",
       notesCollapsed: false,
       collapsed: false,
       services: [] as any[],
     },
-    { id: 2, notesCollapsed: false, collapsed: false, services: [] as any[] },
+    {
+      id: 2,
+      slug: "service",
+      notesCollapsed: false,
+      collapsed: false,
+      services: [] as any[],
+    },
   ]);
+
+  const [display, setDisplay] = useState("itinerary");
 
   const [openServicePopup, setOpenServicePopup] = useState(-1);
 
@@ -110,13 +182,13 @@ export default function CatalogueBuilder(props: {
     <div className="container-fluid activities">
       <div className="row">
         <div className="col-9">
-          {days.map((day, index) => {
+          {catalogue.map((item, index) => {
             return (
               <div
                 className="row py-4 overflow-hidden"
-                key={index + day.id + day.id}
+                key={index + item.id + item.id}
               >
-                {/* Day BAR  */}
+                {/* Item BAR  */}
                 <div className="col-12">
                   <div className="bg-blue rounded-lg px-5 py-2 flex justify-between">
                     <div className="f-24 text-darkblue poppins-semibold">
@@ -125,9 +197,10 @@ export default function CatalogueBuilder(props: {
                     <div
                       className="flex items-center"
                       onClick={() => {
-                        let newDays = [...days];
-                        newDays[index].collapsed = !newDays[index].collapsed;
-                        setDays(newDays);
+                        let newCatalogue = [...catalogue];
+                        newCatalogue[index].collapsed =
+                          !newCatalogue[index].collapsed;
+                        setCatalogue(newCatalogue);
                       }}
                     >
                       <Image
@@ -141,14 +214,16 @@ export default function CatalogueBuilder(props: {
 
                 {/* Rich textbox and services bar  */}
                 <div
-                  className={days[index].collapsed ? "hidden " : "" + " col-12"}
+                  className={
+                    catalogue[index].collapsed ? "hidden " : "" + " col-12"
+                  }
                 >
                   {/* DRAG TABLE SERVICES */}
                   <div className="px-5 pt-5">
                     <DragTableServices
-                      services={day.services}
-                      days={days}
-                      setDays={setDays}
+                      services={item.services}
+                      days={catalogue}
+                      setDays={setCatalogue}
                       dayIndex={index}
                     />
                   </div>
@@ -196,86 +271,113 @@ export default function CatalogueBuilder(props: {
                     name=""
                     id=""
                     className="text-darkblue poppins-medium"
+                    onChange={(e) => {
+                      setDisplay(e.target.value);
+                    }}
                   >
-                    <option value="1">Itineraries</option>
-                    <option value="2">Services</option>
+                    <option value="itinerary">Itineraries</option>
+                    <option value="service">Services</option>
                   </select>
                 </div>
               </div>
             </div>
-            {activities.map((activity, index) => {
-              return (
-                //     {/* activity service */}
-                <div className="col-12 py-2" key={index + activity.location}>
-                  <div className="flex py-2 px-2 border-dashed rounded-lg items-center justify-between">
-                    <div className="flex">
-                      <Image
-                        src={tourImage}
-                        alt="tour image"
-                        className="rounded-lg"
-                        style={{
-                          width: "70px",
-                          height: "70px",
-                          objectFit: "cover",
-                        }}
-                      />
-                      <div className="pl-3">
-                        <div className="f-24 text-darkblue poppins-medium">
-                          {activity.serviceType}
-                        </div>
-                        <div className="flex items-center">
-                          <div className="f-24 poppins-semibold text-darkblue">
-                            $ {activity.price}
+            {display == "service" &&
+              activities.map((activity, index) => {
+                return (
+                  //     {/* activity service */}
+                  <div className="col-12 py-2" key={index + activity.location}>
+                    <div className="flex py-2 px-2 border-dashed rounded-lg items-center justify-between">
+                      <div className="flex">
+                        <Image
+                          src={tourImage}
+                          alt="tour image"
+                          className="rounded-lg"
+                          style={{
+                            width: "70px",
+                            height: "70px",
+                            objectFit: "cover",
+                          }}
+                        />
+                        <div className="pl-3">
+                          <div className="f-24 text-darkblue poppins-medium">
+                            {activity.serviceType}
                           </div>
-                          <div className="f-14 text-darkblue"> / Default</div>
+                          <div className="flex items-center">
+                            <div className="f-24 poppins-semibold text-darkblue">
+                              $ {activity.price}
+                            </div>
+                            <div className="f-14 text-darkblue"> / Default</div>
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    <div
-                      className="pr-2 pointer"
-                      onClick={() => {
-                        if (openServicePopup == index) {
-                          setOpenServicePopup(-1);
-                        } else {
-                          setOpenServicePopup(index);
-                        }
-                      }}
-                    >
-                      <Image src={addCircleIcon} alt="add" />
+                      <div
+                        className="pr-2 pointer"
+                        onClick={() => {
+                          let newCatalogue = [...catalogue];
+                          newCatalogue[1].services = [
+                            activity,
+                            ...newCatalogue[1].services,
+                          ];
+
+                          setCatalogue(newCatalogue);
+                        }}
+                      >
+                        <Image src={addCircleIcon} alt="add" />
+                      </div>
                     </div>
                   </div>
+                );
+              })}
 
-                  <div
-                    className={
-                      (openServicePopup == index ? "" : "hidden") +
-                      " service-day-popup rounded-lg bg-grey px-3 py-3"
-                    }
-                  >
-                    {days.map((day, index) => {
-                      return (
-                        <div
-                          key={index + day.id}
-                          className="text-darkblue text-center day-row pointer"
-                          onClick={() => {
-                            let newDays = [...days];
-                            newDays[index].services = [
-                              activity,
-                              ...newDays[index].services,
-                            ];
-
-                            setDays(newDays);
-                            setOpenServicePopup(-1);
+            {display == "itinerary" &&
+              itineraries.map((itinerary, index) => {
+                return (
+                  //     {/* activity service */}
+                  <div className="col-12 py-2" key={index + itinerary.location}>
+                    <div className="flex py-2 px-2 border-dashed rounded-lg items-center justify-between">
+                      <div className="flex">
+                        <Image
+                          src={tourImage}
+                          alt="tour image"
+                          className="rounded-lg"
+                          style={{
+                            width: "70px",
+                            height: "70px",
+                            objectFit: "cover",
                           }}
-                        >
-                          {index == 0 ? "Itineraries" : "Services"}
+                        />
+                        <div className="pl-3">
+                          <div className="f-24 text-darkblue poppins-medium">
+                            {itinerary.serviceType}
+                          </div>
+                          <div className="flex items-center">
+                            <div className="f-24 poppins-semibold text-darkblue">
+                              $ {itinerary.price}
+                            </div>
+                            <div className="f-14 text-darkblue"> / Default</div>
+                          </div>
                         </div>
-                      );
-                    })}
+                      </div>
+
+                      <div
+                        className="pr-2 pointer"
+                        onClick={() => {
+                          let newCatalogue = [...catalogue];
+                          newCatalogue[0].services = [
+                            itinerary,
+                            ...newCatalogue[0].services,
+                          ];
+
+                          setCatalogue(newCatalogue);
+                        }}
+                      >
+                        <Image src={addCircleIcon} alt="add" />
+                      </div>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
           </div>
         </div>
 
