@@ -220,7 +220,7 @@ export default function Catalogues() {
                           </div>
                           <div className="col-12 px-2 flex justify-between">
                             <div className="f-20 text-darkblue poppins-medium">
-                              Itinerary Name {index + 1}
+                              Catalogue Name {index + 1}
                             </div>
                             <Link href="/catalogue">
                               <div className="rounded-lg bg-lineslight poppins-medium py-1 text-darkblue flex items-center justify-center hover pointer px-4">
