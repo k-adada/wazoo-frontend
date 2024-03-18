@@ -174,21 +174,20 @@ export default function LeftDrawerDMC() {
           </ListItem>
           <Collapse in={openCommunity} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon>{/* <StarBorder /> */}</ListItemIcon>
-                <ListItemText primary="&bull;&nbsp; Service Providers" />
-                {">"}
-              </ListItemButton>
-              <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon>{/* <StarBorder /> */}</ListItemIcon>
-                <ListItemText primary="&bull;&nbsp; Audiences" />
-                {">"}
-              </ListItemButton>
-              <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon>{/* <StarBorder /> */}</ListItemIcon>
-                <ListItemText primary="&bull;&nbsp; My Listings" />
-                {">"}
-              </ListItemButton>
+              <Link href="/audiences">
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemIcon>{/* <StarBorder /> */}</ListItemIcon>
+                  <ListItemText primary="&bull;&nbsp; Audiences" />
+                  {">"}
+                </ListItemButton>
+              </Link>
+              <Link href="/my-listings">
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemIcon>{/* <StarBorder /> */}</ListItemIcon>
+                  <ListItemText primary="&bull;&nbsp; My Listings" />
+                  {">"}
+                </ListItemButton>
+              </Link>
             </List>
           </Collapse>
         </div>
