@@ -1,14 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import "./dist/services.css";
-import LeftDrawerDMC from "../components/LeftDrawerDMC";
 import Image from "next/image";
 import Link from "next/link";
 import ServicesTable from "../components/ServicesTable";
 import { useRouter } from "next/navigation";
 
-import notificationIcon from "../assets/Icon_Notification_Received.png";
-import avatarIcon from "../assets/avatar.png";
 import addIcon from "../assets/Icon_Add.png";
 import backIcon from "../assets/Icon_Back.png";
 import serviceEmptyIcon from "../assets/services_empty.png";

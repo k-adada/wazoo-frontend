@@ -2,8 +2,8 @@ import * as React from "react";
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
 
-export default function MultipleSelect(props: any) {
-  const { options } = props;
+export default function MultipleSelectLight(props: any) {
+  const { options, placeholder } = props;
 
   const [values, setValues] = React.useState([]);
 
@@ -17,7 +17,7 @@ export default function MultipleSelect(props: any) {
 
   return (
     <Autocomplete
-      className="bg-dark-input text-ice rounded-lg w-full multiselect"
+      className="px-5  rounded-lg bg-white text-grey w-full"
       multiple
       id="tags-outlined"
       options={options}
@@ -29,7 +29,7 @@ export default function MultipleSelect(props: any) {
       renderInput={(params) => (
         <TextField
           {...params}
-          placeholder={values.length == 0 ? "Select Operational Locations" : ""}
+          placeholder={placeholder ? placeholder : "Select"}
         />
       )}
     />

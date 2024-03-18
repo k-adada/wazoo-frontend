@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import PasswordInput from "./Password";
-import MultipleSelect from "./MultipleSelect";
+import MultipleSelectDark from "./MultipleSelectDark";
 import Link from "next/link";
 
 export default function Register() {
@@ -99,7 +99,7 @@ export default function Register() {
           {/* where are you based? */}
           <div className="col-span-2">
             <div className="text-ice py-3">Where Are you Based?</div>
-            <MultipleSelect options={cities} />
+            <MultipleSelectDark options={cities} />
           </div>
 
           {/* Register button */}
