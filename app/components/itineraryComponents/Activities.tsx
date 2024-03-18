@@ -25,6 +25,9 @@ import quartierImage from "../../assets/images/services/Quartier_Latin.jpg";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import SingleSelect from "../SingleSelect";
+
+import { useServices } from "@/app/contexts/ServicesContext";
+
 // Dynamically import the RichTextBox component with SSR disabled
 const DynamicRichTextBox = dynamic(() => import("../RichTextBox"), {
   ssr: false, // Disable server-side rendering for this component
@@ -41,7 +44,7 @@ export default function Activities(props: {
   currentStep: string;
 }) {
   const { setCurrentStep, stepsDone, setStepsDone, currentStep } = props;
-
+  const { services, setServices } = useServices();
   useEffect(() => {
     if (currentStep === "activities") {
       setStepsDone(["tripDetails", "accommodation", "activities"]);
