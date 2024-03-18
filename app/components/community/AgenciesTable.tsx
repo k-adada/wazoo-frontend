@@ -24,7 +24,7 @@ import { visuallyHidden } from "@mui/utils";
 import deleteRedIcon from "../../assets/delete_red.png";
 import editIcon from "../../assets/Icon_Edit.png";
 import yoursLogo from "../../assets/images/services/Quartier_Latin.jpg";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface Data {
   id: number;
@@ -59,7 +59,7 @@ function createData(
 const rows = [
   createData(
     1,
-    yoursLogo,
+    yoursLogo.src,
     "Audience 1",
     "Adventure, Family, Honeymoon",
     10,
@@ -68,7 +68,7 @@ const rows = [
   ),
   createData(
     2,
-    yoursLogo,
+    yoursLogo.src,
     "Audience 2",
     "Adventure, Family, Honeymoon",
     10,
@@ -77,7 +77,7 @@ const rows = [
   ),
   createData(
     3,
-    yoursLogo,
+    yoursLogo.src,
     "Audience 3",
     "Adventure, Family, Honeymoon",
     10,
@@ -86,7 +86,7 @@ const rows = [
   ),
   createData(
     4,
-    yoursLogo,
+    yoursLogo.src,
     "Audience 4",
     "Adventure, Family, Honeymoon",
     10,
@@ -95,7 +95,7 @@ const rows = [
   ),
   createData(
     5,
-    yoursLogo,
+    yoursLogo.src,
     "Audience 5",
     "Adventure, Family, Honeymoon",
     10,
@@ -104,7 +104,7 @@ const rows = [
   ),
   createData(
     6,
-    yoursLogo,
+    yoursLogo.src,
     "Audience 6",
     "Adventure, Family, Honeymoon",
     10,
@@ -113,7 +113,7 @@ const rows = [
   ),
   createData(
     7,
-    yoursLogo,
+    yoursLogo.src,
     "Audience 7",
     "Adventure, Family, Honeymoon",
     10,
@@ -122,7 +122,7 @@ const rows = [
   ),
   createData(
     8,
-    yoursLogo,
+    yoursLogo.src,
     "Audience 8",
     "Adventure, Family, Honeymoon",
     10,
@@ -131,7 +131,7 @@ const rows = [
   ),
   createData(
     9,
-    yoursLogo,
+    yoursLogo.src,
     "Audience 9",
     "Adventure, Family, Honeymoon",
     10,
