@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import Head from "next/head";
 import "./globals.css";
 import "./dist/app.css";
 import "./dist/custom.css";
 import "./dist/bootstrap-grid.css";
 import { Providers } from "./providers";
 import { Analytics } from "@vercel/analytics/react";
+import Navbar from "./components/mainComponents/Navbar";
 
 export const metadata: Metadata = {
   title: "Lux | Your single Destination",
@@ -20,17 +20,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <meta
-          property="og:image"
-          content="https://assets.unileversolutions.com/v1/35431836.png"
-        />
-      </Head>
-
       <body className={"poppins-regular"}>
         <Providers>
-          {children}
-          <Analytics />
+          <div className="">
+            <Navbar />
+            {children}
+            <Analytics />
+          </div>
         </Providers>
       </body>
     </html>

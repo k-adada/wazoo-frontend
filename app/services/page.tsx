@@ -31,34 +31,8 @@ export default function CreateServices() {
   };
   const [services, setServices] = useState([1]);
   return (
-    <main className="flex min-h-screen flex-col items-center p-md-24 p-3 bg-lightblue pb-[100px]">
+    <main className="flex min-h-screen flex-col items-center p-md-24 p-3 bg-lightblue pt-[75px] pb-[100px]">
       <div className="container-fluid">
-        {/* navbar  */}
-        <div className="row items-center">
-          <div className="col-auto">
-            <LeftDrawerDMC />
-          </div>
-          <div className="col-auto">
-            <div className="poppins-semibold text-darkblue">France</div>
-          </div>
-          <div className="col"></div>
-          <div className="col-auto">
-            <div className="cursor-pointer">
-              <Image src={notificationIcon} alt="notification" />
-            </div>
-          </div>
-          <div className="col-auto">
-            <div className="flex items-center cursor-pointer">
-              <div className="user-icon">
-                <Image src={avatarIcon} alt="avatar" />
-              </div>
-              <div className="poppins-medium text-darkblue pl-4">
-                Brit Ferguson
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div className="row">
           <div className="col-auto">
             <div className="flex">

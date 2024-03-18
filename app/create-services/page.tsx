@@ -38,34 +38,8 @@ export default function CreateServices() {
   }, []);
 
   return (
-    <main className="flex min-h-screen flex-col items-center p-md-24 p-3 bg-lightblue pb-[100px]">
+    <main className="flex min-h-screen flex-col items-center p-md-24 p-3 bg-lightblue pt-[75px] pb-[100px]">
       <div className="container-fluid">
-        {/* navbar  */}
-        <div className="row items-center">
-          <div className="col-auto">
-            <LeftDrawerDMC />
-          </div>
-          <div className="col-auto">
-            <div className="poppins-semibold text-darkblue">France</div>
-          </div>
-          <div className="col"></div>
-          <div className="col-auto">
-            <div className="cursor-pointer">
-              <Image src={notificationIcon} alt="notification" />
-            </div>
-          </div>
-          <div className="col-auto">
-            <div className="flex items-center cursor-pointer">
-              <div className="user-icon">
-                <Image src={avatarIcon} alt="avatar" />
-              </div>
-              <div className="poppins-medium text-darkblue pl-4">
-                Brit Ferguson
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div className="row">
           <div className="col-auto">
             <div
@@ -325,7 +299,9 @@ export default function CreateServices() {
                     height={80}
                     className="rounded-lg"
                   />
-                  <div className="f-20 text-darkblue line-clamp-1">File name.png</div>
+                  <div className="f-20 text-darkblue line-clamp-1">
+                    File name.png
+                  </div>
                   <div className="uploaded-tag flex justify-between items-center px-3 pr-6">
                     <CircularProgress
                       variant="determinate"
@@ -333,9 +309,7 @@ export default function CreateServices() {
                       style={{ height: "24px", width: "24px" }}
                     />
 
-                    <div className="text-white poppins-medium pl-2">
-                      100%
-                    </div>
+                    <div className="text-white poppins-medium pl-2">100%</div>
                   </div>
                   <Image src={dotsIcon} alt="dots" className="cursor-pointer" />
                 </div>
@@ -349,7 +323,9 @@ export default function CreateServices() {
                     height={80}
                     className="rounded-lg"
                   />
-                  <div className="f-20 text-darkblue line-clamp-1">File name.png</div>
+                  <div className="f-20 text-darkblue line-clamp-1">
+                    File name.png
+                  </div>
                   <div className="progress-tag flex justify-between items-center px-3">
                     <CircularProgress
                       variant="determinate"
@@ -370,7 +346,9 @@ export default function CreateServices() {
                     height={80}
                     className="rounded-lg"
                   />
-                  <div className="f-20 text-darkblue line-clamp-1">File name.png</div>
+                  <div className="f-20 text-darkblue line-clamp-1">
+                    File name.png
+                  </div>
                   <div className="progress-tag flex justify-between items-center px-3">
                     <CircularProgress
                       variant="determinate"
