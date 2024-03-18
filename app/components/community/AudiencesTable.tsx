@@ -67,7 +67,7 @@ function createData(
 const rows = [
   createData(
     1,
-    "Service Provider 1",
+    "Audience 1",
     "Description 1",
     "Continent 1",
     "Country 1",
@@ -79,7 +79,7 @@ const rows = [
   ),
   createData(
     2,
-    "Service Provider 2",
+    "Audience 2",
     "Description 2",
     "Continent 2",
     "Country 2",
@@ -91,7 +91,7 @@ const rows = [
   ),
   createData(
     3,
-    "Service Provider 3",
+    "Audience 3",
     "Description 3",
     "Continent 3",
     "Country 3",
@@ -103,7 +103,7 @@ const rows = [
   ),
   createData(
     4,
-    "Service Provider 4",
+    "Audience 4",
     "Description 4",
     "Continent 4",
     "Country 4",
@@ -115,7 +115,7 @@ const rows = [
   ),
   createData(
     5,
-    "Service Provider 5",
+    "Audience 5",
     "Description 5",
     "Continent 5",
     "Country 5",
@@ -127,7 +127,7 @@ const rows = [
   ),
   createData(
     6,
-    "Service Provider 6",
+    "Audience 6",
     "Description 6",
     "Continent 6",
     "Country 6",
