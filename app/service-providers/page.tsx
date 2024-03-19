@@ -13,7 +13,7 @@ import backIcon from "../assets/Icon_Back.png";
 
 import searchIcon from "../assets/Icon_Search_Black.png";
 import serviceProviderIcon from "../assets/service_providers_none.png";
-import ServiceProvidersTable from "../components/ServiceProvidersTable";
+import ServiceProvidersTable from "../components/serviceProvidersComponents/ServiceProvidersTable";
 
 export default function ServiceProviders() {
   const router = useRouter();

@@ -21,8 +21,8 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import { visuallyHidden } from "@mui/utils";
 
-import deleteRedIcon from "../assets/delete_red.png";
-import editIcon from "../assets/Icon_Edit.png";
+import deleteRedIcon from "../../assets/delete_red.png";
+import editIcon from "../../assets/Icon_Edit.png";
 import Image from "next/image";
 
 interface Data {
@@ -208,18 +208,6 @@ const headCells: readonly HeadCell[] = [
     disablePadding: false,
     label: "Nb. of Locations",
   },
-  {
-    id: "services",
-    numeric: false,
-    disablePadding: false,
-    label: "Services",
-  },
-  {
-    id: "actions" as keyof Data,
-    numeric: false,
-    disablePadding: false,
-    label: "Actions",
-  },
 ];
 
 interface EnhancedTableProps {
@@ -249,7 +237,7 @@ function EnhancedTableHead(props: EnhancedTableProps) {
     };
 
   return (
-    <TableHead className="bg-grey">
+    <TableHead className="bg-lineslight">
       <TableRow>
         <TableCell padding="checkbox">
           <Checkbox
@@ -345,7 +333,7 @@ function EnhancedTableToolbar(props: EnhancedTableToolbarProps) {
     </Toolbar>
   );
 }
-export default function ServiceProvidersTable() {
+export default function SelectSPTable() {
   const [order, setOrder] = React.useState<Order>("asc");
   const [orderBy, setOrderBy] = React.useState<keyof Data>("serviceProvider");
   const [selected, setSelected] = React.useState<readonly number[]>([]);
@@ -475,31 +463,8 @@ export default function ServiceProvidersTable() {
                     <TableCell align="left">{row.description}</TableCell>
                     <TableCell align="left">{row.types}</TableCell>
                     <TableCell align="left">{row.locations}</TableCell>
-                    <TableCell align="center">{row.numberOfLocations}</TableCell>
-                    <TableCell align="left">
-                      <div className="flex justify-end items-center">
-                        <div className="pr-5">{row.services}</div>
-                        <span className="poppins-semibold pr-5">{">"}</span>
-                      </div>
-                    </TableCell>
-                    <TableCell align="left">
-                      <div className="flex">
-                        <Image
-                          src={editIcon}
-                          alt="edit"
-                          onClick={() => {
-                            alert("edit " + row.serviceProvider);
-                          }}
-                        />
-                        <div className="px-3"></div>
-                        <Image
-                          src={deleteRedIcon}
-                          alt="delete"
-                          onClick={() => {
-                            alert("delete " + row.serviceProvider);
-                          }}
-                        />
-                      </div>
+                    <TableCell align="center">
+                      {row.numberOfLocations}
                     </TableCell>
                   </TableRow>
                 );
