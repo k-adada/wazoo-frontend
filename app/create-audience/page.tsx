@@ -95,8 +95,8 @@ export default function CreateAudience() {
                   <div className="col-12 pb-8">
                     <div className="rounded-lg bg-grey text-darkblue f-20 py-3 px-4">
                       Target specific Travel Agency segments with the
-                      &apos;Audiences&apos; feature, publishing services for unique
-                      preferences
+                      &apos;Audiences&apos; feature, publishing Catalogues for
+                      unique preferences
                     </div>
                   </div>
 
