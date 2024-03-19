@@ -314,7 +314,7 @@ export default function CreateServices() {
                       <div className="text-darkblue">Provider Name</div>
                     </div>
                     <div className="col-6">
-                      <div className="text-darkblue">Provider Cost</div>
+                      <div className="text-darkblue">Provider Cost ($)</div>
                     </div>
 
                     {selectedProviders.map((provider, index) => {
