@@ -27,7 +27,7 @@ export default function Explore() {
   const [selectedTab, setSelectedTab] = useState("themes");
 
   return (
-    <main className="flex min-h-screen flex-col items-center p-md-24 p-3 py-[100px] bg-primary-gradient">
+    <main className="flex min-h-screen flex-col items-center p-md-24 p-3 py-[100px] bg-grey">
       {/* themes bar  */}
       <div className="py-2 px-4 rounded-lg w-full" style={{ maxWidth: "80%" }}>
         <div className="row justify-between items-center">
