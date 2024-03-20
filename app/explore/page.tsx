@@ -19,6 +19,8 @@ import bookmarkIcon from "../assets/Icon_Bookmarked_gold.svg";
 
 import DestinationsSection from "../components/exploreComponents/DestinationsSection";
 import ThemesSection from "../components/exploreComponents/ThemesSection";
+import TripsSection from "../components/exploreComponents/TripsSection";
+import ActivitiesSection from "../components/exploreComponents/ActivitiesSection";
 
 export default function Explore() {
   const [selectedTab, setSelectedTab] = useState("themes");
@@ -130,6 +132,14 @@ export default function Explore() {
 
       {/* destinations list */}
       {selectedTab === "destinations" && <DestinationsSection />}
+
+      {/* trips list */}
+      {selectedTab === "trips" && <TripsSection />}
+
+      {/* activities list */}
+      {selectedTab === "activities" && <ActivitiesSection />}
+
+      {/* catalogues list */}
       {/* bottom bar */}
       <div className="w-full bottom-fixed text-center">
         <div className="flex items-center justify-center">
