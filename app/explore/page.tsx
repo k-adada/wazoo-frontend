@@ -21,6 +21,7 @@ import DestinationsSection from "../components/exploreComponents/DestinationsSec
 import ThemesSection from "../components/exploreComponents/ThemesSection";
 import TripsSection from "../components/exploreComponents/TripsSection";
 import ActivitiesSection from "../components/exploreComponents/ActivitiesSection";
+import CataloguesSection from "../components/exploreComponents/CataloguesSection";
 
 export default function Explore() {
   const [selectedTab, setSelectedTab] = useState("themes");
@@ -138,6 +139,9 @@ export default function Explore() {
 
       {/* activities list */}
       {selectedTab === "activities" && <ActivitiesSection />}
+
+      {/* catalogues list */}
+      {selectedTab === "catalogues" && <CataloguesSection />}
 
       {/* catalogues list */}
       {/* bottom bar */}

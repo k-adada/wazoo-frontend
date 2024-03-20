@@ -33,7 +33,7 @@ export default function ActivitiesSection() {
             <div className="row bg-white rounded-lg py-2">
               <div className="col-12 pb-4 px-2">
                 <div className="image-wrapper-83">
-                  <Image src={images[index]} alt="casinoImage" />
+                  <Image src={images[5 - index]} alt="casinoImage" />
                 </div>
               </div>
               <div className="col-12 px-2">

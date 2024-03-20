@@ -4,8 +4,6 @@ import Image from "next/image";
 
 import destination from "../../assets/theme.png";
 
-import Link from "next/link";
-
 import theme1 from "../../assets/images/themes/Adventure.webp";
 import theme2 from "../../assets/images/themes/Beach_Sun.webp";
 import theme3 from "../../assets/images/themes/david.jpg";
