@@ -27,7 +27,7 @@ export default function Explore() {
   const [selectedTab, setSelectedTab] = useState("themes");
 
   return (
-    <main className="flex min-h-screen flex-col items-center p-md-24 p-3 py-[100px]">
+    <main className="flex min-h-screen flex-col items-center p-md-24 p-3 py-[100px] bg-primary-gradient">
       {/* themes bar  */}
       <div className="py-2 px-4 rounded-lg w-full" style={{ maxWidth: "80%" }}>
         <div className="row justify-between items-center">
@@ -147,21 +147,21 @@ export default function Explore() {
       {/* bottom bar */}
       <div className="w-full bottom-fixed text-center">
         <div className="flex items-center justify-center">
-          <div className="rounded-full overflow-hidden backdrop-blur-xl py-4 px-4 mx-1 pointer">
+          <div className="rounded-full overflow-hidden backdrop-blur-xl py-4 px-4 mx-1 pointer" style={{backgroundColor:"rgba(0,0,0,0.2)"}}>
             <Image
               src={planeIcon}
               alt="plane"
               style={{ height: "25px", width: "25px" }}
             />
           </div>
-          <div className="rounded-full overflow-hidden backdrop-blur-xl py-4 px-4 mx-1 pointer">
+          <div className="rounded-full overflow-hidden backdrop-blur-md py-4 px-4 mx-1 pointer" style={{backgroundColor:"rgba(0,0,0,0.2)"}}>
             <Image
               src={doorIcon}
               alt="door"
               style={{ height: "25px", width: "25px" }}
             />
           </div>
-          <div className="rounded-full overflow-hidden backdrop-blur-xl py-4 px-4 mx-1 pointer">
+          <div className="rounded-full overflow-hidden backdrop-blur-md py-4 px-4 mx-1 pointer" style={{backgroundColor:"rgba(0,0,0,0.2)"}}>
             <div className="rounded-full overflow-hidden bg-gold py-4 px-4">
               <Image
                 src={homeIcon}
@@ -170,14 +170,14 @@ export default function Explore() {
               />
             </div>
           </div>
-          <div className="rounded-full overflow-hidden backdrop-blur-xl py-4 px-4 mx-1 pointer">
+          <div className="rounded-full overflow-hidden backdrop-blur-md py-4 px-4 mx-1 pointer" style={{backgroundColor:"rgba(0,0,0,0.2)"}}>
             <Image
               src={bookmarkIcon}
               alt="bookmark"
               style={{ height: "25px", width: "25px" }}
             />
           </div>
-          <div className="rounded-full overflow-hidden backdrop-blur-xl py-4 px-4 mx-1 pointer">
+          <div className="rounded-full overflow-hidden backdrop-blur-md py-4 px-4 mx-1 pointer" style={{backgroundColor:"rgba(0,0,0,0.2)"}}>
             <Image
               src={searchIcon}
               alt="search"

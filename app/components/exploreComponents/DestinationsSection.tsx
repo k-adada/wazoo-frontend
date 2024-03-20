@@ -171,21 +171,6 @@ export default function DestinationsSection() {
           <div
             key={index}
             className="2xl:col-span-2 xl:col-span-3 md:col-span-4 sm:col-span-6 col-span-12 m-auto cursor-pointer relative transform transition-transform duration-300 ease-in-out hover:scale-105"
-            onClick={() => {
-              setSelectedDestinations((prevSelectedDestinations) => {
-                if (
-                  prevSelectedDestinations.some(
-                    (destination) => destination.id === item.id
-                  )
-                ) {
-                  return prevSelectedDestinations.filter(
-                    (destination) => destination.id !== item.id
-                  );
-                } else {
-                  return [...prevSelectedDestinations, item];
-                }
-              });
-            }}
           >
             <div className="destination-name-overlay flex items-center justify-center">
               <div className="text-ice text-center poppins-medium">

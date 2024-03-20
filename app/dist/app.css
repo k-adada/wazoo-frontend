@@ -200,6 +200,10 @@ input::placeholder {
   background-color: #fddfbb;
 }
 
+.bg-primary-gradient {
+  background: linear-gradient(to bottom, transparent, white) #ececec;
+}
+
 .bg-gold-gradient {
   transition: 0.3s ease-in-out;
   background: linear-gradient(180deg, #fddfbb 0%, #c2986b 100%);
