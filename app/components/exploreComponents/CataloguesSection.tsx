@@ -2,25 +2,11 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-import ServicesSwiper from "../servicesSwiper";
-import sunIcon from "../../assets/Sun.svg";
-import locationIcon from "../../assets/Icon_Location.png";
-import clockIcon from "../../assets/Icon_Time.png";
-import calendarIcon from "../../assets/Icon_Calendar_dark.png";
-import treeIcon from "../../assets/tree_dark.svg";
-
-import notificationIcon from "../../assets/Icon_Notification_Received.png";
 import avatarIcon from "../../assets/avatar.png";
-import addIcon from "../../assets/Icon_Add.png";
-import backIcon from "../../assets/Icon_Back.png";
-import serviceEmptyIcon from "../../assets/services_empty.png";
-import listIcon from "../../assets/Icon_List_View.png";
 
 import Link from "next/link";
 import threeDotsIcon from "../../assets/three_dots_white.png";
 import casinoImage from "../../assets/Bellagio-Hotel-Casino-Las-Vegas.webp";
-import speakerIcon from "../../assets/Icon_Campaigns.svg";
-import eyeIcon from "../../assets/Icon_Preview.svg";
 
 import louvreImage from "../../assets/images/services/Louvre.jpg";
 import lucerneImage from "../../assets/images/services/lucerne.jpg";
@@ -59,7 +45,7 @@ export default function CataloguesSection() {
                   </div>
 
                   <div className="absolute bottom-8 left-8 pointer">
-                    <div className="rounded-full bg-white text-grey flex items-center justify-center px-1 py-1">
+                    <div className="rounded-full bg-white text-grey flex items-center justify-center pl-1 pr-2 py-1">
                       <Image
                         src={avatarIcon}
                         alt="avatar"
@@ -71,38 +57,58 @@ export default function CataloguesSection() {
                   </div>
                 </div>
                 <div className="col-12 px-2 flex justify-between">
-                  <div className="f-20 text-darkblue poppins-medium">
+                  <div className="f-18 text-darkblue poppins-medium">
                     Service Catalogue Name {index + 1}
                   </div>
                 </div>
 
-                <div className="col-12 px-2">
-                  <div className="text-grey pt-2">
+                <div className="col-12 px-2 pb-4">
+                  <div className="f-14 text-grey pt-2 line-clamp-2">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Veniam voluptates eveniet iste corrupti! Cum,
                   </div>
                 </div>
 
                 <div className="col-auto px-2 py-1">
-                  <div className="bg-grey text-grey rounded-xl px-2">
+                  <div className="bg-grey text-darkblue rounded-xl px-2 py-1 f-12">
                     #Outdoor activity
                   </div>
                 </div>
                 <div className="col-auto px-2 py-1">
-                  <div className="bg-grey text-grey rounded-xl px-2">
+                  <div className="bg-grey text-darkblue rounded-xl px-2 py-1 f-12">
                     #Beach&Sun
                   </div>
                 </div>
 
                 <div className="col-auto px-2 py-1">
-                  <div className="bg-grey text-grey rounded-xl px-2">
+                  <div className="bg-grey text-darkblue rounded-xl px-2 py-1 f-12">
                     #Snow&Skii
                   </div>
                 </div>
+                <div className="col-auto px-2 py-1">
+                  <div className="bg-grey text-darkblue rounded-xl px-2 py-1 f-12">
+                    #Snow&Skii
+                  </div>
+                </div>
+                <div className="col-auto px-2 py-1">
+                  <div className="bg-grey text-darkblue rounded-xl px-2 py-1 f-12">
+                    #Snow&Skii
+                  </div>
+                </div>
+                <div className="col-auto px-2 py-1">
+                  <div className="bg-grey text-darkblue rounded-xl px-2 py-1 f-12">
+                    #Snow&Skii
+                  </div>
+                </div>
+                <div className="col-auto px-2 py-1">
+                  <div className="bg-grey text-darkblue rounded-xl px-2 py-1 f-12">
+                    #Skii
+                  </div>
+                </div>
 
-                <div className="col-12 flex items-center justify-between pt-4">
+                <div className="col-12 flex items-center justify-between pt-3">
                   <div className="text-darkblue f-14 poppins-medium">
-                    Packages
+                    Itineraries
                     <div className="flex">
                       <Image
                         className="rounded-full"
