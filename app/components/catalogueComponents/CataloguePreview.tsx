@@ -12,7 +12,7 @@ import arrowDownIcon from "../../assets/down_arrow_dark.png";
 import locationIcon from "../../assets/Icon_Location.png";
 import clockIcon from "../../assets/Icon_Time.png";
 import dollarIcon from "../../assets/Icon_Dollars.png";
-import athensImage from "../../assets/images/services/athens.jpg"
+import athensImage from "../../assets/images/services/athens.jpg";
 
 import Link from "next/link";
 import ServicesSwiper from "../servicesSwiper";
@@ -76,16 +76,14 @@ export default function CataloguePreview() {
         </div>
 
         <div className="col-12 pb-8">
-          <div className="flex rounded-lg bg-blue items-center justify-between px-8">
+          <div
+            className="flex rounded-lg bg-blue items-center justify-between px-8 pointer"
+            onClick={() => {
+              setItinerariesCollapsed(!itinerariesCollapsed);
+            }}
+          >
             <div className="f-24 py-2 poppins-semibold">Sample Itineraries</div>
-            <div
-              className="pointer"
-              onClick={() => {
-                setItinerariesCollapsed(!itinerariesCollapsed);
-              }}
-            >
-              <Image src={arrowDownIcon} alt="arrow down" />
-            </div>
+            <Image src={arrowDownIcon} alt="arrow down" />
           </div>
         </div>
 
@@ -156,16 +154,14 @@ export default function CataloguePreview() {
         )}
 
         <div className="col-12 py-8">
-          <div className="flex rounded-lg bg-blue items-center justify-between px-8">
+          <div
+            className="flex rounded-lg bg-blue items-center justify-between px-8 pointer"
+            onClick={() => {
+              setServicesCollapsed(!servicesCollapsed);
+            }}
+          >
             <div className="f-24 py-2 poppins-semibold">Services</div>
-            <div
-              className="pointer"
-              onClick={() => {
-                setServicesCollapsed(!servicesCollapsed);
-              }}
-            >
-              <Image src={arrowDownIcon} alt="arrow down" />
-            </div>
+            <Image src={arrowDownIcon} alt="arrow down" />
           </div>
         </div>
 
@@ -229,7 +225,9 @@ export default function CataloguePreview() {
                     <div className="col-auto pr-2 py-1">
                       <div className=" flex">
                         <Image src={calendarDarkIcon} alt="calendar" />
-                        <div className="text-darkblue pl-1">Oct 11 - Oct 15</div>
+                        <div className="text-darkblue pl-1">
+                          Oct 11 - Oct 15
+                        </div>
                       </div>
                     </div>
                   </div>

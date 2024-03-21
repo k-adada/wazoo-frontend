@@ -44,152 +44,154 @@ export default function CataloguesSection() {
       {[1, 2, 3, 4, 5, 6].map((item, index) => {
         return (
           <div className="col-2xl-3 col-lg-4 col-md-6 py-3 px-5" key={index}>
-            <div className="row bg-white rounded-lg py-2 bg-white catalogue-card">
-              <div className="col-12 pb-4 px-2">
-                <div className="image-wrapper-83">
-                  <Image src={casinoImage} alt="casinoImage" />
+            <Link href="/catalogue">
+              <div className="row bg-white rounded-lg py-2 bg-white catalogue-card">
+                <div className="col-12 pb-4 px-2">
+                  <div className="image-wrapper-83">
+                    <Image src={casinoImage} alt="casinoImage" />
+                  </div>
+                  <div className="absolute top-2 right-8 pointer">
+                    <Image
+                      src={threeDotsIcon}
+                      alt="three dots"
+                      className="three-dots"
+                    />
+                  </div>
+
+                  <div className="absolute bottom-8 left-8 pointer">
+                    <div className="rounded-full bg-white text-grey flex items-center justify-center px-1 py-1">
+                      <Image
+                        src={avatarIcon}
+                        alt="avatar"
+                        className="rounded-full"
+                        style={{ width: "30px", height: "30px" }}
+                      />
+                      <div className="pl-1 f-14">DMC Name</div>
+                    </div>
+                  </div>
                 </div>
-                <div className="absolute top-2 right-8 pointer">
-                  <Image
-                    src={threeDotsIcon}
-                    alt="three dots"
-                    className="three-dots"
-                  />
+                <div className="col-12 px-2 flex justify-between">
+                  <div className="f-20 text-darkblue poppins-medium">
+                    Service Catalogue Name {index + 1}
+                  </div>
                 </div>
 
-                <div className="absolute bottom-8 left-8 pointer">
-                  <div className="rounded-full bg-white text-grey flex items-center justify-center px-1 py-1">
-                    <Image
-                      src={avatarIcon}
-                      alt="avatar"
-                      className="rounded-full"
-                      style={{ width: "30px", height: "30px" }}
-                    />
-                    <div className="pl-1 f-14">DMC Name</div>
+                <div className="col-12 px-2">
+                  <div className="text-grey pt-2">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Veniam voluptates eveniet iste corrupti! Cum,
+                  </div>
+                </div>
+
+                <div className="col-auto px-2 py-1">
+                  <div className="bg-grey text-grey rounded-xl px-2">
+                    #Outdoor activity
+                  </div>
+                </div>
+                <div className="col-auto px-2 py-1">
+                  <div className="bg-grey text-grey rounded-xl px-2">
+                    #Beach&Sun
+                  </div>
+                </div>
+
+                <div className="col-auto px-2 py-1">
+                  <div className="bg-grey text-grey rounded-xl px-2">
+                    #Snow&Skii
+                  </div>
+                </div>
+
+                <div className="col-12 flex items-center justify-between pt-4">
+                  <div className="text-darkblue f-14 poppins-medium">
+                    Packages
+                    <div className="flex">
+                      <Image
+                        className="rounded-full"
+                        style={{
+                          width: "36px",
+                          height: "36px",
+                        }}
+                        src={casinoImage}
+                        alt="casino"
+                      />
+                      <Image
+                        className="rounded-full"
+                        style={{
+                          width: "36px",
+                          height: "36px",
+                          transform: "translateX(-50%)",
+                        }}
+                        src={casinoImage}
+                        alt="casino"
+                      />
+                      <Image
+                        className="rounded-full"
+                        style={{
+                          width: "36px",
+                          height: "36px",
+                          transform: "translateX(-100%)",
+                        }}
+                        src={casinoImage}
+                        alt="casino"
+                      />
+                      <Image
+                        className="rounded-full"
+                        style={{
+                          width: "36px",
+                          height: "36px",
+                          transform: "translateX(-150%)",
+                        }}
+                        src={casinoImage}
+                        alt="casino"
+                      />
+                    </div>
+                  </div>
+                  <div className="text-darkblue f-14 poppins-medium pr-10">
+                    Services
+                    <div className="flex">
+                      <Image
+                        className="rounded-full"
+                        style={{
+                          width: "36px",
+                          height: "36px",
+                        }}
+                        src={casinoImage}
+                        alt="casino"
+                      />
+                      <Image
+                        className="rounded-full"
+                        style={{
+                          width: "36px",
+                          height: "36px",
+                          transform: "translateX(-50%)",
+                        }}
+                        src={casinoImage}
+                        alt="casino"
+                      />
+                      <Image
+                        className="rounded-full"
+                        style={{
+                          width: "36px",
+                          height: "36px",
+                          transform: "translateX(-100%)",
+                        }}
+                        src={casinoImage}
+                        alt="casino"
+                      />
+                      <Image
+                        className="rounded-full"
+                        style={{
+                          width: "36px",
+                          height: "36px",
+                          transform: "translateX(-150%)",
+                        }}
+                        src={casinoImage}
+                        alt="casino"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
-              <div className="col-12 px-2 flex justify-between">
-                <div className="f-20 text-darkblue poppins-medium">
-                  Service Catalogue Name {index + 1}
-                </div>
-              </div>
-
-              <div className="col-12 px-2">
-                <div className="text-grey pt-2">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Veniam voluptates eveniet iste corrupti! Cum,
-                </div>
-              </div>
-
-              <div className="col-auto px-2 py-1">
-                <div className="bg-grey text-grey rounded-xl px-2">
-                  #Outdoor activity
-                </div>
-              </div>
-              <div className="col-auto px-2 py-1">
-                <div className="bg-grey text-grey rounded-xl px-2">
-                  #Beach&Sun
-                </div>
-              </div>
-
-              <div className="col-auto px-2 py-1">
-                <div className="bg-grey text-grey rounded-xl px-2">
-                  #Snow&Skii
-                </div>
-              </div>
-
-              <div className="col-12 flex items-center justify-between pt-4">
-                <div className="text-darkblue f-14 poppins-medium">
-                  Packages
-                  <div className="flex">
-                    <Image
-                      className="rounded-full"
-                      style={{
-                        width: "36px",
-                        height: "36px",
-                      }}
-                      src={casinoImage}
-                      alt="casino"
-                    />
-                    <Image
-                      className="rounded-full"
-                      style={{
-                        width: "36px",
-                        height: "36px",
-                        transform: "translateX(-50%)",
-                      }}
-                      src={casinoImage}
-                      alt="casino"
-                    />
-                    <Image
-                      className="rounded-full"
-                      style={{
-                        width: "36px",
-                        height: "36px",
-                        transform: "translateX(-100%)",
-                      }}
-                      src={casinoImage}
-                      alt="casino"
-                    />
-                    <Image
-                      className="rounded-full"
-                      style={{
-                        width: "36px",
-                        height: "36px",
-                        transform: "translateX(-150%)",
-                      }}
-                      src={casinoImage}
-                      alt="casino"
-                    />
-                  </div>
-                </div>
-                <div className="text-darkblue f-14 poppins-medium pr-10">
-                  Services
-                  <div className="flex">
-                    <Image
-                      className="rounded-full"
-                      style={{
-                        width: "36px",
-                        height: "36px",
-                      }}
-                      src={casinoImage}
-                      alt="casino"
-                    />
-                    <Image
-                      className="rounded-full"
-                      style={{
-                        width: "36px",
-                        height: "36px",
-                        transform: "translateX(-50%)",
-                      }}
-                      src={casinoImage}
-                      alt="casino"
-                    />
-                    <Image
-                      className="rounded-full"
-                      style={{
-                        width: "36px",
-                        height: "36px",
-                        transform: "translateX(-100%)",
-                      }}
-                      src={casinoImage}
-                      alt="casino"
-                    />
-                    <Image
-                      className="rounded-full"
-                      style={{
-                        width: "36px",
-                        height: "36px",
-                        transform: "translateX(-150%)",
-                      }}
-                      src={casinoImage}
-                      alt="casino"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+            </Link>
           </div>
         );
       })}
