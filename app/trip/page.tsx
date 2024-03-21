@@ -9,6 +9,7 @@ import middleEastLogo from "../assets/middle_east_yours.png";
 import backIcon from "../assets/Icon_Back.png";
 import TripOverview from "../components/itineraryComponents/TripOverview";
 import DetailedItinerary from "../components/itineraryComponents/DetailedItinerary";
+import Link from "next/link";
 
 export default function Catalogue() {
   const router = useRouter();
@@ -49,10 +50,15 @@ export default function Catalogue() {
 
           {/* REQUEST A TRIP BUTTON */}
           <div className="col-12">
-            <div className="dark-button pointer ml-auto mt-10" style={{ width: "155px" }}>
-              <div className="flex items-center justify-center h-full text-gold">
-                Request a Trip
-              </div>
+            <div
+              className="dark-button pointer ml-auto mt-10"
+              style={{ width: "155px" }}
+            >
+              <Link href="/request-trip">
+                <div className="flex items-center justify-center h-full text-gold w-full">
+                  Request a Trip
+                </div>
+              </Link>
             </div>
           </div>
           {/* TRIP OVERVIEW + SWIPER */}
