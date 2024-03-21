@@ -48,7 +48,7 @@ export default function TripOverview() {
   return (
     <div className="">
       {/* TRIP OVERVIEW + SWIPER */}
-      <div className="f-32 poppins-semibold text-darkblue pt-8 pb-5">
+      <div className="f-32 poppins-semibold text-darkblue pb-5">
         Trip Overview
       </div>
       <div className="bg-white rounded-lg py-4 px-3">

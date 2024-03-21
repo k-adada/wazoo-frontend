@@ -2,7 +2,7 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Swiper as SwiperClass } from 'swiper';
+import { Swiper as SwiperClass } from "swiper";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
 // import required modules
-import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import { FreeMode, Navigation, Thumbs, Autoplay } from "swiper/modules";
 import Image from "next/image";
 
 export default function ThumbsSwiper(props: any) {
@@ -27,7 +27,8 @@ export default function ThumbsSwiper(props: any) {
           spaceBetween={10}
           navigation={true}
           thumbs={{ swiper: thumbsSwiper }}
-          modules={[FreeMode, Navigation, Thumbs]}
+          modules={[FreeMode, Navigation, Thumbs, Autoplay]}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
           className="mySwiper2 rounded-lg overflow-hidden w-full"
         >
           {tempImages.map((image: any, index: number) => {
@@ -38,6 +39,7 @@ export default function ThumbsSwiper(props: any) {
                     className="object-cover w-full h-full"
                     src={image}
                     alt={`Image-${index}`}
+             
                   />
                 </div>
               </SwiperSlide>

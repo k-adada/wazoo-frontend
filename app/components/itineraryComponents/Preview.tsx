@@ -94,7 +94,7 @@ export default function Preview(props: {
         </div>
 
         {/* TRIP OVERVIEW + SWIPER */}
-        <div className="col-12">
+        <div className="col-12 pt-8">
           <TripOverview />
         </div>
 
