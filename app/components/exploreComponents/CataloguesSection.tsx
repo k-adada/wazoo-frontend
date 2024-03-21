@@ -56,6 +56,18 @@ export default function CataloguesSection() {
                     className="three-dots"
                   />
                 </div>
+
+                <div className="absolute bottom-8 left-8 pointer">
+                  <div className="rounded-full bg-white text-grey flex items-center justify-center px-1 py-1">
+                    <Image
+                      src={avatarIcon}
+                      alt="avatar"
+                      className="rounded-full"
+                      style={{ width: "30px", height: "30px" }}
+                    />
+                    <div className="pl-1 f-14">DMC Name</div>
+                  </div>
+                </div>
               </div>
               <div className="col-12 px-2 flex justify-between">
                 <div className="f-20 text-darkblue poppins-medium">

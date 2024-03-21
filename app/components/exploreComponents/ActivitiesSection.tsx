@@ -8,6 +8,8 @@ import locationIcon from "../../assets/Icon_Location.png";
 import clockIcon from "../../assets/Icon_Time.png";
 import calendarIcon from "../../assets/Icon_Calendar_dark.png";
 import treeIcon from "../../assets/tree_dark.svg";
+import bookmarkIcon from "../../assets/Icon_Bookmarked_gold.svg";
+import unbookmarkIcon from "../../assets/Icon_Unbookmark.svg";
 import louvreImage from "../../assets/images/services/Louvre.jpg";
 import lucerneImage from "../../assets/images/services/lucerne.jpg";
 import montsaintImage from "../../assets/images/services/montsaintmich.jpg";
@@ -34,6 +36,18 @@ export default function ActivitiesSection() {
               <div className="col-12 pb-4 px-2">
                 <div className="image-wrapper-83">
                   <Image src={images[5 - index]} alt="casinoImage" />
+                </div>
+                <div className="absolute top-2 right-8 pointer">
+                  <div
+                    className="py-2 px-2 rounded-full backdrop-blur-xl"
+                    style={{ backgroundColor: "rgba(0,0,0,0.3)" }}
+                  >
+                    <Image
+                      src={unbookmarkIcon}
+                      alt="three dots"
+                      className="three-dots"
+                    />
+                  </div>
                 </div>
               </div>
               <div className="col-12 px-2">

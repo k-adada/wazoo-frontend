@@ -4,6 +4,8 @@ import Image from "next/image";
 
 import ServicesSwiper from "../../components/servicesSwiper";
 import sunIcon from "../../assets/Sun.svg";
+import bookmarkIcon from "../../assets/Icon_Bookmarked_gold.svg";
+import unbookmarkIcon from "../../assets/Icon_Unbookmark.svg";
 import locationIcon from "../../assets/Icon_Location.png";
 import clockIcon from "../../assets/Icon_Time.png";
 import calendarIcon from "../../assets/Icon_Calendar_dark.png";
@@ -34,6 +36,19 @@ export default function TripsSection() {
               <div className="col-12 pb-4 px-2">
                 <div className="image-wrapper-83">
                   <Image src={images[index]} alt="casinoImage" />
+                </div>
+
+                <div className="absolute top-2 right-8 pointer">
+                  <div
+                    className="py-2 px-2 rounded-full backdrop-blur-xl"
+                    style={{ backgroundColor: "rgba(0,0,0,0.3)" }}
+                  >
+                    <Image
+                      src={unbookmarkIcon}
+                      alt="three dots"
+                      className="three-dots"
+                    />
+                  </div>
                 </div>
               </div>
               <div className="col-12 px-2">

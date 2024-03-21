@@ -128,7 +128,7 @@ export default function ThemesSection() {
               src={item.image}
               alt="destination"
               style={{
-                width: "300px",
+                width: "100%",
                 height: "240px",
                 filter: "brightness(0.8)",
               }}
