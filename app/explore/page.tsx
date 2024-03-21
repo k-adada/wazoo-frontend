@@ -29,14 +29,14 @@ export default function Explore() {
   return (
     <main className="flex min-h-screen flex-col items-center p-md-24 p-3 py-[100px] bg-grey">
       {/* themes bar  */}
-      <div className="py-2 px-4 rounded-lg w-full" style={{ maxWidth: "80%" }}>
+      <div className="py-2 px-4 rounded-lg w-full" style={{ maxWidth: "95%" }}>
         <div className="row justify-between items-center">
           {/* title */}
           <div
             className={
               (selectedTab === "themes"
                 ? "rounded-lg bg-blue"
-                : "opacity-25 ") + " pointer py-2 col-auto"
+                : "opacity-25 ") + " pointer py-2 col"
             }
             onClick={() => {
               setSelectedTab("themes");
@@ -45,13 +45,13 @@ export default function Explore() {
             <div className="flex justify-center pb-2">
               <Image src={treeIcon} alt="treeIcon" />
             </div>
-            <div className="f-24 text-darkblue poppins-semibold">Themes</div>
+            <div className="f-20 text-darkblue poppins-semibold text-center">Themes</div>
           </div>
           <div
             className={
               (selectedTab === "destinations"
                 ? "rounded-lg bg-blue"
-                : "opacity-25 ") + " pointer col-auto py-2"
+                : "opacity-25 ") + " pointer col py-2"
             }
             onClick={() => {
               setSelectedTab("destinations");
@@ -60,14 +60,14 @@ export default function Explore() {
             <div className="flex justify-center pb-2">
               <Image src={locationIcon} alt="locationIcon" />
             </div>
-            <div className="f-24 text-darkblue poppins-semibold">
+            <div className="f-20 text-darkblue poppins-semibold text-center">
               Destinations
             </div>
           </div>
           <div
             className={
               (selectedTab === "trips" ? "rounded-lg bg-blue" : "opacity-25 ") +
-              " pointer py-2 col-auto"
+              " pointer py-2 col"
             }
             onClick={() => {
               setSelectedTab("trips");
@@ -76,13 +76,13 @@ export default function Explore() {
             <div className="flex justify-center pb-2">
               <Image src={planeDarkIcon} alt="planeDarkIcon" />
             </div>
-            <div className="f-24 text-darkblue poppins-semibold">Trips</div>
+            <div className="f-20 text-darkblue poppins-semibold text-center">Trips</div>
           </div>
           <div
             className={
               (selectedTab === "activities"
                 ? "rounded-lg bg-blue"
-                : "opacity-25 ") + " pointer col-auto py-2"
+                : "opacity-25 ") + " pointer col py-2"
             }
             onClick={() => {
               setSelectedTab("activities");
@@ -91,7 +91,7 @@ export default function Explore() {
             <div className="flex justify-center pb-2">
               <Image src={activityIcon} alt="activityIcon" />
             </div>
-            <div className="f-24 text-darkblue poppins-semibold">
+            <div className="f-20 text-darkblue poppins-semibold text-center">
               Activities
             </div>
           </div>
@@ -99,7 +99,7 @@ export default function Explore() {
             className={
               (selectedTab === "catalogues"
                 ? "rounded-lg bg-blue"
-                : "opacity-25 ") + " pointer col-auto py-2"
+                : "opacity-25 ") + " pointer col py-2"
             }
             onClick={() => {
               setSelectedTab("catalogues");
@@ -108,12 +108,12 @@ export default function Explore() {
             <div className="flex justify-center pb-2">
               <Image src={brochureIcon} alt="brochureIcon" />
             </div>
-            <div className="f-24 text-darkblue poppins-semibold">
+            <div className="f-20 text-darkblue poppins-semibold text-center">
               Catalogues
             </div>
           </div>
           {/* search */}
-          <div className="col">
+          <div className="col-5">
             <div className="relative">
               <div className="search-icon cursor-pointer">
                 <Image src={searchIconBlack} alt="search" />

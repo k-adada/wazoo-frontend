@@ -163,14 +163,14 @@ export default function DestinationsSection() {
 
   return (
     <div
-      className="grid grid-cols-12 gap-6 w-full mt-6"
-      style={{ maxWidth: "80%" }}
+      className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-6 w-full mt-6"
+      style={{ maxWidth: "95%" }}
     >
       {filteredDestinations.map((item, index) => {
         return (
           <div
             key={index}
-            className="2xl:col-span-2 xl:col-span-3 md:col-span-4 sm:col-span-6 col-span-12 m-auto cursor-pointer relative transform transition-transform duration-300 ease-in-out hover:scale-105"
+            className="m-auto cursor-pointer relative transform transition-transform duration-300 ease-in-out hover:scale-105"
           >
             <div className="destination-name-overlay flex items-center justify-center">
               <div className="text-ice text-center poppins-medium">

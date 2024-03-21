@@ -28,16 +28,19 @@ export default function ActivitiesSection() {
   ];
 
   return (
-    <div className="row mt-6" style={{ maxWidth: "80%" }}>
+    <div
+      className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-2 mt-6"
+      style={{ maxWidth: "95%" }}
+    >
       {[1, 2, 3, 4, 5, 6].map((item, index) => {
         return (
-          <div className="col-3 px-5 py-2" key={index}>
+          <div className="px-5 py-2" key={index}>
             <div className="row bg-white rounded-lg py-2">
               <div className="col-12 pb-4 px-2">
                 <div className="image-wrapper-83">
                   <Image src={images[5 - index]} alt="casinoImage" />
                 </div>
-                <div className="absolute top-2 right-8 pointer">
+                <div className="absolute top-2 right-4 pointer">
                   <div
                     className="py-2 px-2 rounded-full backdrop-blur-xl"
                     style={{ backgroundColor: "rgba(0,0,0,0.3)" }}
@@ -57,47 +60,34 @@ export default function ActivitiesSection() {
                   </div>
 
                   <div className="ml-auto flex items-center">
-                    <div className="f-24 text-darkblue poppins-semibold">
-                      $ 350
+                    <div className="f-16 text-grey poppins-semibold pr-2">
+                      $350
                     </div>
-                    <span className="text-darkblue">/Default</span>
                   </div>
                 </div>
               </div>
-              <div className="col-12 px-2">
-                <div className="f-16 text-grey pt-1 line-clamp-3">
+              <div className="col-12 px-2 pb-3">
+                <div className="f-14 text-grey pt-1 line-clamp-2">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Veniam voluptates eveniet iste corrupti! Cum,
                 </div>
               </div>
-
               <div className="col-auto px-2 py-1">
-                <div className="bg-lineslight rounded-full py-1 px-2">
-                  <div className="text-darkblue f-14">#Outdoor activity</div>
-                </div>
-              </div>
-              <div className="col-auto px-2 py-1">
-                <div className="bg-lineslight rounded-full py-1 px-2">
-                  <div className="text-darkblue f-14">#Beach</div>
-                </div>
-              </div>
-              <div className="col-auto px-2 py-1">
-                <div className="bg-lineslight rounded-full py-1 px-2">
-                  <div className="text-darkblue f-14">#Adventure</div>
-                </div>
-              </div>
-
-              <div className="col-auto px-2 py-1">
-                <div className="flex items-center">
-                  <Image className="mr-2" src={locationIcon} alt="location" />
+                <div className="service-tag flex">
+                  <Image className="mr-1" src={locationIcon} alt="location" />
                   <div className="text-darkblue">Paris, France</div>
                 </div>
               </div>
-
               <div className="col-auto px-2 py-1">
-                <div className="flex items-center">
-                  <Image className="mr-2" src={calendarIcon} alt="calendar" />
-                  <div className="text-darkblue">Oct 11 - Oct 15</div>
+                <div className="service-tag flex">
+                  <Image className="mr-1" src={calendarIcon} alt="calendar" />
+                  <div className="text-darkblue">Oct 1 - Dec 31</div>
+                </div>
+              </div>
+              <div className="col-auto px-2 py-1">
+                <div className="service-tag flex">
+                  <Image className="mr-1" src={treeIcon} alt="treeIcon" />
+                  <div className="text-darkblue">Kayak</div>
                 </div>
               </div>
             </div>
