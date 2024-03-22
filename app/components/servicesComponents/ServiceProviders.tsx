@@ -20,9 +20,9 @@ export default function ServiceProviders(props: any) {
         </div>
         <div className="">
           <div className="row">
-            {selectedProviders.map((provider, index) => {
+            {selectedProviders.map((provider: any, index: number) => {
               return (
-                <div className="col-12 py-4">
+                <div className="col-12 py-4" key={index}>
                   <div className="rounded-lg bg-white py-4 px-4">
                     <div className="row items-center">
                       <div className="col-auto">
