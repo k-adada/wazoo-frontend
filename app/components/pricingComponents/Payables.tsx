@@ -13,7 +13,7 @@ import userIcon from "../../assets/Icon_My_Account_dark.png";
 import tagIcon from "../../assets/Icon_Tag.png";
 import invoiceIcon from "../../assets/Icon_Invoice_dark.png";
 import addIcon from "../../assets/Icon_Add_Dark.png";
-import deleteIcon from "../../assets/delete_red.png";
+import deleteIcon from "../../assets/delete_red.svg";
 
 export default function Payables(props: any) {
   const { title = true } = props;

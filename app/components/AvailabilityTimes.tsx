@@ -42,10 +42,6 @@ export default function AvailabilityTimes() {
   return (
     <>
       <div className="row">
-        <div className="col-12">
-          <div className="text-darkblue pt-8 pb-3 f-20">Availability Times</div>
-        </div>
-
         {/* Monday  */}
         <div className="col-auto">
           <div
@@ -70,7 +66,7 @@ export default function AvailabilityTimes() {
             </span>
             <div className="day-time flex mt-2">
               <input
-                className=""
+                className="border rounded-lg"
                 type="time"
                 value={availability.monday.start}
                 onChange={(e) =>
@@ -85,7 +81,7 @@ export default function AvailabilityTimes() {
               />
               &nbsp;
               <input
-                className=""
+                className="border rounded-lg"
                 type="time"
                 value={availability.monday.end}
                 onChange={(e) =>
@@ -125,7 +121,7 @@ export default function AvailabilityTimes() {
             </span>
             <div className="day-time flex mt-2">
               <input
-                className=""
+                className="border rounded-lg"
                 type="time"
                 value={availability.tuesday.start}
                 onChange={(e) =>
@@ -140,7 +136,7 @@ export default function AvailabilityTimes() {
               />
               &nbsp;
               <input
-                className=""
+                className="border rounded-lg"
                 type="time"
                 value={availability.tuesday.end}
                 onChange={(e) =>
@@ -180,7 +176,7 @@ export default function AvailabilityTimes() {
             </span>
             <div className="day-time flex mt-2">
               <input
-                className=""
+                className="border rounded-lg"
                 type="time"
                 value={availability.wednesday.start}
                 onChange={(e) =>
@@ -195,7 +191,7 @@ export default function AvailabilityTimes() {
               />
               &nbsp;
               <input
-                className=""
+                className="border rounded-lg"
                 type="time"
                 value={availability.wednesday.end}
                 onChange={(e) =>
@@ -235,7 +231,7 @@ export default function AvailabilityTimes() {
             </span>
             <div className="day-time flex mt-2">
               <input
-                className=""
+                className="border rounded-lg"
                 type="time"
                 value={availability.thursday.start}
                 onChange={(e) =>
@@ -250,7 +246,7 @@ export default function AvailabilityTimes() {
               />
               &nbsp;
               <input
-                className=""
+                className="border rounded-lg"
                 type="time"
                 value={availability.thursday.end}
                 onChange={(e) =>
@@ -290,7 +286,7 @@ export default function AvailabilityTimes() {
             </span>
             <div className="day-time flex mt-2">
               <input
-                className=""
+                className="border rounded-lg"
                 type="time"
                 value={availability.friday.start}
                 onChange={(e) =>
@@ -305,7 +301,7 @@ export default function AvailabilityTimes() {
               />
               &nbsp;
               <input
-                className=""
+                className="border rounded-lg"
                 type="time"
                 value={availability.friday.end}
                 onChange={(e) =>
@@ -345,7 +341,7 @@ export default function AvailabilityTimes() {
             </span>
             <div className="day-time flex mt-2">
               <input
-                className=""
+                className="border rounded-lg"
                 type="time"
                 value={availability.saturday.start}
                 onChange={(e) =>
@@ -360,7 +356,7 @@ export default function AvailabilityTimes() {
               />
               &nbsp;
               <input
-                className=""
+                className="border rounded-lg"
                 type="time"
                 value={availability.saturday.end}
                 onChange={(e) =>
@@ -400,7 +396,7 @@ export default function AvailabilityTimes() {
             </span>
             <div className="day-time flex mt-2">
               <input
-                className=""
+                className="border rounded-lg"
                 type="time"
                 value={availability.sunday.start}
                 onChange={(e) =>
@@ -415,7 +411,7 @@ export default function AvailabilityTimes() {
               />
               &nbsp;
               <input
-                className=""
+                className="border rounded-lg"
                 type="time"
                 value={availability.sunday.end}
                 onChange={(e) =>

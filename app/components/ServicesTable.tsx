@@ -21,7 +21,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import { visuallyHidden } from "@mui/utils";
 
-import deleteRedIcon from "../assets/delete_red.png";
+import deleteRedIcon from "../assets/delete_red.svg";
 import editIcon from "../assets/Icon_Edit.png";
 import tourEffelImage from "../assets/tour_effel.jpg";
 

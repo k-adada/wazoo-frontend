@@ -4,7 +4,7 @@ import Image from "next/image";
 import tagIcon from "../../assets/Icon_Tag.png";
 import invoiceIcon from "../../assets/Icon_Invoice_dark.png";
 import addIcon from "../../assets/Icon_Add_Dark.png";
-import deleteIcon from "../../assets/delete_red.png";
+import deleteIcon from "../../assets/delete_red.svg";
 import cancellationIcon from "../../assets/Icon_Stop.png";
 
 export default function MyPricing(props: any) {

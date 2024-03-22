@@ -11,7 +11,7 @@ import addCircleIcon from "../../assets/Icon_Add_circle.png";
 import addIcon from "../../assets/Icon_Add_Dark.png";
 import tourImage from "../../assets/tour_effel.jpg";
 import locationIcon from "../../assets/Icon_Location_gold.png";
-import deleteRedIcon from "../../assets/delete_red.png";
+import deleteRedIcon from "../../assets/delete_red.svg";
 import DragTableServices from "../DragTableServices";
 
 import carImage from "../../assets/mercedes.webp";

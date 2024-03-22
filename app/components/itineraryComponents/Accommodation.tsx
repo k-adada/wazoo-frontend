@@ -7,7 +7,7 @@ import locationIcon from "../../assets/Icon_Location_gold.png";
 import searchIcon from "../../assets/Icon_Search_Black.png";
 import filterIcon from "../../assets/Icon_Itinerary.png";
 import saveIcon from "../../assets/Icon_Save.png";
-import deleteRedIcon from "../../assets/delete_red.png";
+import deleteRedIcon from "../../assets/delete_red.svg";
 import downArrowIcon from "../../assets/down_arrow_dark.png";
 import addIcon from "../../assets/Icon_Add_Dark.png";
 import addGoldIcon from "../../assets/Icon_Add.png";

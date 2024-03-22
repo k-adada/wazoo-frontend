@@ -7,7 +7,7 @@ import {
   GridRowOrderChangeParams,
 } from "@mui/x-data-grid-pro";
 
-import deleteRedIcon from "../../assets/delete_red.png";
+import deleteRedIcon from "../../assets/delete_red.svg";
 import editIcon from "../../assets/Icon_Edit.png";
 import addProviderIcon from "../../assets/serviceProviderAdd.svg";
 import Image from "next/image";
