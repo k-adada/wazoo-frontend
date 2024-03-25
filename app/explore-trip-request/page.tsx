@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import "./dist/QuickRequestTrip.css";
+import "./dist/exploreTripRequest.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -8,6 +8,7 @@ import notificationIcon from "../assets/Icon_Notification_Received.png";
 import avatarIcon from "../assets/avatar.png";
 import saveIcon from "../assets/Icon_Save.png";
 import tripIcon from "../assets/Icon_Plan_Trip.svg";
+import submitIcon from "../assets/Icon_Submit_gold.svg";
 import backIcon from "../assets/Icon_Back.png";
 import downArrowIcon from "../assets/Icon_Arrow_Down_white.png";
 import Link from "next/link";
@@ -16,7 +17,7 @@ import AgenciesTable from "../components/community/AgenciesTable";
 import TripInfo from "../components/requestTripComponents/TripInfo";
 import ClientPreferences from "../components/requestTripComponents/ClientPreferences";
 
-export default function QuickRequestTrip() {
+export default function ExploreTripRequest() {
   const router = useRouter();
   const [currentStep, setCurrentStep] = useState("trip-info");
   const [showTripInfo, setShowTripInfo] = useState(true);
@@ -71,7 +72,7 @@ export default function QuickRequestTrip() {
         </div>
 
         {requestType === "false" && (
-          <div className="row pt-5 justify-center">
+          <div className="row pt-20 justify-center">
             <div className="col-md-auto col-12">
               <div className="bg-darkblue rounded-lg px-4 pt-6 pb-10 w-[350px]">
                 <div className="">
@@ -100,7 +101,11 @@ export default function QuickRequestTrip() {
             <div className="col-md-auto col-12">
               <div className="bg-darkblue rounded-lg px-4 pt-6 pb-10 w-[350px]">
                 <div className="">
-                  <Image className="w-[60px]" src={tripIcon} alt="tripIcon" />
+                  <Image
+                    className="w-[60px]"
+                    src={submitIcon}
+                    alt="submitIcon"
+                  />
                 </div>
                 <div className="text-ice poppins-medium f-20 py-3">
                   Leave a small note

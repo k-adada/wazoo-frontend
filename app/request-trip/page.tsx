@@ -8,6 +8,7 @@ import notificationIcon from "../assets/Icon_Notification_Received.png";
 import avatarIcon from "../assets/avatar.png";
 import saveIcon from "../assets/Icon_Save.png";
 import tripIcon from "../assets/Icon_Plan_Trip.svg";
+import submitIcon from "../assets/Icon_Submit_gold.svg";
 import backIcon from "../assets/Icon_Back.png";
 import downArrowIcon from "../assets/Icon_Arrow_Down_white.png";
 import Link from "next/link";
@@ -73,69 +74,71 @@ export default function RequestTrip() {
         {requestType === "false" && (
           <div className="row pt-5 justify-center">
             <div className="col-md-auto col-12">
-              <div className="bg-darkblue rounded-lg px-4 pt-6 pb-10 w-[350px]">
-                <div className="">
-                  <Image className="w-[60px]" src={tripIcon} alt="tripIcon" />
+              <div className="bg-darkblue rounded-lg px-4 pt-6 pb-10 w-[350px] h-full flex flex-col justify-between">
+                <div className="w-full">
+                  <div className="">
+                    <Image className="w-[60px]" src={tripIcon} alt="tripIcon" />
+                  </div>
+                  <div className="text-ice poppins-medium f-20 py-3">
+                    Tailored Request
+                  </div>
+                  <div className="text-grey pb-6">
+                    Customize your trip by selecting from sample itineraries and
+                    services before submitting your request to DMCs
+                  </div>
                 </div>
-                <div className="text-ice poppins-medium f-20 py-3">
-                  Fill a detailed form
-                </div>
-                <div className="text-grey pb-6">
-                  Lorem ipsum dolor sit amet, sectetur adipiscing elit, sed do
-                  eiusmod tempor incididun Lorem ipsum dolor sit amet, sectetur
-                  adipiscing elit.
-                </div>
-
                 <div
                   className="f-20 pointer text-darkblue bg-gold rounded-lg px-5 py-3 flex items-center justify-center"
                   onClick={() => {
-                    setRequestType("detailed");
+                    setRequestType("tailored");
                   }}
                 >
-                  Fill Form
+                  Tailor My Trip
                 </div>
               </div>
             </div>
 
             <div className="col-md-auto col-12">
-              <div className="bg-darkblue rounded-lg px-4 pt-6 pb-10 w-[350px]">
-                <div className="">
-                  <Image className="w-[60px]" src={tripIcon} alt="tripIcon" />
+              <div className="bg-darkblue rounded-lg px-4 pt-6 pb-10 w-[350px] h-full flex flex-col justify-between">
+                <div className="w-full">
+                  <div className="">
+                    <Image className="w-[60px]" src={submitIcon} alt="submitIcon" />
+                  </div>
+                  <div className="text-ice poppins-medium f-20 py-3">
+                    Quick Dispatch
+                  </div>
+                  <div className="text-grey pb-6">
+                    Quick Dispatch streamlines your request process by swiftly
+                    connecting you with DMCs that match your chosen travel theme
+                    and destinations, ensuring a prompt and tailored response to
+                    your inquiry.
+                  </div>
                 </div>
-                <div className="text-ice poppins-medium f-20 py-3">
-                  Leave a small note
-                </div>
-                <div className="text-grey pb-6">
-                  Lorem ipsum dolor sit amet, sectetur adipiscing elit, sed do
-                  eiusmod tempor incididun Lorem ipsum dolor sit amet, sectetur
-                  adipiscing elit.
-                </div>
-
                 <div
                   className="f-20 pointer text-darkblue bg-gold rounded-lg px-5 py-3 flex items-center justify-center"
                   onClick={() => {
-                    setRequestType("small");
+                    setRequestType("quick");
                   }}
                 >
-                  Leave Note
+                  Dispatch
                 </div>
               </div>
             </div>
           </div>
         )}
 
-        {/* SMALL FORM */}
-        {requestType === "small" && (
+        {/* quick FORM */}
+        {requestType === "quick" && (
           <div className="row pt-5">
             {/* TRIP INFO SECTION  */}
             <div className="col">
-              <TripInfo />
+              <TripInfo quickDispatch={true} />
             </div>
           </div>
         )}
 
         {/* DETAILED FORM */}
-        {requestType === "detailed" && (
+        {requestType === "tailored" && (
           <div className="row pt-5">
             {/*  STEPS LEFT BAR START */}
             <div className="col-auto" style={{ maxHeight: "80vh" }}>

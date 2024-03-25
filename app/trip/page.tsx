@@ -54,7 +54,7 @@ export default function Catalogue() {
               className="dark-button pointer ml-auto mt-10"
               style={{ width: "155px" }}
             >
-              <Link href="/quick-request-trip">
+              <Link href="/explore-trip-request">
                 <div className="flex items-center justify-center h-full text-gold w-full">
                   Request a Trip
                 </div>

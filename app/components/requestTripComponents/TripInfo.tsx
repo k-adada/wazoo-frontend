@@ -3,11 +3,12 @@ import React, { useState } from "react";
 
 import MultipleSelectLight from "../../components/MultipleSelectLight";
 
-export default function TripInfo() {
+export default function TripInfo(props: any) {
+  const { quickDispatch } = props;
   return (
     <div className="row px-5 py-5 rounded-lg bg-blue">
       {/*  Trip Name */}
-      <div className="col-6">
+      <div className="col-6 pb-5">
         <div className="text-darkblue pb-2 f-16">
           Trip Name <span className="text-orange">*</span>
         </div>
@@ -21,7 +22,7 @@ export default function TripInfo() {
         </div>
       </div>
       {/* Client Name  */}
-      <div className="col-6">
+      <div className="col-6 pb-5">
         <div className="text-darkblue pb-2 f-16">
           Client Name <span className="text-orange">*</span>
         </div>
@@ -35,7 +36,7 @@ export default function TripInfo() {
         </div>
       </div>
       {/* Number of Adults  */}
-      <div className="col-6 py-6">
+      <div className="col-6 py-5">
         <div className="text-darkblue pb-2 f-16">
           Number of Adults <span className="text-orange">*</span>
         </div>
@@ -51,7 +52,7 @@ export default function TripInfo() {
         </div>
       </div>
       {/* Number of Children  */}
-      <div className="col-6 py-6">
+      <div className="col-6 py-5">
         <div className="text-darkblue pb-2 f-16">
           Number of Children <span className="text-orange">*</span>
         </div>
@@ -67,7 +68,7 @@ export default function TripInfo() {
         </div>
       </div>
       {/* Trip Dates  */}
-      <div className="col-6 py-6">
+      <div className="col-6 py-5">
         <div className="text-darkblue pb-2 f-16">
           Trip Dates <span className="text-orange">*</span>
         </div>
@@ -83,7 +84,7 @@ export default function TripInfo() {
         </div>
       </div>
       {/* How flexible are the dates? */}
-      <div className="col-6 py-6">
+      <div className="col-6 py-5">
         <div className="text-darkblue pb-2 f-16">
           How flexible are the dates? <span className="text-orange">*</span>
         </div>
@@ -107,7 +108,7 @@ export default function TripInfo() {
         </div>
       </div>
       {/* Budget Approach */}
-      <div className="col-6 py-6">
+      <div className="col-6 py-5">
         <div className="text-darkblue pb-2 f-16">
           Budget Approach
           <span className="text-orange">*</span>
@@ -137,7 +138,7 @@ export default function TripInfo() {
         </div>
       </div>
       {/*  Trip Budget */}
-      <div className="col-6 py-6">
+      <div className="col-6 py-5">
         <div className="text-darkblue pb-2 f-16">
           Trip Budget
           <span className="text-orange">*</span>
@@ -165,7 +166,7 @@ export default function TripInfo() {
       </div>
 
       {/*  Guide Gratuity */}
-      <div className="col-12 py-6">
+      <div className="col-12 py-5">
         <div className="text-darkblue pb-2 f-16">
           Would you like us to include a guide gratuity in this quote?
           <span className="text-orange">*</span>
@@ -185,10 +186,82 @@ export default function TripInfo() {
           />
         </div>
       </div>
+
+      {quickDispatch && (
+        <>
+          {/*  Destinations */}
+          <div className="col-12 py-5">
+            <div className="text-darkblue pb-2 f-16">
+              Please Select the Destinations
+              <span className="text-orange">*</span>
+            </div>
+            <div className="f-14 text-darkblue">
+              Please note: if you choose ALL we will include all destinations
+            </div>
+            <div className="light-input">
+              <MultipleSelectLight
+                options={[
+                  { id: "All", name: "All" },
+                  { id: "Lebanon", name: "Lebanon" },
+                  { id: "Jordan", name: "Jordan" },
+                  { id: "Egypt", name: "Egypt" },
+                  { id: "Morocco", name: "Morocco" },
+                  { id: "Turkey", name: "Turkey" },
+                  { id: "Greece", name: "Greece" },
+                  { id: "Italy", name: "Italy" },
+                  { id: "Spain", name: "Spain" },
+                  { id: "Portugal", name: "Portugal" },
+                  { id: "France", name: "France" },
+                  { id: "Croatia", name: "Croatia" },
+                  { id: "Montenegro", name: "Montenegro" },
+                  { id: "Bosnia", name: "Bosnia" },
+                  { id: "Serbia", name: "Serbia" },
+                  { id: "Albania", name: "Albania" },
+                  { id: "Macedonia", name: "Macedonia" },
+                  { id: "Bulgaria", name: "Bulgaria" },
+                  { id: "Romania", name: "Romania" },
+                  { id: "Hungary", name: "Hungary" },
+                  { id: "Slovakia", name: "Slovakia" },
+                  { id: "Czech Republic", name: "Czech Republic" },
+                  { id: "Poland", name: "Poland" },
+                  { id: "Austria", name: "Austria" },
+                  { id: "Germany", name: "Germany" },
+                  { id: "Switzerland", name: "Switzerland" },
+                  { id: "Netherlands", name: "Netherlands" },
+                  { id: "Belgium", name: "Belgium" },
+                  { id: "Luxembourg", name: "Luxembourg" },
+                  { id: "Denmark", name: "Denmark" },
+                  { id: "Sweden", name: "Sweden" },
+                  { id: "Norway", name: "Norway" },
+                  { id: "Finland", name: "Finland" },
+                  { id: "Iceland", name: "Iceland" },
+                  { id: "United Kingdom", name: "United Kingdom" },
+                  { id: "Ireland", name: "Ireland" },
+                  { id: "Russia", name: "Russia" },
+                  { id: "Ukraine", name: "Ukraine" },
+                  { id: "Belarus", name: "Belarus" },
+                  { id: "Estonia", name: "Estonia" },
+                  { id: "Latvia", name: "Latvia" },
+                  { id: "Lithuania", name: "Lithuania" },
+                  { id: "Moldova", name: "Moldova" },
+                ]}
+                placeholder="Select"
+              />
+            </div>
+          </div>
+        </>
+      )}
+
       {/* Additional info */}
       <div className="col-12">
         <div className="text-darkblue pt-4 pb-2 f-16">
-          Please include any additional iformation you would like us to know
+          {quickDispatch ? (
+            <>
+              Describe your Trip <span className="text-orange">*</span>
+            </>
+          ) : (
+            "Please include any additional iformation you would like us to know"
+          )}
         </div>
         <div className="light-input">
           <textarea
