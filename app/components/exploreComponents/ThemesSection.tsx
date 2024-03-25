@@ -114,7 +114,7 @@ export default function ThemesSection() {
 
   return (
     <div
-      className="grid grid-cols-12 gap-6 w-full mt-6"
+      className="grid grid-cols-12 gap-6 w-full mt-2"
       style={{ maxWidth: "95%" }}
     >
       {themes.map((item, index) => {

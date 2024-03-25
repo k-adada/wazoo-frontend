@@ -16,6 +16,7 @@ import doorIcon from "../assets/door_arrow.svg";
 import homeIcon from "../assets/Icon_Home_dark.svg";
 import searchIcon from "../assets/Icon_Search_gold.svg";
 import bookmarkIcon from "../assets/Icon_Bookmarked_gold.svg";
+import arrowDownIcon from "../assets/down_arrow_dark.svg";
 
 import DestinationsSection from "../components/exploreComponents/DestinationsSection";
 import ThemesSection from "../components/exploreComponents/ThemesSection";
@@ -45,7 +46,9 @@ export default function Explore() {
             <div className="flex justify-center pb-2">
               <Image src={treeIcon} alt="treeIcon" />
             </div>
-            <div className="f-20 text-darkblue poppins-semibold text-center">Themes</div>
+            <div className="f-20 text-darkblue poppins-semibold text-center">
+              Themes
+            </div>
           </div>
           <div
             className={
@@ -76,7 +79,9 @@ export default function Explore() {
             <div className="flex justify-center pb-2">
               <Image src={planeDarkIcon} alt="planeDarkIcon" />
             </div>
-            <div className="f-20 text-darkblue poppins-semibold text-center">Trips</div>
+            <div className="f-20 text-darkblue poppins-semibold text-center">
+              Trips
+            </div>
           </div>
           <div
             className={
@@ -114,15 +119,29 @@ export default function Explore() {
           </div>
           {/* search */}
           <div className="col-5">
-            <div className="relative">
-              <div className="search-icon cursor-pointer">
-                <Image src={searchIconBlack} alt="search" />
+            <div className="flex items-center">
+              <div className="relative w-full">
+                <div className="search-icon cursor-pointer">
+                  <Image src={searchIconBlack} alt="search" />
+                </div>
+                <input
+                  className="bg-white text-darkblue pl-[56px] p-3 rounded-lg w-full"
+                  placeholder={"Search " + selectedTab}
+                  type="text"
+                />
               </div>
-              <input
-                className="bg-white text-darkblue pl-[56px] p-3 rounded-lg w-full"
-                placeholder={"Search " + selectedTab}
-                type="text"
-              />
+              <div className="pl-4 w-auto">
+                <div className="bg-white rounded-lg py-3 px-5 text-darkblue flex items-center">
+                  <div className="">Filasdasdters</div>
+                  <div className="">
+                    <Image
+                      src={arrowDownIcon}
+                      alt="arrowDown"
+                      style={{ height: "25px", width: "25px" }}
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -147,21 +166,30 @@ export default function Explore() {
       {/* bottom bar */}
       <div className="w-full bottom-fixed text-center">
         <div className="flex items-center justify-center">
-          <div className="rounded-full overflow-hidden backdrop-blur-xl py-4 px-4 mx-1 pointer" style={{backgroundColor:"rgba(0,0,0,0.2)"}}>
+          <div
+            className="rounded-full overflow-hidden backdrop-blur-xl py-4 px-4 mx-1 pointer"
+            style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
+          >
             <Image
               src={planeIcon}
               alt="plane"
               style={{ height: "25px", width: "25px" }}
             />
           </div>
-          <div className="rounded-full overflow-hidden backdrop-blur-md py-4 px-4 mx-1 pointer" style={{backgroundColor:"rgba(0,0,0,0.2)"}}>
+          <div
+            className="rounded-full overflow-hidden backdrop-blur-md py-4 px-4 mx-1 pointer"
+            style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
+          >
             <Image
               src={doorIcon}
               alt="door"
               style={{ height: "25px", width: "25px" }}
             />
           </div>
-          <div className="rounded-full overflow-hidden backdrop-blur-md py-4 px-4 mx-1 pointer" style={{backgroundColor:"rgba(0,0,0,0.2)"}}>
+          <div
+            className="rounded-full overflow-hidden backdrop-blur-md py-4 px-4 mx-1 pointer"
+            style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
+          >
             <div className="rounded-full overflow-hidden bg-gold py-4 px-4">
               <Image
                 src={homeIcon}
@@ -170,14 +198,20 @@ export default function Explore() {
               />
             </div>
           </div>
-          <div className="rounded-full overflow-hidden backdrop-blur-md py-4 px-4 mx-1 pointer" style={{backgroundColor:"rgba(0,0,0,0.2)"}}>
+          <div
+            className="rounded-full overflow-hidden backdrop-blur-md py-4 px-4 mx-1 pointer"
+            style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
+          >
             <Image
               src={bookmarkIcon}
               alt="bookmark"
               style={{ height: "25px", width: "25px" }}
             />
           </div>
-          <div className="rounded-full overflow-hidden backdrop-blur-md py-4 px-4 mx-1 pointer" style={{backgroundColor:"rgba(0,0,0,0.2)"}}>
+          <div
+            className="rounded-full overflow-hidden backdrop-blur-md py-4 px-4 mx-1 pointer"
+            style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
+          >
             <Image
               src={searchIcon}
               alt="search"

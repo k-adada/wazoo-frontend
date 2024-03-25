@@ -29,7 +29,7 @@ export default function TripsSection() {
   ];
 
   return (
-    <div className="row mt-6" style={{ maxWidth: "95%" }}>
+    <div className="row mt-2" style={{ maxWidth: "95%" }}>
       {[1, 2, 3, 4, 5, 6].map((item, index) => {
         return (
           <div className="col-3 px-5 py-2" key={index}>

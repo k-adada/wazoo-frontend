@@ -9,7 +9,7 @@ import casinoImage from "../../assets/Bellagio-Hotel-Casino-Las-Vegas.webp";
 
 export default function CataloguesSection() {
   return (
-    <div className="row mt-6" style={{ maxWidth: "95%" }}>
+    <div className="row mt-2" style={{ maxWidth: "95%" }}>
       {[1, 2, 3, 4, 5, 6].map((item, index) => {
         return (
           <div className="col-2xl-3 col-lg-4 col-md-6 py-3 px-5" key={index}>

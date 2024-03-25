@@ -29,7 +29,7 @@ export default function ActivitiesSection() {
 
   return (
     <div
-      className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-2 mt-6"
+      className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-2 mt-2"
       style={{ maxWidth: "95%" }}
     >
       {[1, 2, 3, 4, 5, 6].map((item, index) => {

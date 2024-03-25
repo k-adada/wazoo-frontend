@@ -42,9 +42,13 @@ export default function ExploreTripRequest() {
                 <div className="pl-2 text-darkblue">Back</div>
               </div>
             </div>
-            <div className="col-auto self-center">
+            <div className="col-auto self-center flex items-center">
               <div className="f-36 poppins-semibold text-darkblue ">
                 Request a Trip
+              </div>
+              <div className="f-20 poppins-medium text-darkblue pl-4">
+                {requestType === "detailed" && "- Detailed Form"}
+                {requestType === "small" && "- Small Note"}
               </div>
             </div>
           </div>

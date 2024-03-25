@@ -29,7 +29,7 @@ export default function RequestTrip() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center p-md-24 p-3 bg-lightblue pt-[75px] pb-[100px]">
+    <main className="flex min-h-screen flex-col items-center p-md-24 p-3 bg-lightblue pt-[75px] ">
       <div className="container-fluid">
         <div className="row items-center justify-between">
           <div className="flex">
@@ -42,9 +42,14 @@ export default function RequestTrip() {
                 <div className="pl-2 text-darkblue">Back</div>
               </div>
             </div>
-            <div className="col-auto self-center">
+            <div className="col-auto self-center flex items-center">
               <div className="f-36 poppins-semibold text-darkblue ">
                 Request a Trip
+              </div>
+
+              <div className="f-20 poppins-medium text-darkblue pl-4">
+                {requestType === "quick" && "- Quick Dispatch"}
+                {requestType === "tailored" && "- Tailored Request"}
               </div>
             </div>
           </div>
@@ -310,7 +315,7 @@ export default function RequestTrip() {
               </div>
             )}
           </div>
-        )}  
+        )}
       </div>
     </main>
   );
