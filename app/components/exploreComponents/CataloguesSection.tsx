@@ -1,29 +1,13 @@
 import React from "react";
 import Image from "next/image";
 
-import avatarIcon from "../../assets/avatar.png";
+import Images from "@/app/Images";
 
 import Link from "next/link";
 import threeDotsIcon from "../../assets/three_dots_white.png";
 import casinoImage from "../../assets/Bellagio-Hotel-Casino-Las-Vegas.webp";
 
-import louvreImage from "../../assets/images/services/Louvre.jpg";
-import lucerneImage from "../../assets/images/services/lucerne.jpg";
-import montsaintImage from "../../assets/images/services/montsaintmich.jpg";
-import triomphImage from "../../assets/images/services/Triomphe.jpg";
-import notreImage from "../../assets/images/services/NotreDameCathedral.jpg";
-import quartierImage from "../../assets/images/services/Quartier_Latin.jpg";
-
 export default function CataloguesSection() {
-  const images = [
-    louvreImage,
-    lucerneImage,
-    montsaintImage,
-    triomphImage,
-    notreImage,
-    quartierImage,
-  ];
-
   return (
     <div className="row mt-6" style={{ maxWidth: "95%" }}>
       {[1, 2, 3, 4, 5, 6].map((item, index) => {
@@ -46,7 +30,7 @@ export default function CataloguesSection() {
                   <div className="absolute bottom-8 left-8 pointer">
                     <div className="rounded-full bg-white text-grey flex items-center justify-center pl-1 pr-2 py-1">
                       <Image
-                        src={avatarIcon}
+                        src={Images.avatarIcon}
                         alt="avatar"
                         className="rounded-full"
                         style={{ width: "30px", height: "30px" }}
