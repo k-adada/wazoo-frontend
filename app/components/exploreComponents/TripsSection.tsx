@@ -17,6 +17,7 @@ import triomphImage from "../../assets/images/services/Triomphe.jpg";
 import notreImage from "../../assets/images/services/NotreDameCathedral.jpg";
 import quartierImage from "../../assets/images/services/Quartier_Latin.jpg";
 import Link from "next/link";
+import Images from "@/app/Images";
 
 export default function TripsSection() {
   const images = [
@@ -28,9 +29,122 @@ export default function TripsSection() {
     quartierImage,
   ];
 
+  const trips = [
+    {
+      name: "Enchanting Parisian Escape",
+      description:
+        "Experience the magic of Paris with charming streets, iconic landmarks, and exquisite cuisine.",
+      location: "Paris, France",
+      duration: "5 days",
+      date: "Apr 1 - Oct 31",
+      theme: "Romantic",
+      season: "Spring/Summer",
+      image: Images.louvreImage,
+    },
+    {
+      name: "Adventure in the Swiss Alps",
+      description:
+        "Embark on an adrenaline-packed journey through the breathtaking landscapes of the Swiss Alps.",
+      location: "Switzerland",
+      duration: "7 days",
+      date: "Jun 15 - Sep 15",
+      theme: "Adventure",
+      season: "Summer",
+      image: Images.lucerneImage,
+    },
+    {
+      name: "Romantic Riviera Retreat",
+      description:
+        "Unwind and romance in the picturesque settings of the Riviera with azure waters and golden beaches.",
+      location: "French Riviera",
+      duration: "10 days",
+      date: "May 1 - Sep 30",
+      theme: "Romantic",
+      season: "Spring/Summer",
+      image: "url",
+    },
+    {
+      name: "Cultural Odyssey in Rome",
+      description:
+        "Delve into the rich history and culture of Rome, exploring ancient ruins, art masterpieces, and vibrant neighborhoods.",
+      location: "Rome, Italy",
+      duration: "6 days",
+      date: "Mar 15 - Nov 15",
+      theme: "Cultural",
+      season: "Spring/Fall",
+      image: "url",
+    },
+    {
+      name: "Island Paradise Getaway",
+      description:
+        "Escape to a tropical paradise with pristine beaches, turquoise waters, and lush landscapes.",
+      location: "Maldives",
+      duration: "8 days",
+      date: "Dec 1 - May 31",
+      theme: "Beach",
+      season: "Winter/Spring",
+      image: "url",
+    },
+    {
+      name: "Historic Journey through Athens",
+      description:
+        "Discover the ancient wonders of Athens, from the Acropolis to historic ruins, and immerse in Greek mythology.",
+      location: "Athens, Greece",
+      duration: "7 days",
+      date: "Apr 15 - Oct 31",
+      theme: "Historic",
+      season: "Spring/Summer",
+      image: "url",
+    },
+    {
+      name: "Safari Expedition in Serengeti",
+      description:
+        "Embark on an unforgettable safari adventure in the vast savannahs of Serengeti, witnessing diverse wildlife and natural beauty.",
+      location: "Tanzania",
+      duration: "9 days",
+      date: "Jun 1 - Oct 15",
+      theme: "Wildlife",
+      season: "Summer",
+      image: "url",
+    },
+    {
+      name: "Exploring the Wonders of Istanbul",
+      description:
+        "Immerse in the vibrant culture and history of Istanbul, from ancient landmarks to bustling bazaars.",
+      location: "Istanbul, Turkey",
+      duration: "6 days",
+      date: "Mar 1 - Nov 30",
+      theme: "Cultural",
+      season: "Spring/Fall",
+      image: "url",
+    },
+    {
+      name: "Tropical Bliss in Bali",
+      description:
+        "Relax and rejuvenate in the serene beauty of Bali, with lush landscapes, serene beaches, and spiritual retreats.",
+      location: "Bali, Indonesia",
+      duration: "10 days",
+      date: "Apr 15 - Oct 31",
+      theme: "Beach",
+      season: "Spring/Summer",
+      image: "url",
+    },
+    {
+      name: "Northern Lights Discovery in Iceland",
+      description:
+        "Witness the mesmerizing spectacle of the Northern Lights in Iceland, amidst rugged landscapes and geothermal wonders.",
+      location: "Iceland",
+      duration: "7 days",
+      date: "Sep 1 - Mar 31",
+      theme: "Nature",
+      season: "Winter",
+      image: "url",
+    },
+  ];
+
   return (
     <div className="row mt-2" style={{ maxWidth: "95%" }}>
-      {[1, 2, 3, 4, 5, 6].map((item, index) => {
+      {trips.map((item, index) => {
         return (
           <div className="col-3 px-5 py-2" key={index}>
             <Link href="/trip">
@@ -55,43 +169,42 @@ export default function TripsSection() {
                 </div>
                 <div className="col-12 px-2">
                   <div className="f-20 text-darkblue poppins-medium">
-                    Itinerary Name {index + 1}
+                    {item.name}
                   </div>
                 </div>
                 <div className="col-12 px-2 pb-3">
                   <div className="f-16 text-grey pt-1 line-clamp-2">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Veniam voluptates eveniet iste corrupti! Cum,
+                    {item.description}
                   </div>
                 </div>
                 <div className="col-auto px-2 py-1">
                   <div className="service-tag flex">
                     <Image className="mr-1" src={locationIcon} alt="location" />
-                    <div className="text-darkblue">Paris, France</div>
+                    <div className="text-darkblue">{item.location}</div>
                   </div>
                 </div>
                 <div className="col-auto px-2 py-1">
                   <div className="service-tag flex">
                     <Image className="mr-1" src={clockIcon} alt="time" />
-                    <div className="text-darkblue">5 days</div>
+                    <div className="text-darkblue">{item.duration}</div>
                   </div>
                 </div>
                 <div className="col-auto px-2 py-1">
                   <div className="service-tag flex">
                     <Image className="mr-1" src={calendarIcon} alt="calendar" />
-                    <div className="text-darkblue">Oct 1 - Dec 31</div>
+                    <div className="text-darkblue">{item.date}</div>
                   </div>
                 </div>
                 <div className="col-auto px-2 py-1">
                   <div className="service-tag flex">
                     <Image className="mr-1" src={treeIcon} alt="tree icon" />
-                    <div className="text-darkblue">Adventure</div>
+                    <div className="text-darkblue">{item.theme}</div>
                   </div>
                 </div>
                 <div className="col-auto px-2 py-1">
                   <div className="service-tag flex">
                     <Image className="mr-1" src={sunIcon} alt="sun icon" />
-                    <div className="text-darkblue">Summer</div>
+                    <div className="text-darkblue">{item.season}</div>
                   </div>
                 </div>
               </div>

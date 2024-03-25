@@ -1,4 +1,3 @@
-// Assuming the direct import paths are correct
 import logo from "@/app/assets/middle_east_yours.png";
 import avatarIcon from "@/app/assets/avatar.png";
 import threeDotsWhiteIcon from "@/app/assets/three_dots_white.png";
@@ -13,7 +12,23 @@ import utah from "@/app/assets/images/catalogues/Utah.jpg";
 import istanbul from "@/app/assets/images/catalogues/istanbul.jpg";
 import aurora from "@/app/assets/images/catalogues/AuroraBorealis.jpg";
 import tajmahal from "@/app/assets/images/catalogues/TajMahal.jpg";
-
+import marakesh from "@/app/assets/images/catalogues/Marrakechhotel.jpg";
+import gastronomic from "@/app/assets/images/catalogues/finedining.jpg";
+import disney from "@/app/assets/images/catalogues/disneyland.jpg";
+import egypt from "@/app/assets/images/destinations/egypt.jpg";
+import spain from "@/app/assets/images/destinations/spain.webp";
+import brazil from "@/app/assets/images/destinations/Brazil.webp";
+import lebanon from "@/app/assets/images/destinations/Baalbek.webp";
+import geneva from "@/app/assets/images/services/Geneva.webp";
+import montsaint from "@/app/assets/images/services/montsaintmich.jpg";
+import triomphe from "@/app/assets/images/services/Triomphe.jpg";
+import versailles from "@/app/assets/images/services/Versailles.webp";
+import louvreImage from "@/app/assets/images/services/Louvre.jpg";
+import lucerneImage from "@/app/assets/images/services/lucerne.jpg";
+import montsaintImage from "@/app/assets/images/services/montsaintmich.jpg";
+import triomphImage from "@/app/assets/images/services/Triomphe.jpg";
+import notreImage from "@/app/assets/images/services/NotreDameCathedral.jpg";
+import quartierImage from "@/app/assets/images/services/Quartier_Latin.jpg";
 const Images = {
   logo,
   avatarIcon,
@@ -29,6 +44,23 @@ const Images = {
   istanbul,
   aurora,
   tajmahal,
+  marakesh,
+  gastronomic,
+  disney,
+  egypt,
+  spain,
+  brazil,
+  lebanon,
+  geneva,
+  montsaint,
+  triomphe,
+  versailles,
+  louvreImage,
+  lucerneImage,
+  montsaintImage,
+  triomphImage,
+  notreImage,
+  quartierImage,
 };
 
 export default Images;
