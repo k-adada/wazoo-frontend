@@ -164,6 +164,19 @@ export default function TripInfo() {
           />
         </div>
       </div>
+      {/* Additional info */}
+      <div className="col-12">
+        <div className="text-darkblue pt-4 pb-2 f-16">
+          Please include any additional iformation you would like us to know
+        </div>
+        <div className="light-input">
+          <textarea
+            className="px-5 py-4 rounded-lg bg-white text-grey w-full"
+            placeholder="Type Information Here..."
+            style={{ height: "200px" }}
+          />
+        </div>
+      </div>
     </div>
   );
 }
