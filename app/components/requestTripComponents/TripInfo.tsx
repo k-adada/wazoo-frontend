@@ -91,13 +91,16 @@ export default function TripInfo() {
         <div className="light-input">
           <MultipleSelectLight
             options={[
-              { id: "Felxible", name: "Felxible" },
-              { id: "Very", name: "Very" },
               {
-                id: "Age is just a number",
-                name: "Age is just a number",
+                id: "Must be exact dates provided",
+                name: "Must be exact dates provided",
               },
-              { id: "Note Flexible", name: "Note Flexible" },
+              { id: "Very flexible", name: "Very flexible" },
+              {
+                id: "1-2 days wiggle room",
+                name: "1-2 days wiggle room",
+              },
+              { id: "Other", name: "Other" },
             ]}
             placeholder="Select"
           />
@@ -115,9 +118,19 @@ export default function TripInfo() {
         <div className="light-input">
           <MultipleSelectLight
             options={[
-              { id: "Felxible", name: "Felxible" },
-              { id: "Very", name: "Very" },
-              { id: "Not Flexible", name: "Not Flexible" },
+              {
+                id: "Budget is set, no exceptions",
+                name: "Budget is set, no exceptions",
+              },
+              {
+                id: "Budget-conscious, but will splurge for a few unique elements/comforts",
+                name: "Budget-conscious, but will splurge for a few unique elements/comforts",
+              },
+              {
+                id: "Truly no budget as long as the trip is exceptional and unique",
+                name: "Truly no budget as long as the trip is exceptional and unique",
+              },
+              { id: "Don’t know", name: "Don’t know" },
             ]}
             placeholder="Select"
           />
@@ -133,10 +146,18 @@ export default function TripInfo() {
         <div className="light-input">
           <MultipleSelectLight
             options={[
-              { id: "$5000-$10000", name: "$5000-$10000" },
-              { id: "$10000-$15000", name: "$10000-$15000" },
-              { id: "$15000-$20000", name: "$15000-$20000" },
-              { id: "$20000-$25000", name: "$20000-$25000" },
+              {
+                id: "750$ per person per day max",
+                name: "750$ per person per day max",
+              },
+              {
+                id: "1,500$ - 2,000$ per person per day",
+                name: "1,500$ - 2,000$ per person per day",
+              },
+              {
+                id: "2,000$ or more per person per day",
+                name: "2,000$ or more per person per day",
+              },
             ]}
             placeholder="Select"
           />
