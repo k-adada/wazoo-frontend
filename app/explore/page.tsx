@@ -131,13 +131,15 @@ export default function Explore() {
                 />
               </div>
               <div className="pl-4 w-auto">
-                <div className="bg-white rounded-lg py-3 px-5 text-darkblue flex items-center">
-                  <div className="">Filasdasdters</div>
+                <div className="bg-white rounded-lg py-1 px-3 text-darkblue flex items-center pointer">
+                  <div className="pr-3">Filters</div>
                   <div className="">
                     <Image
                       src={arrowDownIcon}
                       alt="arrowDown"
-                      style={{ height: "25px", width: "25px" }}
+                      width={40}
+                      height={40}
+                      style={{ height: "40px", width: "30px" }}
                     />
                   </div>
                 </div>
