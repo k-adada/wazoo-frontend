@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import middleEastLogo from "../assets/middle_east_yours.png";
 
 import backIcon from "../assets/Icon_Back.png";
+import submitIcon from "../assets/Icon_Submit_gold.svg";
 import TripOverview from "../components/itineraryComponents/TripOverview";
 import DetailedItinerary from "../components/itineraryComponents/DetailedItinerary";
 import Link from "next/link";
@@ -52,11 +53,14 @@ export default function Catalogue() {
           <div className="col-12">
             <div
               className="dark-button pointer ml-auto mt-10"
-              style={{ width: "155px" }}
+              style={{ width: "200px" }}
             >
               <Link href="/explore-trip-request">
                 <div className="flex items-center justify-center h-full text-gold w-full">
-                  Request a Trip
+                  <div className="">
+                    <Image src={submitIcon} alt="submitIcon" />
+                  </div>
+                  <div className="pl-4">Request a Trip</div>
                 </div>
               </Link>
             </div>

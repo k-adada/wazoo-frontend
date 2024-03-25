@@ -189,10 +189,40 @@ export default function TripInfo(props: any) {
 
       {quickDispatch && (
         <>
+          {/*  Themes */}
+          <div className="col-12 py-5">
+            <div className="text-darkblue pb-2 f-16">
+              Trip Themes
+              <span className="text-orange">*</span>
+            </div>
+            <div className="f-14 text-darkblue">
+              Please note: if you choose ALL we will include all themes
+            </div>
+            <div className="light-input">
+              <MultipleSelectLight
+                options={[
+                  { id: "All", name: "All" },
+                  { id: "Adventure", name: "Adventure" },
+                  { id: "Beach", name: "Beach" },
+                  { id: "Culinary", name: "Culinary" },
+                  { id: "Culture", name: "Culture" },
+                  { id: "Family", name: "Family" },
+                  { id: "History", name: "History" },
+                  { id: "Honeymoon", name: "Honeymoon" },
+                  { id: "Luxury", name: "Luxury" },
+                  { id: "Nature", name: "Nature" },
+                  { id: "Relaxation", name: "Relaxation" },
+                  { id: "Shopping", name: "Shopping" },
+                  { id: "Wellness", name: "Wellness" },
+                ]}
+                placeholder="Select"
+              />
+            </div>
+          </div>
           {/*  Destinations */}
           <div className="col-12 py-5">
             <div className="text-darkblue pb-2 f-16">
-              Please Select the Destinations
+              Destinations
               <span className="text-orange">*</span>
             </div>
             <div className="f-14 text-darkblue">
