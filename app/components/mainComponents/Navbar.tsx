@@ -12,7 +12,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const hideOnRoutes = ["/registration", "/themes", "/destinations"];
-  const taOnRoutes = ["/explore", "/request-trip"];
+  const taOnRoutes = ["/explore", "/request-trip","/quick-request-trip"];
   return (
     <div className="absolute w-full top-2">
       {hideOnRoutes.includes(pathname) ? (
