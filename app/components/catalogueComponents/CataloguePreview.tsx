@@ -13,6 +13,7 @@ import locationIcon from "../../assets/Icon_Location.png";
 import clockIcon from "../../assets/Icon_Time.png";
 import dollarIcon from "../../assets/Icon_Dollars.png";
 import athensImage from "../../assets/images/services/athens.jpg";
+import avatarIcon from "../../assets/avatar.png";
 
 import Link from "next/link";
 import ServicesSwiper from "../servicesSwiper";
@@ -27,13 +28,24 @@ export default function CataloguePreview() {
         {/* TITLE AND LOGO HERE */}
         <div className="col-12 pb-10">
           <div className="py-5">
-            <div className="">
+            <div className="relative">
               <Image
                 src={athensImage}
                 alt="athensImage"
                 className="w-full rounded-lg object-cover"
                 style={{ height: "400px" }}
               />
+              <div className="absolute bottom-8 left-8 pointer">
+                <div className="rounded-full bg-white text-grey flex items-center justify-center pl-1 pr-2 py-1">
+                  <Image
+                    src={avatarIcon}
+                    alt="avatar"
+                    className="rounded-full"
+                    style={{ width: "30px", height: "30px" }}
+                  />
+                  <div className="pl-1 f-14">DMC Name</div>
+                </div>
+              </div>
             </div>
             <div className="f-28 poppins-medium text-darkblue pt-8">
               Catalogue Name
