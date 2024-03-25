@@ -5,6 +5,7 @@ import Image from "next/image";
 
 import notificationIcon from "../../assets/Icon_Notification_Received.png";
 import avatarIcon from "../../assets/avatar.png";
+import johnIcon from "../../assets/john.png";
 import { usePathname } from "next/navigation";
 import LeftDrawerTA from "../LeftDrawerTA";
 
@@ -12,7 +13,12 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const hideOnRoutes = ["/registration", "/themes", "/destinations"];
-  const taOnRoutes = ["/explore", "/request-trip","/explore-trip-request"];
+  const taOnRoutes = [
+    "/explore",
+    "/request-trip",
+    "/explore-trip-request",
+    "/ta-dashboard",
+  ];
   return (
     <div className="absolute w-full top-2">
       {hideOnRoutes.includes(pathname) ? (
@@ -21,7 +27,7 @@ export default function Navbar() {
         <div className="container-fluid" style={{ maxWidth: "95%" }}>
           {taOnRoutes.includes(pathname) ? (
             <>
-              {/* DMC navbar  */}
+              {/* TA navbar  */}
               <div className="row items-center">
                 <div className="col-auto">
                   <LeftDrawerTA />
@@ -36,10 +42,10 @@ export default function Navbar() {
                 <div className="col-auto">
                   <div className="flex items-center cursor-pointer">
                     <div className="user-icon">
-                      <Image src={avatarIcon} alt="avatar" />
+                      <Image src={johnIcon} alt="johnIcon" />
                     </div>
                     <div className="poppins-medium text-darkblue pl-4">
-                      Brit Ferguson
+                      John iver
                     </div>
                   </div>
                 </div>

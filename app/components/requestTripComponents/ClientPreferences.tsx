@@ -7,7 +7,7 @@ export default function ClientPreferences() {
   return (
     <div className="row px-5 py-5 rounded-lg bg-blue">
       {/*Please describe how the clients most like to experience a destination*  */}
-      <div className="col-6 pb-6">
+      <div className="col-6 pb-5">
         <div className="text-darkblue f-16 pb-4">
           Describe how the clients like to experience a destination
           <span className="text-orange">*</span>
@@ -39,7 +39,7 @@ export default function ClientPreferences() {
       </div>
 
       {/*How does the group travel together */}
-      <div className="col-6 pb-6">
+      <div className="col-6 pb-5">
         <div className="text-darkblue f-16 pb-4">
           How does the group travel together
           <span className="text-orange">*</span>
@@ -71,7 +71,7 @@ export default function ClientPreferences() {
       </div>
 
       {/*Please describe any travel restrictions of anyone in group */}
-      <div className="col-6 py-6">
+      <div className="col-6 py-5">
         <div className="text-darkblue f-16 pb-4">
           Please describe any travel restrictions of anyone in the group
         </div>
@@ -110,7 +110,7 @@ export default function ClientPreferences() {
       </div>
 
       {/*What is the preferred transportation style of the group* */}
-      <div className="col-6 py-6">
+      <div className="col-6 py-5">
         <div className="text-darkblue f-16 pb-4">
           What is the preferred transportation style of the group
           <span className="text-orange">*</span>
@@ -146,7 +146,7 @@ export default function ClientPreferences() {
       </div>
 
       {/*How many hotels do they prefer to stay in during the trip? */}
-      <div className="col-6 py-6">
+      <div className="col-6 py-5">
         <div className="text-darkblue f-16 pb-4">
           How many hotels do they prefer to stay in during the trip?
         </div>
@@ -170,7 +170,7 @@ export default function ClientPreferences() {
       </div>
 
       {/*Please describe the preferred hotel style?* */}
-      <div className="col-6 py-6">
+      <div className="col-6 py-5">
         <div className="text-darkblue f-16 pb-4">
           Please describe the preferred hotel style?
           <span className="text-orange">*</span>
@@ -211,7 +211,7 @@ export default function ClientPreferences() {
       </div>
 
       {/*Please describe the preferred bedding configuration */}
-      <div className="col-6 py-6">
+      <div className="col-6 py-5">
         <div className="text-darkblue f-16 pb-4">
           Please describe the preferred bedding configuration
         </div>
@@ -256,7 +256,7 @@ export default function ClientPreferences() {
       </div>
 
       {/*What is the preferred decor style of accommodation?* */}
-      <div className="col-6 py-6">
+      <div className="col-6 py-5">
         <div className="text-darkblue f-16 pb-4">
           What is the preferred decor style of accommodation?
           <span className="text-orange">*</span>

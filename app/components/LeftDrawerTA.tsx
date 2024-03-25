@@ -73,17 +73,8 @@ export default function LeftDrawerTA() {
         <Image src={closeIcon} alt="Close Icon" width={15} />
       </div>
       <Link href="/ta-dashboard">
-        <div className="flex items-center">
-          <div className="">
-            <Image
-              className="rounded-full w-[50px] h-[50px]"
-              src={communityIcon}
-              alt="communityIcon"
-            />
-          </div>
-          <div className="pl-4 f-20 text-gold py-[50px] text-center">
-            TA User Name
-          </div>
+        <div className="f-32 text-gold py-[50px] text-center">
+          Luxury Travel
         </div>
       </Link>
       <List>

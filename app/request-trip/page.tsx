@@ -102,7 +102,11 @@ export default function RequestTrip() {
               <div className="bg-darkblue rounded-lg px-4 pt-6 pb-10 w-[350px] h-full flex flex-col justify-between">
                 <div className="w-full">
                   <div className="">
-                    <Image className="w-[60px]" src={submitIcon} alt="submitIcon" />
+                    <Image
+                      className="w-[60px]"
+                      src={submitIcon}
+                      alt="submitIcon"
+                    />
                   </div>
                   <div className="text-ice poppins-medium f-20 py-3">
                     Quick Dispatch
@@ -154,6 +158,14 @@ export default function RequestTrip() {
                 <div className="">
                   <div
                     className={
+                      (currentStep === "itineraries&services" &&
+                        "bg-darkblue ") + " rounded-full h-[96px] w-[10px]"
+                    }
+                  ></div>
+                </div>
+                <div className="">
+                  <div
+                    className={
                       (currentStep === "client-preferences" && "bg-darkblue ") +
                       " rounded-full h-[96px] w-[10px]"
                     }
@@ -193,6 +205,23 @@ export default function RequestTrip() {
                 <div
                   className="pointer w-full"
                   onClick={() => {
+                    setCurrentStep("itineraries&services");
+                  }}
+                >
+                  <div
+                    className={
+                      (currentStep === "itineraries&services" && "bg-blue ") +
+                      " py-4 px-4 rounded-lg"
+                    }
+                  >
+                    <div className="f-16 text-grey">02 -</div>
+                    <div className="text-darkblue">Itineraries & Services</div>
+                  </div>
+                </div>
+                {/* STEP 3  */}
+                <div
+                  className="pointer w-full"
+                  onClick={() => {
                     setCurrentStep("client-preferences");
                   }}
                 >
@@ -202,12 +231,11 @@ export default function RequestTrip() {
                       " py-4 px-4 rounded-lg"
                     }
                   >
-                    <div className="f-16 text-grey">02 -</div>
+                    <div className="f-16 text-grey">03 -</div>
                     <div className="text-darkblue">Client Preferences</div>
                   </div>
                 </div>
-
-                {/* STEP 3  */}
+                {/* STEP 4  */}
                 <div
                   className="pointer w-full"
                   onClick={() => {
@@ -220,7 +248,7 @@ export default function RequestTrip() {
                       " py-4 px-4 rounded-lg"
                     }
                   >
-                    <div className="f-16 text-grey">03 -</div>
+                    <div className="f-16 text-grey">04 -</div>
                     <div className="text-darkblue">Review And Submit</div>
                   </div>
                 </div>
@@ -230,6 +258,13 @@ export default function RequestTrip() {
 
             {/* TRIP INFO SECTION  */}
             {currentStep === "trip-info" && (
+              <div className="col">
+                <TripInfo />
+              </div>
+            )}
+
+            {/* SERVICES AND ITINERARIES  */}
+            {currentStep === "itineraries&services" && (
               <div className="col">
                 <TripInfo />
               </div>
@@ -275,7 +310,7 @@ export default function RequestTrip() {
               </div>
             )}
           </div>
-        )}
+        )}  
       </div>
     </main>
   );
