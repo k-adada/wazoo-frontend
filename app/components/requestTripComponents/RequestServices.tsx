@@ -185,7 +185,7 @@ export default function ItinerariesAndServices(props: {
         <div className="col-9">
           {catalogue.map((item, index) => {
             return (
-              <div className="row py-4 overflow-hidden">
+              <div className="row py-4 overflow-hidden" key={index}>
                 {/* Item BAR  */}
                 <div className="col-12">
                   <div className="bg-blue rounded-lg px-5 py-2 flex justify-between">
