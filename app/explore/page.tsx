@@ -11,11 +11,7 @@ import locationIcon from "../assets/Icon_Location.svg";
 import brochureIcon from "../assets/Icon_Brochure.svg";
 import Link from "next/link";
 
-import planeIcon from "../assets/Icon_Plane.svg";
-import doorIcon from "../assets/door_arrow.svg";
-import homeIcon from "../assets/Icon_Home_dark.svg";
-import searchIcon from "../assets/Icon_Search_gold.svg";
-import bookmarkIcon from "../assets/Icon_Bookmarked_gold.svg";
+
 import arrowDownIcon from "../assets/down_arrow_dark.svg";
 
 import DestinationsSection from "../components/exploreComponents/DestinationsSection";
@@ -165,63 +161,7 @@ export default function Explore() {
       {selectedTab === "catalogues" && <CataloguesSection />}
 
       {/* catalogues list */}
-      {/* bottom bar */}
-      <div className="w-full bottom-fixed text-center">
-        <div className="flex items-center justify-center">
-          <div
-            className="rounded-full overflow-hidden backdrop-blur-xl py-4 px-4 mx-1 pointer"
-            style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
-          >
-            <Image
-              src={planeIcon}
-              alt="plane"
-              style={{ height: "25px", width: "25px" }}
-            />
-          </div>
-          <div
-            className="rounded-full overflow-hidden backdrop-blur-md py-4 px-4 mx-1 pointer"
-            style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
-          >
-            <Image
-              src={doorIcon}
-              alt="door"
-              style={{ height: "25px", width: "25px" }}
-            />
-          </div>
-          <div
-            className="rounded-full overflow-hidden backdrop-blur-md py-4 px-4 mx-1 pointer"
-            style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
-          >
-            <div className="rounded-full overflow-hidden bg-gold py-4 px-4">
-              <Image
-                src={homeIcon}
-                alt="home"
-                style={{ height: "25px", width: "25px" }}
-              />
-            </div>
-          </div>
-          <div
-            className="rounded-full overflow-hidden backdrop-blur-md py-4 px-4 mx-1 pointer"
-            style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
-          >
-            <Image
-              src={bookmarkIcon}
-              alt="bookmark"
-              style={{ height: "25px", width: "25px" }}
-            />
-          </div>
-          <div
-            className="rounded-full overflow-hidden backdrop-blur-md py-4 px-4 mx-1 pointer"
-            style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
-          >
-            <Image
-              src={searchIcon}
-              alt="search"
-              style={{ height: "25px", width: "25px" }}
-            />
-          </div>
-        </div>
-      </div>
+
     </main>
   );
 }
