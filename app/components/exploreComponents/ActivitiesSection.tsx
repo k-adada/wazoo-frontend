@@ -18,7 +18,7 @@ import notreImage from "../../assets/images/services/NotreDameCathedral.jpg";
 import quartierImage from "../../assets/images/services/Quartier_Latin.jpg";
 
 export default function ActivitiesSection(props: any) {
-  const { popup } = props;
+  const { popup, setOpenPreview } = props;
 
   const images = [
     louvreImage,
@@ -37,7 +37,12 @@ export default function ActivitiesSection(props: any) {
       {[1, 2, 3, 4, 5, 6].map((item, index) => {
         return (
           <div className="px-5 py-2" key={index}>
-            <div className="row bg-white rounded-lg py-2">
+            <div
+              className="row bg-white rounded-lg py-2 pointer"
+              onClick={() => {
+                setOpenPreview(true);
+              }}
+            >
               <div className="col-12 pb-4 px-2">
                 <div className="image-wrapper-83">
                   <Image src={images[5 - index]} alt="casinoImage" />

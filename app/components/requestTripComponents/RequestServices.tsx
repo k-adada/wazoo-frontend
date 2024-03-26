@@ -7,6 +7,7 @@ import Images from "@/app/Images";
 
 import DragTableRequestServices from "./DragTableRequestServices";
 import ActivitiesSection from "../exploreComponents/ActivitiesSection";
+import RichTextBox from "../RichTextBox";
 
 export default function RequestServices() {
   const [itineraries, setItineraries] = useState([
@@ -75,6 +76,7 @@ export default function RequestServices() {
   const [selectedServices, setSelectedServices] = useState([] as any[]);
 
   const [addService, setAddService] = useState(false);
+  const [openPreview, setOpenPreview] = useState(false);
 
   return (
     <div className="">
@@ -83,103 +85,185 @@ export default function RequestServices() {
           className="fixed h-full w-full top-0 left-0 z-10"
           style={{ overflowY: "auto", backgroundColor: "rgba(0,0,0,0.5)" }}
         >
-          <div
-            className="container-fluid my-10 p-10 rounded-lg bg-grey"
-            style={{ maxWidth: "90%", marginLeft: "auto", marginRight: "auto" }}
-          >
-            {/* ITINERARYY RELATED INFO */}
-            <div
-              className="absolute top-5 right-5 pointer"
-              onClick={() => {
-                setAddService(false);
-              }}
-            >
-              X
-            </div>
-            {/* search bar */}
-            <div
-              className="py-2 px-4 rounded-lg w-full bg-blue"
-              style={{
-                maxWidth: "95%",
-                marginLeft: "auto",
-                marginRight: "auto",
-              }}
-            >
-              <div className="row justify-between items-center">
-                {/* title */}
-                <div className="col-auto">
-                  <div className="f-20 text-darkblue poppins-semibold text-center">
-                    Services
-                  </div>
+          {openPreview ? (
+            <>
+              <div
+                className="container-fluid my-10 p-10 rounded-lg bg-grey"
+                style={{
+                  width: "40%",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                }}
+              >
+                <div className="text-darkblue f-30 poppins-semibold">
+                  Louvre Museum - Details
                 </div>
 
-                {/* search */}
-                <div className="col">
-                  <div className="flex justify-end items-center">
-                    <div className="relative">
-                      <div className="absolute left-3 top-3 cursor-pointer">
-                        <Image src={Icons.searchIconDark} alt="search" />
-                      </div>
-                      <input
-                        className="bg-white text-darkblue pl-[56px] p-3 rounded-lg w-full"
-                        placeholder={"Search "}
-                        type="text"
-                      />
-                    </div>
-                    <div className="pl-4 w-auto">
-                      <div className="bg-white rounded-lg py-3 px-3 text-darkblue flex items-center pointer">
-                        <div className="pr-3">Filters</div>
-                        <div className="">
-                          <Image
-                            src={Icons.arrowDownDarkIcon}
-                            alt="arrowDown"
-                            width={40}
-                            height={40}
-                            style={{ height: "10px", width: "15px" }}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="ml-4 dark-button flex items-center text-gold pointer"
-                      onClick={() => {
-                        setSelectedServices([
-                          {
-                            id: "1",
-                            image: Images.aurora,
-                            name: "services",
-                            serviceType: "type",
-                            serviceSubType: "sub type",
-                            location: "Location 1",
-                            method: "Method 1",
-                            validity: "oct 1 - oct 4",
-                            price: "350",
-                          },
+                <div className="">
+                  <Image
+                    src={Images.disney}
+                    alt="louvre"
+                    width={500}
+                    height={300}
+                    className="rounded-lg w-full h-[250px] object-cover"
+                  />
+                </div>
 
-                          {
-                            id: "2",
-                            image: Images.machupichu,
-                            name: "service 2",
-                            serviceType: "type 2",
-                            serviceSubType: "sub type 2",
-                            location: "Location 6",
-                            method: "Method 2",
-                            validity: "oct 5 - oct 7",
-                            price: "350",
-                          },
-                        ]);
-                        setAddService(false);
-                      }}
-                    >
-                      <div className="">Save</div>
-                    </div>
+                <div className="f-20 text-darkblue poppins-semibold pt-5">
+                  Experience Method
+                </div>
+                <div className="">
+                  <input
+                    className="w-full py-3 rounded-lg"
+                    type="text"
+                    placeholder="Self Guided"
+                  />
+                </div>
+
+                <div className="f-20 text-darkblue poppins-semibold pt-5">
+                  Timeslot
+                </div>
+                <div className="">
+                  <input
+                    className="w-full py-3 rounded-lg"
+                    type="text"
+                    placeholder="Self Guided"
+                  />
+                </div>
+
+                <div className="f-20 text-darkblue poppins-semibold pt-5">
+                  Customizations
+                </div>
+                <RichTextBox initialData={"Describe your needs"} />
+
+                <div className="flex justify-between items-center pt-5">
+                  <div
+                    className="dark-button flex justify-center items-center text-gold pointer mr-4 w-full"
+                    onClick={() => {
+                      setOpenPreview(false);
+                    }}
+                  >
+                    <div className="">Cancel</div>
+                  </div>
+                  <div
+                    className="dark-button flex justify-center items-center text-gold pointer ml-4 w-full"
+                    onClick={() => {
+                      setOpenPreview(false);
+                    }}
+                  >
+                    <div className="">Save</div>
                   </div>
                 </div>
               </div>
-            </div>
-            <ActivitiesSection popup={true} />
-            {/* ITINERARYY RELATED INFO */}
-          </div>
+            </>
+          ) : (
+            <>
+              <div
+                className="container-fluid my-10 p-10 rounded-lg bg-grey"
+                style={{
+                  maxWidth: "90%",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                }}
+              >
+                {/* ITINERARYY RELATED INFO */}
+                <div
+                  className="absolute top-5 right-5 pointer"
+                  onClick={() => {
+                    setAddService(false);
+                  }}
+                >
+                  X
+                </div>
+                {/* search bar */}
+                <div
+                  className="py-2 px-4 rounded-lg w-full bg-blue"
+                  style={{
+                    maxWidth: "95%",
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                  }}
+                >
+                  <div className="row justify-between items-center">
+                    {/* title */}
+                    <div className="col-auto">
+                      <div className="f-20 text-darkblue poppins-semibold text-center">
+                        Services
+                      </div>
+                    </div>
+
+                    {/* search */}
+                    <div className="col">
+                      <div className="flex justify-end items-center">
+                        <div className="relative">
+                          <div className="absolute left-3 top-3 cursor-pointer">
+                            <Image src={Icons.searchIconDark} alt="search" />
+                          </div>
+                          <input
+                            className="bg-white text-darkblue pl-[56px] p-3 rounded-lg w-full"
+                            placeholder={"Search "}
+                            type="text"
+                          />
+                        </div>
+                        <div className="pl-4 w-auto">
+                          <div className="bg-white rounded-lg py-3 px-3 text-darkblue flex items-center pointer">
+                            <div className="pr-3">Filters</div>
+                            <div className="">
+                              <Image
+                                src={Icons.arrowDownDarkIcon}
+                                alt="arrowDown"
+                                width={40}
+                                height={40}
+                                style={{ height: "10px", width: "15px" }}
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          className="ml-4 dark-button flex items-center text-gold pointer"
+                          onClick={() => {
+                            setSelectedServices([
+                              {
+                                id: "1",
+                                image: Images.aurora,
+                                name: "services",
+                                serviceType: "type",
+                                serviceSubType: "sub type",
+                                location: "Location 1",
+                                method: "Method 1",
+                                validity: "oct 1 - oct 4",
+                                price: "350",
+                              },
+
+                              {
+                                id: "2",
+                                image: Images.machupichu,
+                                name: "service 2",
+                                serviceType: "type 2",
+                                serviceSubType: "sub type 2",
+                                location: "Location 6",
+                                method: "Method 2",
+                                validity: "oct 5 - oct 7",
+                                price: "350",
+                              },
+                            ]);
+                            setAddService(false);
+                          }}
+                        >
+                          <div className="">Save</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <ActivitiesSection
+                  popup={true}
+                  setOpenPreview={setOpenPreview}
+                />
+                {/* ITINERARYY RELATED INFO */}
+              </div>
+            </>
+          )}
         </div>
       )}
 
