@@ -72,31 +72,7 @@ export default function RequestServices() {
     },
   ]);
 
-  const [selectedServices, setSelectedServices] = useState([
-    {
-      id: "1",
-      image: Images.aurora,
-      name: "Itinerary 1",
-      serviceType: "type",
-      serviceSubType: "sub type",
-      location: "Location 1",
-      method: "Method 1",
-      validity: "oct 1 - oct 4",
-      price: "350",
-    },
-
-    {
-      id: "2",
-      image: Images.machupichu,
-      name: "Itinerary 2",
-      serviceType: "type 2",
-      serviceSubType: "sub type 2",
-      location: "Location 6",
-      method: "Method 2",
-      validity: "oct 5 - oct 7",
-      price: "350",
-    },
-  ] as any[]);
+  const [selectedServices, setSelectedServices] = useState([] as any[]);
 
   const [addService, setAddService] = useState(false);
 
@@ -164,14 +140,38 @@ export default function RequestServices() {
                         </div>
                       </div>
                     </div>
-                    <div className="ml-4 dark-button flex items-center text-gold pointer">
-                      <Image
-                        src={Icons.addIconGold}
-                        alt="add"
-                        width={20}
-                        height={20}
-                      />
-                      <div className="pl-2">Add Services </div>
+                    <div
+                      className="ml-4 dark-button flex items-center text-gold pointer"
+                      onClick={() => {
+                        setSelectedServices([
+                          {
+                            id: "1",
+                            image: Images.aurora,
+                            name: "services",
+                            serviceType: "type",
+                            serviceSubType: "sub type",
+                            location: "Location 1",
+                            method: "Method 1",
+                            validity: "oct 1 - oct 4",
+                            price: "350",
+                          },
+
+                          {
+                            id: "2",
+                            image: Images.machupichu,
+                            name: "service 2",
+                            serviceType: "type 2",
+                            serviceSubType: "sub type 2",
+                            location: "Location 6",
+                            method: "Method 2",
+                            validity: "oct 5 - oct 7",
+                            price: "350",
+                          },
+                        ]);
+                        setAddService(false);
+                      }}
+                    >
+                      <div className="">Save</div>
                     </div>
                   </div>
                 </div>

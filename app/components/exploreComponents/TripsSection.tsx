@@ -21,7 +21,7 @@ import Link from "next/link";
 import Images from "@/app/Images";
 
 export default function TripsSection(props: any) {
-  const { popup } = props;
+  const { popup, setOpenPreview } = props;
   const router = useRouter();
 
   const images = [
@@ -153,12 +153,12 @@ export default function TripsSection(props: any) {
           <div className="col-3 px-5 py-2" key={index}>
             {/* <Link href="/trip"> */}
             <div
-              className="row bg-white rounded-lg py-2"
+              className="row bg-white rounded-lg py-2 pointer"
               onClick={() => {
                 if (!popup) {
                   router.push("/trip");
                 } else {
-                  console.log("popup");
+                  setOpenPreview(true);
                 }
               }}
             >

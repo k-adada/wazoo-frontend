@@ -3,13 +3,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 import saveIcon from "../../assets/Icon_Save.png";
-import avatarIcon from "../../assets/avatar.png";
 import middleEastLogo from "../../assets/middle_east_yours.png";
-import calendarIcon from "../../assets/Icon_Calendar.png";
-import mercedesImage from "../../assets/mercedes.webp";
-import locationIcon from "../../assets/Icon_Location.png";
-import treeIcon from "../../assets/goldTree.svg";
-import casinoImage from "../../assets/Bellagio-Hotel-Casino-Las-Vegas.webp";
 
 import Totals from "../pricingComponents/Totals";
 import MyPricing from "../pricingComponents/MyPricing";
