@@ -52,10 +52,9 @@ export default function DragTableRequestItineraries(props: any) {
     },
 
     { field: "name", headerName: "Name", width: 150 },
-    { field: "serviceType", headerName: "Service Type", width: 150 },
-    { field: "serviceSubType", headerName: "Service Sub-Type", width: 150 },
-    { field: "location", headerName: "Location", width: 130 },
-    { field: "method", headerName: "Method", width: 130 },
+    { field: "theme", headerName: "Theme", width: 150 },
+    { field: "destination", headerName: "Destination", width: 150 },
+    { field: "season", headerName: "Season", width: 130 },
     { field: "validity", headerName: "Validity Date", width: 100 },
     { field: "price", headerName: "Price ($)", width: 100 },
     {

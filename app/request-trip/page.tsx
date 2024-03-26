@@ -17,6 +17,7 @@ import AgenciesTable from "../components/community/AgenciesTable";
 import TripInfo from "../components/requestTripComponents/TripInfo";
 import ClientPreferences from "../components/requestTripComponents/ClientPreferences";
 import RequestItineraries from "../components/requestTripComponents/RequestItineraries";
+import RequestServices from "../components/requestTripComponents/RequestServices";
 
 export default function RequestTrip() {
   const router = useRouter();
@@ -271,6 +272,8 @@ export default function RequestTrip() {
             {currentStep === "itineraries&services" && (
               <div className="col-10">
                 <RequestItineraries />
+                <div className="py-5"></div>
+                <RequestServices />
               </div>
             )}
 
