@@ -16,30 +16,14 @@
   background-color: #39ae6c;
 }
 
-.day .day-time {
-  height: 56px;
-  transition: 0.3s ease-in-out;
-  opacity: 0.4;
-}
-.day .day-time input {
-  padding: 0 2px;
+.service-tag {
+  padding: 6px 6px;
   border-radius: 8px;
-}
-.day .day-name {
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-}
-.day .day-name:hover {
-  transition: 0.3s ease-in-out;
   background-color: #c7d4db;
-  border-radius: 20px;
+  font-size: 12px;
 }
-.day.active .day-time {
-  transition: 0.3s ease-in-out;
+.service-tag img {
+  width: 18px;
+  height: 18px;
   opacity: 1;
-}
-.day.active .day-name {
-  transition: 0.3s ease-in-out;
-  background-color: #c7d4db;
-  border-radius: 20px;
 }

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 import ServicesSwiper from "../../components/servicesSwiper";
 import sunIcon from "../../assets/Sundark.svg";
@@ -19,7 +20,10 @@ import quartierImage from "../../assets/images/services/Quartier_Latin.jpg";
 import Link from "next/link";
 import Images from "@/app/Images";
 
-export default function TripsSection() {
+export default function TripsSection(props: any) {
+  const { popup } = props;
+  const router = useRouter();
+
   const images = [
     louvreImage,
     lucerneImage,
@@ -147,13 +151,22 @@ export default function TripsSection() {
       {trips.map((item, index) => {
         return (
           <div className="col-3 px-5 py-2" key={index}>
-            <Link href="/trip">
-              <div className="row bg-white rounded-lg py-2">
-                <div className="col-12 pb-4 px-2">
-                  <div className="image-wrapper-83">
-                    <Image src={images[index]} alt="casinoImage" />
-                  </div>
-
+            {/* <Link href="/trip"> */}
+            <div
+              className="row bg-white rounded-lg py-2"
+              onClick={() => {
+                if (!popup) {
+                  router.push("/trip");
+                } else {
+                  console.log("popup");
+                }
+              }}
+            >
+              <div className="col-12 pb-4 px-2">
+                <div className="image-wrapper-83">
+                  <Image src={images[index]} alt="casinoImage" />
+                </div>
+                {!popup && (
                   <div className="absolute top-2 right-4 pointer">
                     <div
                       className="py-2 px-2 rounded-full backdrop-blur-xl"
@@ -166,49 +179,50 @@ export default function TripsSection() {
                       />
                     </div>
                   </div>
-                </div>
-                <div className="col-12 px-2">
-                  <div className="f-20 text-darkblue poppins-medium">
-                    {item.name}
-                  </div>
-                </div>
-                <div className="col-12 px-2 pb-3">
-                  <div className="f-16 text-grey pt-1 line-clamp-2">
-                    {item.description}
-                  </div>
-                </div>
-                <div className="col-auto px-2 py-1">
-                  <div className="service-tag flex">
-                    <Image className="mr-1" src={locationIcon} alt="location" />
-                    <div className="text-darkblue">{item.location}</div>
-                  </div>
-                </div>
-                <div className="col-auto px-2 py-1">
-                  <div className="service-tag flex">
-                    <Image className="mr-1" src={clockIcon} alt="time" />
-                    <div className="text-darkblue">{item.duration}</div>
-                  </div>
-                </div>
-                <div className="col-auto px-2 py-1">
-                  <div className="service-tag flex">
-                    <Image className="mr-1" src={calendarIcon} alt="calendar" />
-                    <div className="text-darkblue">{item.date}</div>
-                  </div>
-                </div>
-                <div className="col-auto px-2 py-1">
-                  <div className="service-tag flex">
-                    <Image className="mr-1" src={treeIcon} alt="tree icon" />
-                    <div className="text-darkblue">{item.theme}</div>
-                  </div>
-                </div>
-                <div className="col-auto px-2 py-1">
-                  <div className="service-tag flex">
-                    <Image className="mr-1" src={sunIcon} alt="sun icon" />
-                    <div className="text-darkblue">{item.season}</div>
-                  </div>
+                )}
+              </div>
+              <div className="col-12 px-2">
+                <div className="f-20 text-darkblue poppins-medium">
+                  {item.name}
                 </div>
               </div>
-            </Link>
+              <div className="col-12 px-2 pb-3">
+                <div className="f-16 text-grey pt-1 line-clamp-2">
+                  {item.description}
+                </div>
+              </div>
+              <div className="col-auto px-2 py-1">
+                <div className="service-tag flex">
+                  <Image className="mr-1" src={locationIcon} alt="location" />
+                  <div className="text-darkblue">{item.location}</div>
+                </div>
+              </div>
+              <div className="col-auto px-2 py-1">
+                <div className="service-tag flex">
+                  <Image className="mr-1" src={clockIcon} alt="time" />
+                  <div className="text-darkblue">{item.duration}</div>
+                </div>
+              </div>
+              <div className="col-auto px-2 py-1">
+                <div className="service-tag flex">
+                  <Image className="mr-1" src={calendarIcon} alt="calendar" />
+                  <div className="text-darkblue">{item.date}</div>
+                </div>
+              </div>
+              <div className="col-auto px-2 py-1">
+                <div className="service-tag flex">
+                  <Image className="mr-1" src={treeIcon} alt="tree icon" />
+                  <div className="text-darkblue">{item.theme}</div>
+                </div>
+              </div>
+              <div className="col-auto px-2 py-1">
+                <div className="service-tag flex">
+                  <Image className="mr-1" src={sunIcon} alt="sun icon" />
+                  <div className="text-darkblue">{item.season}</div>
+                </div>
+              </div>
+            </div>
+            {/* </Link> */}
           </div>
         );
       })}

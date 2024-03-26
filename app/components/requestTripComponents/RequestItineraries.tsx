@@ -161,7 +161,7 @@ export default function RequestItineraries() {
                         </div>
                       </div>
                     </div>
-                    <div className="ml-4 dark-button flex items-center text-gold">
+                    <div className="ml-4 dark-button flex items-center text-gold pointer">
                       <Image
                         src={Icons.addIconGold}
                         alt="add"
@@ -174,7 +174,7 @@ export default function RequestItineraries() {
                 </div>
               </div>
             </div>
-            <TripsSection />
+            <TripsSection popup={true} />
             {/* ITINERARYY RELATED INFO */}
           </div>
         </div>

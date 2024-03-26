@@ -17,7 +17,9 @@ import triomphImage from "../../assets/images/services/Triomphe.jpg";
 import notreImage from "../../assets/images/services/NotreDameCathedral.jpg";
 import quartierImage from "../../assets/images/services/Quartier_Latin.jpg";
 
-export default function ActivitiesSection() {
+export default function ActivitiesSection(props: any) {
+  const { popup } = props;
+
   const images = [
     louvreImage,
     lucerneImage,
@@ -30,7 +32,7 @@ export default function ActivitiesSection() {
   return (
     <div
       className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-2 mt-2"
-      style={{ maxWidth: "95%" }}
+      style={{ maxWidth: "95%", marginLeft: "auto", marginRight: "auto" }}
     >
       {[1, 2, 3, 4, 5, 6].map((item, index) => {
         return (
@@ -40,18 +42,20 @@ export default function ActivitiesSection() {
                 <div className="image-wrapper-83">
                   <Image src={images[5 - index]} alt="casinoImage" />
                 </div>
-                <div className="absolute top-2 right-4 pointer">
-                  <div
-                    className="py-2 px-2 rounded-full backdrop-blur-xl"
-                    style={{ backgroundColor: "rgba(0,0,0,0.3)" }}
-                  >
-                    <Image
-                      src={unbookmarkIcon}
-                      alt="three dots"
-                      className="three-dots"
-                    />
+                {!popup && (
+                  <div className="absolute top-2 right-4 pointer">
+                    <div
+                      className="py-2 px-2 rounded-full backdrop-blur-xl"
+                      style={{ backgroundColor: "rgba(0,0,0,0.3)" }}
+                    >
+                      <Image
+                        src={unbookmarkIcon}
+                        alt="three dots"
+                        className="three-dots"
+                      />
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
               <div className="col-12 px-2">
                 <div className="flex items-center">
