@@ -4,7 +4,7 @@ import Image from "next/image";
 import Icons from "../Icons";
 import Link from "next/link";
 
-export default function DmcDashboard() {
+export default function TaDashboard() {
   return (
     <main className="flex min-h-screen flex-col items-center p-md-24 p-3 bg-lightblue pt-[75px] pb-[100px]">
       <div className="container-fluid">

@@ -7,8 +7,7 @@ import {
   GridRowOrderChangeParams,
 } from "@mui/x-data-grid-pro";
 
-import deleteRedIcon from "../assets/delete_red.svg";
-import editIcon from "../assets/Icon_Edit.png";
+import Icons from "@/app/Icons";
 import Image from "next/image";
 
 function updateRowPosition(
@@ -26,20 +25,38 @@ function updateRowPosition(
   });
 }
 
-export default function DragTableRequestServices(props: any) {
-  const { services, days, setDays, dayIndex } = props;
+export default function DragTableRequestItineraries(props: any) {
+  const { itineraries, days, setDays, dayIndex } = props;
   // Define your own data with id, name, and description columns
   const tempColumns: GridColDef[] = [
     { field: "id", headerName: "ID", width: 30 },
-    
-    { field: "name", headerName: "Name", width: 200 },
-    { field: "serviceType", headerName: "Service Type", width: 200 },
-    { field: "serviceSubType", headerName: "Service Sub-Type", width: 200 },
-    { field: "description", headerName: "Description", width: 200 },
+    {
+      field: "image",
+      headerName: "Image",
+      width: 100,
+      renderCell: (params: any) => {
+        console.log("PARAMS : ", params);
+        return (
+          <div className="">
+            <Image
+              className="rounded-lg"
+              src={params.row.image}
+              alt="image"
+              width={200}
+              height={200}
+              style={{ height: "40px", width: "40px" }}
+            />
+          </div>
+        );
+      },
+    },
+
+    { field: "name", headerName: "Name", width: 150 },
+    { field: "serviceType", headerName: "Service Type", width: 150 },
+    { field: "serviceSubType", headerName: "Service Sub-Type", width: 150 },
     { field: "location", headerName: "Location", width: 130 },
     { field: "method", headerName: "Method", width: 130 },
-    { field: "duration", headerName: "Duration", width: 100 },
-    { field: "timeslot", headerName: "Timeslot", width: 100 },
+    { field: "validity", headerName: "Validity Date", width: 100 },
     { field: "price", headerName: "Price ($)", width: 100 },
     {
       field: "actions",
@@ -75,13 +92,23 @@ export default function DragTableRequestServices(props: any) {
               className="pointer pr-3"
               onClick={(e) => console.log("EDIT : ", params.id)}
             >
-              <Image src={editIcon} alt="action" width={20} height={20} />
+              <Image
+                src={Icons.editIconDark}
+                alt="action"
+                width={20}
+                height={20}
+              />
             </div>
             <div
               className="pointer"
               onClick={(e) => handleDeleteService(e, params.id)}
             >
-              <Image src={deleteRedIcon} alt="action" width={20} height={20} />
+              <Image
+                src={Icons.deleteRedIcon}
+                alt="action"
+                width={20}
+                height={20}
+              />
             </div>
           </div>
         );
@@ -89,12 +116,12 @@ export default function DragTableRequestServices(props: any) {
     },
   ];
 
-  const [rows, setRows] = React.useState(services);
+  const [rows, setRows] = React.useState(itineraries);
   const [columns] = React.useState(tempColumns);
 
   React.useEffect(() => {
-    setRows(services);
-  }, [services]);
+    setRows(itineraries);
+  }, [itineraries]);
 
   const [loading, setLoading] = React.useState(false);
 

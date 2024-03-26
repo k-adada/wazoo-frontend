@@ -15,6 +15,8 @@ import bookmarkIconGold from "@/app/assets/Icon_Bookmarked_gold.svg";
 import notificationIcon from "@/app/assets/Icon_Notification_Received.png";
 import addIconGold from "@/app/assets/Icon_Add.png";
 import paperPlaneIconGold from "@/app/assets/Icon_Submit_gold.svg";
+import deleteRedIcon from "@/app/assets/delete_red.svg";
+import editIconDark from "@/app/assets/Icon_Edit.png";
 
 const Icons = {
   avatarIcon,
@@ -34,6 +36,8 @@ const Icons = {
   notificationIcon,
   addIconGold,
   paperPlaneIconGold,
+  deleteRedIcon,
+  editIconDark,
 };
 
 export default Icons;

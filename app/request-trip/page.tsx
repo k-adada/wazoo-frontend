@@ -16,6 +16,7 @@ import MultipleSelectLight from "../components/MultipleSelectLight";
 import AgenciesTable from "../components/community/AgenciesTable";
 import TripInfo from "../components/requestTripComponents/TripInfo";
 import ClientPreferences from "../components/requestTripComponents/ClientPreferences";
+import RequestItineraries from "../components/requestTripComponents/RequestItineraries";
 
 export default function RequestTrip() {
   const router = useRouter();
@@ -150,7 +151,7 @@ export default function RequestTrip() {
         {requestType === "tailored" && (
           <div className="row pt-5">
             {/*  STEPS LEFT BAR START */}
-            <div className="col-auto" style={{ maxHeight: "80vh" }}>
+            <div className="col-2 flex" style={{ height: "80vh" }}>
               <div className="flex flex-col bg-blue rounded-full h-full w-[10px] items-center justify-between">
                 <div className="">
                   <div
@@ -185,9 +186,7 @@ export default function RequestTrip() {
                   ></div>
                 </div>
               </div>
-            </div>
-            <div className="col-2" style={{ maxHeight: "80vh" }}>
-              <div className="flex flex-col h-full items-center justify-between py-2">
+              <div className="flex flex-col h-full items-center justify-between py-2 pl-5">
                 {/* STEP 1  */}
                 <div
                   className="pointer w-full"
@@ -270,8 +269,8 @@ export default function RequestTrip() {
 
             {/* SERVICES AND ITINERARIES  */}
             {currentStep === "itineraries&services" && (
-              <div className="col">
-                <TripInfo />
+              <div className="col-10">
+                <RequestItineraries />
               </div>
             )}
 
