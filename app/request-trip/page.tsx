@@ -24,6 +24,8 @@ export default function RequestTrip() {
   const [currentStep, setCurrentStep] = useState("trip-info");
   const [showTripInfo, setShowTripInfo] = useState(true);
   const [showClientPreferences, setShowClientPreferences] = useState(true);
+  const [showItinerariesAndServices, setShowItinerariesAndServices] =
+    useState(true);
   const [requestType, setRequestType] = useState("false");
 
   const routerBack = () => {
@@ -299,6 +301,28 @@ export default function RequestTrip() {
                 </div>
 
                 {showTripInfo && <TripInfo />}
+
+                <div
+                  className="row items-center bg-darkblue rounded-lg px-5 py-2 justify-between mb-5 pointer"
+                  onClick={() => {
+                    setShowItinerariesAndServices(!showItinerariesAndServices);
+                  }}
+                >
+                  <div className="col-auto text-white f-24">
+                    Itineraries and Services
+                  </div>
+                  <div className="col-auto">
+                    <Image src={downArrowIcon} alt="downArrowIcon" />
+                  </div>
+                </div>
+
+                {showItinerariesAndServices && (
+                  <>
+                    <RequestItineraries />
+                    <div className="py-5"></div>
+                    <RequestServices />
+                  </>
+                )}
 
                 <div
                   className="row items-center bg-darkblue rounded-lg px-5 py-2 justify-between my-5 pointer"
