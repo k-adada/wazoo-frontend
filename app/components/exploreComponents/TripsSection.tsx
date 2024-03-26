@@ -143,7 +143,7 @@ export default function TripsSection() {
   ];
 
   return (
-    <div className="row mt-2" style={{ maxWidth: "95%" }}>
+    <div className="row mt-2" style={{ maxWidth: "95%", margin: "auto" }}>
       {trips.map((item, index) => {
         return (
           <div className="col-3 px-5 py-2" key={index}>

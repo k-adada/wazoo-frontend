@@ -6,6 +6,7 @@ import Icons from "@/app/Icons";
 import Images from "@/app/Images";
 
 import DragTableRequestItineraries from "./DragTableRequestItineraries";
+import TripsSection from "../exploreComponents/TripsSection";
 
 export default function RequestItineraries() {
   const [itineraries, setItineraries] = useState([
@@ -94,12 +95,100 @@ export default function RequestItineraries() {
     },
   ] as any[]);
 
+  const [addItinerary, setAddItinerary] = useState(false);
+
   return (
     <div className="">
+      {addItinerary && (
+        <div
+          className="fixed h-full w-full top-0 left-0 z-10"
+          style={{ overflowY: "auto", backgroundColor: "rgba(0,0,0,0.5)" }}
+        >
+          <div
+            className="container-fluid my-10 p-10 rounded-lg bg-grey"
+            style={{ maxWidth: "90%", marginLeft: "auto", marginRight: "auto" }}
+          >
+            {/* ITINERARYY RELATED INFO */}
+            <div
+              className="absolute top-5 right-5 pointer"
+              onClick={() => {
+                setAddItinerary(false);
+              }}
+            >
+              X
+            </div>
+            {/* search bar */}
+            <div
+              className="py-2 px-4 rounded-lg w-full bg-blue"
+              style={{
+                maxWidth: "95%",
+                marginLeft: "auto",
+                marginRight: "auto",
+              }}
+            >
+              <div className="row justify-between items-center">
+                {/* title */}
+                <div className="col-auto">
+                  <div className="f-20 text-darkblue poppins-semibold text-center">
+                    Itineraries
+                  </div>
+                </div>
+
+                {/* search */}
+                <div className="col">
+                  <div className="flex justify-end items-center">
+                    <div className="relative">
+                      <div className="absolute left-3 top-3 cursor-pointer">
+                        <Image src={Icons.searchIconDark} alt="search" />
+                      </div>
+                      <input
+                        className="bg-white text-darkblue pl-[56px] p-3 rounded-lg w-full"
+                        placeholder={"Search "}
+                        type="text"
+                      />
+                    </div>
+                    <div className="pl-4 w-auto">
+                      <div className="bg-white rounded-lg py-3 px-3 text-darkblue flex items-center pointer">
+                        <div className="pr-3">Filters</div>
+                        <div className="">
+                          <Image
+                            src={Icons.arrowDownDarkIcon}
+                            alt="arrowDown"
+                            width={40}
+                            height={40}
+                            style={{ height: "10px", width: "15px" }}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="ml-4 dark-button flex items-center text-gold">
+                      <Image
+                        src={Icons.addIconGold}
+                        alt="add"
+                        width={20}
+                        height={20}
+                      />
+                      <div className="pl-2">Add Itineraries</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <TripsSection />
+            {/* ITINERARYY RELATED INFO */}
+          </div>
+        </div>
+      )}
+
       {/* Item BAR  */}
       <div className="bg-blue rounded-lg px-5 py-2 flex justify-between">
         <div className="f-24 text-darkblue poppins-semibold">Itineraries</div>
-        <div className="dark-button flex items-center text-gold pointer">
+        <div
+          className="dark-button flex items-center text-gold pointer"
+          onClick={() => {
+            setAddItinerary(!addItinerary);
+          }}
+        >
           <Image src={Icons.addIconGold} alt="add" width={20} height={20} />
           <div className="pl-2">Add Itinerary</div>
         </div>

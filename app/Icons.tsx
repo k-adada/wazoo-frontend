@@ -11,12 +11,14 @@ import planeIconGold from "@/app/assets/Icon_Plane.svg";
 import doorIconGold from "@/app/assets/door_arrow.svg";
 import homeIconDark from "@/app/assets/Icon_Home_dark.svg";
 import searchIconGold from "@/app/assets/Icon_Search_gold.svg";
+import searchIconDark from "@/app/assets/Icon_Search_Black.png";
 import bookmarkIconGold from "@/app/assets/Icon_Bookmarked_gold.svg";
 import notificationIcon from "@/app/assets/Icon_Notification_Received.png";
 import addIconGold from "@/app/assets/Icon_Add.png";
 import paperPlaneIconGold from "@/app/assets/Icon_Submit_gold.svg";
 import deleteRedIcon from "@/app/assets/delete_red.svg";
 import editIconDark from "@/app/assets/Icon_Edit.png";
+import arrowDownDarkIcon from "@/app/assets/down_arrow_dark.svg";
 
 const Icons = {
   avatarIcon,
@@ -38,6 +40,8 @@ const Icons = {
   paperPlaneIconGold,
   deleteRedIcon,
   editIconDark,
+  searchIconDark,
+  arrowDownDarkIcon,
 };
 
 export default Icons;
