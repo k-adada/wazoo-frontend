@@ -6,7 +6,10 @@ import MultipleSelectLight from "../../components/MultipleSelectLight";
 export default function TripInfo(props: any) {
   const { quickDispatch } = props;
   return (
-    <div className="row px-5 py-5 rounded-lg bg-blue">
+    <div
+      className="row px-5 py-5 rounded-lg bg-blue"
+      style={{ height: "80vh", overflowY: "auto" }}
+    >
       {/*  Trip Name */}
       <div className="col-6 pb-5">
         <div className="text-darkblue pb-2 f-16">
