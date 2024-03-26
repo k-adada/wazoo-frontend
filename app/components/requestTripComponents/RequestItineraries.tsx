@@ -99,7 +99,7 @@ export default function RequestItineraries() {
       {/* Item BAR  */}
       <div className="bg-blue rounded-lg px-5 py-2 flex justify-between">
         <div className="f-24 text-darkblue poppins-semibold">Itineraries</div>
-        <div className="dark-button flex items-center text-gold">
+        <div className="dark-button flex items-center text-gold pointer">
           <Image src={Icons.addIconGold} alt="add" width={20} height={20} />
           <div className="pl-2">Add Itinerary</div>
         </div>
