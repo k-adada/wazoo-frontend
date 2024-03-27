@@ -111,7 +111,7 @@ export default function RequestItineraries() {
                   <div className="bg-white rounded-lg py-5 px-5 text-center">
                     <div className="">
                       <Image
-                        src={Images.aurora}
+                        src={Images.middleEastLogo}
                         alt="middleEastLogo"
                         style={{ height: "120px", width: "120px" }}
                         className="m-auto"

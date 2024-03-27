@@ -36,6 +36,7 @@ import theme4 from "@/app/assets/images/themes/Food_Wine.webp";
 import theme5 from "@/app/assets/images/themes/Honeymoon.webp";
 import theme6 from "@/app/assets/images/themes/Safari.webp";
 import theme7 from "@/app/assets/images/themes/yacht_charter.webp";
+import middleEastLogo from "@/app/assets/middle_east_yours.png";
 
 const Images = {
   logo,
@@ -76,6 +77,7 @@ const Images = {
   theme5,
   theme6,
   theme7,
+  middleEastLogo,
 };
 
 export default Images;
