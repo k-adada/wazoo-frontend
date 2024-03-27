@@ -5,7 +5,6 @@ import Images from "@/app/Images";
 import Icons from "@/app/Icons";
 
 import Link from "next/link";
-import threeDotsIcon from "../../assets/three_dots_white.png";
 import casinoImage from "../../assets/Bellagio-Hotel-Casino-Las-Vegas.webp";
 
 export default function CataloguesSection() {
@@ -122,13 +121,13 @@ export default function CataloguesSection() {
                 <div className="col-12 pb-4 px-2">
                   <div className="image-wrapper-83">
                     <Image
-                      src={item?.image ? item.image : casinoImage}
-                      alt="casinoImage"
+                      src={item?.image ? item.image : Images.machupichu}
+                      alt="Image"
                     />
                   </div>
                   <div className="absolute top-2 right-8 pointer">
                     <Image
-                      src={threeDotsIcon}
+                      src={Icons.threeDotsWhiteIcon}
                       alt="three dots"
                       className="three-dots"
                     />
