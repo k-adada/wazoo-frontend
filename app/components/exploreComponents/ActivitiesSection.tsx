@@ -105,18 +105,19 @@ export default function ActivitiesSection(props: any) {
                       transform: "translate(-50%,-50%)",
                     }}
                   />
+                  {customServices?.services.length !== 0 && (
+                    <div className="absolute top-2 left-4 flex items-center">
+                      <div className="f-16 text-gold poppins-semibold py-1 px-2 bg-darkblue rounded-lg">
+                        {customServices?.services.length}
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
 
               <div className="flex items-center pt-4">
                 <div className="f-20 text-darkblue poppins-medium">
                   Add Custom Service
-                </div>
-
-                <div className="ml-auto flex items-center">
-                  <div className="f-16 text-gold poppins-semibold py-1 px-1 bg-darkblue rounded-lg">
-                    {customServices?.services.length}
-                  </div>
                 </div>
               </div>
 

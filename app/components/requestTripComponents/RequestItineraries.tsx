@@ -165,7 +165,7 @@ export default function RequestItineraries() {
                     {/* title */}
                     <div className="col-auto">
                       <div className="f-20 text-darkblue poppins-semibold text-center">
-                        Itineraries
+                      Add Itineraries to your Trip
                       </div>
                     </div>
 

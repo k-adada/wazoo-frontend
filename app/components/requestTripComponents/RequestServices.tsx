@@ -208,7 +208,7 @@ export default function RequestServices() {
                   {/* title */}
                   <div className="col-auto">
                     <div className="f-20 text-darkblue poppins-semibold text-center">
-                      Services
+                      Add Services to your Trip
                     </div>
                   </div>
 
