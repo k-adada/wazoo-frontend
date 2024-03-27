@@ -114,7 +114,7 @@ export default function ActivitiesSection(props: any) {
                 </div>
 
                 <div className="ml-auto flex items-center">
-                  <div className="f-16 text-grey poppins-semibold pr-2">
+                  <div className="f-16 text-gold poppins-semibold py-1 px-1 bg-darkblue rounded-lg">
                     {customServices?.services.length}
                   </div>
                 </div>

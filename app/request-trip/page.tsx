@@ -32,6 +32,16 @@ export default function RequestTrip() {
     router.back();
   };
 
+  const handleNext = () => {
+    if (currentStep === "trip-info") {
+      setCurrentStep("itineraries&services");
+    } else if (currentStep === "itineraries&services") {
+      setCurrentStep("client-preferences");
+    } else if (currentStep === "client-preferences") {
+      setCurrentStep("review-and-submit");
+    }
+  };
+
   return (
     <main className="flex min-h-screen flex-col items-center p-md-24 p-3 bg-lightblue pt-[75px] ">
       <div className="container-fluid">
@@ -57,27 +67,32 @@ export default function RequestTrip() {
               </div>
             </div>
           </div>
-          <div className="flex pt-5">
-            <div className="col-auto">
-              <Link href="/audiences">
-                <div className="dark-button text-gold poppins-medium cursor-pointer">
-                  <div className="flex items-center h-full">
-                    <Image src={saveIcon} alt="saveIcon" />
-                    <div className="pl-4">Save as Draft</div>
+          {requestType !== "false" && (
+            <div className="flex pt-5">
+              <div className="col-auto">
+                <Link href="/ta-dashboard">
+                  <div className="dark-button text-gold poppins-medium pointer">
+                    <div className="flex items-center h-full">
+                      <Image src={saveIcon} alt="saveIcon" />
+                      <div className="pl-4">Save as Draft</div>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            </div>
-            <div className="col-auto">
-              <Link href="/audiences">
-                <div className="dark-button text-gold poppins-medium cursor-pointer">
+                </Link>
+              </div>
+              <div className="col-auto">
+                <div
+                  className="dark-button text-gold poppins-medium pointer"
+                  onClick={() => {
+                    handleNext();
+                  }}
+                >
                   <div className="flex items-center h-full">
                     <div className="">Next</div>
                   </div>
                 </div>
-              </Link>
+              </div>
             </div>
-          </div>
+          )}
         </div>
 
         {requestType === "false" && (

@@ -127,7 +127,7 @@ export default function RequestServices() {
 
                 <div className="">
                   <Image
-                    src={Images.disney}
+                    src={Images.louvreImage}
                     alt="louvre"
                     width={500}
                     height={300}

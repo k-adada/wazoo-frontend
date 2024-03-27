@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import LeftDrawerTA from "../LeftDrawerTA";
 
 import Icons from "@/app/Icons";
+import Link from "next/link";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -105,18 +106,20 @@ export default function Navbar() {
               style={{ height: "25px", width: "25px" }}
             />
           </div>
-          <div
-            className="rounded-full overflow-hidden backdrop-blur-md py-4 px-4 mx-1 pointer"
-            style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
-          >
-            <div className="rounded-full overflow-hidden bg-gold py-4 px-4">
-              <Image
-                src={Icons.homeIconDark}
-                alt="home"
-                style={{ height: "25px", width: "25px" }}
-              />
+          <Link href="/ta-dashboard">
+            <div
+              className="rounded-full overflow-hidden backdrop-blur-md py-4 px-4 mx-1 pointer"
+              style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
+            >
+              <div className="rounded-full overflow-hidden bg-gold py-4 px-4">
+                <Image
+                  src={Icons.homeIconDark}
+                  alt="home"
+                  style={{ height: "25px", width: "25px" }}
+                />
+              </div>
             </div>
-          </div>
+          </Link>
           <div
             className="rounded-full overflow-hidden backdrop-blur-md py-4 px-4 mx-1 pointer"
             style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
@@ -127,16 +130,18 @@ export default function Navbar() {
               style={{ height: "25px", width: "25px" }}
             />
           </div>
-          <div
-            className="rounded-full overflow-hidden backdrop-blur-md py-4 px-4 mx-1 pointer"
-            style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
-          >
-            <Image
-              src={Icons.searchIconGold}
-              alt="search"
-              style={{ height: "25px", width: "25px" }}
-            />
-          </div>
+          <Link href="/explore">
+            <div
+              className="rounded-full overflow-hidden backdrop-blur-md py-4 px-4 mx-1 pointer"
+              style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
+            >
+              <Image
+                src={Icons.searchIconGold}
+                alt="search"
+                style={{ height: "25px", width: "25px" }}
+              />
+            </div>
+          </Link>
         </div>
       </div>
     </>
