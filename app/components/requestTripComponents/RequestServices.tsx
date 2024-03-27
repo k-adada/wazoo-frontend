@@ -8,6 +8,7 @@ import Images from "@/app/Images";
 import DragTableRequestServices from "./DragTableRequestServices";
 import ActivitiesSection from "../exploreComponents/ActivitiesSection";
 import dynamic from "next/dynamic";
+import SingleSelect from "../SingleSelect";
 
 const DynamicRichTextBox = dynamic(() => import("../RichTextBox"), {
   ssr: false, // Disable server-side rendering for this component
@@ -66,10 +67,9 @@ export default function RequestServices() {
                     Please select service location
                   </div>
                   <div className="">
-                    <input
-                      className="w-full py-3 rounded-lg px-4"
-                      type="text"
-                      placeholder="location here"
+                    <SingleSelect
+                      options={["Location", "Location 2", "Location 3"]}
+                      label=""
                     />
                   </div>
 
@@ -84,6 +84,11 @@ export default function RequestServices() {
                       className="dark-button flex justify-center items-center text-gold pointer mr-4 w-full"
                       onClick={() => {
                         setOpenPreview(false);
+
+                        setCustomServices({
+                          open: false,
+                          services: customServices.services,
+                        });
                       }}
                     >
                       <div className="">Cancel</div>
@@ -97,7 +102,7 @@ export default function RequestServices() {
                         tempServices.push(1);
 
                         setCustomServices({
-                          open: true,
+                          open: false,
                           services: tempServices,
                         });
                       }}
@@ -130,29 +135,24 @@ export default function RequestServices() {
                   />
                 </div>
 
-                <div className="f-20 text-darkblue poppins-semibold pt-5">
+                <div className="f-20 text-darkblue poppins-semibold pt-5 pb-1">
                   Experience Method
                 </div>
                 <div className="">
-                  <input
-                    className="w-full py-3 rounded-lg"
-                    type="text"
-                    placeholder="Self Guided"
-                  />
+                  <SingleSelect options={["Self Guided", "Guided"]} label="" />
                 </div>
 
-                <div className="f-20 text-darkblue poppins-semibold pt-5">
+                <div className="f-20 text-darkblue poppins-semibold pt-5 pb-1">
                   Timeslot
                 </div>
                 <div className="">
-                  <input
-                    className="w-full py-3 rounded-lg"
-                    type="text"
-                    placeholder="Self Guided"
+                  <SingleSelect
+                    options={["Morning", "Afternoon", "Evening"]}
+                    label=""
                   />
                 </div>
 
-                <div className="f-20 text-darkblue poppins-semibold pt-5">
+                <div className="f-20 text-darkblue poppins-semibold pt-5 pb-1">
                   Customizations
                 </div>
                 <DynamicRichTextBox initialData="Describe your needs" />
