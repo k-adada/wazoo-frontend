@@ -1,37 +1,14 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
-import ServicesSwiper from "../../components/servicesSwiper";
-import sunIcon from "../../assets/Sundark.svg";
-import bookmarkIcon from "../../assets/Icon_Bookmarked_gold.svg";
-import unbookmarkIcon from "../../assets/Icon_Unbookmark.svg";
-import locationIcon from "../../assets/Icon_Location.png";
-import clockIcon from "../../assets/Icon_Time.png";
-import calendarIcon from "../../assets/Icon_Calendar_dark.png";
-import treeIcon from "../../assets/tree_dark.svg";
-import louvreImage from "../../assets/images/services/Louvre.jpg";
-import lucerneImage from "../../assets/images/services/lucerne.jpg";
-import montsaintImage from "../../assets/images/services/montsaintmich.jpg";
-import triomphImage from "../../assets/images/services/Triomphe.jpg";
-import notreImage from "../../assets/images/services/NotreDameCathedral.jpg";
-import quartierImage from "../../assets/images/services/Quartier_Latin.jpg";
-import Link from "next/link";
 import Images from "@/app/Images";
+import Icons from "@/app/Icons";
 
 export default function TripsSection(props: any) {
   const { popup, setOpenPreview } = props;
   const router = useRouter();
-
-  const images = [
-    louvreImage,
-    lucerneImage,
-    montsaintImage,
-    triomphImage,
-    notreImage,
-    quartierImage,
-  ];
 
   const trips = [
     {
@@ -65,7 +42,7 @@ export default function TripsSection(props: any) {
       date: "May 1 - Sep 30",
       theme: "Romantic",
       season: "Spring/Summer",
-      image: "url",
+      image: Images.montsaintImage,
     },
     {
       name: "Cultural Odyssey in Rome",
@@ -76,7 +53,7 @@ export default function TripsSection(props: any) {
       date: "Mar 15 - Nov 15",
       theme: "Cultural",
       season: "Spring/Fall",
-      image: "url",
+      image: Images.triomphImage,
     },
     {
       name: "Island Paradise Getaway",
@@ -87,7 +64,7 @@ export default function TripsSection(props: any) {
       date: "Dec 1 - May 31",
       theme: "Beach",
       season: "Winter/Spring",
-      image: "url",
+      image: Images.notreImage,
     },
     {
       name: "Historic Journey through Athens",
@@ -98,7 +75,7 @@ export default function TripsSection(props: any) {
       date: "Apr 15 - Oct 31",
       theme: "Historic",
       season: "Spring/Summer",
-      image: "url",
+      image: Images.quartierImage,
     },
     {
       name: "Safari Expedition in Serengeti",
@@ -109,7 +86,7 @@ export default function TripsSection(props: any) {
       date: "Jun 1 - Oct 15",
       theme: "Wildlife",
       season: "Summer",
-      image: "url",
+      image: Images.safari,
     },
     {
       name: "Exploring the Wonders of Istanbul",
@@ -120,7 +97,7 @@ export default function TripsSection(props: any) {
       date: "Mar 1 - Nov 30",
       theme: "Cultural",
       season: "Spring/Fall",
-      image: "url",
+      image: Images.marakesh,
     },
     {
       name: "Tropical Bliss in Bali",
@@ -131,7 +108,7 @@ export default function TripsSection(props: any) {
       date: "Apr 15 - Oct 31",
       theme: "Beach",
       season: "Spring/Summer",
-      image: "url",
+      image: Images.santorini,
     },
     {
       name: "Northern Lights Discovery in Iceland",
@@ -142,7 +119,7 @@ export default function TripsSection(props: any) {
       date: "Sep 1 - Mar 31",
       theme: "Nature",
       season: "Winter",
-      image: "url",
+      image: Images.aurora,
     },
   ];
 
@@ -164,7 +141,12 @@ export default function TripsSection(props: any) {
             >
               <div className="col-12 pb-5 px-2">
                 <div className="image-wrapper-83">
-                  <Image src={images[index]} alt="casinoImage" />
+                  <Image
+                    src={item.image}
+                    alt="casinoImage"
+                    width={1000}
+                    height={1000}
+                  />
                 </div>
                 {!popup && (
                   <div className="absolute top-2 right-4 pointer">
@@ -173,7 +155,7 @@ export default function TripsSection(props: any) {
                       style={{ backgroundColor: "rgba(0,0,0,0.3)" }}
                     >
                       <Image
-                        src={unbookmarkIcon}
+                        src={Icons.unbookmarkGoldIcon}
                         alt="three dots"
                         className="three-dots"
                       />
@@ -191,31 +173,51 @@ export default function TripsSection(props: any) {
 
               <div className="col-auto px-2 py-1">
                 <div className="service-tag flex">
-                  <Image className="mr-1" src={locationIcon} alt="location" />
+                  <Image
+                    className="mr-1"
+                    src={Icons.locationDarkIcon}
+                    alt="location"
+                  />
                   <div className="text-darkblue">{item.location}</div>
                 </div>
               </div>
               <div className="col-auto px-2 py-1">
                 <div className="service-tag flex">
-                  <Image className="mr-1" src={clockIcon} alt="time" />
+                  <Image
+                    className="mr-1"
+                    src={Icons.clockDarkIcon}
+                    alt="time"
+                  />
                   <div className="text-darkblue">{item.duration}</div>
                 </div>
               </div>
               <div className="col-auto px-2 py-1">
                 <div className="service-tag flex">
-                  <Image className="mr-1" src={calendarIcon} alt="calendar" />
+                  <Image
+                    className="mr-1"
+                    src={Icons.calendarDarkIcon}
+                    alt="calendar"
+                  />
                   <div className="text-darkblue">{item.date}</div>
                 </div>
               </div>
               <div className="col-auto px-2 py-1">
                 <div className="service-tag flex">
-                  <Image className="mr-1" src={treeIcon} alt="tree icon" />
+                  <Image
+                    className="mr-1"
+                    src={Icons.treeDarkIcon}
+                    alt="tree icon"
+                  />
                   <div className="text-darkblue">{item.theme}</div>
                 </div>
               </div>
               <div className="col-auto px-2 py-1">
                 <div className="service-tag flex">
-                  <Image className="mr-1" src={sunIcon} alt="sun icon" />
+                  <Image
+                    className="mr-1"
+                    src={Icons.sunDarkIcon}
+                    alt="sun icon"
+                  />
                   <div className="text-darkblue">{item.season}</div>
                 </div>
               </div>

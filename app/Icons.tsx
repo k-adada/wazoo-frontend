@@ -20,6 +20,12 @@ import deleteRedIcon from "@/app/assets/delete_red.svg";
 import editIconDark from "@/app/assets/Icon_Edit.png";
 import arrowDownDarkIcon from "@/app/assets/down_arrow_dark.svg";
 import xDarkWhiteBgIcon from "@/app/assets/darkXwhitebgIcon.svg";
+import treeDarkIcon from "@/app/assets/tree_dark.svg";
+import calendarDarkIcon from "@/app/assets/Icon_Calendar_dark.png";
+import clockDarkIcon from "@/app/assets/Icon_Time.png";
+import locationDarkIcon from "@/app/assets/Icon_Location.png";
+import unbookmarkGoldIcon from "@/app/assets/Icon_Unbookmark.svg";
+import sunDarkIcon from "@/app/assets/Sundark.svg";
 
 const Icons = {
   avatarIcon,
@@ -44,6 +50,12 @@ const Icons = {
   searchIconDark,
   arrowDownDarkIcon,
   xDarkWhiteBgIcon,
+  treeDarkIcon,
+  calendarDarkIcon,
+  clockDarkIcon,
+  locationDarkIcon,
+  unbookmarkGoldIcon,
+  sunDarkIcon,
 };
 
 export default Icons;
