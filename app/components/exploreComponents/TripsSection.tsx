@@ -153,7 +153,7 @@ export default function TripsSection(props: any) {
           <div className="col-3 px-5 py-2" key={index}>
             {/* <Link href="/trip"> */}
             <div
-              className="row bg-white rounded-lg py-2 pointer"
+              className="row bg-white rounded-lg py-2 pointer h-full"
               onClick={() => {
                 if (!popup) {
                   router.push("/trip");
@@ -162,7 +162,7 @@ export default function TripsSection(props: any) {
                 }
               }}
             >
-              <div className="col-12 pb-4 px-2">
+              <div className="col-12 pb-5 px-2">
                 <div className="image-wrapper-83">
                   <Image src={images[index]} alt="casinoImage" />
                 </div>
@@ -180,17 +180,15 @@ export default function TripsSection(props: any) {
                     </div>
                   </div>
                 )}
-              </div>
-              <div className="col-12 px-2">
-                <div className="f-20 text-darkblue poppins-medium">
+
+                <div className="f-20 text-darkblue poppins-medium pt-3 line-clamp-1">
                   {item.name}
                 </div>
-              </div>
-              <div className="col-12 px-2 pb-3">
                 <div className="f-16 text-grey pt-1 line-clamp-2">
                   {item.description}
                 </div>
               </div>
+
               <div className="col-auto px-2 py-1">
                 <div className="service-tag flex">
                   <Image className="mr-1" src={locationIcon} alt="location" />

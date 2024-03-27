@@ -95,7 +95,8 @@ export default function RequestItineraries() {
           >
             {/* ITINERARYY RELATED INFO */}
             <div
-              className="absolute top-5 right-5 pointer"
+              className="absolute pointer"
+              style={{ top: "50px", right: "6%" }}
               onClick={() => {
                 setAddItinerary(false);
               }}
