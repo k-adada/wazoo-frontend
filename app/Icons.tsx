@@ -19,6 +19,7 @@ import paperPlaneIconGold from "@/app/assets/Icon_Submit_gold.svg";
 import deleteRedIcon from "@/app/assets/delete_red.svg";
 import editIconDark from "@/app/assets/Icon_Edit.png";
 import arrowDownDarkIcon from "@/app/assets/down_arrow_dark.svg";
+import xDarkWhiteBgIcon from "@/app/assets/darkXwhitebgIcon.svg";
 
 const Icons = {
   avatarIcon,
@@ -42,6 +43,7 @@ const Icons = {
   editIconDark,
   searchIconDark,
   arrowDownDarkIcon,
+  xDarkWhiteBgIcon,
 };
 
 export default Icons;

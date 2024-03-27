@@ -25,7 +25,7 @@ const editorConfiguration = {
   ],
 };
 
-function RichTextBox(props: { initialData: string | null | undefined; }) {
+function RichTextBox(props: { initialData: string | null | undefined }) {
   return (
     <CKEditor
       editor={Editor}
