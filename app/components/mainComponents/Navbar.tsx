@@ -84,7 +84,10 @@ export default function Navbar() {
       </div>
 
       {/* bottom bar */}
-      <div className="w-full fixed bottom-10 text-center z-10">
+      <div
+        className="w-[360px] fixed bottom-10 text-center z-10"
+        style={{ left: "50%", transform: "translateX(-50%)" }}
+      >
         <div className="flex items-center justify-center">
           <div
             className="rounded-full overflow-hidden backdrop-blur-xl py-4 px-4 mx-1 pointer"
