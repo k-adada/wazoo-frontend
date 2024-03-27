@@ -7,7 +7,11 @@ import Images from "@/app/Images";
 
 import DragTableRequestServices from "./DragTableRequestServices";
 import ActivitiesSection from "../exploreComponents/ActivitiesSection";
-import RichTextBox from "../RichTextBox";
+import dynamic from "next/dynamic";
+
+const DynamicRichTextBox = dynamic(() => import("../RichTextBox"), {
+  ssr: false, // Disable server-side rendering for this component
+});
 
 export default function RequestServices() {
   const [itineraries, setItineraries] = useState([
@@ -134,8 +138,7 @@ export default function RequestServices() {
                 <div className="f-20 text-darkblue poppins-semibold pt-5">
                   Customizations
                 </div>
-                <RichTextBox initialData={"Describe your needs"} />
-
+                <DynamicRichTextBox initialData="Describe your needs" />
                 <div className="flex justify-between items-center pt-5">
                   <div
                     className="dark-button flex justify-center items-center text-gold pointer mr-4 w-full"
