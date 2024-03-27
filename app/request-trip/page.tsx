@@ -169,109 +169,113 @@ export default function RequestTrip() {
         {requestType === "tailored" && (
           <div className="row pt-5">
             {/*  STEPS LEFT BAR START */}
-            <div className="col-2 flex" style={{ height: "80vh" }}>
-              <div className="flex flex-col bg-blue rounded-full h-full w-[10px] items-center justify-between">
-                <div className="">
-                  <div
-                    className={
-                      (currentStep === "trip-info" && "bg-darkblue ") +
-                      " rounded-full h-[96px] w-[10px]"
-                    }
-                  ></div>
-                </div>
-                <div className="">
-                  <div
-                    className={
-                      (currentStep === "itineraries&services" &&
-                        "bg-darkblue ") + " rounded-full h-[96px] w-[10px]"
-                    }
-                  ></div>
-                </div>
-                <div className="">
-                  <div
-                    className={
-                      (currentStep === "client-preferences" && "bg-darkblue ") +
-                      " rounded-full h-[96px] w-[10px]"
-                    }
-                  ></div>
-                </div>
-                <div className="">
-                  <div
-                    className={
-                      (currentStep === "review-and-submit" && "bg-darkblue ") +
-                      " rounded-full h-[96px] w-[10px]"
-                    }
-                  ></div>
-                </div>
-              </div>
-              <div className="flex flex-col h-full items-center justify-between py-2 pl-5">
-                {/* STEP 1  */}
-                <div
-                  className="pointer w-full"
-                  onClick={() => {
-                    setCurrentStep("trip-info");
-                  }}
-                >
-                  <div
-                    className={
-                      (currentStep === "trip-info" && "bg-blue ") +
-                      " py-4 px-4 rounded-lg"
-                    }
-                  >
-                    <div className="f-16 text-grey">01 -</div>
-                    <div className="text-darkblue">Trip Info</div>
+            <div className="col-2" style={{ height: "80vh" }}>
+              <div className="flex fixed" style={{ height: "80vh" }}>
+                <div className="flex flex-col bg-blue rounded-full h-full w-[10px] items-center justify-between">
+                  <div className="">
+                    <div
+                      className={
+                        (currentStep === "trip-info" && "bg-darkblue ") +
+                        " rounded-full h-[96px] w-[10px]"
+                      }
+                    ></div>
+                  </div>
+                  <div className="">
+                    <div
+                      className={
+                        (currentStep === "itineraries&services" &&
+                          "bg-darkblue ") + " rounded-full h-[96px] w-[10px]"
+                      }
+                    ></div>
+                  </div>
+                  <div className="">
+                    <div
+                      className={
+                        (currentStep === "client-preferences" &&
+                          "bg-darkblue ") + " rounded-full h-[96px] w-[10px]"
+                      }
+                    ></div>
+                  </div>
+                  <div className="">
+                    <div
+                      className={
+                        (currentStep === "review-and-submit" &&
+                          "bg-darkblue ") + " rounded-full h-[96px] w-[10px]"
+                      }
+                    ></div>
                   </div>
                 </div>
+                <div className="flex flex-col h-full items-center justify-between py-2 pl-5">
+                  {/* STEP 1  */}
+                  <div
+                    className="pointer w-full"
+                    onClick={() => {
+                      setCurrentStep("trip-info");
+                    }}
+                  >
+                    <div
+                      className={
+                        (currentStep === "trip-info" && "bg-blue ") +
+                        " py-4 px-4 rounded-lg"
+                      }
+                    >
+                      <div className="f-16 text-grey">01 -</div>
+                      <div className="text-darkblue">Trip Info</div>
+                    </div>
+                  </div>
 
-                {/* STEP 2  */}
-                <div
-                  className="pointer w-full"
-                  onClick={() => {
-                    setCurrentStep("itineraries&services");
-                  }}
-                >
+                  {/* STEP 2  */}
                   <div
-                    className={
-                      (currentStep === "itineraries&services" && "bg-blue ") +
-                      " py-4 px-4 rounded-lg"
-                    }
+                    className="pointer w-full"
+                    onClick={() => {
+                      setCurrentStep("itineraries&services");
+                    }}
                   >
-                    <div className="f-16 text-grey">02 -</div>
-                    <div className="text-darkblue">Itineraries & Services</div>
+                    <div
+                      className={
+                        (currentStep === "itineraries&services" && "bg-blue ") +
+                        " py-4 px-4 rounded-lg"
+                      }
+                    >
+                      <div className="f-16 text-grey">02 -</div>
+                      <div className="text-darkblue">
+                        Itineraries & Services
+                      </div>
+                    </div>
                   </div>
-                </div>
-                {/* STEP 3  */}
-                <div
-                  className="pointer w-full"
-                  onClick={() => {
-                    setCurrentStep("client-preferences");
-                  }}
-                >
+                  {/* STEP 3  */}
                   <div
-                    className={
-                      (currentStep === "client-preferences" && "bg-blue ") +
-                      " py-4 px-4 rounded-lg"
-                    }
+                    className="pointer w-full"
+                    onClick={() => {
+                      setCurrentStep("client-preferences");
+                    }}
                   >
-                    <div className="f-16 text-grey">03 -</div>
-                    <div className="text-darkblue">Client Preferences</div>
+                    <div
+                      className={
+                        (currentStep === "client-preferences" && "bg-blue ") +
+                        " py-4 px-4 rounded-lg"
+                      }
+                    >
+                      <div className="f-16 text-grey">03 -</div>
+                      <div className="text-darkblue">Client Preferences</div>
+                    </div>
                   </div>
-                </div>
-                {/* STEP 4  */}
-                <div
-                  className="pointer w-full"
-                  onClick={() => {
-                    setCurrentStep("review-and-submit");
-                  }}
-                >
+                  {/* STEP 4  */}
                   <div
-                    className={
-                      (currentStep === "review-and-submit" && "bg-blue ") +
-                      " py-4 px-4 rounded-lg"
-                    }
+                    className="pointer w-full"
+                    onClick={() => {
+                      setCurrentStep("review-and-submit");
+                    }}
                   >
-                    <div className="f-16 text-grey">04 -</div>
-                    <div className="text-darkblue">Review And Submit</div>
+                    <div
+                      className={
+                        (currentStep === "review-and-submit" && "bg-blue ") +
+                        " py-4 px-4 rounded-lg"
+                      }
+                    >
+                      <div className="f-16 text-grey">04 -</div>
+                      <div className="text-darkblue">Review And Submit</div>
+                    </div>
                   </div>
                 </div>
               </div>
