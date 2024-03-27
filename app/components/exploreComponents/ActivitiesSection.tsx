@@ -121,8 +121,8 @@ export default function ActivitiesSection(props: any) {
               </div>
 
               <div className="f-14 text-grey pt-1 line-clamp-4">
-                Can't find what you need? Tell us, and we'll create a custom
-                service just for you
+                Can&apos;t find what you need? Tell us, and we&apos;ll create a
+                custom service just for you
               </div>
             </div>
           </div>
