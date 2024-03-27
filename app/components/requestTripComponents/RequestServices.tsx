@@ -21,7 +21,7 @@ export default function RequestServices() {
   const [openPreview, setOpenPreview] = useState(false);
   const [customServices, setCustomServices] = useState({
     open: false,
-    services: [],
+    services: [] as any[],
   });
 
   return (
