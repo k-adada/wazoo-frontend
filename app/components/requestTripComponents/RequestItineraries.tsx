@@ -224,7 +224,7 @@ export default function RequestItineraries() {
                             ]);
                           }}
                         >
-                          <div className="">Save</div>
+                          <div className="">Add to Trip</div>
                         </div>
                       </div>
                     </div>

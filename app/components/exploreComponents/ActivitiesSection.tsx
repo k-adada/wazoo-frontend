@@ -108,7 +108,7 @@ export default function ActivitiesSection(props: any) {
                 </div>
                 {customServices?.services.length !== 0 && (
                   <div className="absolute top-2 left-4 flex items-center">
-                    <div className="f-16 text-gold poppins-semibold py-1 px-2 bg-darkblue rounded-lg">
+                    <div className="f-16 text-gold text-center poppins-semibold py-1 bg-darkblue rounded-lg w-[34px]">
                       {customServices?.services.length}
                     </div>
                   </div>
