@@ -29,6 +29,14 @@ import montsaintImage from "@/app/assets/images/services/montsaintmich.jpg";
 import triomphImage from "@/app/assets/images/services/Triomphe.jpg";
 import notreImage from "@/app/assets/images/services/NotreDameCathedral.jpg";
 import quartierImage from "@/app/assets/images/services/Quartier_Latin.jpg";
+import theme1 from "@/app/assets/images/themes/Adventure.webp";
+import theme2 from "@/app/assets/images/themes/Beach_Sun.webp";
+import theme3 from "@/app/assets/images/themes/david.jpg";
+import theme4 from "@/app/assets/images/themes/Food_Wine.webp";
+import theme5 from "@/app/assets/images/themes/Honeymoon.webp";
+import theme6 from "@/app/assets/images/themes/Safari.webp";
+import theme7 from "@/app/assets/images/themes/yacht_charter.webp";
+
 const Images = {
   logo,
   avatarIcon,
@@ -61,6 +69,13 @@ const Images = {
   triomphImage,
   notreImage,
   quartierImage,
+  theme1,
+  theme2,
+  theme3,
+  theme4,
+  theme5,
+  theme6,
+  theme7,
 };
 
 export default Images;

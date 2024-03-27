@@ -4,8 +4,6 @@ import Image from "next/image";
 
 import check from "../../assets/check.png";
 
-import Link from "next/link";
-
 import australiaImage from "../../assets/images/destinations/Australia.webp";
 import brazilImage from "../../assets/images/destinations/Brazil.webp";
 import egyptImage from "../../assets/images/destinations/egypt.jpg";

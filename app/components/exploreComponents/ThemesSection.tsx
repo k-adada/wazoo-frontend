@@ -2,15 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-import destination from "../../assets/theme.png";
-
-import theme1 from "../../assets/images/themes/Adventure.webp";
-import theme2 from "../../assets/images/themes/Beach_Sun.webp";
-import theme3 from "../../assets/images/themes/david.jpg";
-import theme4 from "../../assets/images/themes/Food_Wine.webp";
-import theme5 from "../../assets/images/themes/Honeymoon.webp";
-import theme6 from "../../assets/images/themes/Safari.webp";
-import theme7 from "../../assets/images/themes/yacht_charter.webp";
+import Images from "@/app/Images";
 
 export default function ThemesSection() {
   const [themes, setThemes] = useState([
@@ -20,7 +12,7 @@ export default function ThemesSection() {
       subtitle:
         "lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor",
       country: "Lebanon",
-      image: theme1,
+      image: Images.theme1,
     },
     {
       id: 2,
@@ -28,7 +20,7 @@ export default function ThemesSection() {
       subtitle:
         "lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor",
       country: "Lebanon",
-      image: theme2,
+      image: Images.theme2,
     },
     {
       id: 3,
@@ -36,7 +28,7 @@ export default function ThemesSection() {
       subtitle:
         "lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor",
       country: "Lebanon",
-      image: theme3,
+      image: Images.theme3,
     },
     {
       id: 4,
@@ -44,7 +36,7 @@ export default function ThemesSection() {
       subtitle:
         "lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor",
       country: "Lebanon",
-      image: theme4,
+      image: Images.theme4,
     },
     {
       id: 5,
@@ -52,7 +44,7 @@ export default function ThemesSection() {
       subtitle:
         "lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor",
       country: "Lebanon",
-      image: theme5,
+      image: Images.theme5,
     },
     {
       id: 6,
@@ -60,7 +52,7 @@ export default function ThemesSection() {
       subtitle:
         "lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor",
       country: "Lebanon",
-      image: theme6,
+      image: Images.theme6,
     },
     {
       id: 7,
@@ -68,7 +60,7 @@ export default function ThemesSection() {
       subtitle:
         "lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor",
       country: "Lebanon",
-      image: theme7,
+      image: Images.theme7,
     },
     {
       id: 2,
@@ -76,7 +68,7 @@ export default function ThemesSection() {
       subtitle:
         "lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor",
       country: "Lebanon",
-      image: destination,
+      image: Images.lebanon,
     },
     {
       id: 3,
@@ -84,31 +76,31 @@ export default function ThemesSection() {
       subtitle:
         "lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor",
       country: "Lebanon",
-      image: destination,
+      image: Images.safari,
     },
     {
       id: 4,
-      name: "Lebanon",
+      name: "Marakesh",
       subtitle:
         "lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor",
       country: "Lebanon",
-      image: destination,
+      image: Images.marakesh,
     },
     {
       id: 5,
-      name: "Lebanon",
+      name: "Aurora",
       subtitle:
         "lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor",
       country: "Lebanon",
-      image: destination,
+      image: Images.aurora,
     },
     {
       id: 6,
-      name: "Lebanon",
+      name: "Brazil",
       subtitle:
         "lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor",
-      country: "Lebanon",
-      image: destination,
+      country: "Brazil",
+      image: Images.brazil,
     },
   ]);
 
