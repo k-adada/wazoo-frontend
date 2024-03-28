@@ -90,7 +90,7 @@ const rows = [
   createData(
     2,
     "28/03/24",
-    "New",
+    "Open",
     "John Doe",
     "Tailored",
     "10",
@@ -102,7 +102,7 @@ const rows = [
   createData(
     3,
     "28/03/24",
-    "New",
+    "Building",
     "John Doe",
     "Tailored",
     "10",
@@ -114,7 +114,7 @@ const rows = [
   createData(
     4,
     "28/03/24",
-    "New",
+    "Confirmed",
     "John Doe",
     "Tailored",
     "10",
@@ -126,7 +126,7 @@ const rows = [
   createData(
     5,
     "28/03/24",
-    "New",
+    "In Progress",
     "John Doe",
     "Tailored",
     "10",
@@ -138,7 +138,7 @@ const rows = [
   createData(
     6,
     "28/03/24",
-    "New",
+    "Completed",
     "John Doe",
     "Tailored",
     "10",
@@ -150,7 +150,7 @@ const rows = [
   createData(
     7,
     "28/03/24",
-    "New",
+    "Cancelled",
     "John Doe",
     "Tailored",
     "10",
@@ -497,6 +497,27 @@ export default function MyTripsTable() {
     [order, orderBy, page, rowsPerPage]
   );
 
+  const getBgColor = (status: string) => {
+    switch (status) {
+      case "New":
+        return "bg-new";
+      case "Open":
+        return "bg-open";
+      case "Building":
+        return "bg-building";
+      case "Confirmed":
+        return "bg-confirmed";
+      case "In Progress":
+        return "bg-progress";
+      case "Completed":
+        return "bg-completed";
+      case "Cancelled":
+        return "bg-cancelled";
+      default:
+        return "bg-grey";
+    }
+  };
+
   return (
     <Box sx={{ width: "100%" }}>
       <Paper sx={{ width: "100%", mb: 2 }}>
@@ -549,7 +570,12 @@ export default function MyTripsTable() {
                       {row.requestDate}
                     </TableCell>
                     <TableCell align="left">
-                      <div className="px-1 py-1 rounded-full bg-green text-center text-white poppins-medium">
+                      <div
+                        className={
+                          getBgColor(row.status) +
+                          " px-1 py-1 rounded-full text-center text-white poppins-medium"
+                        }
+                      >
                         {row.status}
                       </div>
                     </TableCell>
@@ -609,7 +635,8 @@ export default function MyTripsTable() {
                         </div>
                         <div className="px-1">
                           <Image
-                            src={Icons.sideTagDarkIcon}
+                            style={{ transform: "rotate(45deg)" }}
+                            src={Icons.tagDarkIcon}
                             alt="edit"
                             onClick={() => {
                               alert("edit " + row.id);

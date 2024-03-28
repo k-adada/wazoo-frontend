@@ -35,6 +35,7 @@ import sideTagDarkIcon from "@/app/assets/side_tag_dark.svg";
 import stopCircleDarkIcon from "@/app/assets/stop_circle_dark.svg";
 import checkGreyIcon from "@/app/assets/check_grey.svg";
 import closeDarkIcon from "@/app/assets/Icon_Close_dark.svg";
+import tagDarkIcon from "@/app/assets/Icon_Tag.svg";
 
 const Icons = {
   avatarIcon,
@@ -74,6 +75,7 @@ const Icons = {
   stopCircleDarkIcon,
   checkGreyIcon,
   closeDarkIcon,
+  tagDarkIcon,
 };
 
 export default Icons;

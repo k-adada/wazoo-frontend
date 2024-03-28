@@ -200,8 +200,32 @@ input::placeholder {
   background-color: #fddfbb;
 }
 
-.bg-green {
+.bg-new {
   background-color: #39ae6c;
+}
+
+.bg-completed {
+  background-color: #015814;
+}
+
+.bg-open {
+  background-color: #3984ae;
+}
+
+.bg-building {
+  background-color: #efab01;
+}
+
+.bg-confirmed {
+  background-color: #1c2a79;
+}
+
+.bg-progress {
+  background-color: #570354;
+}
+
+.bg-cancelled {
+  background-color: #a4a4a4;
 }
 
 .bg-primary-gradient {
