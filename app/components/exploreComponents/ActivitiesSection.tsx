@@ -10,9 +10,9 @@ export default function ActivitiesSection(props: any) {
 
   const [services, setServices] = useState([
     {
-      name: "Service Name 1",
+      name: "Louvre Museum",
       description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam voluptates eveniet iste corrupti! Cum,",
+        "In the heart of Paris, on the right bank of the Seine, the Louvre Museum is a must-see for all visitors to the French capital. The world's largest and most visited museum, it is a historic monument in Paris, France. A central landmark of the city, it is located on the Right Bank of the Seine in the city's 1st arrondissement.",
       location: "Paris, France",
       duration: "Oct 1 - Dec 31",
       theme: "Kayak",
@@ -20,9 +20,9 @@ export default function ActivitiesSection(props: any) {
       image: Images.louvreImage,
     },
     {
-      name: "Service Name 2",
+      name: "Geneva Lakehouse",
       description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam voluptates eveniet iste corrupti! Cum,",
+        "Geneva Lakehouse is a beautiful property located in the heart of Geneva, Switzerland. The property is situated on the shores of Lake Geneva and offers stunning views of the lake and the surrounding mountains. The property is perfect for a relaxing getaway and is ideal for families, couples, and groups of friends looking to escape the hustle and bustle of city life.",
       location: "Paris, France",
       duration: "Oct 1 - Dec 31",
       theme: "Kayak",
@@ -30,9 +30,9 @@ export default function ActivitiesSection(props: any) {
       image: Images.lucerneImage,
     },
     {
-      name: "Service Name 3",
+      name: "Mont Saint Michel",
       description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam voluptates eveniet iste corrupti! Cum,",
+        "Mont Saint-Michel is an island commune in Normandy, France. It is located approximately one kilometre off the country's northwestern coast, at the mouth of the Couesnon River near Avranches and is 100 hectares in size. The island has held strategic fortifications since ancient times and since the 8th century AD has been the seat of the monastery from which it draws its name. The structural composition of the town exemplifies the feudal society that constructed it. On top, God, the abbey and monastery; below, the great halls; then stores and housing; and at the bottom, outside the walls, houses for fishermen and farmers",
       location: "Paris, France",
       duration: "Oct 1 - Dec 31",
       theme: "Kayak",
@@ -40,9 +40,9 @@ export default function ActivitiesSection(props: any) {
       image: Images.montsaintImage,
     },
     {
-      name: "Service Name 4",
+      name: "Arc de Triomphe",
       description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam voluptates eveniet iste corrupti! Cum,",
+        "The Arc de Triomphe de l'Étoile is one of the most famous monuments in Paris, France, standing at the western end of the Champs-Élysées at the centre of Place Charles de Gaulle, formerly named Place de l'Étoile — the étoile or 'star' of the juncture formed by its twelve radiating avenues. The location of the arc and the plaza is shared between three arrondissements, 16th, 17th (north), and 8th (east). The Arc de Triomphe honours those who fought and died for France in the French Revolutionary and Napoleonic Wars, with the names of all French victories and generals inscribed on its inner and outer surfaces. Beneath its vault lies the Tomb of the Unknown Soldier from World War I.",
       location: "Paris, France",
       duration: "Oct 1 - Dec 31",
       theme: "Kayak",
@@ -50,9 +50,9 @@ export default function ActivitiesSection(props: any) {
       image: Images.triomphImage,
     },
     {
-      name: "Service Name 5",
+      name: "Notre Dame Cathedral",
       description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam voluptates eveniet iste corrupti! Cum,",
+        "Notre-Dame de Paris, referred to simply as Notre-Dame, is a medieval Catholic cathedral on the Île de la Cité in the 4th arrondissement of Paris. The cathedral was consecrated to the Virgin Mary and considered to be one of the finest examples of French Gothic architecture. Its pioneering use of the rib vault and flying buttress, its enormous and colourful rose windows, as well as the naturalism and abundance of its sculptural decoration set it apart from the earlier Romanesque style. Major components that make Notre Dame stand out include one of the world's largest organs and its immense church bells. The cathedral's construction began in 1160 under Bishop Maurice de Sully and was largely complete by 1260, though it was modified frequently in the following centuries. In the 1790s, Notre-Dame suffered desecration during the French Revolution when much of its religious imagery was damaged or destroyed. A major restoration project supervised by Eugène Viollet-le-Duc began in 1845 and continued for twenty-five years. Beginning in 1963, the facade of the Cathedral was cleaned of centuries of soot and grime, returning it to its original colour. Another cleaning and restoration project was carried out between 1991 and 2000. As the cathedral of the Archdiocese of Paris, Notre-Dame contains the cathedra of the Archbishop of Paris (Michel Aupetit). 12 million people visit Notre-Dame yearly, more than any other Parisian monument. The cathedral's treasury is notable for its reliquary which houses some of Catholicism's most important relics including the purported Crown of Thorns, a fragment of the True Cross, and one of the Holy Nails.",
       location: "Paris, France",
       duration: "Oct 1 - Dec 31",
       theme: "Kayak",
@@ -60,9 +60,9 @@ export default function ActivitiesSection(props: any) {
       image: Images.notreImage,
     },
     {
-      name: "Service Name 6",
+      name: "Latin Quarter",
       description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam voluptates eveniet iste corrupti! Cum,",
+        "The Latin Quarter of Paris is an area in the 5th and the 6th arrondissements of Paris. It is situated on the left bank of the Seine, around the Sorbonne. Known for its student life, lively atmosphere, and bistros, the Latin Quarter is the home to a number of higher education establishments besides the university itself, such as the Lycée Louis-le-Grand, the Lycée Henri-IV, the Lycée Saint-Louis, and the Lycée Janson de Sailly. Other establishments such as the École Normale Supérieure, the École des Mines de Paris, HEC Paris, the Collège de France, the Sciences Po Paris, and the Jussieu university campus, also occupy part of the Latin Quarter. The area gets its name from the Latin language, which was once widely spoken in and around the University since Latin was the language of learning in the Middle Ages in Europe.",
       location: "Paris, France",
       duration: "Oct 1 - Dec 31",
       theme: "Kayak",

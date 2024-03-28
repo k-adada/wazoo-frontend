@@ -12,6 +12,39 @@ export default function TripsSection(props: any) {
 
   const trips = [
     {
+      name: "Tropical Bliss in Bali",
+      description:
+        "Relax and rejuvenate in the serene beauty of Bali, with lush landscapes, serene beaches, and spiritual retreats.",
+      location: "Bali, Indonesia",
+      duration: "10 days",
+      date: "Apr 15 - Oct 31",
+      theme: "Beach",
+      season: "Spring/Summer",
+      image: Images.santorini,
+    },
+    {
+      name: "Northern Lights Discovery in Iceland",
+      description:
+        "Witness the mesmerizing spectacle of the Northern Lights in Iceland, amidst rugged landscapes and geothermal wonders.",
+      location: "Iceland",
+      duration: "7 days",
+      date: "Sep 1 - Mar 31",
+      theme: "Nature",
+      season: "Winter",
+      image: Images.aurora,
+    },
+    {
+      name: "Exploring the Wonders of Istanbul",
+      description:
+        "Immerse in the vibrant culture and history of Istanbul, from ancient landmarks to bustling bazaars.",
+      location: "Istanbul, Turkey",
+      duration: "6 days",
+      date: "Mar 1 - Nov 30",
+      theme: "Cultural",
+      season: "Spring/Fall",
+      image: Images.marakesh,
+    },
+    {
       name: "Enchanting Parisian Escape",
       description:
         "Experience the magic of Paris with charming streets, iconic landmarks, and exquisite cuisine.",
@@ -22,28 +55,7 @@ export default function TripsSection(props: any) {
       season: "Spring/Summer",
       image: Images.louvreImage,
     },
-    {
-      name: "Adventure in the Swiss Alps",
-      description:
-        "Embark on an adrenaline-packed journey through the breathtaking landscapes of the Swiss Alps.",
-      location: "Switzerland",
-      duration: "7 days",
-      date: "Jun 15 - Sep 15",
-      theme: "Adventure",
-      season: "Summer",
-      image: Images.lucerneImage,
-    },
-    {
-      name: "Romantic Riviera Retreat",
-      description:
-        "Unwind and romance in the picturesque settings of the Riviera with azure waters and golden beaches.",
-      location: "French Riviera",
-      duration: "10 days",
-      date: "May 1 - Sep 30",
-      theme: "Romantic",
-      season: "Spring/Summer",
-      image: Images.montsaintImage,
-    },
+
     {
       name: "Cultural Odyssey in Rome",
       description:
@@ -89,37 +101,26 @@ export default function TripsSection(props: any) {
       image: Images.safari,
     },
     {
-      name: "Exploring the Wonders of Istanbul",
+      name: "Adventure in the Swiss Alps",
       description:
-        "Immerse in the vibrant culture and history of Istanbul, from ancient landmarks to bustling bazaars.",
-      location: "Istanbul, Turkey",
-      duration: "6 days",
-      date: "Mar 1 - Nov 30",
-      theme: "Cultural",
-      season: "Spring/Fall",
-      image: Images.marakesh,
-    },
-    {
-      name: "Tropical Bliss in Bali",
-      description:
-        "Relax and rejuvenate in the serene beauty of Bali, with lush landscapes, serene beaches, and spiritual retreats.",
-      location: "Bali, Indonesia",
-      duration: "10 days",
-      date: "Apr 15 - Oct 31",
-      theme: "Beach",
-      season: "Spring/Summer",
-      image: Images.santorini,
-    },
-    {
-      name: "Northern Lights Discovery in Iceland",
-      description:
-        "Witness the mesmerizing spectacle of the Northern Lights in Iceland, amidst rugged landscapes and geothermal wonders.",
-      location: "Iceland",
+        "Embark on an adrenaline-packed journey through the breathtaking landscapes of the Swiss Alps.",
+      location: "Switzerland",
       duration: "7 days",
-      date: "Sep 1 - Mar 31",
-      theme: "Nature",
-      season: "Winter",
-      image: Images.aurora,
+      date: "Jun 15 - Sep 15",
+      theme: "Adventure",
+      season: "Summer",
+      image: Images.lucerneImage,
+    },
+    {
+      name: "Romantic Riviera Retreat",
+      description:
+        "Unwind and romance in the picturesque settings of the Riviera with azure waters and golden beaches.",
+      location: "French Riviera",
+      duration: "10 days",
+      date: "May 1 - Sep 30",
+      theme: "Romantic",
+      season: "Spring/Summer",
+      image: Images.montsaintImage,
     },
   ];
 
