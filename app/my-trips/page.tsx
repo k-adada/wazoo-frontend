@@ -70,7 +70,7 @@ export default function MyTrips() {
                   </div>
                 </div>
                 <div className="flex col-auto">
-                  <Link href="/create-itineraries">
+                  <Link href="/request-trip">
                     <div className="dark-button text-gold poppins-medium cursor-pointer">
                       <div className="flex items-center h-full">
                         <Image src={Icons.paperPlaneIconGold} alt="request" />

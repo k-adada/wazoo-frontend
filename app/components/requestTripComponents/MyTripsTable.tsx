@@ -83,7 +83,7 @@ const rows = [
     "Tailored",
     "10",
     "May 1 - May 10",
-    "Paris, France",
+    "France, Italy",
     "$5000",
     "5"
   ),
@@ -92,10 +92,10 @@ const rows = [
     "28/03/24",
     "Open",
     "John Doe",
-    "Tailored",
+    "Dispatch",
     "10",
     "May 1 - May 10",
-    "Paris, France",
+    "France, Italy",
     "$5000",
     "5"
   ),
@@ -107,7 +107,7 @@ const rows = [
     "Tailored",
     "10",
     "May 1 - May 10",
-    "Paris, France",
+    "France, Italy",
     "$5000",
     "5"
   ),
@@ -116,10 +116,10 @@ const rows = [
     "28/03/24",
     "Confirmed",
     "John Doe",
-    "Tailored",
+    "Dispatch",
     "10",
     "May 1 - May 10",
-    "Paris, France",
+    "France, Italy",
     "$5000",
     "5"
   ),
@@ -131,7 +131,7 @@ const rows = [
     "Tailored",
     "10",
     "May 1 - May 10",
-    "Paris, France",
+    "France, Italy",
     "$5000",
     "5"
   ),
@@ -140,10 +140,10 @@ const rows = [
     "28/03/24",
     "Completed",
     "John Doe",
-    "Tailored",
+    "Dispatch",
     "10",
     "May 1 - May 10",
-    "Paris, France",
+    "France, Italy",
     "$5000",
     "5"
   ),
@@ -155,7 +155,7 @@ const rows = [
     "Tailored",
     "10",
     "May 1 - May 10",
-    "Paris, France",
+    "France, Italy",
     "$5000",
     "5"
   ),
@@ -167,7 +167,7 @@ const rows = [
     "Tailored",
     "10",
     "May 1 - May 10",
-    "Paris, France",
+    "France, Italy",
     "$5000",
     "5"
   ),
@@ -179,7 +179,7 @@ const rows = [
     "Tailored",
     "10",
     "May 1 - May 10",
-    "Paris, France",
+    "France, Italy",
     "$5000",
     "5"
   ),

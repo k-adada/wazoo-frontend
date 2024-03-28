@@ -18,6 +18,8 @@ export default function Navbar() {
     "/request-trip",
     "/explore-trip-request",
     "/ta-dashboard",
+    "/my-trips",
+    "/trip",
   ];
   return (
     <>
