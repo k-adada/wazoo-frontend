@@ -91,16 +91,18 @@ export default function Navbar() {
         style={{ left: "50%", transform: "translateX(-50%)" }}
       >
         <div className="flex items-center justify-center">
-          <div
-            className="rounded-full overflow-hidden backdrop-blur-xl py-4 px-4 mx-1 pointer"
-            style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
-          >
-            <Image
-              src={Icons.planeIconGold}
-              alt="plane"
-              style={{ height: "25px", width: "25px" }}
-            />
-          </div>
+          <Link href="/my-trips">
+            <div
+              className="rounded-full overflow-hidden backdrop-blur-xl py-4 px-4 mx-1 pointer"
+              style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
+            >
+              <Image
+                src={Icons.planeIconGold}
+                alt="plane"
+                style={{ height: "25px", width: "25px" }}
+              />
+            </div>
+          </Link>
           <div
             className="rounded-full overflow-hidden backdrop-blur-md py-4 px-4 mx-1 pointer"
             style={{ backgroundColor: "rgba(0,0,0,0.2)" }}

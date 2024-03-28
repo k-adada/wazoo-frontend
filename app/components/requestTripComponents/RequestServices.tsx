@@ -29,7 +29,11 @@ export default function RequestServices() {
       {addService && (
         <div
           className="fixed h-full w-full top-0 left-0"
-          style={{ overflowY: "auto", backgroundColor: "rgba(0,0,0,0.5)", zIndex: 1000000000}}
+          style={{
+            overflowY: "auto",
+            backgroundColor: "rgba(0,0,0,0.5)",
+            zIndex: 1000000000,
+          }}
         >
           {openPreview ? (
             customServices.open ? (
@@ -245,26 +249,26 @@ export default function RequestServices() {
                           setSelectedServices([
                             {
                               id: "1",
-                              image: Images.aurora,
-                              name: "services",
-                              serviceType: "type",
-                              serviceSubType: "sub type",
-                              location: "Location 1",
+                              image: Images.louvreImage,
+                              name: "Louvre Museum",
+                              serviceType: "Culture",
+                              serviceSubType: "Art",
+                              location: "Paris, France",
                               method: "Method 1",
-                              validity: "oct 1 - oct 4",
-                              price: "350",
+                              validity: "Oct 1 - Oct 4",
+                              price: "350$",
                             },
 
                             {
                               id: "2",
-                              image: Images.machupichu,
-                              name: "service 2",
-                              serviceType: "type 2",
-                              serviceSubType: "sub type 2",
-                              location: "Location 6",
+                              image: Icons.activityIconDark,
+                              name: "Custom Service",
+                              serviceType: "Custom",
+                              serviceSubType: "-",
+                              location: "Germany",
                               method: "Method 2",
-                              validity: "oct 5 - oct 7",
-                              price: "350",
+                              validity: "Jan 5 - Feb 9",
+                              price: "690$",
                             },
                           ]);
                           setAddService(false);

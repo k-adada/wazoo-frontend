@@ -165,7 +165,7 @@ export default function RequestItineraries() {
                     {/* title */}
                     <div className="col-auto">
                       <div className="f-20 text-darkblue poppins-semibold text-center">
-                      Add Itineraries to your Trip
+                        Add Itineraries to your Trip
                       </div>
                     </div>
 
@@ -203,23 +203,23 @@ export default function RequestItineraries() {
                             setSelectedItineraries([
                               {
                                 id: "1",
-                                image: Images.aurora,
-                                name: "Itinerary 1",
-                                theme: "theme",
-                                destination: "destination",
+                                image: Images.santorini,
+                                name: "Santorini Getaway",
+                                theme: "Beach",
+                                destination: "Greece",
                                 season: "summer",
-                                validity: "oct 1 - oct 4",
-                                price: "350",
+                                validity: "Apr 1 - Sep 4",
+                                price: "4000$",
                               },
                               {
                                 id: "2",
-                                image: Images.machupichu,
-                                name: "Itinerary 2",
-                                theme: "theme 2",
-                                destination: "destination 2",
+                                image: Images.louvreImage,
+                                name: "Experience Paris",
+                                theme: "Culture",
+                                destination: "France",
                                 season: "winter",
-                                validity: "oct 6 - oct 10",
-                                price: "350",
+                                validity: "Oct 1 - Dec 31",
+                                price: "6400$",
                               },
                             ]);
                           }}

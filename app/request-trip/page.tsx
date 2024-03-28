@@ -39,6 +39,8 @@ export default function RequestTrip() {
       setCurrentStep("client-preferences");
     } else if (currentStep === "client-preferences") {
       setCurrentStep("review-and-submit");
+    } else if (currentStep === "review-and-submit") {
+      router.push("/my-trips");
     }
   };
 
