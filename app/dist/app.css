@@ -200,6 +200,10 @@ input::placeholder {
   background-color: #fddfbb;
 }
 
+.bg-green {
+  background-color: #39ae6c;
+}
+
 .bg-primary-gradient {
   background: linear-gradient(to bottom, transparent, white) #ececec;
 }

@@ -26,6 +26,15 @@ import clockDarkIcon from "@/app/assets/Icon_Time.png";
 import locationDarkIcon from "@/app/assets/Icon_Location.png";
 import unbookmarkGoldIcon from "@/app/assets/Icon_Unbookmark.svg";
 import sunDarkIcon from "@/app/assets/Sundark.svg";
+import planTripIconDark from "@/app/assets/Icon_Plan_TripDark.svg";
+import taActionButtonGrey from "@/app/assets/TA_Action_Buttons.svg";
+import messageGreyIcon from "@/app/assets/message_grey.svg";
+import burgerGreyIcon from "@/app/assets/burger_grey.svg";
+import reportGreyIcon from "@/app/assets/report_grey.svg";
+import sideTagDarkIcon from "@/app/assets/side_tag_dark.svg";
+import stopCircleDarkIcon from "@/app/assets/stop_circle_dark.svg";
+import checkGreyIcon from "@/app/assets/check_grey.svg";
+import closeDarkIcon from "@/app/assets/Icon_Close_dark.svg";
 
 const Icons = {
   avatarIcon,
@@ -56,6 +65,15 @@ const Icons = {
   locationDarkIcon,
   unbookmarkGoldIcon,
   sunDarkIcon,
+  planTripIconDark,
+  taActionButtonGrey,
+  messageGreyIcon,
+  burgerGreyIcon,
+  reportGreyIcon,
+  sideTagDarkIcon,
+  stopCircleDarkIcon,
+  checkGreyIcon,
+  closeDarkIcon,
 };
 
 export default Icons;
