@@ -28,8 +28,8 @@ export default function RequestServices() {
     <div className="">
       {addService && (
         <div
-          className="fixed h-full w-full top-0 left-0 z-10"
-          style={{ overflowY: "auto", backgroundColor: "rgba(0,0,0,0.5)" }}
+          className="fixed h-full w-full top-0 left-0"
+          style={{ overflowY: "auto", backgroundColor: "rgba(0,0,0,0.5)", zIndex: 1000000000}}
         >
           {openPreview ? (
             customServices.open ? (
