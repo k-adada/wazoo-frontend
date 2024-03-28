@@ -5,10 +5,7 @@ import MultipleSelectLight from "../../components/MultipleSelectLight";
 
 export default function ClientPreferences() {
   return (
-    <div
-      className="row px-5 py-5 rounded-lg bg-blue"
-      style={{ height: "80vh", overflowY: "auto" }}
-    >
+    <div className="row px-5 py-5 rounded-lg bg-blue">
       {/*Please describe how the clients most like to experience a destination*  */}
       <div className="col-6 pb-5">
         <div className="text-darkblue f-16 pb-4">

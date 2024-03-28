@@ -284,7 +284,10 @@ export default function RequestTrip() {
 
             {/* TRIP INFO SECTION  */}
             {currentStep === "trip-info" && (
-              <div className="col">
+              <div
+                className="col"
+                style={{ height: "80vh", overflowY: "auto" }}
+              >
                 <TripInfo />
               </div>
             )}
@@ -300,13 +303,19 @@ export default function RequestTrip() {
 
             {/* CLIENT PREFFERENCES SECTION  */}
             {currentStep === "client-preferences" && (
-              <div className="col">
+              <div
+                className="col"
+                style={{ height: "80vh", overflowY: "auto" }}
+              >
                 <ClientPreferences />
               </div>
             )}
 
             {currentStep === "review-and-submit" && (
-              <div className="col">
+              <div
+                className="col"
+                style={{ height: "80vh", overflowY: "auto" }}
+              >
                 <div
                   className="row items-center bg-darkblue rounded-lg px-5 py-2 justify-between mb-5 pointer"
                   onClick={() => {
@@ -322,7 +331,7 @@ export default function RequestTrip() {
                 {showTripInfo && <TripInfo />}
 
                 <div
-                  className="row items-center bg-darkblue rounded-lg px-5 py-2 justify-between mb-5 pointer"
+                  className="row items-center bg-darkblue rounded-lg px-5 py-2 justify-between my-5 pointer"
                   onClick={() => {
                     setShowItinerariesAndServices(!showItinerariesAndServices);
                   }}
