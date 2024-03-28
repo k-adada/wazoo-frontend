@@ -48,7 +48,7 @@ export default function ExploreTripRequest() {
               </div>
               <div className="f-20 poppins-medium text-darkblue pl-4">
                 {requestType === "detailed" && "- Detailed Form"}
-                {requestType === "small" && "- Small Note"}
+                {requestType === "small" && "- Quick Note"}
               </div>
             </div>
           </div>
@@ -92,7 +92,7 @@ export default function ExploreTripRequest() {
                 </div>
 
                 <div
-                  className="f-20 pointer text-darkblue bg-gold rounded-lg px-5 py-3 flex items-center justify-center"
+                  className="f-20 pointer text-darkblue bg-gold rounded-lg px-5 py-3 flex items-center justify-center poppins-medium"
                   onClick={() => {
                     setRequestType("detailed");
                   }}
@@ -112,7 +112,7 @@ export default function ExploreTripRequest() {
                   />
                 </div>
                 <div className="text-ice poppins-medium f-20 py-3">
-                  Leave a small note
+                  Leave a quick note
                 </div>
                 <div className="text-grey pb-6">
                   Lorem ipsum dolor sit amet, sectetur adipiscing elit, sed do
@@ -121,7 +121,7 @@ export default function ExploreTripRequest() {
                 </div>
 
                 <div
-                  className="f-20 pointer text-darkblue bg-gold rounded-lg px-5 py-3 flex items-center justify-center"
+                  className="f-20 pointer text-darkblue bg-gold rounded-lg px-5 py-3 flex items-center justify-center poppins-medium"
                   onClick={() => {
                     setRequestType("small");
                   }}

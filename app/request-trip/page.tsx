@@ -112,7 +112,7 @@ export default function RequestTrip() {
                   </div>
                 </div>
                 <div
-                  className="f-20 pointer text-darkblue bg-gold rounded-lg px-5 py-3 flex items-center justify-center"
+                  className="f-20 pointer text-darkblue bg-gold rounded-lg px-5 py-3 flex items-center justify-center poppins-medium"
                   onClick={() => {
                     setRequestType("tailored");
                   }}
@@ -143,7 +143,7 @@ export default function RequestTrip() {
                   </div>
                 </div>
                 <div
-                  className="f-20 pointer text-darkblue bg-gold rounded-lg px-5 py-3 flex items-center justify-center"
+                  className="f-20 pointer text-darkblue bg-gold rounded-lg px-5 py-3 flex items-center justify-center poppins-medium"
                   onClick={() => {
                     setRequestType("quick");
                   }}
