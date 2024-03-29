@@ -33,6 +33,7 @@ interface Data {
   types: string;
   locations: string;
   numberOfLocations: number;
+  itineraries: number;
   services: number;
 }
 
@@ -44,6 +45,7 @@ function createData(
   types: string,
   locations: string,
   numberOfLocations: number,
+  itineraries: number,
   services: number
 ): Data {
   return {
@@ -54,6 +56,7 @@ function createData(
     types,
     locations,
     numberOfLocations,
+    itineraries,
     services,
   };
 }
@@ -67,6 +70,7 @@ const rows = [
     "Adventure, Food & Wine",
     "Paris, France",
     2,
+    2,
     23
   ),
   createData(
@@ -76,6 +80,7 @@ const rows = [
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "Adventure, Food & Wine",
     "Paris, France",
+    2,
     2,
     20
   ),
@@ -87,6 +92,7 @@ const rows = [
     "Adventure, Food & Wine",
     "Paris, France",
     2,
+    2,
     18
   ),
   createData(
@@ -96,6 +102,7 @@ const rows = [
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "Adventure, Food & Wine",
     "Paris, France",
+    2,
     2,
     18
   ),
@@ -107,6 +114,7 @@ const rows = [
     "Adventure, Food & Wine",
     "Paris, France",
     2,
+    2,
     18
   ),
   createData(
@@ -116,6 +124,7 @@ const rows = [
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "Adventure, Food & Wine",
     "Paris, France",
+    2,
     2,
     18
   ),
@@ -207,6 +216,12 @@ const headCells: readonly HeadCell[] = [
     numeric: false,
     disablePadding: false,
     label: "Nb. of Locations",
+  },
+  {
+    id: "itineraries",
+    numeric: false,
+    disablePadding: false,
+    label: "Itineraries",
   },
   {
     id: "services",
@@ -475,7 +490,15 @@ export default function ServiceProvidersTable() {
                     <TableCell align="left">{row.description}</TableCell>
                     <TableCell align="left">{row.types}</TableCell>
                     <TableCell align="left">{row.locations}</TableCell>
-                    <TableCell align="center">{row.numberOfLocations}</TableCell>
+                    <TableCell align="center">
+                      {row.numberOfLocations}
+                    </TableCell>
+                    <TableCell align="left">
+                      <div className="flex justify-end items-center">
+                        <div className="pr-5">{row.itineraries}</div>
+                        <span className="poppins-semibold pr-5">{">"}</span>
+                      </div>
+                    </TableCell>
                     <TableCell align="left">
                       <div className="flex justify-end items-center">
                         <div className="pr-5">{row.services}</div>
@@ -491,14 +514,14 @@ export default function ServiceProvidersTable() {
                             alert("edit " + row.serviceProvider);
                           }}
                         />
-                        <div className="px-3"></div>
+                        {/* <div className="px-3"></div>
                         <Image
                           src={deleteRedIcon}
                           alt="delete"
                           onClick={() => {
                             alert("delete " + row.serviceProvider);
                           }}
-                        />
+                        /> */}
                       </div>
                     </TableCell>
                   </TableRow>

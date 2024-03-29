@@ -160,21 +160,6 @@ export default function ServiceDetails() {
             </div>
           </div>
 
-          {/* Requires Voucher  */}
-          <div className="col-6">
-            <div className="text-darkblue pb-2 pt-8 f-20">
-              Requires Voucher <span className="text-orange">*</span>
-            </div>
-            <div className="light-input">
-              <div className="remove-mui-label">
-                <SingleSelect
-                  options={[{ label: "Yes" }, { label: "No" }]}
-                  label="Select"
-                />
-              </div>
-            </div>
-          </div>
-
           {/* Description */}
           <div className="col-12">
             <div className="text-darkblue pt-8 pb-2 f-20">

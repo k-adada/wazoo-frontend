@@ -5,11 +5,10 @@ import LeftDrawerDMC from "../components/LeftDrawerDMC";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
-import notificationIcon from "../assets/Icon_Notification_Received.png";
-import avatarIcon from "../assets/avatar.png";
 import saveIcon from "../assets/Icon_Save.png";
 import backIcon from "../assets/Icon_Back.png";
 import Link from "next/link";
+import SingleSelect from "../components/SingleSelect";
 
 export default function CreateServiceProviders() {
   const router = useRouter();
@@ -53,7 +52,6 @@ export default function CreateServiceProviders() {
                   />
                 </div>
               </div>
-
               {/* service provider phone number  */}
               <div className="col-6">
                 <div className="text-darkblue pb-2 f-20">Phone Number</div>
@@ -65,7 +63,37 @@ export default function CreateServiceProviders() {
                   />
                 </div>
               </div>
-
+              {/* service email  */}
+              <div className="col-12">
+                <div className="text-darkblue pb-2 f-20">
+                  Service Provider Email <span className="text-orange">*</span>
+                </div>
+                <div className="light-input">
+                  <input
+                    className="px-5 py-4 rounded-lg bg-white text-grey w-full"
+                    type="text"
+                    placeholder="Service Provider email"
+                  />
+                </div>
+              </div>
+              {/* subtype  */}
+              <div className="col-12">
+                <div className="text-darkblue pb-2 pt-8 f-20">
+                  Select Subtype <span className="text-orange">*</span>
+                </div>
+                <div className="light-input">
+                  <div className="remove-mui-label">
+                    <SingleSelect
+                      options={[
+                        { label: "transfer sub" },
+                        { label: "Accomodation sub" },
+                        { label: "Activity sub" },
+                      ]}
+                      label="Select Category"
+                    />
+                  </div>
+                </div>
+              </div>
               {/* Description */}
               <div className="col-12">
                 <div className="text-darkblue pt-4 pb-2 f-20">
