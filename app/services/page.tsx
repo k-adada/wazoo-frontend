@@ -15,9 +15,42 @@ export default function CreateServices() {
     router.back();
   };
 
-  const [services, setServices] = useState([1]);
+  const providers = [
+    {
+      name: "Service Provider 1",
+      price: "$350",
+      phone: "+33 1 09 75 83 51",
+      email: "provider@email.com",
+      availability: [
+        { day: "Monday", time: "11:00am - 10:00pm" },
+        { day: "Tuesday", time: "11:00am - 10:00pm" },
+        { day: "Wednesday", time: "11:00am - 10:00pm" },
+        { day: "Thursday", time: "11:00am - 10:00pm" },
+        { day: "Friday", time: "11:00am - 10:00pm" },
+        { day: "Saturday", time: "11:00am - 10:00pm" },
+        { day: "Sunday", time: "11:00am - 10:00pm" },
+      ],
+    },
+    {
+      name: "Service Provider 2",
+      price: "$350",
+      phone: "+33 1 09 75 83 51",
+      email: "provider@email.com",
+      availability: [
+        { day: "Monday", time: "11:00am - 10:00pm" },
+        { day: "Tuesday", time: "11:00am - 10:00pm" },
+        { day: "Wednesday", time: "11:00am - 10:00pm" },
+        { day: "Thursday", time: "11:00am - 10:00pm" },
+        { day: "Friday", time: "11:00am - 10:00pm" },
+        { day: "Saturday", time: "11:00am - 10:00pm" },
+        { day: "Sunday", time: "11:00am - 10:00pm" },
+      ],
+    },
+  ];
+  const services = [1];
+
   const [detailsTab, setDetailsTab] = useState("details");
-  const [providers, setProviders] = useState([1, 2, 3]);
+
   return (
     <main className="flex min-h-screen flex-col items-center p-md-24 p-3 bg-lightblue pt-[75px] pb-[100px]">
       <div className="container-fluid">
@@ -213,7 +246,7 @@ export default function CreateServices() {
                                 />
                               </div>
                               <div className="f-18 poppins-semibold text-darkblue ">
-                                Service Provider
+                                {provider.name}
                               </div>
                             </div>
                             <div className="pl-5 pt-2">
@@ -224,7 +257,9 @@ export default function CreateServices() {
                                     alt="dollars"
                                   />
                                 </div>
-                                <div className="text-darkblue">$350</div>
+                                <div className="text-darkblue">
+                                  {provider.price}
+                                </div>
                               </div>
                               <div className="flex py-1">
                                 <div className="pr-3">
@@ -234,8 +269,8 @@ export default function CreateServices() {
                                   />
                                 </div>
                                 <div className="text-darkblue">
-                                  <a href="tel:+9613123456">
-                                    +33 1 09 75 83 51
+                                  <a href={"tel:" + provider.phone}>
+                                    {provider.phone}
                                   </a>
                                 </div>
                               </div>
@@ -247,8 +282,8 @@ export default function CreateServices() {
                                   />
                                 </div>
                                 <div className="text-darkblue">
-                                  <a href="mailto:provider@email.com">
-                                    provider@email.com
+                                  <a href={"mailto:" + provider.email}>
+                                    {provider.email}
                                   </a>
                                 </div>
                               </div>
@@ -256,62 +291,21 @@ export default function CreateServices() {
                                 <div className="f-18 poppins-semibold text-darkblue py-2">
                                   Availability Times
                                 </div>
-                                <div className="flex justify-between items-center">
-                                  <div className="text-darkblue poppins-medium">
-                                    Monday
-                                  </div>
-                                  <div className="text-darkblue pr-[80px]">
-                                    11:00am - 10:00pm
-                                  </div>
-                                </div>
-                                <div className="flex justify-between items-center">
-                                  <div className="text-darkblue poppins-medium">
-                                    Tuesday
-                                  </div>
-                                  <div className="text-darkblue pr-[80px]">
-                                    11:00am - 10:00pm
-                                  </div>
-                                </div>
-                                <div className="flex justify-between items-center">
-                                  <div className="text-darkblue poppins-medium">
-                                    Wednesday
-                                  </div>
-                                  <div className="text-darkblue pr-[80px]">
-                                    11:00am - 10:00pm
-                                  </div>
-                                </div>
-                                <div className="flex justify-between items-center">
-                                  <div className="text-darkblue poppins-medium">
-                                    Thursday
-                                  </div>
-                                  <div className="text-darkblue pr-[80px]">
-                                    11:00am - 10:00pm
-                                  </div>
-                                </div>
-                                <div className="flex justify-between items-center">
-                                  <div className="text-darkblue poppins-medium">
-                                    Friday
-                                  </div>
-                                  <div className="text-darkblue pr-[80px]">
-                                    11:00am - 10:00pm
-                                  </div>
-                                </div>
-                                <div className="flex justify-between items-center">
-                                  <div className="text-darkblue poppins-medium">
-                                    Saturday
-                                  </div>
-                                  <div className="text-darkblue pr-[80px]">
-                                    11:00am - 10:00pm
-                                  </div>
-                                </div>
-                                <div className="flex justify-between items-center">
-                                  <div className="text-darkblue poppins-medium">
-                                    Sunday
-                                  </div>
-                                  <div className="text-darkblue pr-[80px]">
-                                    11:00am - 10:00pm
-                                  </div>
-                                </div>
+                                {provider.availability.map(
+                                  (availability, index) => (
+                                    <div
+                                      className="flex justify-between items-center"
+                                      key={index}
+                                    >
+                                      <div className="text-darkblue poppins-medium">
+                                        {availability.day}
+                                      </div>
+                                      <div className="text-darkblue pr-[80px]">
+                                        {availability.time}
+                                      </div>
+                                    </div>
+                                  )
+                                )}
                               </div>
                             </div>
                           </div>
