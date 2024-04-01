@@ -45,8 +45,12 @@ import dollarIconDark from "@/app/assets/Icon_Dollars.png";
 import userIconDark from "@/app/assets/Icon_My_Account_dark.png";
 import phoneIconDark from "@/app/assets/phone_icon.png";
 import serviceEmptyIconDark from "@/app/assets/services_empty.png";
+import brochureIconDark from "@/app/assets/Icon_Brochure.svg";
+import planeDarkIcon from "@/app/assets/Icon_PlaneDark.svg";
 
 const Icons = {
+  planeDarkIcon,
+  brochureIconDark,
   serviceEmptyIconDark,
   userIconDark,
   phoneIconDark,

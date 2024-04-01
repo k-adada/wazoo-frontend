@@ -3,24 +3,15 @@ import React, { useState } from "react";
 import "./dist/explore.css";
 import Image from "next/image";
 
-import searchIconBlack from "../assets/Icon_Search_Black.png";
-import planeDarkIcon from "../assets/Icon_PlaneDark.svg";
-import treeIcon from "../assets/tree_dark.svg";
-import activityIcon from "../assets/Icon_Activity.svg";
-import locationIcon from "../assets/Icon_Location.svg";
-import brochureIcon from "../assets/Icon_Brochure.svg";
-import Link from "next/link";
-
-import arrowDownIcon from "../assets/down_arrow_dark.svg";
-
 import DestinationsSection from "../components/exploreComponents/DestinationsSection";
 import ThemesSection from "../components/exploreComponents/ThemesSection";
 import TripsSection from "../components/exploreComponents/TripsSection";
 import ActivitiesSection from "../components/exploreComponents/ActivitiesSection";
 import CataloguesSection from "../components/exploreComponents/CataloguesSection";
+import Icons from "../Icons";
 
 export default function Explore() {
-  const [selectedTab, setSelectedTab] = useState("themes");
+  const [selectedTab, setSelectedTab] = useState("trips");
 
   return (
     <main className="flex min-h-screen flex-col items-center p-md-24 p-3 py-[100px] bg-grey">
@@ -28,6 +19,39 @@ export default function Explore() {
       <div className="py-2 px-4 rounded-lg w-full" style={{ maxWidth: "95%" }}>
         <div className="row justify-between items-center">
           {/* title */}
+          <div
+            className={
+              (selectedTab === "trips" ? "rounded-lg bg-blue" : "opacity-25 ") +
+              " pointer py-2 col"
+            }
+            onClick={() => {
+              setSelectedTab("trips");
+            }}
+          >
+            <div className="flex justify-center pb-2">
+              <Image src={Icons.planeDarkIcon} alt="planeDarkIcon" />
+            </div>
+            <div className="f-20 text-darkblue poppins-semibold text-center">
+              Trips
+            </div>
+          </div>
+          <div
+            className={
+              (selectedTab === "catalogues"
+                ? "rounded-lg bg-blue"
+                : "opacity-25 ") + " pointer col py-2"
+            }
+            onClick={() => {
+              setSelectedTab("catalogues");
+            }}
+          >
+            <div className="flex justify-center pb-2">
+              <Image src={Icons.brochureIconDark} alt="brochureIcon" />
+            </div>
+            <div className="f-20 text-darkblue poppins-semibold text-center">
+              Catalogues
+            </div>
+          </div>
           <div
             className={
               (selectedTab === "themes"
@@ -39,12 +63,13 @@ export default function Explore() {
             }}
           >
             <div className="flex justify-center pb-2">
-              <Image src={treeIcon} alt="treeIcon" />
+              <Image src={Icons.treeDarkIcon} alt="treeIcon" />
             </div>
             <div className="f-20 text-darkblue poppins-semibold text-center">
               Themes
             </div>
           </div>
+
           <div
             className={
               (selectedTab === "destinations"
@@ -56,28 +81,13 @@ export default function Explore() {
             }}
           >
             <div className="flex justify-center pb-2">
-              <Image src={locationIcon} alt="locationIcon" />
+              <Image src={Icons.locationDarkIcon} alt="locationIcon" />
             </div>
             <div className="f-20 text-darkblue poppins-semibold text-center">
               Destinations
             </div>
           </div>
-          <div
-            className={
-              (selectedTab === "trips" ? "rounded-lg bg-blue" : "opacity-25 ") +
-              " pointer py-2 col"
-            }
-            onClick={() => {
-              setSelectedTab("trips");
-            }}
-          >
-            <div className="flex justify-center pb-2">
-              <Image src={planeDarkIcon} alt="planeDarkIcon" />
-            </div>
-            <div className="f-20 text-darkblue poppins-semibold text-center">
-              Trips
-            </div>
-          </div>
+
           {/* <div
             className={
               (selectedTab === "activities"
@@ -95,29 +105,13 @@ export default function Explore() {
               Activities
             </div>
           </div> */}
-          <div
-            className={
-              (selectedTab === "catalogues"
-                ? "rounded-lg bg-blue"
-                : "opacity-25 ") + " pointer col py-2"
-            }
-            onClick={() => {
-              setSelectedTab("catalogues");
-            }}
-          >
-            <div className="flex justify-center pb-2">
-              <Image src={brochureIcon} alt="brochureIcon" />
-            </div>
-            <div className="f-20 text-darkblue poppins-semibold text-center">
-              Catalogues
-            </div>
-          </div>
+
           {/* search */}
           <div className="col-5">
             <div className="flex items-center">
               <div className="relative w-full">
                 <div className="search-icon cursor-pointer">
-                  <Image src={searchIconBlack} alt="search" />
+                  <Image src={Icons.searchIconDark} alt="search" />
                 </div>
                 <input
                   className="bg-white text-darkblue pl-[56px] p-3 rounded-lg w-full"
@@ -130,7 +124,7 @@ export default function Explore() {
                   <div className="pr-3">Filters</div>
                   <div className="">
                     <Image
-                      src={arrowDownIcon}
+                      src={Icons.arrowDownDarkIcon}
                       alt="arrowDown"
                       width={40}
                       height={40}
@@ -160,7 +154,6 @@ export default function Explore() {
       {selectedTab === "catalogues" && <CataloguesSection />}
 
       {/* catalogues list */}
-
     </main>
   );
 }
