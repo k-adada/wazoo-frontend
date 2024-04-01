@@ -1,88 +1,65 @@
-"use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
 
-import check from "../../assets/check.png";
-
-import australiaImage from "../../assets/images/destinations/Australia.webp";
-import brazilImage from "../../assets/images/destinations/Brazil.webp";
-import egyptImage from "../../assets/images/destinations/egypt.jpg";
-import franceImage from "../../assets/images/destinations/France.png";
-import lebanonImage from "../../assets/images/destinations/Baalbek.webp";
-import japanImage from "../../assets/images/destinations/Japan.webp";
-import italyImage from "../../assets/images/destinations/Italy.png";
-import newzealandImage from "../../assets/images/destinations/NewZeland.png";
-import spainImage from "../../assets/images/destinations/spain.webp";
-import thailandImage from "../../assets/images/destinations/Thailand.webp";
-import uaeImage from "../../assets/images/destinations/UAE.png";
-import turkeyImage from "../../assets/images/destinations/Turkey.png";
-import switzerlandImage from "../../assets/images/destinations/Switzerland.webp";
-
-interface Destination {
-  id: number;
-  name: string;
-  continent: string;
-  country: string;
-  image: any;
-}
+import Images from "@/app/Images";
 
 export default function DestinationsSection() {
-  const [destinations, setDestinations] = useState([
+  const destinations = [
     {
       id: 1,
       name: "Lebanon",
       continent: "Asia",
       country: "Lebanon",
-      image: lebanonImage,
+      image: Images.lebanon,
     },
     {
       id: 2,
       name: "France",
       continent: "Europe",
       country: "France",
-      image: franceImage,
+      image: Images.franceImage,
     },
     {
       id: 3,
       name: "Australia",
       continent: "Oceania",
       country: "Australia",
-      image: australiaImage,
+      image: Images.australiaImage,
     },
     {
       id: 4,
       name: "Brazil",
       continent: "South America",
       country: "Brazil",
-      image: brazilImage,
+      image: Images.brazil,
     },
     {
       id: 5,
       name: "Egypt",
       continent: "Africa",
       country: "Egypt",
-      image: egyptImage,
+      image: Images.egypt,
     },
     {
       id: 6,
       name: "Japan",
       continent: "Asia",
       country: "Japan",
-      image: japanImage,
+      image: Images.japanImage,
     },
     {
       id: 7,
       name: "Italy",
       continent: "Europe",
       country: "Italy",
-      image: italyImage,
+      image: Images.italyImage,
     },
     {
       id: 8,
       name: "New Zealand",
       continent: "Oceania",
       country: "New Zealand",
-      image: newzealandImage,
+      image: Images.newzealandImage,
     },
 
     {
@@ -90,81 +67,44 @@ export default function DestinationsSection() {
       name: "Thailand",
       continent: "Asia",
       country: "Thailand",
-      image: thailandImage,
+      image: Images.thailandImage,
     },
     {
       id: 12,
       name: "Spain",
       continent: "Europe",
       country: "Spain",
-      image: spainImage,
+      image: Images.spain,
     },
     {
       id: 13,
       name: "UAE",
       continent: "Asia",
       country: "UAE",
-      image: uaeImage,
+      image: Images.uaeImage,
     },
     {
       id: 14,
       name: "Turkey",
       continent: "Asia",
       country: "Turkey",
-      image: turkeyImage,
+      image: Images.turkeyImage,
     },
     {
       id: 15,
       name: "Switzerland",
       continent: "Europe",
       country: "Switzerland",
-      image: switzerlandImage,
+      image: Images.switzerlandImage,
     },
-  ]);
-
-  const [selectedDestinations, setSelectedDestinations] = useState<
-    Destination[]
-  >([]);
-
-  const [filteredDestinations, setFilteredDestinations] = useState<
-    Destination[]
-  >([]);
-
-  const [filteredCountries, setFilteredCountries] = useState<Destination[]>([]);
-
-  const [filteredContinents, setFilteredContinents] = useState<Destination[]>(
-    []
-  );
-
-  useEffect(() => {
-    const filterDestinations = (destinations: Destination[]) => {
-      let filteredDestinations = destinations;
-      if (filteredCountries.length > 0) {
-        filteredDestinations = filteredDestinations.filter((destination) =>
-          filteredCountries.some(
-            (filteredCountry) => filteredCountry.id === destination.id
-          )
-        );
-      }
-      if (filteredContinents.length > 0) {
-        filteredDestinations = filteredDestinations.filter((destination) =>
-          filteredContinents.some(
-            (filteredContinent) => filteredContinent.id === destination.id
-          )
-        );
-      }
-      return filteredDestinations;
-    };
-
-    setFilteredDestinations(filterDestinations(destinations));
-  }, [filteredCountries, filteredContinents, destinations]);
+  ];
 
   return (
     <div
       className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-6 w-full mt-2"
       style={{ maxWidth: "95%" }}
     >
-      {filteredDestinations.map((item, index) => {
+      {destinations.map((item, index) => {
         return (
           <div
             key={index}
@@ -175,18 +115,6 @@ export default function DestinationsSection() {
                 {item.name}
               </div>
             </div>
-
-            {selectedDestinations.some(
-              (destination) => destination.id === item.id
-            ) && (
-              <>
-                <div className="destination-selected-overlay flex items-center justify-center">
-                  <div className="text-ice text-center poppins-medium">
-                    <Image src={check} alt="check" />
-                  </div>
-                </div>
-              </>
-            )}
 
             <Image
               className="rounded-[15px] object-cover"

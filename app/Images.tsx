@@ -37,8 +37,26 @@ import theme5 from "@/app/assets/images/themes/Honeymoon.webp";
 import theme6 from "@/app/assets/images/themes/Safari.webp";
 import theme7 from "@/app/assets/images/themes/yacht_charter.webp";
 import middleEastLogo from "@/app/assets/middle_east_yours.png";
+import australiaImage from "@/app/assets/images/destinations/Australia.webp";
+import franceImage from "@/app/assets/images/destinations/France.png";
+import japanImage from "@/app/assets/images/destinations/Japan.webp";
+import italyImage from "@/app/assets/images/destinations/Italy.png";
+import newzealandImage from "@/app/assets/images/destinations/NewZeland.png";
+import thailandImage from "@/app/assets/images/destinations/Thailand.webp";
+import uaeImage from "@/app/assets/images/destinations/UAE.png";
+import turkeyImage from "@/app/assets/images/destinations/Turkey.png";
+import switzerlandImage from "@/app/assets/images/destinations/Switzerland.webp";
 
 const Images = {
+  australiaImage,
+  franceImage,
+  japanImage,
+  italyImage,
+  newzealandImage,
+  thailandImage,
+  uaeImage,
+  turkeyImage,
+  switzerlandImage,
   logo,
   avatarIcon,
   threeDotsWhiteIcon,
