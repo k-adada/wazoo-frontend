@@ -21,16 +21,6 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import { visuallyHidden } from "@mui/utils";
 
-import deleteRedIcon from "../../assets/delete_red.svg";
-import editIcon from "../../assets/Icon_Edit.png";
-import tourEffelImage from "../../assets/tour_effel.jpg";
-
-import alpsImage from "../../assets/images/services/alps.webp";
-import bernImage from "../../assets/images/services/bern.jpg";
-import eifelImage from "../../assets/images/services/EiffelTower.jpg";
-import brandenImage from "../../assets/images/services/BrandenbergGate.webp";
-import garnierImage from "../../assets/images/services/Garnier.webp";
-import genevaImage from "../../assets/images/services/Geneva.webp";
 
 import Image from "next/image";
 import Icons from "@/app/Icons";

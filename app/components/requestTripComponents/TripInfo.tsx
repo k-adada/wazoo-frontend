@@ -168,7 +168,7 @@ export default function TripInfo(props: any) {
       {/*  Guide Gratuity */}
       <div className="col-12 py-5">
         <div className="text-darkblue pb-2 f-16">
-          Would you like us to include a guide gratuity in this quote?
+          Would you like us to include ALL gratuities in this quote?
           <span className="text-orange">*</span>
         </div>
         <div className="f-14 text-darkblue">

@@ -16,7 +16,8 @@ export default function CreateServices() {
   };
 
   const [services, setServices] = useState([1]);
-
+  const [detailsTab, setDetailsTab] = useState("details");
+  const [providers, setProviders] = useState([1, 2, 3]);
   return (
     <main className="flex min-h-screen flex-col items-center p-md-24 p-3 bg-lightblue pt-[75px] pb-[100px]">
       <div className="container-fluid">
@@ -106,7 +107,13 @@ export default function CreateServices() {
               </div>
             </div>
             <div className="col-3">
-              <div className="row bg-white rounded-lg py-2">
+              <div
+                className="row bg-white rounded-lg py-2"
+                style={{
+                  maxHeight: "80vh",
+                  overflowY: "auto",
+                }}
+              >
                 <div className="col-12 px-2">
                   <div className="f-24 text-darkblue poppins-medium py-2">
                     Service Name
@@ -117,126 +124,202 @@ export default function CreateServices() {
                   <ServicesSwiper images={[]} />
                 </div>
 
-                <div className="col-auto px-2 py-1">
-                  <div className="service-tag flex">
-                    <Image src={Icons.locationDarkIcon} alt="location" />
-                    <div className="text-grey pl-2">Paris, France</div>
+                {/* DETAILS TABS  */}
+                <div className="col-6 px-2 mb-5">
+                  <div
+                    className={
+                      (detailsTab === "details" ? "bg-blue" : "bg-grey") +
+                      " rounded-lg poppins-medium pointer"
+                    }
+                    onClick={() => setDetailsTab("details")}
+                  >
+                    <div className="py-2 text-center">Details</div>
+                  </div>
+                </div>
+                <div className="col-6 px-2 mb-5">
+                  <div
+                    className={
+                      (detailsTab === "providers" ? "bg-blue" : "bg-grey") +
+                      " rounded-lg poppins-medium pointer"
+                    }
+                    onClick={() => setDetailsTab("providers")}
+                  >
+                    <div className="py-2 text-center">Providers</div>
                   </div>
                 </div>
 
-                <div className="col-auto px-2 py-1">
-                  <div className="service-tag flex">
-                    <Image src={Icons.clockDarkIcon} alt="time" />
-                    <div className="text-grey pl-2">3h</div>
-                  </div>
-                </div>
+                {detailsTab === "details" && (
+                  <>
+                    <div className="col-auto px-2 py-1">
+                      <div className="service-tag flex">
+                        <Image src={Icons.locationDarkIcon} alt="location" />
+                        <div className="text-grey pl-2">Paris, France</div>
+                      </div>
+                    </div>
 
-                <div className="col-auto px-2 py-1">
-                  <div className="service-tag flex">
-                    <Image src={Icons.calendarDarkIcon} alt="calendar" />
-                    <div className="text-grey pl-2">Oct 11 - Oct 15</div>
-                  </div>
-                </div>
-                <div className="col-auto px-2 py-1">
-                  <div className="service-tag flex">
-                    <Image src={Icons.dollarIconDark} alt="dollar sign" />
-                    <div className="text-grey pl-2">$350</div>
-                  </div>
-                </div>
-                <div className="col-auto px-2 py-1">
-                  <div className="service-tag flex">
-                    <div className="text-grey">Outdoor Activity</div>
-                  </div>
-                </div>
-                <div className="col-auto px-2 py-1">
-                  <div className="service-tag flex">
-                    <div className="text-grey">Sub-type</div>
-                  </div>
-                </div>
-                <div className="col-12 px-2 py-3">
-                  <div className="f-14 text-darkblue pt-4">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Veniam voluptates eveniet iste corrupti! Cum, nulla
-                    exercitationem beatae tempora veritatis ex voluptates labore
-                    a quae, reiciendis soluta? Error repellat commodi similique.
-                  </div>
-                </div>
+                    <div className="col-auto px-2 py-1">
+                      <div className="service-tag flex">
+                        <Image src={Icons.clockDarkIcon} alt="time" />
+                        <div className="text-grey pl-2">3h</div>
+                      </div>
+                    </div>
 
-                <div className="col-12 px-2 py-4">
-                  <div className="f-18 poppins-semibold text-darkblue py-2">
-                    Availability Times
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <div className="text-darkblue poppins-medium">Monday</div>
-                    <div className="text-darkblue pr-[80px]">
-                      11:00am - 10:00pm
+                    <div className="col-auto px-2 py-1">
+                      <div className="service-tag flex">
+                        <Image src={Icons.calendarDarkIcon} alt="calendar" />
+                        <div className="text-grey pl-2">Oct 11 - Oct 15</div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <div className="text-darkblue poppins-medium">Tuesday</div>
-                    <div className="text-darkblue pr-[80px]">
-                      11:00am - 10:00pm
+                    <div className="col-auto px-2 py-1">
+                      <div className="service-tag flex">
+                        <Image src={Icons.dollarIconDark} alt="dollar sign" />
+                        <div className="text-grey pl-2">$350</div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <div className="text-darkblue poppins-medium">
-                      Wednesday
+                    <div className="col-auto px-2 py-1">
+                      <div className="service-tag flex">
+                        <div className="text-grey">Outdoor Activity</div>
+                      </div>
                     </div>
-                    <div className="text-darkblue pr-[80px]">
-                      11:00am - 10:00pm
+                    <div className="col-auto px-2 py-1">
+                      <div className="service-tag flex">
+                        <div className="text-grey">Sub-type</div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <div className="text-darkblue poppins-medium">Thursday</div>
-                    <div className="text-darkblue pr-[80px]">
-                      11:00am - 10:00pm
+                    <div className="col-12 px-2 py-3">
+                      <div className="f-14 text-darkblue pt-4">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Veniam voluptates eveniet iste corrupti! Cum,
+                        nulla exercitationem beatae tempora veritatis ex
+                        voluptates labore a quae, reiciendis soluta? Error
+                        repellat commodi similique.
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <div className="text-darkblue poppins-medium">Friday</div>
-                    <div className="text-darkblue pr-[80px]">
-                      11:00am - 10:00pm
-                    </div>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <div className="text-darkblue poppins-medium">Saturday</div>
-                    <div className="text-darkblue pr-[80px]">
-                      11:00am - 10:00pm
-                    </div>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <div className="text-darkblue poppins-medium">Sunday</div>
-                    <div className="text-darkblue pr-[80px]">
-                      11:00am - 10:00pm
-                    </div>
-                  </div>
-                </div>
+                  </>
+                )}
 
-                <div className="col-12 px-2 pt-4">
-                  <div className="f-18 poppins-semibold text-darkblue py-2">
-                    Service Provider
-                  </div>
-                  <div className="flex py-1">
-                    <div className="pr-3">
-                      <Image src={Icons.userIconDark} alt="userIcon" />
-                    </div>
-                    <div className="text-darkblue">Le Touriste</div>
-                  </div>
-                  <div className="flex py-1">
-                    <div className="pr-3">
-                      <Image src={Icons.dollarIconDark} alt="dollars" />
-                    </div>
-                    <div className="text-darkblue">$350</div>
-                  </div>
-                  <div className="flex py-1">
-                    <div className="pr-3">
-                      <Image src={Icons.phoneIconDark} alt="phoneIcon" />
-                    </div>
-                    <div className="text-darkblue">
-                      <a href="tel:+9613123456">+33 1 09 75 83 51</a>
-                    </div>
-                  </div>
-                </div>
+                {detailsTab === "providers" && (
+                  <>
+                    {providers.map((provider, index) => (
+                      <div className="col-12 px-2 py-2" key={index}>
+                        <div className="rounded-lg border">
+                          <div className="px-2 pt-4">
+                            <div className="flex items-center">
+                              <div className="pr-3">
+                                <Image
+                                  height={32}
+                                  src={Icons.userIconDark}
+                                  alt="userIcon"
+                                />
+                              </div>
+                              <div className="f-18 poppins-semibold text-darkblue ">
+                                Service Provider
+                              </div>
+                            </div>
+                            <div className="pl-5 pt-2">
+                              <div className="flex py-1">
+                                <div className="pr-3">
+                                  <Image
+                                    src={Icons.dollarIconDark}
+                                    alt="dollars"
+                                  />
+                                </div>
+                                <div className="text-darkblue">$350</div>
+                              </div>
+                              <div className="flex py-1">
+                                <div className="pr-3">
+                                  <Image
+                                    src={Icons.phoneIconDark}
+                                    alt="phoneIcon"
+                                  />
+                                </div>
+                                <div className="text-darkblue">
+                                  <a href="tel:+9613123456">
+                                    +33 1 09 75 83 51
+                                  </a>
+                                </div>
+                              </div>
+                              <div className="flex py-1">
+                                <div className="pr-3">
+                                  <Image
+                                    src={Icons.calendarDarkIcon}
+                                    alt="mail"
+                                  />
+                                </div>
+                                <div className="text-darkblue">
+                                  <a href="mailto:provider@email.com">
+                                    provider@email.com
+                                  </a>
+                                </div>
+                              </div>
+                              <div className="py-4">
+                                <div className="f-18 poppins-semibold text-darkblue py-2">
+                                  Availability Times
+                                </div>
+                                <div className="flex justify-between items-center">
+                                  <div className="text-darkblue poppins-medium">
+                                    Monday
+                                  </div>
+                                  <div className="text-darkblue pr-[80px]">
+                                    11:00am - 10:00pm
+                                  </div>
+                                </div>
+                                <div className="flex justify-between items-center">
+                                  <div className="text-darkblue poppins-medium">
+                                    Tuesday
+                                  </div>
+                                  <div className="text-darkblue pr-[80px]">
+                                    11:00am - 10:00pm
+                                  </div>
+                                </div>
+                                <div className="flex justify-between items-center">
+                                  <div className="text-darkblue poppins-medium">
+                                    Wednesday
+                                  </div>
+                                  <div className="text-darkblue pr-[80px]">
+                                    11:00am - 10:00pm
+                                  </div>
+                                </div>
+                                <div className="flex justify-between items-center">
+                                  <div className="text-darkblue poppins-medium">
+                                    Thursday
+                                  </div>
+                                  <div className="text-darkblue pr-[80px]">
+                                    11:00am - 10:00pm
+                                  </div>
+                                </div>
+                                <div className="flex justify-between items-center">
+                                  <div className="text-darkblue poppins-medium">
+                                    Friday
+                                  </div>
+                                  <div className="text-darkblue pr-[80px]">
+                                    11:00am - 10:00pm
+                                  </div>
+                                </div>
+                                <div className="flex justify-between items-center">
+                                  <div className="text-darkblue poppins-medium">
+                                    Saturday
+                                  </div>
+                                  <div className="text-darkblue pr-[80px]">
+                                    11:00am - 10:00pm
+                                  </div>
+                                </div>
+                                <div className="flex justify-between items-center">
+                                  <div className="text-darkblue poppins-medium">
+                                    Sunday
+                                  </div>
+                                  <div className="text-darkblue pr-[80px]">
+                                    11:00am - 10:00pm
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </>
+                )}
               </div>
             </div>
           </div>
