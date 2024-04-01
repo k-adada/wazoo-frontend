@@ -11,7 +11,6 @@ import locationIcon from "../assets/Icon_Location.svg";
 import brochureIcon from "../assets/Icon_Brochure.svg";
 import Link from "next/link";
 
-
 import arrowDownIcon from "../assets/down_arrow_dark.svg";
 
 import DestinationsSection from "../components/exploreComponents/DestinationsSection";
@@ -79,7 +78,7 @@ export default function Explore() {
               Trips
             </div>
           </div>
-          <div
+          {/* <div
             className={
               (selectedTab === "activities"
                 ? "rounded-lg bg-blue"
@@ -95,7 +94,7 @@ export default function Explore() {
             <div className="f-20 text-darkblue poppins-semibold text-center">
               Activities
             </div>
-          </div>
+          </div> */}
           <div
             className={
               (selectedTab === "catalogues"

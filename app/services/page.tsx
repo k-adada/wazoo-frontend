@@ -1,32 +1,22 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./dist/services.css";
 import Image from "next/image";
 import Link from "next/link";
 import ServicesTable from "../components/ServicesTable";
 import { useRouter } from "next/navigation";
-
-import addIcon from "../assets/Icon_Add.png";
-import backIcon from "../assets/Icon_Back.png";
-import serviceEmptyIcon from "../assets/services_empty.png";
-import itineraryIcon from "../assets/Icon_Build_Package.png";
-import reportIcon from "../assets/Icon_Invoice.png";
-import listIcon from "../assets/Icon_List_View.png";
 import ServicesSwiper from "../components/servicesSwiper";
-import locationIcon from "../assets/Icon_Location.png";
-import clockIcon from "../assets/Icon_Time.png";
-import calendarIcon from "../assets/Icon_Calendar_dark.png";
-import dollarIcon from "../assets/Icon_Dollars.png";
-import userIcon from "../assets/Icon_My_Account_dark.png";
-import phoneIcon from "../assets/phone_icon.png";
-import searchIcon from "../assets/Icon_Search_Black.png";
+
+import Icons from "../Icons";
 
 export default function CreateServices() {
   const router = useRouter();
   const routerBack = () => {
     router.back();
   };
+
   const [services, setServices] = useState([1]);
+
   return (
     <main className="flex min-h-screen flex-col items-center p-md-24 p-3 bg-lightblue pt-[75px] pb-[100px]">
       <div className="container-fluid">
@@ -37,7 +27,7 @@ export default function CreateServices() {
                 className="flex items-center py-5 back-button"
                 onClick={routerBack}
               >
-                <Image src={backIcon} alt="back" />
+                <Image src={Icons.backIcon} alt="back" />
                 <div className="pl-2 text-darkblue">Back</div>
               </div>
             </div>
@@ -60,7 +50,7 @@ export default function CreateServices() {
                   <Link href="/create-services">
                     <div className="dark-button text-gold poppins-medium cursor-pointer">
                       <div className="flex items-center h-full">
-                        <Image src={addIcon} alt="add icon" />
+                        <Image src={Icons.addIconGold} alt="add icon" />
                         <div className="pl-4">Add Service</div>
                       </div>
                     </div>
@@ -69,7 +59,7 @@ export default function CreateServices() {
                   <Link href="/create-services">
                     <div className="dark-button text-gold poppins-medium cursor-pointer">
                       <div className="flex items-center h-full">
-                        <Image src={listIcon} alt="list icon" />
+                        <Image src={Icons.listIconGold} alt="list icon" />
                         <div className="pl-4">List View</div>
                       </div>
                     </div>
@@ -81,7 +71,10 @@ export default function CreateServices() {
                   <Link href="/create-itineraries">
                     <div className="dark-button text-gold poppins-medium cursor-pointer">
                       <div className="flex items-center h-full">
-                        <Image src={itineraryIcon} alt="itineraryIcon icon" />
+                        <Image
+                          src={Icons.itineraryIconGold}
+                          alt="itineraryIcon icon"
+                        />
                         <div className="pl-4">Create Itinerary</div>
                       </div>
                     </div>
@@ -90,7 +83,7 @@ export default function CreateServices() {
                   <Link href="#">
                     <div className="dark-button text-gold poppins-medium cursor-pointer">
                       <div className="flex items-center h-full">
-                        <Image src={reportIcon} alt="report icon" />
+                        <Image src={Icons.reportIconGold} alt="report icon" />
                         <div className="pl-4">Generate Reports</div>
                       </div>
                     </div>
@@ -103,7 +96,7 @@ export default function CreateServices() {
                     placeholder="Search"
                   />
                   <div className="absolute left-5 top-2">
-                    <Image src={searchIcon} alt="search" />
+                    <Image src={Icons.searchIconDark} alt="search" />
                   </div>
                 </div>
 
@@ -126,27 +119,27 @@ export default function CreateServices() {
 
                 <div className="col-auto px-2 py-1">
                   <div className="service-tag flex">
-                    <Image src={locationIcon} alt="location" />
+                    <Image src={Icons.locationDarkIcon} alt="location" />
                     <div className="text-grey pl-2">Paris, France</div>
                   </div>
                 </div>
 
                 <div className="col-auto px-2 py-1">
                   <div className="service-tag flex">
-                    <Image src={clockIcon} alt="time" />
+                    <Image src={Icons.clockDarkIcon} alt="time" />
                     <div className="text-grey pl-2">3h</div>
                   </div>
                 </div>
 
                 <div className="col-auto px-2 py-1">
                   <div className="service-tag flex">
-                    <Image src={calendarIcon} alt="calendar" />
+                    <Image src={Icons.calendarDarkIcon} alt="calendar" />
                     <div className="text-grey pl-2">Oct 11 - Oct 15</div>
                   </div>
                 </div>
                 <div className="col-auto px-2 py-1">
                   <div className="service-tag flex">
-                    <Image src={dollarIcon} alt="dollar sign" />
+                    <Image src={Icons.dollarIconDark} alt="dollar sign" />
                     <div className="text-grey pl-2">$350</div>
                   </div>
                 </div>
@@ -225,19 +218,19 @@ export default function CreateServices() {
                   </div>
                   <div className="flex py-1">
                     <div className="pr-3">
-                      <Image src={userIcon} alt="userIcon" />
+                      <Image src={Icons.userIconDark} alt="userIcon" />
                     </div>
                     <div className="text-darkblue">Le Touriste</div>
                   </div>
                   <div className="flex py-1">
                     <div className="pr-3">
-                      <Image src={dollarIcon} alt="dollars" />
+                      <Image src={Icons.dollarIconDark} alt="dollars" />
                     </div>
                     <div className="text-darkblue">$350</div>
                   </div>
                   <div className="flex py-1">
                     <div className="pr-3">
-                      <Image src={phoneIcon} alt="phoneIcon" />
+                      <Image src={Icons.phoneIconDark} alt="phoneIcon" />
                     </div>
                     <div className="text-darkblue">
                       <a href="tel:+9613123456">+33 1 09 75 83 51</a>
@@ -254,7 +247,7 @@ export default function CreateServices() {
                 <div className="text-center">
                   <Image
                     className="m-auto"
-                    src={serviceEmptyIcon}
+                    src={Icons.serviceEmptyIconDark}
                     alt="serviceEmptyIcon"
                   />
                   <div className="f-48 text-darkblue poppins-medium">
@@ -270,7 +263,7 @@ export default function CreateServices() {
                 <Link href="/create-services">
                   <div className="dark-button text-gold poppins-medium cursor-pointer">
                     <div className="flex items-center h-full">
-                      <Image src={addIcon} alt="add icon" />
+                      <Image src={Icons.addIconGold} alt="add icon" />
                       <div className="pl-4">Add Service</div>
                     </div>
                   </div>

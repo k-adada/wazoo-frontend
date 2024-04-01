@@ -37,8 +37,23 @@ import checkGreyIcon from "@/app/assets/check_grey.svg";
 import closeDarkIcon from "@/app/assets/Icon_Close_dark.svg";
 import tagDarkIcon from "@/app/assets/Icon_Tag.svg";
 import activityIconDark from "@/app/assets/Icon_Activity.svg";
+import backIcon from "@/app/assets/Icon_Back.png";
+import listIconGold from "@/app/assets/Icon_List_View.png";
+import itineraryIconGold from "@/app/assets/Icon_Build_Package.png";
+import reportIconGold from "@/app/assets/Icon_Invoice.png";
+import dollarIconDark from "@/app/assets/Icon_Dollars.png";
+import userIconDark from "@/app/assets/Icon_My_Account_dark.png";
+import phoneIconDark from "@/app/assets/phone_icon.png";
+import serviceEmptyIconDark from "@/app/assets/services_empty.png";
 
 const Icons = {
+  serviceEmptyIconDark,
+  userIconDark,
+  phoneIconDark,
+  dollarIconDark,
+  reportIconGold,
+  itineraryIconGold,
+  listIconGold,
   avatarIcon,
   threeDotsWhiteIcon,
   vicky,
@@ -78,6 +93,7 @@ const Icons = {
   closeDarkIcon,
   tagDarkIcon,
   activityIconDark,
+  backIcon,
 };
 
 export default Icons;
