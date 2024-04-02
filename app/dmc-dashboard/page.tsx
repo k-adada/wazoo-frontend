@@ -7,7 +7,126 @@ import Icons from "../Icons";
 import Images from "../Images";
 
 export default function DmcDashboard() {
-  const trips = [1, 2, 3, 4];
+  const trips = [
+    {
+      id: 1,
+      image: Images.aurora,
+      tripId: "Trip ID",
+      taName: "TA Name",
+      date: "Oct 11 - Oct 15",
+      people: "3 adults 2 kids",
+      location: "Paris, France",
+      status: "Pending TA",
+    },
+    {
+      id: 2,
+      image: Images.australiaImage,
+      tripId: "Trip ID",
+      taName: "TA Name",
+      date: "Oct 11 - Oct 15",
+      people: "3 adults 2 kids",
+      location: "Paris, France",
+      status: "Pending TA",
+    },
+    {
+      id: 3,
+      image: Images.italyImage,
+      tripId: "Trip ID",
+      taName: "TA Name",
+      date: "Oct 11 - Oct 15",
+      people: "3 adults 2 kids",
+      location: "Paris, France",
+      status: "Pending TA",
+    },
+    {
+      id: 4,
+      image: Images.egypt,
+      tripId: "Trip ID",
+      taName: "TA Name",
+      date: "Oct 11 - Oct 15",
+      people: "3 adults 2 kids",
+      location: "Paris, France",
+      status: "Pending TA",
+    },
+  ];
+
+  const globalRequests = [
+    {
+      id: 1,
+      image: Icons.jane,
+      requestId: "Request ID",
+      taName: "TA Name",
+      date: "Oct 11 - Oct 15",
+      people: "3 adults 2 kids",
+      location: "Paris, France",
+    },
+    {
+      id: 2,
+      image: Icons.brit,
+      requestId: "Request ID",
+      taName: "TA Name",
+      date: "Oct 11 - Oct 15",
+      people: "3 adults 2 kids",
+      location: "Paris, France",
+    },
+    {
+      id: 3,
+      image: Icons.marcus,
+      requestId: "Request ID",
+      taName: "TA Name",
+      date: "Oct 11 - Oct 15",
+      people: "3 adults 2 kids",
+      location: "Paris, France",
+    },
+    {
+      id: 4,
+      image: Icons.mary,
+      requestId: "Request ID",
+      taName: "TA Name",
+      date: "Oct 11 - Oct 15",
+      people: "3 adults 2 kids",
+      location: "Paris, France",
+    },
+  ];
+
+  const tailoredRequests = [
+    {
+      id: 1,
+      image: Icons.jane,
+      requestId: "Request ID",
+      taName: "TA Name",
+      date: "Oct 11 - Oct 15",
+      people: "3 adults 2 kids",
+      location: "Paris, France",
+    },
+    {
+      id: 2,
+      image: Icons.brit,
+      requestId: "Request ID",
+      taName: "TA Name",
+      date: "Oct 11 - Oct 15",
+      people: "3 adults 2 kids",
+      location: "Paris, France",
+    },
+    {
+      id: 3,
+      image: Icons.marcus,
+      requestId: "Request ID",
+      taName: "TA Name",
+      date: "Oct 11 - Oct 15",
+      people: "3 adults 2 kids",
+      location: "Paris, France",
+    },
+    {
+      id: 4,
+      image: Icons.mary,
+      requestId: "Request ID",
+      taName: "TA Name",
+      date: "Oct 11 - Oct 15",
+      people: "3 adults 2 kids",
+      location: "Paris, France",
+    },
+  ];
 
   return (
     <main className="flex min-h-screen flex-col items-center p-md-24 p-3 bg-lightblue pt-[75px] pb-[100px]">
@@ -59,7 +178,7 @@ export default function DmcDashboard() {
               <div className="f-20 text-darkblue poppins-semibold">
                 My Trips
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center pointer">
                 <div className="f-14 poppins-semibold text-darkblue">
                   View All
                 </div>
@@ -75,22 +194,26 @@ export default function DmcDashboard() {
                   <div className="col-auto">
                     <Image
                       className="rounded-lg w-[44px] h-[44px]"
-                      src={Images.aurora}
+                      src={trip.image}
                       alt="trip"
                     />
                   </div>
 
                   {/* TRIP ID AND NAME  */}
                   <div className="col-auto">
-                    <div className="text-grey poppins-medium f-16">Trip ID</div>
-                    <div className="text-darkblue poppins-medium">TA Name</div>
+                    <div className="text-grey poppins-medium f-16">
+                      {trip.tripId}
+                    </div>
+                    <div className="text-darkblue poppins-medium">
+                      {trip.taName}
+                    </div>
                   </div>
 
                   {/* TRIP DATE  */}
                   <div className="col-auto flex items-center">
                     <Image src={Icons.calendarDarkIcon} alt="calendar" />
                     <div className="pl-2 text-darkblue poppins-medium">
-                      Oct 11 - Oct 15
+                      {trip.date}
                     </div>
                   </div>
 
@@ -98,7 +221,7 @@ export default function DmcDashboard() {
                   <div className="col-auto flex items-center">
                     <Image src={Icons.userIconDark} alt="calendar" />
                     <div className="pl-2 text-darkblue poppins-medium">
-                      3 adults 2 kids
+                      {trip.people}
                     </div>
                   </div>
 
@@ -106,14 +229,14 @@ export default function DmcDashboard() {
                   <div className="col-auto flex items-center">
                     <Image src={Icons.locationDarkIcon} alt="calendar" />
                     <div className="pl-2 text-darkblue poppins-medium">
-                      Paris, France
+                      {trip.location}
                     </div>
                   </div>
 
                   {/* TRIP STATUS */}
                   <div className="col-auto">
                     <div className="rounded-full bg-new text-white poppins-medium text-center px-2">
-                      Pending TA
+                      {trip.status}
                     </div>
                   </div>
 
@@ -160,7 +283,7 @@ export default function DmcDashboard() {
                   <div className="f-20 text-darkblue poppins-semibold">
                     New Global Requests
                   </div>
-                  <div className="flex items-center">
+                  <div className="flex items-center pointer">
                     <div className="f-14 poppins-semibold text-darkblue">
                       View All
                     </div>
@@ -170,48 +293,48 @@ export default function DmcDashboard() {
                   </div>
                 </div>
                 <div className="py-1 px-2 rounded-lg bg-white ">
-                  {trips.map((trip) => (
+                  {globalRequests.map((item, index) => (
                     <div className="flex items-center justify-between rounded-lg border-dashed py-2 w-full my-1">
-                      {/* TRIP IMAGE */}
+                      {/* REQUEST IMAGE */}
                       <div className="col-auto px-1">
                         <Image
                           className="rounded-lg w-[44px] h-[44px]"
-                          src={Icons.jane}
-                          alt="trip"
+                          src={item.image}
+                          alt={item.taName}
                         />
                       </div>
 
-                      {/* TRIP ID AND NAME  */}
+                      {/* REQUEST ID AND NAME  */}
                       <div className="col-auto px-1">
                         <div className="text-grey poppins-medium f-12">
-                          Trip ID
+                          {item.requestId}
                         </div>
                         <div className="text-darkblue poppins-medium f-12">
-                          TA Name
+                          {item.taName}
                         </div>
                       </div>
 
-                      {/* TRIP DATE  */}
+                      {/* REQUEST DATE  */}
                       <div className="col-auto flex items-center px-1">
                         <Image src={Icons.calendarDarkIcon} alt="calendar" />
                         <div className="pl-2 text-darkblue poppins-medium f-12">
-                          Oct 11 - Oct 15
+                          {item.date}
                         </div>
                       </div>
 
-                      {/* TRIP PEOPLE */}
+                      {/* REQUEST PEOPLE */}
                       <div className="col-auto flex items-center px-1">
                         <Image src={Icons.userIconDark} alt="calendar" />
                         <div className="pl-2 text-darkblue poppins-medium f-12">
-                          3 adults 2 kids
+                          {item.people}
                         </div>
                       </div>
 
-                      {/* TRIP LOCATION */}
+                      {/* REQUEST LOCATION */}
                       <div className="col-auto flex items-center px-1">
                         <Image src={Icons.locationDarkIcon} alt="calendar" />
                         <div className="pl-2 text-darkblue poppins-medium f-12">
-                          Paris, France
+                          {item.location}
                         </div>
                       </div>
                     </div>
@@ -226,7 +349,7 @@ export default function DmcDashboard() {
                   <div className="f-20 text-darkblue poppins-semibold">
                     New Tailored Requests
                   </div>
-                  <div className="flex items-center">
+                  <div className="flex items-center pointer">
                     <div className="f-14 poppins-semibold text-darkblue">
                       View All
                     </div>
@@ -236,48 +359,48 @@ export default function DmcDashboard() {
                   </div>
                 </div>
                 <div className="py-1 px-2 rounded-lg bg-white ">
-                  {trips.map((trip) => (
+                  {tailoredRequests.map((item, index) => (
                     <div className="flex items-center justify-between rounded-lg border-dashed py-2 w-full my-1">
-                      {/* TRIP IMAGE */}
+                      {/* REQUEST IMAGE */}
                       <div className="col-auto px-1">
                         <Image
                           className="rounded-lg w-[44px] h-[44px]"
-                          src={Icons.john}
-                          alt="trip"
+                          src={item.image}
+                          alt={item.taName}
                         />
                       </div>
 
-                      {/* TRIP ID AND NAME  */}
+                      {/* REQUEST ID AND NAME  */}
                       <div className="col-auto px-1">
                         <div className="text-grey poppins-medium f-12">
-                          Trip ID
+                          {item.requestId}
                         </div>
                         <div className="text-darkblue poppins-medium f-12">
-                          TA Name
+                          {item.taName}
                         </div>
                       </div>
 
-                      {/* TRIP DATE  */}
+                      {/* REQUEST DATE  */}
                       <div className="col-auto flex items-center px-1">
                         <Image src={Icons.calendarDarkIcon} alt="calendar" />
                         <div className="pl-2 text-darkblue poppins-medium f-12">
-                          Oct 11 - Oct 15
+                          {item.date}
                         </div>
                       </div>
 
-                      {/* TRIP PEOPLE */}
+                      {/* REQUEST PEOPLE */}
                       <div className="col-auto flex items-center px-1">
                         <Image src={Icons.userIconDark} alt="calendar" />
                         <div className="pl-2 text-darkblue poppins-medium f-12">
-                          3 adults 2 kids
+                          {item.people}
                         </div>
                       </div>
 
-                      {/* TRIP LOCATION */}
+                      {/* REQUEST LOCATION */}
                       <div className="col-auto flex items-center px-1">
                         <Image src={Icons.locationDarkIcon} alt="calendar" />
                         <div className="pl-2 text-darkblue poppins-medium f-12">
-                          Paris, France
+                          {item.location}
                         </div>
                       </div>
                     </div>
