@@ -46,8 +46,10 @@ import thailandImage from "@/app/assets/images/destinations/Thailand.webp";
 import uaeImage from "@/app/assets/images/destinations/UAE.png";
 import turkeyImage from "@/app/assets/images/destinations/Turkey.png";
 import switzerlandImage from "@/app/assets/images/destinations/Switzerland.webp";
+import athensImage from "@/app/assets/images/services/athens.jpg";
 
 const Images = {
+  athensImage,
   australiaImage,
   franceImage,
   japanImage,

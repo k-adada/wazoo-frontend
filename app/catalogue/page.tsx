@@ -1,11 +1,9 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./dist/catalogue.css";
 import Image from "next/image";
 
 import { useRouter } from "next/navigation";
-
-import backIcon from "../assets/Icon_Back.png";
 
 import CataloguePreview from "../components/catalogueComponents/CataloguePreview";
 import Icons from "../Icons";
@@ -15,16 +13,6 @@ export default function Catalogue() {
   const routerBack = () => {
     router.back();
   };
-
-  const [activeCatalogue, setActiveCatalogue] = useState(-1);
-
-  const [openAudiences, setOpenAudiences] = useState(false);
-
-  useEffect(() => {
-    if (!openAudiences) {
-      setActiveCatalogue(-1);
-    }
-  }, [openAudiences]);
 
   return (
     <main className="flex min-h-screen flex-col items-center p-md-24 p-3 bg-lightblue pt-[75px] pb-[100px]">
@@ -41,7 +29,7 @@ export default function Catalogue() {
           </div>
           <div className="col-auto self-center">
             <div className="f-36 poppins-semibold text-darkblue ">
-              Catalogues
+              Catalogue
             </div>
           </div>
         </div>

@@ -24,6 +24,21 @@ import interlakenImage from "../assets/images/services/interlaken.jpg";
 
 export default function ServicesSwiper(props: any) {
   const { images } = props;
+  const currentImages =
+    images.length > 0
+      ? images
+      : [
+          alpsImage,
+          bernImage,
+          eifelImage,
+          brandenImage,
+          garnierImage,
+          genevaImage,
+          quartierImage,
+          jungerfrauImage,
+          interlakenImage,
+        ];
+
   return (
     <>
       <Swiper
@@ -39,59 +54,13 @@ export default function ServicesSwiper(props: any) {
         modules={[Pagination, Autoplay, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <div className="image-wrapper-83">
-            <Image src={alpsImage} alt="casinoImage" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <div className="image-wrapper-83">
-            <Image src={bernImage} alt="casinoImage" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <div className="image-wrapper-83">
-            <Image src={eifelImage} alt="casinoImage" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <div className="image-wrapper-83">
-            <Image src={brandenImage} alt="casinoImage" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <div className="image-wrapper-83">
-            <Image src={garnierImage} alt="casinoImage" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <div className="image-wrapper-83">
-            <Image src={genevaImage} alt="casinoImage" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <div className="image-wrapper-83">
-            <Image src={quartierImage} alt="casinoImage" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <div className="image-wrapper-83">
-            <Image src={jungerfrauImage} alt="casinoImage" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <div className="image-wrapper-83">
-            <Image src={interlakenImage} alt="casinoImage" />
-          </div>
-        </SwiperSlide>
+        {currentImages.map((image: any, index: number) => (
+          <SwiperSlide key={index}>
+            <div className="image-wrapper-83">
+              <Image src={image} alt={"image" + index} />
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );
