@@ -1,15 +1,11 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./dist/itineraries.css";
-import LeftDrawerDMC from "../components/LeftDrawerDMC";
 import Image from "next/image";
 import Link from "next/link";
-import ServicesTable from "../components/ServicesTable";
 
 import { useRouter } from "next/navigation";
 
-import notificationIcon from "../assets/Icon_Notification_Received.png";
-import avatarIcon from "../assets/avatar.png";
 import addIcon from "../assets/Icon_Add.png";
 import backIcon from "../assets/Icon_Back.png";
 import arrowIcon from "../assets/down_arrow_dark.png";
@@ -26,13 +22,88 @@ import montsaintImage from "../assets/images/services/montsaintmich.jpg";
 import triomphImage from "../assets/images/services/Triomphe.jpg";
 import notreImage from "../assets/images/services/NotreDameCathedral.jpg";
 import quartierImage from "../assets/images/services/Quartier_Latin.jpg";
+import Icons from "../Icons";
 
 export default function CreateItineraries() {
   const router = useRouter();
   const routerBack = () => {
     router.back();
   };
-  const [itineraries, setItineraries] = useState([1]);
+
+  const itineraries = [
+    {
+      id: 1,
+      name: "Itinerary 1",
+      description:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam voluptates eveniet iste corrupti!",
+      location: "Paris, France",
+      duration: "3h",
+      date: "Oct 11 - Oct 15",
+      price: "$350",
+      tags: ["Outdoor Activity", "Sub-type"],
+      image: louvreImage,
+    },
+    {
+      id: 2,
+      name: "Itinerary 2",
+      description:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam voluptates eveniet iste corrupti!",
+      location: "Paris, France",
+      duration: "3h",
+      date: "Oct 11 - Oct 15",
+      price: "$350",
+      tags: ["Outdoor Activity", "Sub-type"],
+      image: lucerneImage,
+    },
+    {
+      id: 3,
+      name: "Itinerary 3",
+      description:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam voluptates eveniet iste corrupti!",
+      location: "Paris, France",
+      duration: "3h",
+      date: "Oct 11 - Oct 15",
+      price: "$350",
+      tags: ["Outdoor Activity", "Sub-type"],
+      image: montsaintImage,
+    },
+    {
+      id: 4,
+      name: "Itinerary 4",
+      description:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam voluptates eveniet iste corrupti!",
+      location: "Paris, France",
+      duration: "3h",
+      date: "Oct 11 - Oct 15",
+      price: "$350",
+      tags: ["Outdoor Activity", "Sub-type"],
+      image: triomphImage,
+    },
+    {
+      id: 5,
+      name: "Itinerary 5",
+      description:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam voluptates eveniet iste corrupti!",
+      location: "Paris, France",
+      duration: "3h",
+      date: "Oct 11 - Oct 15",
+      price: "$350",
+      tags: ["Outdoor Activity", "Sub-type"],
+      image: notreImage,
+    },
+    {
+      id: 6,
+      name: "Itinerary 6",
+      description:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam voluptates eveniet iste corrupti!",
+      location: "Paris, France",
+      duration: "3h",
+      date: "Oct 11 - Oct 15",
+      price: "$350",
+      tags: ["Outdoor Activity", "Sub-type"],
+      image: quartierImage,
+    },
+  ];
 
   const images = [
     louvreImage,
@@ -133,6 +204,8 @@ export default function CreateItineraries() {
     },
   ]);
 
+  const [selectedItinerary, setSelectedItinerary] = useState(itineraries[0]);
+
   return (
     <main className="flex min-h-screen flex-col items-center p-md-24 p-3 bg-lightblue pt-[75px] pb-[100px]">
       <div className="container-fluid">
@@ -184,79 +257,84 @@ export default function CreateItineraries() {
               </div>
               <div className="row justify-between">
                 <div className="col-12 py-3"></div>
-                {/* <div className="col-12 pt-7">
-                  <ServicesTable />
-                </div> */}
-                {[1, 2, 3, 4, 5, 6].map((item, index) => {
+                {itineraries.map((item, index) => {
                   return (
                     <div className="col-4 px-5 py-2" key={index}>
-                      <div className="row bg-white rounded-lg py-2">
+                      <div
+                        className="row bg-white rounded-lg py-2 pointer"
+                        onClick={() => {
+                          setSelectedItinerary(item);
+                        }}
+                      >
                         <div className="col-12 pb-4 px-2">
                           <div className="image-wrapper-83">
-                            <Image src={images[index]} alt="casinoImage" />
+                            <Image src={item.image} alt={item.name} />
                           </div>
                         </div>
+                        {/* Name */}
                         <div className="col-12 px-2">
                           <div className="f-20 text-darkblue poppins-medium">
-                            Itinerary Name {index + 1}
+                            {item.name}
                           </div>
                         </div>
+                        {/* Description */}
                         <div className="col-12 px-2">
                           <div className="f-16 text-grey pt-1 line-clamp-3">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit. Veniam voluptates eveniet iste corrupti! Cum,
+                            {item.description}
                           </div>
                         </div>
+                        {/* Location */}
                         <div className="col-auto px-2 py-1">
                           <div className="service-tag flex">
                             <Image
                               className="mr-2"
-                              src={locationIcon}
+                              src={Icons.locationDarkIcon}
                               alt="location"
                             />
-                            <div className="text-grey">Paris, France</div>
+                            <div className="text-grey">{item.location}</div>
                           </div>
                         </div>
+                        {/* Duration */}
                         <div className="col-auto px-2 py-1">
                           <div className="service-tag flex">
                             <Image
                               className="mr-2"
-                              src={clockIcon}
+                              src={Icons.clockDarkIcon}
                               alt="time"
                             />
-                            <div className="text-grey">3h</div>
+                            <div className="text-grey">{item.duration}</div>
                           </div>
                         </div>
+                        {/* Date */}
                         <div className="col-auto px-2 py-1">
                           <div className="service-tag flex">
                             <Image
                               className="mr-2"
-                              src={calendarIcon}
+                              src={Icons.calendarDarkIcon}
                               alt="calendar"
                             />
-                            <div className="text-grey">Oct 11 - Oct 15</div>
+                            <div className="text-grey">{item.date}</div>
                           </div>
                         </div>
+                        {/* Price */}
                         <div className="col-auto px-2 py-1">
                           <div className="service-tag flex">
                             <Image
                               className="mr-2"
-                              src={dollarIcon}
+                              src={Icons.dollarIconDark}
                               alt="dollar sign"
                             />
-                            <div className="text-grey">$350</div>
+                            <div className="text-grey">{item.price}</div>
                           </div>
                         </div>
-                        <div className="col-auto px-2 py-1">
-                          <div className="service-tag flex">
-                            <div className="text-grey">Outdoor Activity</div>
+                        {/* TAGS */}
+                        {item.tags.map((tag, index) => (
+                          <div className="col-auto px-2 py-1" key={index}>
+                            <div className="service-tag flex">
+                              <div className="text-grey">{tag}</div>
+                            </div>
                           </div>
-                        </div>
-                        <div className="col-auto px-2 py-1">
-                          <div className="service-tag flex">
-                            <div className="text-grey">Sub-type</div>
-                          </div>
-                        </div>
+                        ))}
                       </div>
                     </div>
                   );
@@ -267,7 +345,7 @@ export default function CreateItineraries() {
               <div className="row bg-white rounded-lg py-2">
                 <div className="col-12 px-2">
                   <div className="f-24 text-darkblue poppins-medium py-2">
-                    Itinerary Name
+                    {selectedItinerary.name}
                   </div>
                 </div>
 
@@ -277,29 +355,32 @@ export default function CreateItineraries() {
 
                 <div className="col-12 px-2">
                   <div className="f-16 text-grey pt-1 pb-4">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Veniam
+                    {selectedItinerary.description}
                   </div>
                 </div>
 
                 <div className="col-auto px-2 py-1">
                   <div className="service-tag flex">
-                    <Image src={locationIcon} alt="location" />
-                    <div className="text-grey pl-2">Paris, France</div>
+                    <Image src={Icons.locationDarkIcon} alt="location" />
+                    <div className="text-grey pl-2">
+                      {selectedItinerary.location}
+                    </div>
                   </div>
                 </div>
 
                 <div className="col-auto px-2 py-1">
                   <div className="service-tag flex">
-                    <Image src={clockIcon} alt="time" />
-                    <div className="text-grey">3h</div>
+                    <Image src={Icons.clockDarkIcon} alt="time" />
+                    <div className="text-grey">
+                      {selectedItinerary.duration}
+                    </div>
                   </div>
                 </div>
 
                 <div className="col-auto px-2 py-1">
                   <div className="service-tag flex">
-                    <Image src={calendarIcon} alt="calendar" />
-                    <div className="text-grey">Oct 11 - Oct 15</div>
+                    <Image src={Icons.calendarDarkIcon} alt="calendar" />
+                    <div className="text-grey">{selectedItinerary.date}</div>
                   </div>
                 </div>
                 <div className="col-12">

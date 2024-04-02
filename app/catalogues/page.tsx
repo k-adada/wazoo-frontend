@@ -85,7 +85,7 @@ export default function Catalogues() {
       name: "Families",
       selected: true,
       image: casinoImage,
-      agencies: [1, 2, 3, 4, 5, 6, , 7, 8, 9],
+      agencies: [1, 2, 3, 4, 5, 6, 2, 7, 8, 9],
     },
     {
       id: 2,
