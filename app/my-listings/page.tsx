@@ -14,7 +14,7 @@ export default function MyListings() {
     router.back();
   };
 
-  const trips = [1];
+  const listings = [1];
   return (
     <main className="flex min-h-screen flex-col items-center p-md-24 p-3 bg-lightblue pt-[75px] pb-[100px]">
       <div className="container-fluid">
@@ -35,7 +35,7 @@ export default function MyListings() {
           </div>
         </div>
 
-        {trips.length > 0 ? (
+        {listings.length > 0 ? (
           <div className="row">
             <div className="col-12">
               <div className="row justify-between pt-10">
@@ -56,10 +56,10 @@ export default function MyListings() {
                   </div>
                 </div>
                 <div className="flex col-auto">
-                  <Link href="/create-catalogues">
+                  <Link href="/catalogues">
                     <div className="dark-button text-gold poppins-medium cursor-pointer">
                       <div className="flex items-center h-full">
-                        <Image src={Icons.addIconGold} alt="create lissting" />
+                        <Image src={Icons.addIconGold} alt="create listing" />
                         <div className="pl-4">Create Listing</div>
                       </div>
                     </div>
@@ -92,7 +92,9 @@ export default function MyListings() {
                 <div className="f-48 text-darkblue poppins-medium">
                   Your List is Empty
                 </div>
-                <div className="f-24 text-grey">Start by Requesting a Trip</div>
+                <div className="f-24 text-grey">
+                  Start by Publishing a Catalogue
+                </div>
               </div>
             </div>
 
@@ -101,7 +103,7 @@ export default function MyListings() {
                 <div className="dark-button text-gold poppins-medium cursor-pointer">
                   <div className="flex items-center h-full">
                     <Image src={Icons.paperPlaneIconGold} alt="add icon" />
-                    <div className="pl-4">Request a Trip</div>
+                    <div className="pl-4">Publish Catalogue</div>
                   </div>
                 </div>
               </Link>
