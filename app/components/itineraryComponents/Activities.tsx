@@ -55,7 +55,7 @@ export default function Activities(props: {
     }
   }, [setStepsDone, currentStep]);
 
-  const [activities, setActivities] = useState([
+  const activities = [
     {
       id: "1",
       serviceType: "Louvre",
@@ -122,8 +122,8 @@ export default function Activities(props: {
       price: "350",
       image: quartierImage,
     },
-  ]);
-  const [transports, setTransports] = useState([
+  ];
+  const transports = [
     {
       id: "1",
       serviceType: "Transport 1",
@@ -184,8 +184,8 @@ export default function Activities(props: {
       timeslot: "Timeslot 6",
       price: "350",
     },
-  ]);
-  const [hotels, setHotels] = useState([
+  ];
+  const hotels = [
     {
       id: "1",
       serviceType: "Hotel 1",
@@ -246,7 +246,8 @@ export default function Activities(props: {
       timeslot: "Timeslot 6",
       price: "350",
     },
-  ]);
+  ];
+
   const [rooms, setRooms] = useState([
     {
       id: 1,

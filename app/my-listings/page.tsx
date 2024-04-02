@@ -1,14 +1,14 @@
 "use client";
 import React from "react";
-import "./dist/myTrips.css";
+import "./dist/myListings.css";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 import Icons from "../Icons";
-import MyTripsTable from "../components/requestTripComponents/MyTripsTable";
+import MyListingsTable from "../components/community/MyListingsTable";
 
-export default function MyTrips() {
+export default function MyListings() {
   const router = useRouter();
   const routerBack = () => {
     router.back();
@@ -56,11 +56,11 @@ export default function MyTrips() {
                   </div>
                 </div>
                 <div className="flex col-auto">
-                  <Link href="/request-trip">
+                  <Link href="/create-catalogues">
                     <div className="dark-button text-gold poppins-medium cursor-pointer">
                       <div className="flex items-center h-full">
-                        <Image src={Icons.paperPlaneIconGold} alt="request" />
-                        <div className="pl-4">Request a Trip</div>
+                        <Image src={Icons.addIconGold} alt="create lissting" />
+                        <div className="pl-4">Create Listing</div>
                       </div>
                     </div>
                   </Link>
@@ -75,7 +75,7 @@ export default function MyTrips() {
                   </Link>
                 </div>
                 <div className="col-12 pt-7">
-                  <MyTripsTable />
+                  <MyListingsTable />
                 </div>
               </div>
             </div>
