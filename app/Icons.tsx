@@ -50,8 +50,12 @@ import planeDarkIcon from "@/app/assets/Icon_PlaneDark.svg";
 import checkDark from "@/app/assets/check.png";
 import speakerIconDark from "@/app/assets/Icon_Campaigns.svg";
 import eyeIconDark from "@/app/assets/Icon_Preview.svg";
+import treeIconGold from "@/app/assets/goldTree.svg";
+import sunIconGold from "@/app/assets/Sun.svg";
 
 const Icons = {
+  sunIconGold,
+  treeIconGold,
   eyeIconDark,
   speakerIconDark,
   checkDark,

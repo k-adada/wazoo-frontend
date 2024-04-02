@@ -2,10 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
-import saveIcon from "../../assets/Icon_Save.png";
-import treeIcon from "../../assets/goldTree.svg";
 import sunIcon from "../../assets/Sun.svg";
-import tourEffelImage from "../../assets/tour_effel.jpg";
 import calendarIcon from "../../assets/Icon_Calendar.png";
 import calendarDarkIcon from "../../assets/Icon_Calendar_dark.png";
 import arrowDownIcon from "../../assets/down_arrow_dark.png";
@@ -17,6 +14,7 @@ import avatarIcon from "../../assets/avatar.png";
 
 import Link from "next/link";
 import ServicesSwiper from "../servicesSwiper";
+import Icons from "@/app/Icons";
 
 export default function CataloguePreview() {
   const [itinerariesCollapsed, setItinerariesCollapsed] = useState(false);
@@ -67,7 +65,7 @@ export default function CataloguePreview() {
                 <div className="pr-2">
                   <Image
                     style={{ width: "18px", height: "18px" }}
-                    src={treeIcon}
+                    src={Icons.treeIconGold}
                     alt="tree gold"
                   />
                 </div>
@@ -77,7 +75,7 @@ export default function CataloguePreview() {
                 <div className="pr-2">
                   <Image
                     style={{ width: "18px", height: "18px" }}
-                    src={sunIcon}
+                    src={Icons.sunIconGold}
                     alt="sunIcon"
                   />
                 </div>

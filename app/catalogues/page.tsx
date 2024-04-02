@@ -268,7 +268,7 @@ export default function Catalogues() {
 
                           {/* TAGS START */}
                           {item.tags.map((tag, index) => (
-                            <div className="col-auto px-2 py-1">
+                            <div className="col-auto px-2 py-1" key={index}>
                               <div className="bg-grey text-grey rounded-xl px-2">
                                 {tag}
                               </div>
@@ -283,6 +283,7 @@ export default function Catalogues() {
                               <div className="flex">
                                 {item.packages.map((packageImage, index) => (
                                   <Image
+                                    key={index}
                                     className="rounded-full"
                                     style={{
                                       width: "36px",
@@ -300,6 +301,7 @@ export default function Catalogues() {
                               <div className="flex">
                                 {item.services.map((serviceImage, index) => (
                                   <Image
+                                    key={index}
                                     className="rounded-full"
                                     style={{
                                       width: "36px",

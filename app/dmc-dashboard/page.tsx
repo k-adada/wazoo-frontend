@@ -188,8 +188,11 @@ export default function DmcDashboard() {
               </div>
             </div>
             <div className="py-2 px-3 rounded-lg bg-white ">
-              {trips.map((trip) => (
-                <div className="flex items-center justify-between rounded-lg bg-blue py-2 w-full my-1">
+              {trips.map((trip, index) => (
+                <div
+                  className="flex items-center justify-between rounded-lg bg-blue py-2 w-full my-1"
+                  key={index}
+                >
                   {/* TRIP IMAGE */}
                   <div className="col-auto">
                     <Image
@@ -294,7 +297,10 @@ export default function DmcDashboard() {
                 </div>
                 <div className="py-1 px-2 rounded-lg bg-white ">
                   {globalRequests.map((item, index) => (
-                    <div className="flex items-center justify-between rounded-lg border-dashed py-2 w-full my-1">
+                    <div
+                      className="flex items-center justify-between rounded-lg border-dashed py-2 w-full my-1"
+                      key={index}
+                    >
                       {/* REQUEST IMAGE */}
                       <div className="col-auto px-1">
                         <Image
@@ -360,7 +366,10 @@ export default function DmcDashboard() {
                 </div>
                 <div className="py-1 px-2 rounded-lg bg-white ">
                   {tailoredRequests.map((item, index) => (
-                    <div className="flex items-center justify-between rounded-lg border-dashed py-2 w-full my-1">
+                    <div
+                      className="flex items-center justify-between rounded-lg border-dashed py-2 w-full my-1"
+                      key={index}
+                    >
                       {/* REQUEST IMAGE */}
                       <div className="col-auto px-1">
                         <Image

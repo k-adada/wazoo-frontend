@@ -6,9 +6,9 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 import backIcon from "../assets/Icon_Back.png";
-import casinoImage from "../assets/Bellagio-Hotel-Casino-Las-Vegas.webp";
 
 import CataloguePreview from "../components/catalogueComponents/CataloguePreview";
+import Icons from "../Icons";
 
 export default function Catalogue() {
   const router = useRouter();
@@ -35,7 +35,7 @@ export default function Catalogue() {
               className="flex items-center py-5 back-button"
               onClick={routerBack}
             >
-              <Image src={backIcon} alt="back" />
+              <Image src={Icons.backIcon} alt="back" />
               <div className="pl-2 text-darkblue">Back</div>
             </div>
           </div>
