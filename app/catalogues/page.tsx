@@ -1,31 +1,79 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import "./dist/catalogues.css";
-import LeftDrawerDMC from "../components/LeftDrawerDMC";
 import Image from "next/image";
 import Link from "next/link";
 
 import { useRouter } from "next/navigation";
 
-import notificationIcon from "../assets/Icon_Notification_Received.png";
-import avatarIcon from "../assets/avatar.png";
-import addIcon from "../assets/Icon_Add.png";
-import backIcon from "../assets/Icon_Back.png";
-import serviceEmptyIcon from "../assets/services_empty.png";
-import listIcon from "../assets/Icon_List_View.png";
-import threeDotsIcon from "../assets/three_dots_white.png";
 import casinoImage from "../assets/Bellagio-Hotel-Casino-Las-Vegas.webp";
-import speakerIcon from "../assets/Icon_Campaigns.svg";
-import eyeIcon from "../assets/Icon_Preview.svg";
 
 import AudienceDrawer from "../components/catalogueComponents/AudienceDrawer";
+import Icons from "../Icons";
+import Images from "../Images";
 
 export default function Catalogues() {
   const router = useRouter();
   const routerBack = () => {
     router.back();
   };
-  const [itineraries, setItineraries] = useState([1]);
+
+  const catalogues = [
+    {
+      id: 1,
+      image: Images.aurora,
+      name: "Catalogue 1",
+      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+      tags: ["#Outdoor activity", "#Beach&Sun", "#Snow&Skii"],
+      packages: [casinoImage, casinoImage, casinoImage, casinoImage],
+      services: [casinoImage, casinoImage, casinoImage, casinoImage],
+    },
+    {
+      id: 2,
+      image: Images.australiaImage,
+      name: "Catalogue 2",
+      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+      tags: ["#Outdoor activity", "#Beach&Sun", "#Snow&Skii"],
+      packages: [casinoImage, casinoImage, casinoImage, casinoImage],
+      services: [casinoImage, casinoImage, casinoImage, casinoImage],
+    },
+    {
+      id: 3,
+      image: Images.brazil,
+      name: "Catalogue 3",
+      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+      tags: ["#Outdoor activity", "#Beach&Sun", "#Snow&Skii"],
+      packages: [casinoImage, casinoImage, casinoImage, casinoImage],
+      services: [casinoImage, casinoImage, casinoImage, casinoImage],
+    },
+    {
+      id: 4,
+      image: Images.disney,
+      name: "Catalogue 4",
+      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+      tags: ["#Outdoor activity", "#Beach&Sun", "#Snow&Skii"],
+      packages: [casinoImage, casinoImage, casinoImage, casinoImage],
+      services: [casinoImage, casinoImage, casinoImage, casinoImage],
+    },
+    {
+      id: 5,
+      image: Images.istanbul,
+      name: "Catalogue 5",
+      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+      tags: ["#Outdoor activity", "#Beach&Sun", "#Snow&Skii"],
+      packages: [casinoImage, casinoImage, casinoImage, casinoImage],
+      services: [casinoImage, casinoImage, casinoImage, casinoImage],
+    },
+    {
+      id: 6,
+      image: Images.japanImage,
+      name: "Catalogue 6",
+      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+      tags: ["#Outdoor activity", "#Beach&Sun", "#Snow&Skii"],
+      packages: [casinoImage, casinoImage, casinoImage, casinoImage],
+      services: [casinoImage, casinoImage, casinoImage, casinoImage],
+    },
+  ];
 
   const [activeCatalogue, setActiveCatalogue] = useState(-1);
 
@@ -113,7 +161,7 @@ export default function Catalogues() {
               className="flex items-center py-5 back-button"
               onClick={routerBack}
             >
-              <Image src={backIcon} alt="back" />
+              <Image src={Icons.backIcon} alt="back" />
               <div className="pl-2 text-darkblue">Back</div>
             </div>
           </div>
@@ -124,7 +172,7 @@ export default function Catalogues() {
           </div>
         </div>
 
-        {itineraries.length > 0 ? (
+        {catalogues.length > 0 ? (
           <div className="row">
             <div className="col-12">
               <AudienceDrawer
@@ -145,7 +193,7 @@ export default function Catalogues() {
                   <Link href="/create-catalogues">
                     <div className="dark-button text-gold poppins-medium cursor-pointer">
                       <div className="flex items-center h-full">
-                        <Image src={addIcon} alt="add icon" />
+                        <Image src={Icons.addIconGold} alt="add icon" />
                         <div className="pl-4">Create Catalogue</div>
                       </div>
                     </div>
@@ -154,7 +202,7 @@ export default function Catalogues() {
                   <Link href="#">
                     <div className="dark-button text-gold poppins-medium cursor-pointer">
                       <div className="flex items-center h-full">
-                        <Image src={listIcon} alt="list icon" />
+                        <Image src={Icons.listIconGold} alt="list icon" />
                         <div className="pl-4">List View</div>
                       </div>
                     </div>
@@ -166,7 +214,7 @@ export default function Catalogues() {
                 {/* <div className="col-12 pt-7">
                   <ServicesTable />
                 </div> */}
-                {[1, 2, 3, 4, 5, 6].map((item, index) => {
+                {catalogues.map((item, index) => {
                   return (
                     <div
                       className="col-2xl-3 col-lg-4 col-md-6 py-3 px-2"
@@ -182,146 +230,91 @@ export default function Catalogues() {
                         <div className="row py-2">
                           <div className="col-12 pb-4 px-2">
                             <div className="image-wrapper-83">
-                              <Image src={casinoImage} alt="casinoImage" />
+                              <Image src={item.image} alt={item.name} />
                             </div>
                             <div className="absolute top-2 right-8 pointer">
                               <Image
-                                src={threeDotsIcon}
+                                src={Icons.threeDotsWhiteIcon}
                                 alt="three dots"
                                 className="three-dots"
                               />
                             </div>
                           </div>
+
+                          {/* CATALOGUE NAME */}
                           <div className="col-12 px-2 flex justify-between">
                             <div className="f-20 text-darkblue poppins-medium">
-                              Catalogue Name {index + 1}
+                              {item.name}
                             </div>
                             <Link href="/catalogue">
                               <div className="rounded-lg bg-lineslight poppins-medium py-1 text-darkblue flex items-center justify-center hover pointer px-4">
                                 <div className="">
-                                  <Image src={eyeIcon} alt="eyeIcon" />
+                                  <Image
+                                    src={Icons.eyeIconDark}
+                                    alt="eyeIcon"
+                                  />
                                 </div>
                                 <div className="pl-2">View</div>
                               </div>
                             </Link>
                           </div>
 
+                          {/* DESCRIPTION */}
                           <div className="col-12 px-2">
                             <div className="text-grey pt-4">
-                              Lorem ipsum dolor sit amet consectetur,
-                              adipisicing elit. Veniam voluptates eveniet iste
-                              corrupti! Cum,
+                              {item.description}
                             </div>
                           </div>
 
-                          <div className="col-auto px-2 py-1">
-                            <div className="bg-grey text-grey rounded-xl px-2">
-                              #Outdoor activity
+                          {/* TAGS START */}
+                          {item.tags.map((tag, index) => (
+                            <div className="col-auto px-2 py-1">
+                              <div className="bg-grey text-grey rounded-xl px-2">
+                                {tag}
+                              </div>
                             </div>
-                          </div>
-                          <div className="col-auto px-2 py-1">
-                            <div className="bg-grey text-grey rounded-xl px-2">
-                              #Beach&Sun
-                            </div>
-                          </div>
+                          ))}
+                          {/* TAGS END */}
 
-                          <div className="col-auto px-2 py-1">
-                            <div className="bg-grey text-grey rounded-xl px-2">
-                              #Snow&Skii
-                            </div>
-                          </div>
-
+                          {/* PACKAGES AND SERVICES IMAGES DISPLAY  */}
                           <div className="col-12 flex items-center justify-between pt-4">
                             <div className="text-darkblue f-14 poppins-medium">
                               Packages
                               <div className="flex">
-                                <Image
-                                  className="rounded-full"
-                                  style={{
-                                    width: "36px",
-                                    height: "36px",
-                                  }}
-                                  src={casinoImage}
-                                  alt="casino"
-                                />
-                                <Image
-                                  className="rounded-full"
-                                  style={{
-                                    width: "36px",
-                                    height: "36px",
-                                    transform: "translateX(-50%)",
-                                  }}
-                                  src={casinoImage}
-                                  alt="casino"
-                                />
-                                <Image
-                                  className="rounded-full"
-                                  style={{
-                                    width: "36px",
-                                    height: "36px",
-                                    transform: "translateX(-100%)",
-                                  }}
-                                  src={casinoImage}
-                                  alt="casino"
-                                />
-                                <Image
-                                  className="rounded-full"
-                                  style={{
-                                    width: "36px",
-                                    height: "36px",
-                                    transform: "translateX(-150%)",
-                                  }}
-                                  src={casinoImage}
-                                  alt="casino"
-                                />
+                                {item.packages.map((packageImage, index) => (
+                                  <Image
+                                    className="rounded-full"
+                                    style={{
+                                      width: "36px",
+                                      height: "36px",
+                                      transform: `translateX(-${index * 50}%)`,
+                                    }}
+                                    src={packageImage}
+                                    alt="packageImage"
+                                  />
+                                ))}
                               </div>
                             </div>
                             <div className="text-darkblue f-14 poppins-medium pr-10">
                               Services
                               <div className="flex">
-                                <Image
-                                  className="rounded-full"
-                                  style={{
-                                    width: "36px",
-                                    height: "36px",
-                                  }}
-                                  src={casinoImage}
-                                  alt="casino"
-                                />
-                                <Image
-                                  className="rounded-full"
-                                  style={{
-                                    width: "36px",
-                                    height: "36px",
-                                    transform: "translateX(-50%)",
-                                  }}
-                                  src={casinoImage}
-                                  alt="casino"
-                                />
-                                <Image
-                                  className="rounded-full"
-                                  style={{
-                                    width: "36px",
-                                    height: "36px",
-                                    transform: "translateX(-100%)",
-                                  }}
-                                  src={casinoImage}
-                                  alt="casino"
-                                />
-                                <Image
-                                  className="rounded-full"
-                                  style={{
-                                    width: "36px",
-                                    height: "36px",
-                                    transform: "translateX(-150%)",
-                                  }}
-                                  src={casinoImage}
-                                  alt="casino"
-                                />
+                                {item.services.map((serviceImage, index) => (
+                                  <Image
+                                    className="rounded-full"
+                                    style={{
+                                      width: "36px",
+                                      height: "36px",
+                                      transform: `translateX(-${index * 50}%)`,
+                                    }}
+                                    src={serviceImage}
+                                    alt="serviceImage"
+                                  />
+                                ))}
                               </div>
                             </div>
                           </div>
 
+                          {/* PUBLISH CATALOGUE */}
                           <div className="col-12 pt-4">
                             <div
                               className="rounded-lg bg-lineslight poppins-medium py-3 text-darkblue flex items-center justify-center pointer hover px-4"
@@ -335,7 +328,10 @@ export default function Catalogues() {
                               }}
                             >
                               <div className="">
-                                <Image src={speakerIcon} alt="speaker" />
+                                <Image
+                                  src={Icons.speakerIconDark}
+                                  alt="speaker"
+                                />
                               </div>
                               <div className="pl-2"> Publish Catalogue</div>
                             </div>
@@ -349,36 +345,34 @@ export default function Catalogues() {
             </div>
           </div>
         ) : (
-          <>
-            <div className="row items-center justify-center">
-              <div className="col-12">
-                <div className="text-center">
-                  <Image
-                    className="m-auto"
-                    src={serviceEmptyIcon}
-                    alt="serviceEmptyIcon"
-                  />
-                  <div className="f-48 text-darkblue poppins-medium">
-                    No Catalogues Created
-                  </div>
-                  <div className="f-24 text-grey">
-                    Start Creating Your Catalogue
-                  </div>
+          <div className="row items-center justify-center">
+            <div className="col-12">
+              <div className="text-center">
+                <Image
+                  className="m-auto"
+                  src={Icons.serviceEmptyIconDark}
+                  alt="serviceEmptyIcon"
+                />
+                <div className="f-48 text-darkblue poppins-medium">
+                  No Catalogues Created
+                </div>
+                <div className="f-24 text-grey">
+                  Start Creating Your Catalogue
                 </div>
               </div>
-
-              <div className="col-auto pt-[64px]">
-                <Link href="/create-catalogues">
-                  <div className="dark-button text-gold poppins-medium cursor-pointer">
-                    <div className="flex items-center h-full">
-                      <Image src={addIcon} alt="add icon" />
-                      <div className="pl-4">Add Catalogue</div>
-                    </div>
-                  </div>
-                </Link>
-              </div>
             </div>
-          </>
+
+            <div className="col-auto pt-[64px]">
+              <Link href="/create-catalogues">
+                <div className="dark-button text-gold poppins-medium cursor-pointer">
+                  <div className="flex items-center h-full">
+                    <Image src={Icons.addIconGold} alt="add icon" />
+                    <div className="pl-4">Add Catalogue</div>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </div>
         )}
       </div>
     </main>

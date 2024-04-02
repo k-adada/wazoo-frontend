@@ -48,8 +48,12 @@ import serviceEmptyIconDark from "@/app/assets/services_empty.png";
 import brochureIconDark from "@/app/assets/Icon_Brochure.svg";
 import planeDarkIcon from "@/app/assets/Icon_PlaneDark.svg";
 import checkDark from "@/app/assets/check.png";
+import speakerIconDark from "@/app/assets/Icon_Campaigns.svg";
+import eyeIconDark from "@/app/assets/Icon_Preview.svg";
 
 const Icons = {
+  eyeIconDark,
+  speakerIconDark,
   checkDark,
   planeDarkIcon,
   brochureIconDark,
