@@ -40,40 +40,22 @@ export default function MyTrips() {
             <div className="col-12">
               <div className="row justify-between pt-10">
                 <div className="col-auto">
-                  <div className="f-16 py-2 px-3 bg-white rounded-lg">
+                  <div className="f-16 py-2 px-3 bg-white rounded-lg pointer">
                     Filters
                   </div>
                 </div>
 
-                <div className="col relative">
+                <div className="col-auto relative">
                   <input
                     type="text"
-                    className="bg-white py-2 pl-10 rounded-lg w-full"
+                    className="bg-white py-2 pl-10 rounded-lg w-full w-[400px]"
                     placeholder="Search"
                   />
                   <div className="absolute left-5 top-2">
                     <Image src={Icons.searchIconDark} alt="search" />
                   </div>
                 </div>
-                <div className="flex col-auto">
-                  <Link href="/request-trip">
-                    <div className="dark-button text-gold poppins-medium cursor-pointer">
-                      <div className="flex items-center h-full">
-                        <Image src={Icons.paperPlaneIconGold} alt="request" />
-                        <div className="pl-4">Request a Trip</div>
-                      </div>
-                    </div>
-                  </Link>
-                  <div className="px-3"></div>
-                  <Link href="#">
-                    <div className="dark-button text-gold poppins-medium cursor-pointer">
-                      <div className="flex items-center h-full">
-                        <Image src={Icons.reportIconGold} alt="report icon" />
-                        <div className="pl-4">Generate Reports</div>
-                      </div>
-                    </div>
-                  </Link>
-                </div>
+
                 <div className="col-12 pt-7">
                   <MyTripsTable />
                 </div>

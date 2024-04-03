@@ -76,7 +76,7 @@ export default function CreateServices() {
             <div className="col-9">
               <div className="row justify-between">
                 <div className="col-auto">
-                  <div className="f-16 py-2 px-3 bg-white rounded-lg">
+                  <div className="f-16 py-2 px-3 bg-white rounded-lg pointer">
                     Filters
                   </div>
                 </div>
