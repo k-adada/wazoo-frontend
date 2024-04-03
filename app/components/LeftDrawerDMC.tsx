@@ -195,34 +195,38 @@ export default function LeftDrawerDMC() {
         {/* Requests  */}
         <div className="py-2">
           <ListItem key={"Requests"} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <Image
-                  src={requestsIcon}
-                  alt="Requests Icon"
-                  width={24}
-                  height={24}
-                />
-              </ListItemIcon>
-              <ListItemText primary={"Requests"} />
-            </ListItemButton>
+            <Link href="/dmc-my-requests">
+              <ListItemButton>
+                <ListItemIcon>
+                  <Image
+                    src={requestsIcon}
+                    alt="Requests Icon"
+                    width={24}
+                    height={24}
+                  />
+                </ListItemIcon>
+                <ListItemText primary={"Requests"} />
+              </ListItemButton>
+            </Link>
           </ListItem>
         </div>
 
         {/* My Trips  */}
         <div className="py-2">
           <ListItem key={"My Trips"} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <Image
-                  src={tripsIcon}
-                  alt="My Trips Icon"
-                  width={24}
-                  height={24}
-                />
-              </ListItemIcon>
-              <ListItemText primary={"My Trips"} />
-            </ListItemButton>
+            <Link href="/dmc-my-trips">
+              <ListItemButton>
+                <ListItemIcon>
+                  <Image
+                    src={tripsIcon}
+                    alt="My Trips Icon"
+                    width={24}
+                    height={24}
+                  />
+                </ListItemIcon>
+                <ListItemText primary={"My Trips"} />
+              </ListItemButton>
+            </Link>
           </ListItem>
         </div>
 
