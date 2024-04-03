@@ -21,6 +21,8 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import { visuallyHidden } from "@mui/utils";
 
+<Tooltip title="Add" placement="top"></Tooltip>;
+
 import Image from "next/image";
 import Icons from "@/app/Icons";
 
@@ -572,86 +574,104 @@ export default function DMCMyTripsTable(props: { content: Data[] }) {
                     <TableCell align="left">
                       <div className="flex">
                         <div className="px-1">
-                          <Image
-                            src={Icons.eyeIconDark}
-                            alt="edit"
-                            onClick={() => {
-                              alert("edit " + row.id);
-                            }}
-                          />
+                          <Tooltip title="View" placement="top">
+                            <Image
+                              src={Icons.eyeIconDark}
+                              alt="edit"
+                              onClick={() => {
+                                alert("edit " + row.id);
+                              }}
+                            />
+                          </Tooltip>
                         </div>
                         <div className="px-1">
-                          <Image
-                            src={Icons.paperPlaneIconGold}
-                            alt="edit"
-                            onClick={() => {
-                              alert("edit " + row.id);
-                            }}
-                          />
+                          <Tooltip title="Proposals" placement="top">
+                            <Image
+                              src={Icons.paperPlaneIconGold}
+                              alt="edit"
+                              onClick={() => {
+                                alert("edit " + row.id);
+                              }}
+                            />
+                          </Tooltip>
                         </div>
                         <div className="px-1">
-                          <Image
-                            src={Icons.messageGreyIcon}
-                            alt="edit"
-                            onClick={() => {
-                              alert("edit " + row.id);
-                            }}
-                          />
+                          <Tooltip title="Message" placement="top">
+                            <Image
+                              src={Icons.messageGreyIcon}
+                              alt="edit"
+                              onClick={() => {
+                                alert("edit " + row.id);
+                              }}
+                            />
+                          </Tooltip>
                         </div>
                         <div className="px-1">
-                          <Image
-                            src={Icons.burgerGreyIcon}
-                            alt="edit"
-                            onClick={() => {
-                              alert("edit " + row.id);
-                            }}
-                          />
+                          <Tooltip title="Itinerary Builder" placement="top">
+                            <Image
+                              src={Icons.burgerGreyIcon}
+                              alt="edit"
+                              onClick={() => {
+                                alert("edit " + row.id);
+                              }}
+                            />
+                          </Tooltip>
                         </div>
                         <div className="px-1">
-                          <Image
-                            src={Icons.reportGreyIcon}
-                            alt="edit"
-                            onClick={() => {
-                              alert("edit " + row.id);
-                            }}
-                          />
+                          <Tooltip title="History" placement="top">
+                            <Image
+                              src={Icons.reportGreyIcon}
+                              alt="edit"
+                              onClick={() => {
+                                alert("edit " + row.id);
+                              }}
+                            />
+                          </Tooltip>
                         </div>
                         <div className="px-1">
-                          <Image
-                            style={{ transform: "rotate(45deg)" }}
-                            src={Icons.tagDarkIcon}
-                            alt="edit"
-                            onClick={() => {
-                              alert("edit " + row.id);
-                            }}
-                          />
+                          <Tooltip title="Vouchers" placement="top">
+                            <Image
+                              style={{ transform: "rotate(45deg)" }}
+                              src={Icons.tagDarkIcon}
+                              alt="edit"
+                              onClick={() => {
+                                alert("edit " + row.id);
+                              }}
+                            />
+                          </Tooltip>
                         </div>
                         <div className="px-1">
-                          <Image
-                            src={Icons.stopCircleDarkIcon}
-                            alt="edit"
-                            onClick={() => {
-                              alert("edit " + row.id);
-                            }}
-                          />
+                          <Tooltip title="Delete" placement="top">
+                            <Image
+                              src={Icons.stopCircleDarkIcon}
+                              alt="edit"
+                              onClick={() => {
+                                alert("edit " + row.id);
+                              }}
+                            />
+                          </Tooltip>
                         </div>
                         <div className="px-1">
-                          <Image
-                            src={Icons.checkGreyIcon}
-                            alt="edit"
-                            onClick={() => {
-                              alert("edit " + row.id);
-                            }}
-                          />
+                          <Tooltip title="Confirm Trip" placement="top">
+                            <Image
+                              src={Icons.checkGreyIcon}
+                              alt="edit"
+                              onClick={() => {
+                                alert("edit " + row.id);
+                              }}
+                            />
+                          </Tooltip>
                         </div>
                         <div className="px-1">
-                          <Image
-                            src={Icons.closeDarkIcon}
-                            alt="edit"
-                            onClick={() => {
-                              alert("edit " + row.id);
-                            }}
-                          />
+                          <Tooltip title="Delete" placement="top">
+                            <Image
+                              src={Icons.closeDarkIcon}
+                              alt="edit"
+                              onClick={() => {
+                                alert("edit " + row.id);
+                              }}
+                            />
+                          </Tooltip>
                         </div>
                       </div>
                     </TableCell>

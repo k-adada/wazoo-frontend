@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 
 import Icons from "../Icons";
 import MyTripsTable from "../components/requestTripComponents/MyTripsTable";
+import DMCMyTripsTable from "../components/requestTripComponents/DMCMyTripsTable";
 
 export default function MyTrips() {
   const router = useRouter();
@@ -14,7 +15,144 @@ export default function MyTrips() {
     router.back();
   };
 
-  const trips = [1];
+  interface Data {
+    id: number;
+    requestDate: string;
+    type: string;
+    status: string;
+    tavelAgent: string;
+    groupSize: string;
+    destinations: string;
+    theme: string;
+    tripDates: string;
+    budget: string;
+  }
+
+  function createData(
+    id: number,
+    requestDate: string,
+    type: string,
+    status: string,
+    tavelAgent: string,
+    groupSize: string,
+    destinations: string,
+    theme: string,
+    tripDates: string,
+    budget: string
+  ): Data {
+    return {
+      id,
+      requestDate,
+      type,
+      status,
+      tavelAgent,
+      groupSize,
+      destinations,
+      theme,
+      tripDates,
+      budget,
+    };
+  }
+
+  const trips = [
+    createData(
+      1,
+      "01-01-2021",
+      "Detailed",
+      "New",
+      "Travel Agent",
+      "10",
+      "Paris, London, Rome",
+      "Adventure",
+      "01-01-2024 , 01-02-2024",
+      "$5000"
+    ),
+    createData(
+      2,
+      "01-01-2021",
+      "Detailed",
+      "Open",
+      "Travel Agent",
+      "10",
+      "Paris, London, Rome",
+      "Adventure",
+      "01-01-2024 , 01-02-2024",
+      "$5000"
+    ),
+    createData(
+      3,
+      "01-01-2021",
+      "Detailed",
+      "Building",
+      "Travel Agent",
+      "10",
+      "Paris, London, Rome",
+      "Adventure",
+      "01-01-2024 , 01-02-2024",
+      "$5000"
+    ),
+    createData(
+      4,
+      "01-01-2021",
+      "Short Form",
+      "Confirmed",
+      "Travel Agent",
+      "10",
+      "Paris, London, Rome",
+      "Adventure",
+      "01-01-2024 , 01-02-2024",
+      "$5000"
+    ),
+    createData(
+      5,
+      "01-01-2021",
+      "Detailed",
+      "In Progress",
+      "Travel Agent",
+      "10",
+      "Paris, London, Rome",
+      "Adventure",
+      "01-01-2024 , 01-02-2024",
+      "$5000"
+    ),
+    createData(
+      6,
+      "01-01-2021",
+      "Detailed",
+      "Completed",
+      "Travel Agent",
+      "10",
+      "Paris, London, Rome",
+      "Adventure",
+      "01-01-2024 , 01-02-2024",
+      "$5000"
+    ),
+    createData(
+      7,
+      "01-01-2021",
+      "Detailed",
+      "Cancelled",
+      "Travel Agent",
+      "10",
+      "Paris, London, Rome",
+      "Adventure",
+      "01-01-2024 , 01-02-2024",
+      "$5000"
+    ),
+    createData(
+      8,
+      "01-01-2021",
+      "Detailed",
+      "New",
+      "Travel Agent",
+      "10",
+      "Paris, London, Rome",
+      "Adventure",
+      "01-01-2024 , 01-02-2024",
+      "$5000"
+    ),
+  ];
+
   return (
     <main className="flex min-h-screen flex-col items-center p-md-24 p-3 bg-lightblue pt-[75px] pb-[100px]">
       <div className="container-fluid">
@@ -57,7 +195,7 @@ export default function MyTrips() {
                 </div>
 
                 <div className="col-12 pt-7">
-                  <MyTripsTable />
+                  <DMCMyTripsTable content={trips} />
                 </div>
               </div>
             </div>
