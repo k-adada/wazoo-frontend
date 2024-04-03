@@ -1,12 +1,11 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import "./dist/myTrips.css";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 import Icons from "../Icons";
-import MyTripsTable from "../components/requestTripComponents/MyTripsTable";
 import DMCMyTripsTable from "../components/requestTripComponents/DMCMyTripsTable";
 
 export default function MyRequests() {
@@ -14,8 +13,186 @@ export default function MyRequests() {
   const routerBack = () => {
     router.back();
   };
-
+  const [requestType, setRequestType] = useState("global");
   const trips = [1];
+
+  interface Data {
+    id: number;
+    requestDate: string;
+    type: string;
+    status: string;
+    tavelAgent: string;
+    groupSize: string;
+    destinations: string;
+    theme: string;
+    tripDates: string;
+    budget: string;
+  }
+
+  function createData(
+    id: number,
+    requestDate: string,
+    type: string,
+    status: string,
+    tavelAgent: string,
+    groupSize: string,
+    destinations: string,
+    theme: string,
+    tripDates: string,
+    budget: string
+  ): Data {
+    return {
+      id,
+      requestDate,
+      type,
+      status,
+      tavelAgent,
+      groupSize,
+      destinations,
+      theme,
+      tripDates,
+      budget,
+    };
+  }
+
+  const globalRequests = [
+    createData(
+      1,
+      "01-01-2021",
+      "Detailed",
+      "New",
+      "Travel Agent",
+      "10",
+      "Paris, London, Rome",
+      "Adventure",
+      "01-01-2024 , 01-02-2024",
+      "$5000"
+    ),
+    createData(
+      2,
+      "01-01-2021",
+      "Detailed",
+      "Open",
+      "Travel Agent",
+      "10",
+      "Paris, London, Rome",
+      "Adventure",
+      "01-01-2024 , 01-02-2024",
+      "$5000"
+    ),
+    createData(
+      3,
+      "01-01-2021",
+      "Detailed",
+      "Building",
+      "Travel Agent",
+      "10",
+      "Paris, London, Rome",
+      "Adventure",
+      "01-01-2024 , 01-02-2024",
+      "$5000"
+    ),
+    createData(
+      4,
+      "01-01-2021",
+      "Short Form",
+      "Confirmed",
+      "Travel Agent",
+      "10",
+      "Paris, London, Rome",
+      "Adventure",
+      "01-01-2024 , 01-02-2024",
+      "$5000"
+    ),
+    createData(
+      5,
+      "01-01-2021",
+      "Detailed",
+      "In Progress",
+      "Travel Agent",
+      "10",
+      "Paris, London, Rome",
+      "Adventure",
+      "01-01-2024 , 01-02-2024",
+      "$5000"
+    ),
+    createData(
+      6,
+      "01-01-2021",
+      "Detailed",
+      "Completed",
+      "Travel Agent",
+      "10",
+      "Paris, London, Rome",
+      "Adventure",
+      "01-01-2024 , 01-02-2024",
+      "$5000"
+    ),
+    createData(
+      7,
+      "01-01-2021",
+      "Detailed",
+      "Cancelled",
+      "Travel Agent",
+      "10",
+      "Paris, London, Rome",
+      "Adventure",
+      "01-01-2024 , 01-02-2024",
+      "$5000"
+    ),
+    createData(
+      8,
+      "01-01-2021",
+      "Detailed",
+      "New",
+      "Travel Agent",
+      "10",
+      "Paris, London, Rome",
+      "Adventure",
+      "01-01-2024 , 01-02-2024",
+      "$5000"
+    ),
+  ];
+
+  const tailoredRequests = [
+    createData(
+      1,
+      "01-01-2021",
+      "Detailed",
+      "New",
+      "Travel Agent",
+      "10",
+      "Paris, London, Rome",
+      "Adventure",
+      "01-01-2024 , 01-02-2024",
+      "$5000"
+    ),
+    createData(
+      2,
+      "01-01-2021",
+      "Detailed",
+      "Open",
+      "Travel Agent",
+      "10",
+      "Paris, London, Rome",
+      "Adventure",
+      "01-01-2024 , 01-02-2024",
+      "$5000"
+    ),
+    createData(
+      3,
+      "01-01-2021",
+      "Detailed",
+      "Building",
+      "Travel Agent",
+      "10",
+      "Paris, London, Rome",
+      "Adventure",
+      "01-01-2024 , 01-02-2024",
+      "$5000"
+    ),
+  ];
+
   return (
     <main className="flex min-h-screen flex-col items-center p-md-24 p-3 bg-lightblue pt-[75px] pb-[100px]">
       <div className="container-fluid">
@@ -32,36 +209,96 @@ export default function MyRequests() {
             </div>
           </div>
           <div className="col-auto self-center">
-            <div className="f-36 poppins-semibold text-darkblue ">My Trips</div>
+            <div className="f-36 poppins-semibold text-darkblue ">
+              Received Requests
+            </div>
           </div>
         </div>
 
         {trips.length > 0 ? (
           <div className="row">
-            <div className="col-12">
-              <div className="row justify-between pt-10">
-                <div className="col-auto">
-                  <div className="f-16 py-2 px-3 bg-white rounded-lg">
-                    Filters
-                  </div>
+            <div className="col-12 flex">
+              {/* Requests TABS  */}
+              <div className="col-2 px-2 mb-5">
+                <div
+                  className={
+                    (requestType === "global" ? "bg-blue" : "bg-grey") +
+                    " rounded-lg poppins-medium pointer"
+                  }
+                  onClick={() => setRequestType("global")}
+                >
+                  <div className="py-2 text-center">Global Requests</div>
                 </div>
-
-                <div className="col-auto relative">
-                  <input
-                    type="text"
-                    className="bg-white py-2 pl-10 rounded-lg w-full w-[400px]"
-                    placeholder="Search"
-                  />
-                  <div className="absolute left-5 top-2">
-                    <Image src={Icons.searchIconDark} alt="search" />
-                  </div>
-                </div>
-
-                <div className="col-12 pt-7">
-                  <DMCMyTripsTable />
+              </div>
+              <div className="col-2 px-2 mb-5">
+                <div
+                  className={
+                    (requestType === "tailored" ? "bg-blue" : "bg-grey") +
+                    " rounded-lg poppins-medium pointer"
+                  }
+                  onClick={() => setRequestType("tailored")}
+                >
+                  <div className="py-2 text-center">Tailored</div>
                 </div>
               </div>
             </div>
+            {requestType === "global" && (
+              <>
+                <div className="col-12">
+                  <div className="row justify-between pt-10">
+                    <div className="col-auto">
+                      <div className="f-16 py-2 px-3 bg-white rounded-lg">
+                        Filters
+                      </div>
+                    </div>
+
+                    <div className="col-auto relative">
+                      <input
+                        type="text"
+                        className="bg-white py-2 pl-10 rounded-lg w-full w-[400px]"
+                        placeholder="Search"
+                      />
+                      <div className="absolute left-5 top-2">
+                        <Image src={Icons.searchIconDark} alt="search" />
+                      </div>
+                    </div>
+
+                    <div className="col-12 pt-7">
+                      <DMCMyTripsTable content={globalRequests} />
+                    </div>
+                  </div>
+                </div>
+              </>
+            )}
+
+            {requestType === "tailored" && (
+              <>
+                <div className="col-12">
+                  <div className="row justify-between pt-10">
+                    <div className="col-auto">
+                      <div className="f-16 py-2 px-3 bg-white rounded-lg">
+                        Filters
+                      </div>
+                    </div>
+
+                    <div className="col-auto relative">
+                      <input
+                        type="text"
+                        className="bg-white py-2 pl-10 rounded-lg w-full w-[400px]"
+                        placeholder="Search"
+                      />
+                      <div className="absolute left-5 top-2">
+                        <Image src={Icons.searchIconDark} alt="search" />
+                      </div>
+                    </div>
+
+                    <div className="col-12 pt-7">
+                      <DMCMyTripsTable content={tailoredRequests} />
+                    </div>
+                  </div>
+                </div>
+              </>
+            )}
           </div>
         ) : (
           <div className="row items-center justify-center">

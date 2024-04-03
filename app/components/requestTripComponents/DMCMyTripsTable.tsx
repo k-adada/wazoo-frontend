@@ -63,7 +63,7 @@ function createData(
   };
 }
 
-const rows = [
+const tempRows = [
   createData(
     1,
     "01-01-2021",
@@ -399,7 +399,11 @@ function EnhancedTableToolbar(props: EnhancedTableToolbarProps) {
     </Toolbar>
   );
 }
-export default function DMCMyTripsTable() {
+
+export default function DMCMyTripsTable(props: { content: Data[] }) {
+  const { content } = props;
+  const rows = content || tempRows;
+
   const [order, setOrder] = React.useState<Order>("asc");
   const [orderBy, setOrderBy] = React.useState<keyof Data>("requestDate");
   const [selected, setSelected] = React.useState<readonly number[]>([]);
