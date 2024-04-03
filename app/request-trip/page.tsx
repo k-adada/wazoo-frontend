@@ -4,20 +4,16 @@ import "./dist/requestTrip.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
-import notificationIcon from "../assets/Icon_Notification_Received.png";
-import avatarIcon from "../assets/avatar.png";
 import saveIcon from "../assets/Icon_Save.png";
 import tripIcon from "../assets/Icon_Plan_Trip.svg";
-import submitIcon from "../assets/Icon_Submit_gold.svg";
-import backIcon from "../assets/Icon_Back.png";
+
 import downArrowIcon from "../assets/Icon_Arrow_Down_white.png";
 import Link from "next/link";
-import MultipleSelectLight from "../components/MultipleSelectLight";
-import AgenciesTable from "../components/community/AgenciesTable";
 import TripInfo from "../components/requestTripComponents/TripInfo";
 import ClientPreferences from "../components/requestTripComponents/ClientPreferences";
 import RequestItineraries from "../components/requestTripComponents/RequestItineraries";
 import RequestServices from "../components/requestTripComponents/RequestServices";
+import Icons from "../Icons";
 
 export default function RequestTrip() {
   const router = useRouter();
@@ -40,7 +36,7 @@ export default function RequestTrip() {
     } else if (currentStep === "client-preferences") {
       setCurrentStep("review-and-submit");
     } else if (currentStep === "review-and-submit") {
-      router.push("/my-trips");
+      router.push("/ta-my-trips");
     }
   };
 
@@ -54,7 +50,7 @@ export default function RequestTrip() {
                 className="flex items-center py-5 back-button"
                 onClick={routerBack}
               >
-                <Image src={backIcon} alt="back" />
+                <Image src={Icons.backIcon} alt="back" />
                 <div className="pl-2 text-darkblue">Back</div>
               </div>
             </div>
@@ -130,7 +126,7 @@ export default function RequestTrip() {
                   <div className="">
                     <Image
                       className="w-[60px]"
-                      src={submitIcon}
+                      src={Icons.submitIconGold}
                       alt="submitIcon"
                     />
                   </div>

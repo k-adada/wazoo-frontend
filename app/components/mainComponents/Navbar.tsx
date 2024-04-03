@@ -18,7 +18,7 @@ export default function Navbar() {
     "/request-trip",
     "/explore-trip-request",
     "/ta-dashboard",
-    "/my-trips",
+    "/ta-my-trips",
     "/trip",
   ];
   return (
@@ -91,7 +91,7 @@ export default function Navbar() {
         style={{ left: "50%", transform: "translateX(-50%)" }}
       >
         <div className="flex items-center justify-center">
-          <Link href="/my-trips">
+          <Link href="/ta-my-trips">
             <div
               className="rounded-full overflow-hidden backdrop-blur-xl py-4 px-4 mx-1 pointer"
               style={{ backgroundColor: "rgba(0,0,0,0.2)" }}

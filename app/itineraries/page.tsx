@@ -6,23 +6,10 @@ import Link from "next/link";
 
 import { useRouter } from "next/navigation";
 
-import addIcon from "../assets/Icon_Add.png";
-import backIcon from "../assets/Icon_Back.png";
-import arrowIcon from "../assets/down_arrow_dark.png";
-import serviceEmptyIcon from "../assets/services_empty.png";
-import listIcon from "../assets/Icon_List_View.png";
 import ServicesSwiper from "../components/servicesSwiper";
-import locationIcon from "../assets/Icon_Location.png";
-import clockIcon from "../assets/Icon_Time.png";
-import calendarIcon from "../assets/Icon_Calendar_dark.png";
-import dollarIcon from "../assets/Icon_Dollars.png";
-import louvreImage from "../assets/images/services/Louvre.jpg";
-import lucerneImage from "../assets/images/services/lucerne.jpg";
-import montsaintImage from "../assets/images/services/montsaintmich.jpg";
-import triomphImage from "../assets/images/services/Triomphe.jpg";
-import notreImage from "../assets/images/services/NotreDameCathedral.jpg";
-import quartierImage from "../assets/images/services/Quartier_Latin.jpg";
+
 import Icons from "../Icons";
+import Images from "../Images";
 
 export default function CreateItineraries() {
   const router = useRouter();
@@ -41,7 +28,7 @@ export default function CreateItineraries() {
       date: "Oct 11 - Oct 15",
       price: "$350",
       tags: ["Outdoor Activity", "Sub-type"],
-      image: louvreImage,
+      image: Images.louvreImage,
     },
     {
       id: 2,
@@ -53,7 +40,7 @@ export default function CreateItineraries() {
       date: "Oct 11 - Oct 15",
       price: "$350",
       tags: ["Outdoor Activity", "Sub-type"],
-      image: lucerneImage,
+      image: Images.lucerneImage,
     },
     {
       id: 3,
@@ -65,7 +52,7 @@ export default function CreateItineraries() {
       date: "Oct 11 - Oct 15",
       price: "$350",
       tags: ["Outdoor Activity", "Sub-type"],
-      image: montsaintImage,
+      image: Images.montsaintImage,
     },
     {
       id: 4,
@@ -77,7 +64,7 @@ export default function CreateItineraries() {
       date: "Oct 11 - Oct 15",
       price: "$350",
       tags: ["Outdoor Activity", "Sub-type"],
-      image: triomphImage,
+      image: Images.triomphImage,
     },
     {
       id: 5,
@@ -89,7 +76,7 @@ export default function CreateItineraries() {
       date: "Oct 11 - Oct 15",
       price: "$350",
       tags: ["Outdoor Activity", "Sub-type"],
-      image: notreImage,
+      image: Images.notreImage,
     },
     {
       id: 6,
@@ -101,17 +88,8 @@ export default function CreateItineraries() {
       date: "Oct 11 - Oct 15",
       price: "$350",
       tags: ["Outdoor Activity", "Sub-type"],
-      image: quartierImage,
+      image: Images.quartierImage,
     },
-  ];
-
-  const images = [
-    louvreImage,
-    lucerneImage,
-    montsaintImage,
-    triomphImage,
-    notreImage,
-    quartierImage,
   ];
 
   const [days, setDays] = useState([
@@ -129,7 +107,7 @@ export default function CreateItineraries() {
           duration: "Duration 1",
           timeslot: "Timeslot 1",
           price: "350",
-          image: louvreImage,
+          image: Images.louvreImage,
         },
         {
           id: "2",
@@ -140,7 +118,7 @@ export default function CreateItineraries() {
           duration: "Duration 2",
           timeslot: "Timeslot 2",
           price: "350",
-          image: lucerneImage,
+          image: Images.lucerneImage,
         },
       ] as any[],
     },
@@ -158,7 +136,7 @@ export default function CreateItineraries() {
           duration: "Duration 5",
           timeslot: "Timeslot 5",
           price: "350",
-          image: notreImage,
+          image: Images.notreImage,
         },
         {
           id: "6",
@@ -169,7 +147,7 @@ export default function CreateItineraries() {
           duration: "Duration 6",
           timeslot: "Timeslot 6",
           price: "350",
-          image: quartierImage,
+          image: Images.quartierImage,
         },
       ] as any[],
     },
@@ -187,7 +165,7 @@ export default function CreateItineraries() {
           duration: "Duration 3",
           timeslot: "Timeslot 3",
           price: "350",
-          image: montsaintImage,
+          image: Images.montsaintImage,
         },
         {
           id: "4",
@@ -198,7 +176,7 @@ export default function CreateItineraries() {
           duration: "Duration 4",
           timeslot: "Timeslot 4",
           price: "350",
-          image: triomphImage,
+          image: Images.triomphImage,
         },
       ] as any[],
     },
@@ -215,7 +193,7 @@ export default function CreateItineraries() {
               className="flex items-center py-5 back-button"
               onClick={routerBack}
             >
-              <Image src={backIcon} alt="back" />
+              <Image src={Icons.backIcon} alt="back" />
               <div className="pl-2 text-darkblue">Back</div>
             </div>
           </div>
@@ -239,7 +217,7 @@ export default function CreateItineraries() {
                   <Link href="/create-itineraries">
                     <div className="dark-button text-gold poppins-medium cursor-pointer">
                       <div className="flex items-center h-full">
-                        <Image src={addIcon} alt="add icon" />
+                        <Image src={Icons.addIconGold} alt="add icon" />
                         <div className="pl-4">Add Itinerary</div>
                       </div>
                     </div>
@@ -248,7 +226,7 @@ export default function CreateItineraries() {
                   <Link href="#">
                     <div className="dark-button text-gold poppins-medium cursor-pointer">
                       <div className="flex items-center h-full">
-                        <Image src={listIcon} alt="list icon" />
+                        <Image src={Icons.listIconGold} alt="list icon" />
                         <div className="pl-4">List View</div>
                       </div>
                     </div>
@@ -383,6 +361,7 @@ export default function CreateItineraries() {
                     <div className="text-grey">{selectedItinerary.date}</div>
                   </div>
                 </div>
+
                 <div className="col-12">
                   {days.map((day, index) => {
                     return (
@@ -400,7 +379,7 @@ export default function CreateItineraries() {
                           </div>
 
                           <div className="">
-                            <Image src={arrowIcon} alt="arrow" />
+                            <Image src={Icons.arrowDownDarkIcon} alt="arrow" />
                           </div>
                         </div>
                         <div
@@ -460,7 +439,7 @@ export default function CreateItineraries() {
                 <div className="text-center">
                   <Image
                     className="m-auto"
-                    src={serviceEmptyIcon}
+                    src={Icons.serviceEmptyIconDark}
                     alt="serviceEmptyIcon"
                   />
                   <div className="f-48 text-darkblue poppins-medium">
@@ -476,7 +455,7 @@ export default function CreateItineraries() {
                 <Link href="/create-itineraries">
                   <div className="dark-button text-gold poppins-medium cursor-pointer">
                     <div className="flex items-center h-full">
-                      <Image src={addIcon} alt="add icon" />
+                      <Image src={Icons.addIconGold} alt="add icon" />
                       <div className="pl-4">Add Itinerary</div>
                     </div>
                   </div>
