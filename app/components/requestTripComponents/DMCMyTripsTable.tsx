@@ -21,8 +21,6 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import { visuallyHidden } from "@mui/utils";
 
-<Tooltip title="Add" placement="top"></Tooltip>;
-
 import Image from "next/image";
 import Icons from "@/app/Icons";
 
