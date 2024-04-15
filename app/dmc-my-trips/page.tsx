@@ -6,7 +6,6 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 import Icons from "../Icons";
-import MyTripsTable from "../components/requestTripComponents/MyTripsTable";
 import DMCMyTripsTable from "../components/requestTripComponents/DMCMyTripsTable";
 
 export default function MyTrips() {
