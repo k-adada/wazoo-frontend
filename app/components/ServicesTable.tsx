@@ -23,7 +23,6 @@ import { visuallyHidden } from "@mui/utils";
 
 import deleteRedIcon from "../assets/delete_red.svg";
 import editIcon from "../assets/Icon_Edit.png";
-import tourEffelImage from "../assets/tour_effel.jpg";
 
 import alpsImage from "../assets/images/services/alps.webp";
 import bernImage from "../assets/images/services/bern.jpg";
@@ -385,6 +384,7 @@ function EnhancedTableToolbar(props: EnhancedTableToolbarProps) {
     </Toolbar>
   );
 }
+
 export default function ServicesTable() {
   const [order, setOrder] = React.useState<Order>("asc");
   const [orderBy, setOrderBy] = React.useState<keyof Data>("serviceName");

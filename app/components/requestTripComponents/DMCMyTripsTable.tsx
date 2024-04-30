@@ -23,6 +23,7 @@ import { visuallyHidden } from "@mui/utils";
 
 import Image from "next/image";
 import Icons from "@/app/Icons";
+import Link from "next/link";
 
 interface Data {
   id: number;
@@ -475,7 +476,7 @@ export default function DMCMyTripsTable(props: { content: Data[] }) {
         page * rowsPerPage,
         page * rowsPerPage + rowsPerPage
       ),
-    [order, orderBy, page, rowsPerPage]
+    [order, orderBy, page, rowsPerPage, rows]
   );
 
   const getBgColor = (status: string) => {
@@ -573,24 +574,19 @@ export default function DMCMyTripsTable(props: { content: Data[] }) {
                       <div className="flex">
                         <div className="px-1">
                           <Tooltip title="View" placement="top">
-                            <Image
-                              src={Icons.eyeIconDark}
-                              alt="edit"
-                              onClick={() => {
-                                alert("edit " + row.id);
-                              }}
-                            />
+                            <Link href={`/dmc-my-requests`}>
+                              <Image src={Icons.eyeIconDark} alt="edit" />
+                            </Link>
                           </Tooltip>
                         </div>
                         <div className="px-1">
                           <Tooltip title="Proposals" placement="top">
-                            <Image
-                              src={Icons.paperPlaneIconGold}
-                              alt="edit"
-                              onClick={() => {
-                                alert("edit " + row.id);
-                              }}
-                            />
+                            <Link href={`/dmc-my-proposals`}>
+                              <Image
+                                src={Icons.paperPlaneIconGold}
+                                alt="edit"
+                              />
+                            </Link>
                           </Tooltip>
                         </div>
                         <div className="px-1">
