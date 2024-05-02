@@ -12,7 +12,7 @@ import Link from "next/link";
 export default function Navbar() {
   const pathname = usePathname();
 
-  const hideOnRoutes = ["/registration", "/themes", "/destinations"];
+  const hideOnRoutes = ["/registration", "/themes", "/destinations", "/chat"];
   const taOnRoutes = [
     "/explore",
     "/request-trip",
@@ -53,6 +53,73 @@ export default function Navbar() {
                     </div>
                   </div>
                 </div>
+
+                {/* bottom bar */}
+                <div
+                  className="w-[360px] fixed bottom-10 text-center z-10"
+                  style={{ left: "50%", transform: "translateX(-50%)" }}
+                >
+                  <div className="flex items-center justify-center">
+                    <Link href="/ta-my-trips">
+                      <div
+                        className="rounded-full overflow-hidden backdrop-blur-xl py-4 px-4 mx-1 pointer"
+                        style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
+                      >
+                        <Image
+                          src={Icons.planeIconGold}
+                          alt="plane"
+                          style={{ height: "25px", width: "25px" }}
+                        />
+                      </div>
+                    </Link>
+                    <div
+                      className="rounded-full overflow-hidden backdrop-blur-md py-4 px-4 mx-1 pointer"
+                      style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
+                    >
+                      <Image
+                        src={Icons.doorIconGold}
+                        alt="door"
+                        style={{ height: "25px", width: "25px" }}
+                      />
+                    </div>
+                    <Link href="/ta-dashboard">
+                      <div
+                        className="rounded-full overflow-hidden backdrop-blur-md py-4 px-4 mx-1 pointer"
+                        style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
+                      >
+                        <div className="rounded-full overflow-hidden bg-gold py-4 px-4">
+                          <Image
+                            src={Icons.homeIconDark}
+                            alt="home"
+                            style={{ height: "25px", width: "25px" }}
+                          />
+                        </div>
+                      </div>
+                    </Link>
+                    <div
+                      className="rounded-full overflow-hidden backdrop-blur-md py-4 px-4 mx-1 pointer"
+                      style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
+                    >
+                      <Image
+                        src={Icons.bookmarkIconGold}
+                        alt="bookmark"
+                        style={{ height: "25px", width: "25px" }}
+                      />
+                    </div>
+                    <Link href="/explore">
+                      <div
+                        className="rounded-full overflow-hidden backdrop-blur-md py-4 px-4 mx-1 pointer"
+                        style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
+                      >
+                        <Image
+                          src={Icons.searchIconGold}
+                          alt="search"
+                          style={{ height: "25px", width: "25px" }}
+                        />
+                      </div>
+                    </Link>
+                  </div>
+                </div>
               </>
             ) : (
               <>
@@ -83,73 +150,6 @@ export default function Navbar() {
             )}
           </div>
         )}
-      </div>
-
-      {/* bottom bar */}
-      <div
-        className="w-[360px] fixed bottom-10 text-center z-10"
-        style={{ left: "50%", transform: "translateX(-50%)" }}
-      >
-        <div className="flex items-center justify-center">
-          <Link href="/ta-my-trips">
-            <div
-              className="rounded-full overflow-hidden backdrop-blur-xl py-4 px-4 mx-1 pointer"
-              style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
-            >
-              <Image
-                src={Icons.planeIconGold}
-                alt="plane"
-                style={{ height: "25px", width: "25px" }}
-              />
-            </div>
-          </Link>
-          <div
-            className="rounded-full overflow-hidden backdrop-blur-md py-4 px-4 mx-1 pointer"
-            style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
-          >
-            <Image
-              src={Icons.doorIconGold}
-              alt="door"
-              style={{ height: "25px", width: "25px" }}
-            />
-          </div>
-          <Link href="/ta-dashboard">
-            <div
-              className="rounded-full overflow-hidden backdrop-blur-md py-4 px-4 mx-1 pointer"
-              style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
-            >
-              <div className="rounded-full overflow-hidden bg-gold py-4 px-4">
-                <Image
-                  src={Icons.homeIconDark}
-                  alt="home"
-                  style={{ height: "25px", width: "25px" }}
-                />
-              </div>
-            </div>
-          </Link>
-          <div
-            className="rounded-full overflow-hidden backdrop-blur-md py-4 px-4 mx-1 pointer"
-            style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
-          >
-            <Image
-              src={Icons.bookmarkIconGold}
-              alt="bookmark"
-              style={{ height: "25px", width: "25px" }}
-            />
-          </div>
-          <Link href="/explore">
-            <div
-              className="rounded-full overflow-hidden backdrop-blur-md py-4 px-4 mx-1 pointer"
-              style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
-            >
-              <Image
-                src={Icons.searchIconGold}
-                alt="search"
-                style={{ height: "25px", width: "25px" }}
-              />
-            </div>
-          </Link>
-        </div>
       </div>
     </>
   );
