@@ -6,3 +6,33 @@
 .chat-input {
   background-color: transparent;
 }
+
+/* components/ResizableTabs.module.css */
+.tabContainer {
+  display: flex;
+  overflow-x: auto;
+  border-bottom: 1px solid #ccc;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  border-right: 1px solid #ccc;
+  transition: all 0.3s;
+}
+
+.tab:last-child {
+  border-right: none;
+}
+
+.addTab {
+  padding: 10px;
+  cursor: pointer;
+  border-right: 1px solid #ccc;
+  transition: all 0.3s;
+  color: #666;
+}
+
+.addTab:hover {
+  background-color: #f0f0f0;
+}

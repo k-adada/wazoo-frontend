@@ -56,7 +56,7 @@ export default function ServicesSwiper(props: any) {
       >
         {currentImages.map((image: any, index: number) => (
           <SwiperSlide key={index}>
-            <div className="image-wrapper-83">
+            <div className="image-wrapper-55">
               <Image src={image} alt={"image" + index} />
             </div>
           </SwiperSlide>

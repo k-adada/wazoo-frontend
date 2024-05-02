@@ -8,6 +8,7 @@ import Icons from "../Icons";
 import Images from "../Images";
 import ServicesSwiper from "../components/servicesSwiper";
 import UploadInput from "../components/uploadInput";
+import ResizableTabs from "../components/ResizableTabs";
 
 export default function Chat() {
   const router = useRouter();
@@ -141,56 +142,61 @@ export default function Chat() {
           {/* CHAT BAR LEFT */}
           <div className="col-2 px-2">
             <div className="bg-white rounded-lg py-2 h-[90vh] overflow-auto">
-              <div className="px-2 py-2">
-                <div className="flex items-center pointer rounded-lg bg-lightblue p-2">
-                  <div className="pr-3">
-                    <Image
-                      src={Icons.brit}
-                      alt="user"
-                      width={42}
-                      height={42}
-                      className="m-auto"
-                    />
-                  </div>
+              <div className=""></div>
 
-                  <div className="text-darkblue f-18 poppins-medium">
-                    {"Brit"}
-                  </div>
-                </div>
-              </div>
+              <div className="chats-container p-2">
+                <div className="text-grey poppins-medium">All Messages</div>
+                <div className="py-2">
+                  <div className="flex items-center pointer rounded-lg bg-lightblue p-2">
+                    <div className="pr-3">
+                      <Image
+                        src={Icons.brit}
+                        alt="user"
+                        width={42}
+                        height={42}
+                        className="m-auto"
+                      />
+                    </div>
 
-              <div className="px-2 py-2">
-                <div className="flex items-center pointer rounded-lg p-2">
-                  <div className="pr-3">
-                    <Image
-                      src={Icons.veronica}
-                      alt="user"
-                      width={42}
-                      height={42}
-                      className="m-auto"
-                    />
-                  </div>
-
-                  <div className="text-darkblue f-18 poppins-medium">
-                    {"Veronica"}
+                    <div className="text-darkblue f-18 poppins-medium">
+                      {"Brit"}
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="px-2 py-2">
-                <div className="flex items-center pointer rounded-lg p-2">
-                  <div className="pr-3">
-                    <Image
-                      src={Icons.vicky}
-                      alt="user"
-                      width={42}
-                      height={42}
-                      className="m-auto"
-                    />
+                <div className="py-2">
+                  <div className="flex items-center pointer rounded-lg p-2">
+                    <div className="pr-3">
+                      <Image
+                        src={Icons.veronica}
+                        alt="user"
+                        width={42}
+                        height={42}
+                        className="m-auto"
+                      />
+                    </div>
+
+                    <div className="text-darkblue f-18 poppins-medium">
+                      {"Veronica"}
+                    </div>
                   </div>
+                </div>
 
-                  <div className="text-darkblue f-18 poppins-medium">
-                    {"Vicky"}
+                <div className="py-2">
+                  <div className="flex items-center pointer rounded-lg p-2">
+                    <div className="pr-3">
+                      <Image
+                        src={Icons.vicky}
+                        alt="user"
+                        width={42}
+                        height={42}
+                        className="m-auto"
+                      />
+                    </div>
+
+                    <div className="text-darkblue f-18 poppins-medium">
+                      {"Vicky"}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -289,20 +295,18 @@ export default function Chat() {
                     {/* CONTENT MESSAGE */}
                     {/* RIGHT MESSAGE REQUEST DETAILS*/}
                     <div className="flex bg-blue w-[75%] p-2 rounded-lg ml-auto">
-                      <div className="">
-                        <Image
-                          src={Images.lucerneImage}
-                          alt="user"
-                          width={200}
-                          height={200}
-                          className="rounded-lg w-[250px] h-[150px] object-cover"
-                        />
-                      </div>
+                      <Image
+                        src={Images.lucerneImage}
+                        alt="user"
+                        width={200}
+                        height={200}
+                        className="rounded-lg w-[250px] h-[150px] object-cover"
+                      />
                       <div className="pl-2">
                         <div className="text-darkblue f-16 poppins-medium">
                           Request Details
                         </div>
-                        <div className="f-12 text-grey poppins-regular">
+                        <div className="f-12 text-grey poppins-regular line-clamp-2">
                           Lorem ipsum dolor sit amet consectetur adipisicing
                           elit. Impedit nihil alias blanditiis
                         </div>
@@ -351,6 +355,18 @@ export default function Chat() {
                         </div>
                       </div>
                     </div>
+                    <div className="flex p-2 justify-end gap-2">
+                      <div className="itinerary-tag rounded-lg pointer flex items-center">
+                        <div className="">I</div>
+                        Test
+                      </div>
+                      <div className="itinerary-tag rounded-lg pointer flex items-center">
+                        Test
+                      </div>
+                      <div className="dark-button text-gold flex items-center">
+                        Share Sample Itinerary
+                      </div>
+                    </div>
                   </div>
                   <div className="pl-2">
                     <Image src={Icons.brit} alt="user" width={50} height={50} />
@@ -359,15 +375,14 @@ export default function Chat() {
 
                 {/* LEFT REQUEST */}
                 <div className="flex">
-                  <div className="pr-2">
-                    <Image
-                      src={Icons.veronica}
-                      alt="user"
-                      width={50}
-                      height={50}
-                    />
-                  </div>
-                  <div className="">
+                  <Image
+                    src={Icons.veronica}
+                    alt="user"
+                    width={50}
+                    height={50}
+                    className="self-start"
+                  />
+                  <div className="pl-2">
                     <div className="f-14 text-darkblue poppins-medium">
                       Brit Ferguson
                       <span className="text-grey f-12 poppins-regular pl-3">
@@ -377,15 +392,13 @@ export default function Chat() {
                     {/* CONTENT MESSAGE */}
                     {/* RIGHT MESSAGE REQUEST DETAILS*/}
                     <div className="flex bg-blue w-[75%] p-2 rounded-lg mr-auto">
-                      <div className="">
-                        <Image
-                          src={Images.lucerneImage}
-                          alt="user"
-                          width={200}
-                          height={200}
-                          className="rounded-lg w-[250px] h-[150px] object-cover"
-                        />
-                      </div>
+                      <Image
+                        src={Images.lucerneImage}
+                        alt="user"
+                        width={200}
+                        height={200}
+                        className="rounded-lg w-[250px] h-[150px] object-cover"
+                      />
                       <div className="pl-2">
                         <div className="text-darkblue f-16 poppins-medium">
                           Request Details
@@ -444,7 +457,7 @@ export default function Chat() {
 
                 {/* RIGHT SAMPLE */}
                 <div className="flex justify-end">
-                  <div className="w-full">
+                  <div className="w-full pr-2">
                     <div className="f-14 text-darkblue poppins-medium text-right">
                       <span className="text-grey f-12 poppins-regular pr-3">
                         11:28
@@ -464,15 +477,13 @@ export default function Chat() {
                           className="rounded-lg object-cover -rotate-90"
                         />
                       </div>
-                      <div className="">
-                        <Image
-                          src={Images.lucerneImage}
-                          alt="user"
-                          width={200}
-                          height={200}
-                          className="rounded-lg w-[250px] h-[150px] object-cover"
-                        />
-                      </div>
+                      <Image
+                        src={Images.lucerneImage}
+                        alt="user"
+                        width={300}
+                        height={200}
+                        className="rounded-lg w-[250px] h-[150px] object-cover"
+                      />
                       <div className="pl-2">
                         <div className="text-darkblue f-16 poppins-medium">
                           Sample France Itinerary
@@ -484,41 +495,37 @@ export default function Chat() {
 
                         {/* TAGS  */}
                         <div className="flex flex-wrap">
-                          <div className="itinerary-tag rounded-lg poppins-medium text-darkblue m-1">
-                            Medium
-                          </div>
-                          <div className="itinerary-tag rounded-lg poppins-medium text-darkblue m-1">
+                          <div className="itinerary-tag rounded-lg poppins-medium text-darkblue m-1 f-12">
                             5 days
                           </div>
-                          <div className="itinerary-tag rounded-lg poppins-medium text-darkblue m-1">
+                          <div className="itinerary-tag rounded-lg poppins-medium text-darkblue m-1 f-12">
                             Theme
                           </div>
-                          <div className="itinerary-tag rounded-lg poppins-medium text-darkblue m-1">
+                          <div className="itinerary-tag rounded-lg poppins-medium text-darkblue m-1 f-12">
                             Seasonality
                           </div>
-                          <div className="itinerary-tag rounded-lg poppins-medium text-darkblue m-1">
+                          <div className="itinerary-tag rounded-lg poppins-medium text-darkblue m-1 f-12">
                             Oct 11 - Oct 15
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="pl-2">
+                  <div className="">
                     <Image src={Icons.brit} alt="user" width={50} height={50} />
                   </div>
                 </div>
 
                 {/* LEFT SAMPLE */}
                 <div className="flex">
-                  <div className="pr-2">
-                    <Image
-                      src={Icons.veronica}
-                      alt="user"
-                      width={50}
-                      height={50}
-                    />
-                  </div>
-                  <div className="">
+                  <Image
+                    src={Icons.veronica}
+                    alt="user"
+                    width={50}
+                    height={50}
+                    className="self-start"
+                  />
+                  <div className="pl-2">
                     <div className="f-14 text-darkblue poppins-medium">
                       Brit Ferguson
                       <span className="text-grey f-12 poppins-regular pl-3">
@@ -537,39 +544,39 @@ export default function Chat() {
                           className="rounded-lg object-cover -rotate-90"
                         />
                       </div>
-                      <div className="">
-                        <Image
-                          src={Images.lucerneImage}
-                          alt="user"
-                          width={200}
-                          height={200}
-                          className="rounded-lg w-[250px] h-[150px] object-cover"
-                        />
-                      </div>
+                      <Image
+                        src={Images.lucerneImage}
+                        alt="user"
+                        width={300}
+                        height={200}
+                        className="rounded-lg w-[250px] h-[150px] object-cover"
+                      />
                       <div className="pl-2">
                         <div className="text-darkblue f-16 poppins-medium">
                           Request Details
                         </div>
-                        <div className="f-12 text-grey poppins-regular">
+                        <div className="f-12 text-grey poppins-regular line-clamp-3">
                           Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Impedit nihil alias blanditiis elit. Impedit
+                          nihil alias blanditiis elit. Impedit nihil alias
+                          blanditiis elit. Impedit nihil alias blanditiis elit.
+                          Impedit nihil alias blanditiis elit. Impedit nihil
+                          alias blanditiis elit. Impedit nihil alias blanditiis
                           elit. Impedit nihil alias blanditiis
                         </div>
 
                         {/* TAGS  */}
                         <div className="flex flex-wrap">
-                          <div className="itinerary-tag rounded-lg poppins-medium text-darkblue m-1">
-                            Medium
-                          </div>
-                          <div className="itinerary-tag rounded-lg poppins-medium text-darkblue m-1">
+                          <div className="itinerary-tag rounded-lg poppins-medium text-darkblue m-1 f-12">
                             5 days
                           </div>
-                          <div className="itinerary-tag rounded-lg poppins-medium text-darkblue m-1">
+                          <div className="itinerary-tag rounded-lg poppins-medium text-darkblue m-1 f-12">
                             Theme
                           </div>
-                          <div className="itinerary-tag rounded-lg poppins-medium text-darkblue m-1">
+                          <div className="itinerary-tag rounded-lg poppins-medium text-darkblue m-1 f-12">
                             Seasonality
                           </div>
-                          <div className="itinerary-tag rounded-lg poppins-medium text-darkblue m-1">
+                          <div className="itinerary-tag rounded-lg poppins-medium text-darkblue m-1 f-12">
                             Oct 11 - Oct 15
                           </div>
                         </div>
@@ -581,7 +588,7 @@ export default function Chat() {
 
               <div className="bg-lightblue rounded-lg py-2 absolute bottom-0 w-[96%]">
                 <div className="flex flex-wrap items-center">
-                 <UploadInput />
+                  <UploadInput />
 
                   <div className="rounded-full px-4 py-2 bg-slate-300 w-11/12 ml-2 flex justify-between items-center">
                     <div className="w-11/12">
@@ -608,6 +615,8 @@ export default function Chat() {
           {/* ITINERARY AND TRIPS BAR RIGHT */}
           <div className="col-3 px-2">
             <div className="bg-white rounded-lg py-2 h-[90vh] overflow-auto px-4">
+              <ResizableTabs />
+
               <div className="row">
                 <div className="col-12 px-2">
                   <div className="f-24 text-darkblue poppins-medium py-2">
