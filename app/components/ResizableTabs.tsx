@@ -1,26 +1,45 @@
-// components/ResizableTabs.js
-import React, { useState } from "react";
+"use client";
+import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
 
-const ResizableTabs = () => {
-  const [tabs, setTabs] = useState(["Tab 1", "Tab 2", "Tab 3"]);
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
 
-  const addTab = () => {
-    const newTab = `Tab ${tabs.length + 1}`;
-    setTabs([...tabs, newTab]);
-  };
+// import required modules
+// import { FreeMode, Pagination } from "swiper/modules";
+
+export default function App() {
 
   return (
-    <div className="tabContainer">
-      {tabs.map((tab, index) => (
-        <div key={index} className="tab">
-          {tab}
-        </div>
-      ))}
-      <div className="addTab" onClick={addTab}>
-        +
+    <>
+      <div className="h-[40px]">
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={30}
+          freeMode={true}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[]}
+          className="mySwiper h-[40px]"
+        >
+          <SwiperSlide>
+            <div className="h-[40px] flex items-center justify-center pointer">Trip 1</div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="h-[40px] flex items-center justify-center pointer bg-grey">Trip 2</div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="h-[40px] flex items-center justify-center pointer bg-grey">Trip 3</div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="h-[40px] flex items-center justify-center pointer bg-grey">Trip 4</div>
+          </SwiperSlide>
+        </Swiper>
       </div>
-    </div>
+    </>
   );
-};
-
-export default ResizableTabs;
+}

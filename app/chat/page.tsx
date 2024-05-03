@@ -206,7 +206,7 @@ export default function Chat() {
           {/* CHAT WINDOW MIDDLE  */}
           <div className="col-7 px-2">
             <div className="rounded-lg bg-white p-2 h-[90vh] overflow-auto">
-              <div className="bg-lightblue rounded-lg py-2 absolute top-2 w-[94%]">
+              <div className="bg-lightblue py-2 absolute top-0 w-[97%]">
                 <div className="flex justify-between">
                   <div className="flex items-center">
                     <div className="">
@@ -505,7 +505,7 @@ export default function Chat() {
                             Seasonality
                           </div>
                           <div className="itinerary-tag rounded-lg poppins-medium text-darkblue m-1 f-12">
-                            Oct 11 - Oct 15
+                            Oct 1 - Dec 31
                           </div>
                         </div>
                       </div>
@@ -577,7 +577,7 @@ export default function Chat() {
                             Seasonality
                           </div>
                           <div className="itinerary-tag rounded-lg poppins-medium text-darkblue m-1 f-12">
-                            Oct 11 - Oct 15
+                            Oct 1 - Dec 31
                           </div>
                         </div>
                       </div>
@@ -614,9 +614,10 @@ export default function Chat() {
 
           {/* ITINERARY AND TRIPS BAR RIGHT */}
           <div className="col-3 px-2">
-            <div className="bg-white rounded-lg py-2 h-[90vh] overflow-auto px-4">
-              <ResizableTabs />
-
+            <div className="bg-white rounded-lg py-2 h-[90vh] overflow-auto px-4 pt-[50px]">
+              <div className="absolute top-0 w-full left-0 px-2 bg-white z-10">
+                <ResizableTabs />
+              </div>
               <div className="row">
                 <div className="col-12 px-2">
                   <div className="f-24 text-darkblue poppins-medium py-2">
@@ -680,41 +681,53 @@ export default function Chat() {
                         >
                           {day.services.map((service, index) => {
                             return (
-                              <div
-                                className="py-1"
-                                key={index + service.location}
-                              >
-                                <div className="flex p-2 bg-grey rounded-lg items-center justify-between">
-                                  <div className="flex">
-                                    <Image
-                                      src={service.image}
-                                      alt="tour image"
-                                      className="rounded-lg"
-                                      style={{
-                                        width: "70px",
-                                        height: "70px",
-                                        objectFit: "cover",
-                                      }}
-                                    />
-                                    <div className="pl-3">
-                                      <div className="f-16 text-darkblue poppins-medium">
-                                        {service.serviceType}
-                                      </div>
-                                      <div className="items-center">
-                                        <div className="f-14 text-grey line-clamp-2">
-                                          Lorem ipsum dolor sit amet consectetur
-                                          adipisicing elit. Excepturi nisi
-                                          fugiat inventore iusto architecto,
-                                          similique, voluptas eum culpa neque
-                                          saepe tempore, quo magnam! Molestias
-                                          mollitia ducimus voluptas nihil
-                                          excepturi labore!
+                              <>
+                                <div
+                                  className="py-1"
+                                  key={index + service.location}
+                                >
+                                  <div className="flex p-2 bg-grey rounded-lg items-center justify-between">
+                                    <div className="flex">
+                                      <Image
+                                        src={service.image}
+                                        alt="tour image"
+                                        className="rounded-lg"
+                                        style={{
+                                          width: "70px",
+                                          height: "70px",
+                                          objectFit: "cover",
+                                        }}
+                                      />
+                                      <div className="pl-3">
+                                        <div className="f-16 text-darkblue poppins-medium">
+                                          {service.serviceType}
+                                        </div>
+                                        <div className="items-center">
+                                          <div className="f-14 text-grey line-clamp-2">
+                                            Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit.
+                                            Excepturi nisi fugiat inventore
+                                            iusto architecto, similique,
+                                            voluptas eum culpa neque saepe
+                                            tempore, quo magnam! Molestias
+                                            mollitia ducimus voluptas nihil
+                                            excepturi labore!
+                                          </div>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
-                              </div>
+                                <div className="bg-lineslight rounded-lg flex items-center p-1 w-1/4 ml-auto">
+                                  <Image
+                                    src={Icons.homeIconDark}
+                                    alt="chat"
+                                    width={20}
+                                    height={20}
+                                  />
+                                  <span className="pl-2 f-12">Comment</span>
+                                </div>
+                              </>
                             );
                           })}
                         </div>
